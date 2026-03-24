@@ -1,0 +1,162 @@
+{
+  "document_type": "Certificate of Completion",
+  "document_description": "A formal certificate for course completion.",
+  "fields": [
+    {
+      "field_name": "institution_name",
+      "original_value": "Pacific Northwest Technical Institute",
+      "category": "institution",
+      "description": "Institution name",
+      "all_variations": [
+        {
+          "text": "Pacific Northwest Technical Institute",
+          "placeholder": "{{ institution_name }}"
+        },
+        {
+          "text": "PACIFIC NORTHWEST TECHNICAL INSTITUTE",
+          "placeholder": "{{ institution_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "recipient_name",
+      "original_value": "Jason Alexander Rivera",
+      "category": "recipient",
+      "description": "Recipient name",
+      "all_variations": [
+        {
+          "text": "Jason Alexander Rivera",
+          "placeholder": "{{ recipient_name }}"
+        },
+        {
+          "text": "JASON ALEXANDER RIVERA",
+          "placeholder": "{{ recipient_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "course_name",
+      "original_value": "Advanced Project Management Professional (PMP) Preparation",
+      "category": "course",
+      "description": "Course name",
+      "all_variations": [
+        {
+          "text": "Advanced Project Management Professional (PMP) Preparation",
+          "placeholder": "{{ course_name }}"
+        },
+        {
+          "text": "ADVANCED PROJECT MANAGEMENT PROFESSIONAL (PMP) PREPARATION",
+          "placeholder": "{{ course_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "course_description",
+      "original_value": "An intensive program covering project lifecycle management, risk assessment, stakeholder engagement, and agile methodologies aligned with PMI standards.",
+      "category": "course",
+      "description": "Course description",
+      "all_variations": [
+        {
+          "text": "An intensive program covering project lifecycle management, risk assessment, stakeholder engagement, and agile methodologies aligned with PMI standards.",
+          "placeholder": "{{ course_description }}"
+        }
+      ]
+    },
+    {
+      "field_name": "completion_date",
+      "original_value": "January 30, 2026",
+      "category": "dates",
+      "description": "Completion date",
+      "all_variations": [
+        {
+          "text": "January 30, 2026",
+          "placeholder": "{{ completion_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "total_hours",
+      "original_value": "40 hours",
+      "category": "course",
+      "description": "Total hours",
+      "all_variations": [
+        {
+          "text": "40 hours",
+          "placeholder": "{{ total_hours }}"
+        }
+      ]
+    },
+    {
+      "field_name": "instructor_name",
+      "original_value": "Dr. Karen Whitfield",
+      "category": "personnel",
+      "description": "Instructor name",
+      "all_variations": [
+        {
+          "text": "Dr. Karen Whitfield",
+          "placeholder": "{{ instructor_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "instructor_title_line1",
+      "original_value": "Lead Instructor,",
+      "category": "personnel",
+      "description": "Instructor title line 1",
+      "all_variations": [
+        {
+          "text": "Lead Instructor,",
+          "placeholder": "{{ instructor_title_line1 }}"
+        }
+      ]
+    },
+    {
+      "field_name": "instructor_title_line2",
+      "original_value": "Professional Development",
+      "category": "personnel",
+      "description": "Instructor title line 2",
+      "all_variations": [
+        {
+          "text": "Professional Development",
+          "placeholder": "{{ instructor_title_line2 }}"
+        }
+      ]
+    },
+    {
+      "field_name": "director_name",
+      "original_value": "Robert M. Tanaka",
+      "category": "personnel",
+      "description": "Director name",
+      "all_variations": [
+        {
+          "text": "Robert M. Tanaka",
+          "placeholder": "{{ director_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "director_title",
+      "original_value": "Director of Continuing Education",
+      "category": "personnel",
+      "description": "Director title",
+      "all_variations": [
+        {
+          "text": "Director of Continuing Education",
+          "placeholder": "{{ director_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "certificate_number",
+      "original_value": "CERT-PMP-2026-00418",
+      "category": "certificate",
+      "description": "Certificate number",
+      "all_variations": [
+        {
+          "text": "CERT-PMP-2026-00418",
+          "placeholder": "{{ certificate_number }}"
+        }
+      ]
+    }
+  ]
+}

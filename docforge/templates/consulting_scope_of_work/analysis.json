@@ -1,0 +1,210 @@
+{
+  "document_type": "Consulting Scope of Work",
+  "document_description": "A scope of work document for consulting.",
+  "fields": [
+    {
+      "field_name": "consultant_company_name",
+      "original_value": "Clearpath Strategy Partners",
+      "category": "consultant",
+      "description": "Consultant company",
+      "all_variations": [
+        {
+          "text": "Clearpath Strategy Partners",
+          "placeholder": "{{ consultant_company_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "consultant_address",
+      "original_value": "1 North Wacker Drive, Suite 3500, Chicago, IL 60606",
+      "category": "consultant",
+      "description": "Consultant address",
+      "all_variations": [
+        {
+          "text": "1 North Wacker Drive, Suite 3500, Chicago, IL 60606",
+          "placeholder": "{{ consultant_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "client_company_name",
+      "original_value": "Midwest Healthcare Systems, Inc.",
+      "category": "client",
+      "description": "Client company",
+      "all_variations": [
+        {
+          "text": "Midwest Healthcare Systems, Inc.",
+          "placeholder": "{{ client_company_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "client_address",
+      "original_value": "700 North Michigan Avenue, Suite 1200, Chicago, IL 60611",
+      "category": "client",
+      "description": "Client address",
+      "all_variations": [
+        {
+          "text": "700 North Michigan Avenue, Suite 1200, Chicago, IL 60611",
+          "placeholder": "{{ client_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "project_name",
+      "original_value": "Operational Efficiency Assessment",
+      "category": "project",
+      "description": "Project name",
+      "all_variations": [
+        {
+          "text": "Operational Efficiency Assessment",
+          "placeholder": "{{ project_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "sow_date",
+      "original_value": "February 18, 2026",
+      "category": "dates",
+      "description": "SOW date",
+      "all_variations": [
+        {
+          "text": "February 18, 2026",
+          "placeholder": "{{ sow_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "sow_number",
+      "original_value": "SOW-2026-014",
+      "category": "project",
+      "description": "SOW number",
+      "all_variations": [
+        {
+          "text": "SOW-2026-014",
+          "placeholder": "{{ sow_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "project_objective",
+      "original_value": "Conduct a comprehensive assessment of current operational workflows across three hospital campuses to identify inefficiencies and recommend process improvements targeting a 15% reduction in administrative overhead.",
+      "category": "project",
+      "description": "Project objective",
+      "all_variations": [
+        {
+          "text": "Conduct a comprehensive assessment of current operational workflows across three hospital campuses to identify inefficiencies and recommend process improvements targeting a 15% reduction in administrative overhead.",
+          "placeholder": "{{ project_objective }}"
+        }
+      ]
+    },
+    {
+      "field_name": "timeline_start",
+      "original_value": "March 1, 2026",
+      "category": "dates",
+      "description": "Timeline start",
+      "all_variations": [
+        {
+          "text": "March 1, 2026",
+          "placeholder": "{{ timeline_start }}"
+        }
+      ]
+    },
+    {
+      "field_name": "timeline_end",
+      "original_value": "May 31, 2026",
+      "category": "dates",
+      "description": "Timeline end",
+      "all_variations": [
+        {
+          "text": "May 31, 2026",
+          "placeholder": "{{ timeline_end }}"
+        }
+      ]
+    },
+    {
+      "field_name": "total_fee",
+      "original_value": "$185,000.00",
+      "category": "financial",
+      "description": "Total fee",
+      "all_variations": [
+        {
+          "text": "$185,000.00",
+          "placeholder": "{{ total_fee }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_pct_1",
+      "original_value": "$55,500.00",
+      "category": "financial",
+      "description": "First payment amount",
+      "all_variations": [
+        {
+          "text": "$55,500.00",
+          "placeholder": "{{ payment_pct_1 }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_pct_final",
+      "original_value": "$74,000.00",
+      "category": "financial",
+      "description": "Final payment amount",
+      "all_variations": [
+        {
+          "text": "$74,000.00",
+          "placeholder": "{{ payment_pct_final }}"
+        }
+      ]
+    },
+    {
+      "field_name": "consultant_signature_name",
+      "original_value": "Elizabeth Grant",
+      "category": "signatures",
+      "description": "Consultant signatory",
+      "all_variations": [
+        {
+          "text": "Elizabeth Grant",
+          "placeholder": "{{ consultant_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "consultant_title",
+      "original_value": "Managing Partner",
+      "category": "signatures",
+      "description": "Consultant title",
+      "all_variations": [
+        {
+          "text": "Managing Partner",
+          "placeholder": "{{ consultant_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "client_signature_name",
+      "original_value": "Dr. Harold Simmons",
+      "category": "signatures",
+      "description": "Client signatory",
+      "all_variations": [
+        {
+          "text": "Dr. Harold Simmons",
+          "placeholder": "{{ client_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "client_title",
+      "original_value": "Chief Operating Officer",
+      "category": "signatures",
+      "description": "Client title",
+      "all_variations": [
+        {
+          "text": "Chief Operating Officer",
+          "placeholder": "{{ client_title }}"
+        }
+      ]
+    }
+  ]
+}

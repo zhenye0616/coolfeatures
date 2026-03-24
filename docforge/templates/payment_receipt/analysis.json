@@ -1,0 +1,178 @@
+{
+  "document_type": "Payment Receipt",
+  "document_description": "A payment receipt confirming transaction.",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Lakeside Auto Repair",
+      "category": "company",
+      "description": "Company name",
+      "all_variations": [
+        {
+          "text": "Lakeside Auto Repair",
+          "placeholder": "{{ company_name }}"
+        },
+        {
+          "text": "LAKESIDE AUTO REPAIR",
+          "placeholder": "{{ company_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "920 Lakeshore Drive, Milwaukee, WI 53202",
+      "category": "company",
+      "description": "Company address",
+      "all_variations": [
+        {
+          "text": "920 Lakeshore Drive, Milwaukee, WI 53202",
+          "placeholder": "{{ company_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_phone",
+      "original_value": "(414) 555-0763",
+      "category": "company",
+      "description": "Company phone",
+      "all_variations": [
+        {
+          "text": "(414) 555-0763",
+          "placeholder": "{{ company_phone }}"
+        }
+      ]
+    },
+    {
+      "field_name": "receipt_number",
+      "original_value": "REC-2026-1847",
+      "category": "receipt",
+      "description": "Receipt number",
+      "all_variations": [
+        {
+          "text": "REC-2026-1847",
+          "placeholder": "{{ receipt_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "receipt_date",
+      "original_value": "February 21, 2026",
+      "category": "receipt",
+      "description": "Receipt date",
+      "all_variations": [
+        {
+          "text": "February 21, 2026",
+          "placeholder": "{{ receipt_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "received_from",
+      "original_value": "Patricia M. Gallagher",
+      "category": "payer",
+      "description": "Received from",
+      "all_variations": [
+        {
+          "text": "Patricia M. Gallagher",
+          "placeholder": "{{ received_from }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payer_address",
+      "original_value": "347 East Brady Street, Milwaukee, WI 53202",
+      "category": "payer",
+      "description": "Payer address",
+      "all_variations": [
+        {
+          "text": "347 East Brady Street, Milwaukee, WI 53202",
+          "placeholder": "{{ payer_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_method",
+      "original_value": "Visa Credit Card",
+      "category": "payment",
+      "description": "Payment method",
+      "all_variations": [
+        {
+          "text": "Visa Credit Card",
+          "placeholder": "{{ payment_method }}"
+        }
+      ]
+    },
+    {
+      "field_name": "check_number_or_transaction_id",
+      "original_value": "TXN-44892071",
+      "category": "payment",
+      "description": "Transaction ID",
+      "all_variations": [
+        {
+          "text": "TXN-44892071",
+          "placeholder": "{{ check_number_or_transaction_id }}"
+        }
+      ]
+    },
+    {
+      "field_name": "subtotal",
+      "original_value": "$377.40",
+      "category": "totals",
+      "description": "Subtotal",
+      "all_variations": [
+        {
+          "text": "$377.40",
+          "placeholder": "{{ subtotal }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tax",
+      "original_value": "$20.19",
+      "category": "totals",
+      "description": "Tax",
+      "all_variations": [
+        {
+          "text": "$20.19",
+          "placeholder": "{{ tax }}"
+        }
+      ]
+    },
+    {
+      "field_name": "total_paid",
+      "original_value": "$397.59",
+      "category": "totals",
+      "description": "Total paid",
+      "all_variations": [
+        {
+          "text": "$397.59",
+          "placeholder": "{{ total_paid }}"
+        }
+      ]
+    },
+    {
+      "field_name": "balance_due",
+      "original_value": "$0.00",
+      "category": "totals",
+      "description": "Balance due",
+      "all_variations": [
+        {
+          "text": "$0.00",
+          "placeholder": "{{ balance_due }}"
+        }
+      ]
+    },
+    {
+      "field_name": "received_by_name",
+      "original_value": "Tony Marchetti",
+      "category": "signatures",
+      "description": "Received by",
+      "all_variations": [
+        {
+          "text": "Tony Marchetti",
+          "placeholder": "{{ received_by_name }}"
+        }
+      ]
+    }
+  ]
+}

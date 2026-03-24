@@ -1,0 +1,132 @@
+{
+  "type": "object",
+  "required": [
+    "company",
+    "receipt",
+    "payer",
+    "payment",
+    "totals",
+    "signatures"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": [
+        "company_name",
+        "company_address",
+        "company_phone"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "Company name"
+        },
+        "company_address": {
+          "type": "string",
+          "description": "Company address"
+        },
+        "company_phone": {
+          "type": "string",
+          "description": "Company phone"
+        }
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "required": [
+        "receipt_number",
+        "receipt_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "receipt_number": {
+          "type": "string",
+          "description": "Receipt number"
+        },
+        "receipt_date": {
+          "type": "string",
+          "description": "Receipt date"
+        }
+      }
+    },
+    "payer": {
+      "type": "object",
+      "required": [
+        "received_from",
+        "payer_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "received_from": {
+          "type": "string",
+          "description": "Received from"
+        },
+        "payer_address": {
+          "type": "string",
+          "description": "Payer address"
+        }
+      }
+    },
+    "payment": {
+      "type": "object",
+      "required": [
+        "payment_method",
+        "check_number_or_transaction_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "payment_method": {
+          "type": "string",
+          "description": "Payment method"
+        },
+        "check_number_or_transaction_id": {
+          "type": "string",
+          "description": "Transaction ID"
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "required": [
+        "subtotal",
+        "tax",
+        "total_paid",
+        "balance_due"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subtotal": {
+          "type": "string",
+          "description": "Subtotal"
+        },
+        "tax": {
+          "type": "string",
+          "description": "Tax"
+        },
+        "total_paid": {
+          "type": "string",
+          "description": "Total paid"
+        },
+        "balance_due": {
+          "type": "string",
+          "description": "Balance due"
+        }
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "received_by_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "received_by_name": {
+          "type": "string",
+          "description": "Received by"
+        }
+      }
+    }
+  }
+}

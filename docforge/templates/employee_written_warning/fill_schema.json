@@ -1,0 +1,148 @@
+{
+  "type": "object",
+  "required": [
+    "company",
+    "employee",
+    "management",
+    "dates",
+    "warning"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": [
+        "company_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "Company name"
+        }
+      }
+    },
+    "employee": {
+      "type": "object",
+      "required": [
+        "employee_name",
+        "employee_id",
+        "employee_title",
+        "department"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "employee_name": {
+          "type": "string",
+          "description": "Employee name"
+        },
+        "employee_id": {
+          "type": "string",
+          "description": "Employee ID"
+        },
+        "employee_title": {
+          "type": "string",
+          "description": "Employee title"
+        },
+        "department": {
+          "type": "string",
+          "description": "Department"
+        }
+      }
+    },
+    "management": {
+      "type": "object",
+      "required": [
+        "manager_name",
+        "manager_title",
+        "hr_representative_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "manager_name": {
+          "type": "string",
+          "description": "Manager name"
+        },
+        "manager_title": {
+          "type": "string",
+          "description": "Manager title"
+        },
+        "hr_representative_name": {
+          "type": "string",
+          "description": "HR representative"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "warning_date",
+        "improvement_deadline",
+        "employee_acknowledgment_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "warning_date": {
+          "type": "string",
+          "description": "Warning date"
+        },
+        "improvement_deadline": {
+          "type": "string",
+          "description": "Improvement deadline"
+        },
+        "employee_acknowledgment_date": {
+          "type": "string",
+          "description": "Acknowledgment date"
+        }
+      }
+    },
+    "warning": {
+      "type": "object",
+      "required": [
+        "warning_level",
+        "violation_type",
+        "incident_description",
+        "prev_warning_verbal_date",
+        "prev_warning_written_date",
+        "company_policy_reference",
+        "corrective_attendance_days",
+        "consequences_of_non_improvement"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "warning_level": {
+          "type": "string",
+          "description": "Warning level"
+        },
+        "violation_type": {
+          "type": "string",
+          "description": "Violation type"
+        },
+        "incident_description": {
+          "type": "string",
+          "description": "Incident description"
+        },
+        "prev_warning_verbal_date": {
+          "type": "string",
+          "description": "Date of verbal counseling"
+        },
+        "prev_warning_written_date": {
+          "type": "string",
+          "description": "Date of first written warning"
+        },
+        "company_policy_reference": {
+          "type": "string",
+          "description": "Policy reference"
+        },
+        "corrective_attendance_days": {
+          "type": "string",
+          "description": "Perfect attendance requirement period"
+        },
+        "consequences_of_non_improvement": {
+          "type": "string",
+          "description": "Consequences"
+        }
+      }
+    }
+  }
+}

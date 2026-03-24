@@ -1,0 +1,170 @@
+{
+  "document_type": "Non-Disclosure Agreement",
+  "document_description": "A mutual NDA between two parties.",
+  "fields": [
+    {
+      "field_name": "disclosing_party_name",
+      "original_value": "Apex Innovations, LLC",
+      "category": "parties",
+      "description": "Name of the disclosing party",
+      "all_variations": [
+        {
+          "text": "Apex Innovations, LLC",
+          "placeholder": "{{ disclosing_party_name }}"
+        },
+        {
+          "text": "APEX INNOVATIONS, LLC",
+          "placeholder": "{{ disclosing_party_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "disclosing_party_address",
+      "original_value": "742 Technology Drive, Suite 300, San Jose, CA 95134",
+      "category": "parties",
+      "description": "Address of the disclosing party",
+      "all_variations": [
+        {
+          "text": "742 Technology Drive, Suite 300, San Jose, CA 95134",
+          "placeholder": "{{ disclosing_party_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_party_name",
+      "original_value": "Brightline Consulting Group, Inc.",
+      "category": "parties",
+      "description": "Name of the receiving party",
+      "all_variations": [
+        {
+          "text": "Brightline Consulting Group, Inc.",
+          "placeholder": "{{ receiving_party_name }}"
+        },
+        {
+          "text": "BRIGHTLINE CONSULTING GROUP, INC.",
+          "placeholder": "{{ receiving_party_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_party_address",
+      "original_value": "1580 Market Street, Floor 12, San Francisco, CA 94102",
+      "category": "parties",
+      "description": "Address of the receiving party",
+      "all_variations": [
+        {
+          "text": "1580 Market Street, Floor 12, San Francisco, CA 94102",
+          "placeholder": "{{ receiving_party_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "effective_date",
+      "original_value": "January 15, 2026",
+      "category": "dates",
+      "description": "Date agreement takes effect",
+      "all_variations": [
+        {
+          "text": "January 15, 2026",
+          "placeholder": "{{ effective_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "confidential_info_description",
+      "original_value": "proprietary software algorithms, product roadmaps, customer lists, financial projections, and trade secrets related to AI-powered analytics platforms",
+      "category": "details",
+      "description": "Description of confidential information",
+      "all_variations": [
+        {
+          "text": "proprietary software algorithms, product roadmaps, customer lists, financial projections, and trade secrets related to AI-powered analytics platforms",
+          "placeholder": "{{ confidential_info_description }}"
+        }
+      ]
+    },
+    {
+      "field_name": "agreement_duration",
+      "original_value": "two (2) years",
+      "category": "details",
+      "description": "Duration of the agreement",
+      "all_variations": [
+        {
+          "text": "two (2) years",
+          "placeholder": "{{ agreement_duration }}"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "California",
+      "category": "details",
+      "description": "State whose laws govern the agreement",
+      "all_variations": [
+        {
+          "text": "California",
+          "placeholder": "{{ governing_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "disclosing_party_signature_name",
+      "original_value": "Margaret Chen",
+      "category": "signatures",
+      "description": "Name of disclosing party signatory",
+      "all_variations": [
+        {
+          "text": "Margaret Chen",
+          "placeholder": "{{ disclosing_party_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "disclosing_party_title",
+      "original_value": "Chief Executive Officer",
+      "category": "signatures",
+      "description": "Title of disclosing party signatory",
+      "all_variations": [
+        {
+          "text": "Chief Executive Officer",
+          "placeholder": "{{ disclosing_party_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_party_signature_name",
+      "original_value": "David Kowalski",
+      "category": "signatures",
+      "description": "Name of receiving party signatory",
+      "all_variations": [
+        {
+          "text": "David Kowalski",
+          "placeholder": "{{ receiving_party_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_party_title",
+      "original_value": "Managing Director",
+      "category": "signatures",
+      "description": "Title of receiving party signatory",
+      "all_variations": [
+        {
+          "text": "Managing Director",
+          "placeholder": "{{ receiving_party_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "signature_date",
+      "original_value": "January 15, 2026",
+      "category": "dates",
+      "description": "Date of signature",
+      "all_variations": [
+        {
+          "text": "January 15, 2026",
+          "placeholder": "{{ signature_date }}"
+        }
+      ]
+    }
+  ]
+}

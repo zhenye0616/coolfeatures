@@ -1,0 +1,270 @@
+{
+  "document_type": "Certificate of Liability Insurance",
+  "document_description": "An insurance certificate verifying coverage.",
+  "fields": [
+    {
+      "field_name": "certificate_date",
+      "original_value": "January 28, 2026",
+      "category": "certificate",
+      "description": "Certificate date",
+      "all_variations": [
+        {
+          "text": "January 28, 2026",
+          "placeholder": "{{ certificate_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "certificate_number",
+      "original_value": "COI-2026-88431",
+      "category": "certificate",
+      "description": "Certificate number",
+      "all_variations": [
+        {
+          "text": "COI-2026-88431",
+          "placeholder": "{{ certificate_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "producer_name",
+      "original_value": "Pacific Coast Insurance Brokers",
+      "category": "producer",
+      "description": "Producer/agent name",
+      "all_variations": [
+        {
+          "text": "Pacific Coast Insurance Brokers",
+          "placeholder": "{{ producer_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "producer_address",
+      "original_value": "3200 Wilshire Blvd, Suite 710",
+      "category": "producer",
+      "description": "Producer address line 1",
+      "all_variations": [
+        {
+          "text": "3200 Wilshire Blvd, Suite 710",
+          "placeholder": "{{ producer_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "producer_city_state",
+      "original_value": "Los Angeles, CA 90010",
+      "category": "producer",
+      "description": "Producer city/state/zip",
+      "all_variations": [
+        {
+          "text": "Los Angeles, CA 90010",
+          "placeholder": "{{ producer_city_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "producer_phone",
+      "original_value": "(213) 555-0629",
+      "category": "producer",
+      "description": "Producer phone",
+      "all_variations": [
+        {
+          "text": "(213) 555-0629",
+          "placeholder": "{{ producer_phone }}"
+        }
+      ]
+    },
+    {
+      "field_name": "insured_name",
+      "original_value": "Atlas Mechanical Contractors, Inc.",
+      "category": "insured",
+      "description": "Insured company name",
+      "all_variations": [
+        {
+          "text": "Atlas Mechanical Contractors, Inc.",
+          "placeholder": "{{ insured_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "insured_address",
+      "original_value": "1875 Industrial Way",
+      "category": "insured",
+      "description": "Insured address line 1",
+      "all_variations": [
+        {
+          "text": "1875 Industrial Way",
+          "placeholder": "{{ insured_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "insured_city_state",
+      "original_value": "Torrance, CA 90501",
+      "category": "insured",
+      "description": "Insured city/state/zip",
+      "all_variations": [
+        {
+          "text": "Torrance, CA 90501",
+          "placeholder": "{{ insured_city_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "insurer_name",
+      "original_value": "Hartford Fire Insurance Company",
+      "category": "insurer",
+      "description": "Insurer name",
+      "all_variations": [
+        {
+          "text": "Hartford Fire Insurance Company",
+          "placeholder": "{{ insurer_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_number",
+      "original_value": "HFI-GL-7829041",
+      "category": "policy",
+      "description": "Policy number",
+      "all_variations": [
+        {
+          "text": "HFI-GL-7829041",
+          "placeholder": "{{ policy_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_effective_date",
+      "original_value": "01/01/2026",
+      "category": "policy",
+      "description": "Policy effective date",
+      "all_variations": [
+        {
+          "text": "01/01/2026",
+          "placeholder": "{{ policy_effective_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_expiration_date",
+      "original_value": "01/01/2027",
+      "category": "policy",
+      "description": "Policy expiration date",
+      "all_variations": [
+        {
+          "text": "01/01/2027",
+          "placeholder": "{{ policy_expiration_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "general_liability_limit",
+      "original_value": "$1,000,000 per occurrence",
+      "category": "limits",
+      "description": "General liability limit",
+      "all_variations": [
+        {
+          "text": "$1,000,000 per occurrence",
+          "placeholder": "{{ general_liability_limit }}"
+        }
+      ]
+    },
+    {
+      "field_name": "umbrella_limit",
+      "original_value": "$5,000,000 per occurrence",
+      "category": "limits",
+      "description": "Umbrella liability limit",
+      "all_variations": [
+        {
+          "text": "$5,000,000 per occurrence",
+          "placeholder": "{{ umbrella_limit }}"
+        }
+      ]
+    },
+    {
+      "field_name": "workers_comp_limit",
+      "original_value": "$500,000 / $500,000 / $500,000",
+      "category": "limits",
+      "description": "Workers comp limit",
+      "all_variations": [
+        {
+          "text": "$500,000 / $500,000 / $500,000",
+          "placeholder": "{{ workers_comp_limit }}"
+        }
+      ]
+    },
+    {
+      "field_name": "auto_liability_limit",
+      "original_value": "$1,000,000 combined single limit",
+      "category": "limits",
+      "description": "Auto liability limit",
+      "all_variations": [
+        {
+          "text": "$1,000,000 combined single limit",
+          "placeholder": "{{ auto_liability_limit }}"
+        }
+      ]
+    },
+    {
+      "field_name": "certificate_holder_name",
+      "original_value": "Westfield Development Group, LLC",
+      "category": "holder",
+      "description": "Certificate holder name",
+      "all_variations": [
+        {
+          "text": "Westfield Development Group, LLC",
+          "placeholder": "{{ certificate_holder_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "certificate_holder_address",
+      "original_value": "500 South Grand Avenue, Suite 2800",
+      "category": "holder",
+      "description": "Certificate holder address line 1",
+      "all_variations": [
+        {
+          "text": "500 South Grand Avenue, Suite 2800",
+          "placeholder": "{{ certificate_holder_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "certificate_holder_city_state",
+      "original_value": "Los Angeles, CA 90071",
+      "category": "holder",
+      "description": "Certificate holder city/state/zip",
+      "all_variations": [
+        {
+          "text": "Los Angeles, CA 90071",
+          "placeholder": "{{ certificate_holder_city_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "description_of_operations",
+      "original_value": "HVAC installation and plumbing services for Westfield Tower commercial renovation project at 500 South Grand Avenue, Los Angeles, CA.",
+      "category": "details",
+      "description": "Description of operations",
+      "all_variations": [
+        {
+          "text": "HVAC installation and plumbing services for Westfield Tower commercial renovation project at 500 South Grand Avenue, Los Angeles, CA.",
+          "placeholder": "{{ description_of_operations }}"
+        }
+      ]
+    },
+    {
+      "field_name": "authorized_representative_name",
+      "original_value": "Christine Delgado",
+      "category": "signatures",
+      "description": "Authorized representative",
+      "all_variations": [
+        {
+          "text": "Christine Delgado",
+          "placeholder": "{{ authorized_representative_name }}"
+        }
+      ]
+    }
+  ]
+}

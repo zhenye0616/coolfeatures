@@ -1,0 +1,143 @@
+{
+  "type": "object",
+  "required": [
+    "client",
+    "project",
+    "people",
+    "dates",
+    "financial"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "client": {
+      "type": "object",
+      "required": [
+        "client_company"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "client_company": {
+          "type": "string",
+          "description": "Client company"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "project_name",
+        "project_overview",
+        "target_audience",
+        "key_message",
+        "tone_and_style",
+        "competitors",
+        "success_metric_preorders",
+        "success_metric_impressions",
+        "success_metric_ctr",
+        "success_metric_visits"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "project_name": {
+          "type": "string",
+          "description": "Project name"
+        },
+        "project_overview": {
+          "type": "string",
+          "description": "Project overview"
+        },
+        "target_audience": {
+          "type": "string",
+          "description": "Target audience"
+        },
+        "key_message": {
+          "type": "string",
+          "description": "Key message"
+        },
+        "tone_and_style": {
+          "type": "string",
+          "description": "Tone and style"
+        },
+        "competitors": {
+          "type": "string",
+          "description": "Competitors"
+        },
+        "success_metric_preorders": {
+          "type": "string",
+          "description": "Pre-order target"
+        },
+        "success_metric_impressions": {
+          "type": "string",
+          "description": "Social impressions target"
+        },
+        "success_metric_ctr": {
+          "type": "string",
+          "description": "Email CTR target"
+        },
+        "success_metric_visits": {
+          "type": "string",
+          "description": "Landing page visits target"
+        }
+      }
+    },
+    "people": {
+      "type": "object",
+      "required": [
+        "prepared_by",
+        "approver_name",
+        "approver_title"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "prepared_by": {
+          "type": "string",
+          "description": "Prepared by"
+        },
+        "approver_name": {
+          "type": "string",
+          "description": "Approver name"
+        },
+        "approver_title": {
+          "type": "string",
+          "description": "Approver title"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "date",
+        "timeline_start",
+        "timeline_end"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "Brief date"
+        },
+        "timeline_start": {
+          "type": "string",
+          "description": "Timeline start"
+        },
+        "timeline_end": {
+          "type": "string",
+          "description": "Timeline end"
+        }
+      }
+    },
+    "financial": {
+      "type": "object",
+      "required": [
+        "budget"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "budget": {
+          "type": "string",
+          "description": "Budget"
+        }
+      }
+    }
+  }
+}

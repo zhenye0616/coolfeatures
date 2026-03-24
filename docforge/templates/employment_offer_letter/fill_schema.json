@@ -1,0 +1,172 @@
+{
+  "type": "object",
+  "required": [
+    "company",
+    "dates",
+    "candidate",
+    "position",
+    "compensation",
+    "hr"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": [
+        "company_name",
+        "company_address",
+        "company_city_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "Company name"
+        },
+        "company_address": {
+          "type": "string",
+          "description": "Company address line 1"
+        },
+        "company_city_state": {
+          "type": "string",
+          "description": "Company city/state/zip"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "letter_date",
+        "start_date",
+        "offer_expiration_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "letter_date": {
+          "type": "string",
+          "description": "Letter date"
+        },
+        "start_date": {
+          "type": "string",
+          "description": "Start date"
+        },
+        "offer_expiration_date": {
+          "type": "string",
+          "description": "Offer expiration date"
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "candidate_name",
+        "candidate_name_short",
+        "candidate_address",
+        "candidate_city_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "candidate_name": {
+          "type": "string",
+          "description": "Candidate name"
+        },
+        "candidate_name_short": {
+          "type": "string",
+          "description": "Short form/abbreviation for candidate name (in the original document this was 'Priya')"
+        },
+        "candidate_address": {
+          "type": "string",
+          "description": "Candidate address line 1"
+        },
+        "candidate_city_state": {
+          "type": "string",
+          "description": "Candidate city/state/zip"
+        }
+      }
+    },
+    "position": {
+      "type": "object",
+      "required": [
+        "job_title",
+        "department",
+        "reporting_to",
+        "employment_type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "job_title": {
+          "type": "string",
+          "description": "Job title"
+        },
+        "department": {
+          "type": "string",
+          "description": "Department"
+        },
+        "reporting_to": {
+          "type": "string",
+          "description": "Reports to"
+        },
+        "employment_type": {
+          "type": "string",
+          "description": "Employment type"
+        }
+      }
+    },
+    "compensation": {
+      "type": "object",
+      "required": [
+        "annual_salary",
+        "pay_frequency",
+        "company_match_pct",
+        "wellness_stipend",
+        "pto_days"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "annual_salary": {
+          "type": "string",
+          "description": "Annual salary"
+        },
+        "pay_frequency": {
+          "type": "string",
+          "description": "Pay frequency"
+        },
+        "company_match_pct": {
+          "type": "string",
+          "description": "401k company match percentage"
+        },
+        "wellness_stipend": {
+          "type": "string",
+          "description": "Annual wellness stipend amount"
+        },
+        "pto_days": {
+          "type": "string",
+          "description": "PTO days"
+        }
+      }
+    },
+    "hr": {
+      "type": "object",
+      "required": [
+        "hr_contact_name",
+        "hr_contact_title",
+        "hr_contact_email"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "hr_contact_name": {
+          "type": "string",
+          "description": "HR contact name"
+        },
+        "hr_contact_title": {
+          "type": "string",
+          "description": "HR contact title"
+        },
+        "hr_contact_email": {
+          "type": "string",
+          "description": "HR contact email"
+        }
+      }
+    }
+  }
+}

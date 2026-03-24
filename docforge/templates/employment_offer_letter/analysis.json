@@ -1,0 +1,266 @@
+{
+  "document_type": "Employment Offer Letter",
+  "document_description": "A formal job offer letter.",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Horizon Analytics, Inc.",
+      "category": "company",
+      "description": "Company name",
+      "all_variations": [
+        {
+          "text": "Horizon Analytics, Inc.",
+          "placeholder": "{{ company_name }}"
+        },
+        {
+          "text": "HORIZON ANALYTICS, INC.",
+          "placeholder": "{{ company_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "2200 Sand Hill Road, Suite 150",
+      "category": "company",
+      "description": "Company address line 1",
+      "all_variations": [
+        {
+          "text": "2200 Sand Hill Road, Suite 150",
+          "placeholder": "{{ company_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_city_state",
+      "original_value": "Menlo Park, CA 94025",
+      "category": "company",
+      "description": "Company city/state/zip",
+      "all_variations": [
+        {
+          "text": "Menlo Park, CA 94025",
+          "placeholder": "{{ company_city_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "letter_date",
+      "original_value": "February 5, 2026",
+      "category": "dates",
+      "description": "Letter date",
+      "all_variations": [
+        {
+          "text": "February 5, 2026",
+          "placeholder": "{{ letter_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "candidate_name",
+      "original_value": "Priya Sharma",
+      "category": "candidate",
+      "description": "Candidate name",
+      "all_variations": [
+        {
+          "text": "Priya Sharma",
+          "placeholder": "{{ candidate_name }}"
+        },
+        {
+          "text": "Priya",
+          "placeholder": "{{ candidate_name_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "candidate_address",
+      "original_value": "1487 Castro Street, Apt 3",
+      "category": "candidate",
+      "description": "Candidate address line 1",
+      "all_variations": [
+        {
+          "text": "1487 Castro Street, Apt 3",
+          "placeholder": "{{ candidate_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "candidate_city_state",
+      "original_value": "Mountain View, CA 94041",
+      "category": "candidate",
+      "description": "Candidate city/state/zip",
+      "all_variations": [
+        {
+          "text": "Mountain View, CA 94041",
+          "placeholder": "{{ candidate_city_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "job_title",
+      "original_value": "Senior Data Scientist",
+      "category": "position",
+      "description": "Job title",
+      "all_variations": [
+        {
+          "text": "Senior Data Scientist",
+          "placeholder": "{{ job_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "Product Analytics",
+      "category": "position",
+      "description": "Department",
+      "all_variations": [
+        {
+          "text": "Product Analytics",
+          "placeholder": "{{ department }}"
+        }
+      ]
+    },
+    {
+      "field_name": "reporting_to",
+      "original_value": "Dr. Laura Kim, VP of Data Science",
+      "category": "position",
+      "description": "Reports to",
+      "all_variations": [
+        {
+          "text": "Dr. Laura Kim, VP of Data Science",
+          "placeholder": "{{ reporting_to }}"
+        }
+      ]
+    },
+    {
+      "field_name": "start_date",
+      "original_value": "March 16, 2026",
+      "category": "dates",
+      "description": "Start date",
+      "all_variations": [
+        {
+          "text": "March 16, 2026",
+          "placeholder": "{{ start_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "employment_type",
+      "original_value": "Full-time, Exempt",
+      "category": "position",
+      "description": "Employment type",
+      "all_variations": [
+        {
+          "text": "Full-time, Exempt",
+          "placeholder": "{{ employment_type }}"
+        }
+      ]
+    },
+    {
+      "field_name": "annual_salary",
+      "original_value": "$165,000.00",
+      "category": "compensation",
+      "description": "Annual salary",
+      "all_variations": [
+        {
+          "text": "$165,000.00",
+          "placeholder": "{{ annual_salary }}"
+        }
+      ]
+    },
+    {
+      "field_name": "pay_frequency",
+      "original_value": "bi-weekly",
+      "category": "compensation",
+      "description": "Pay frequency",
+      "all_variations": [
+        {
+          "text": "bi-weekly",
+          "placeholder": "{{ pay_frequency }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_match_pct",
+      "original_value": "4%",
+      "category": "compensation",
+      "description": "401k company match percentage",
+      "all_variations": [
+        {
+          "text": "4%",
+          "placeholder": "{{ company_match_pct }}"
+        }
+      ]
+    },
+    {
+      "field_name": "wellness_stipend",
+      "original_value": "$1,500",
+      "category": "compensation",
+      "description": "Annual wellness stipend amount",
+      "all_variations": [
+        {
+          "text": "$1,500",
+          "placeholder": "{{ wellness_stipend }}"
+        }
+      ]
+    },
+    {
+      "field_name": "pto_days",
+      "original_value": "20 days paid time off plus 10 company holidays",
+      "category": "compensation",
+      "description": "PTO days",
+      "all_variations": [
+        {
+          "text": "20 days paid time off plus 10 company holidays",
+          "placeholder": "{{ pto_days }}"
+        }
+      ]
+    },
+    {
+      "field_name": "offer_expiration_date",
+      "original_value": "February 19, 2026",
+      "category": "dates",
+      "description": "Offer expiration date",
+      "all_variations": [
+        {
+          "text": "February 19, 2026",
+          "placeholder": "{{ offer_expiration_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "hr_contact_name",
+      "original_value": "Rachel Nguyen",
+      "category": "hr",
+      "description": "HR contact name",
+      "all_variations": [
+        {
+          "text": "Rachel Nguyen",
+          "placeholder": "{{ hr_contact_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "hr_contact_title",
+      "original_value": "Director of People Operations",
+      "category": "hr",
+      "description": "HR contact title",
+      "all_variations": [
+        {
+          "text": "Director of People Operations",
+          "placeholder": "{{ hr_contact_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "hr_contact_email",
+      "original_value": "rachel.nguyen@horizonanalytics.com",
+      "category": "hr",
+      "description": "HR contact email",
+      "all_variations": [
+        {
+          "text": "rachel.nguyen@horizonanalytics.com",
+          "placeholder": "{{ hr_contact_email }}"
+        }
+      ]
+    }
+  ]
+}

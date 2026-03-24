@@ -1,0 +1,246 @@
+{
+  "document_type": "Employee Written Warning Notice",
+  "document_description": "A formal disciplinary document.",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Summit Logistics, Inc.",
+      "category": "company",
+      "description": "Company name",
+      "all_variations": [
+        {
+          "text": "Summit Logistics, Inc.",
+          "placeholder": "{{ company_name }}"
+        },
+        {
+          "text": "SUMMIT LOGISTICS, INC.",
+          "placeholder": "{{ company_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_name",
+      "original_value": "Tyler J. Brooks",
+      "category": "employee",
+      "description": "Employee name",
+      "all_variations": [
+        {
+          "text": "Tyler J. Brooks",
+          "placeholder": "{{ employee_name }}"
+        },
+        {
+          "text": "Mr. Brooks",
+          "placeholder": "{{ employee_name_with_prefix }}"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_id",
+      "original_value": "EMP-20418",
+      "category": "employee",
+      "description": "Employee ID",
+      "all_variations": [
+        {
+          "text": "EMP-20418",
+          "placeholder": "{{ employee_id }}"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_title",
+      "original_value": "Warehouse Associate",
+      "category": "employee",
+      "description": "Employee title",
+      "all_variations": [
+        {
+          "text": "Warehouse Associate",
+          "placeholder": "{{ employee_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "Operations - Distribution Center",
+      "category": "employee",
+      "description": "Department",
+      "all_variations": [
+        {
+          "text": "Operations - Distribution Center",
+          "placeholder": "{{ department }}"
+        }
+      ]
+    },
+    {
+      "field_name": "manager_name",
+      "original_value": "Angela Moretti",
+      "category": "management",
+      "description": "Manager name",
+      "all_variations": [
+        {
+          "text": "Angela Moretti, Distribution Center Manager",
+          "placeholder": "{{ manager_name_with_title }}"
+        },
+        {
+          "text": "Angela Moretti",
+          "placeholder": "{{ manager_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "manager_title",
+      "original_value": "Distribution Center Manager",
+      "category": "management",
+      "description": "Manager title",
+      "all_variations": [
+        {
+          "text": "Distribution Center Manager",
+          "placeholder": "{{ manager_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "warning_date",
+      "original_value": "February 14, 2026",
+      "category": "dates",
+      "description": "Warning date",
+      "all_variations": [
+        {
+          "text": "February 14, 2026",
+          "placeholder": "{{ warning_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "warning_level",
+      "original_value": "Second Written Warning",
+      "category": "warning",
+      "description": "Warning level",
+      "all_variations": [
+        {
+          "text": "Second Written Warning",
+          "placeholder": "{{ warning_level }}"
+        }
+      ]
+    },
+    {
+      "field_name": "violation_type",
+      "original_value": "Attendance / Excessive Absenteeism",
+      "category": "warning",
+      "description": "Violation type",
+      "all_variations": [
+        {
+          "text": "Attendance / Excessive Absenteeism",
+          "placeholder": "{{ violation_type }}"
+        }
+      ]
+    },
+    {
+      "field_name": "incident_description",
+      "original_value": "Mr. Brooks failed to report for his scheduled shift on February 10, 2026, and did not notify his supervisor or call the absence hotline within the required one-hour window. This is the fourth unexcused absence in the past 60 days (prior absences: January 8, January 19, and January 28, 2026).",
+      "category": "warning",
+      "description": "Incident description",
+      "all_variations": [
+        {
+          "text": "Mr. Brooks failed to report for his scheduled shift on February 10, 2026, and did not notify his supervisor or call the absence hotline within the required one-hour window. This is the fourth unexcused absence in the past 60 days (prior absences: January 8, January 19, and January 28, 2026).",
+          "placeholder": "{{ incident_description }}"
+        }
+      ]
+    },
+    {
+      "field_name": "prev_warning_verbal_date",
+      "original_value": "January 12, 2026",
+      "category": "warning",
+      "description": "Date of verbal counseling",
+      "all_variations": [
+        {
+          "text": "January 12, 2026",
+          "placeholder": "{{ prev_warning_verbal_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "prev_warning_written_date",
+      "original_value": "January 22, 2026",
+      "category": "warning",
+      "description": "Date of first written warning",
+      "all_variations": [
+        {
+          "text": "January 22, 2026",
+          "placeholder": "{{ prev_warning_written_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_policy_reference",
+      "original_value": "Employee Handbook, Section 5.3 - Attendance Policy",
+      "category": "warning",
+      "description": "Policy reference",
+      "all_variations": [
+        {
+          "text": "Employee Handbook, Section 5.3 - Attendance Policy",
+          "placeholder": "{{ company_policy_reference }}"
+        }
+      ]
+    },
+    {
+      "field_name": "corrective_attendance_days",
+      "original_value": "90 days",
+      "category": "warning",
+      "description": "Perfect attendance requirement period",
+      "all_variations": [
+        {
+          "text": "90 days",
+          "placeholder": "{{ corrective_attendance_days }}"
+        }
+      ]
+    },
+    {
+      "field_name": "improvement_deadline",
+      "original_value": "May 15, 2026",
+      "category": "dates",
+      "description": "Improvement deadline",
+      "all_variations": [
+        {
+          "text": "May 15, 2026",
+          "placeholder": "{{ improvement_deadline }}"
+        }
+      ]
+    },
+    {
+      "field_name": "consequences_of_non_improvement",
+      "original_value": "Failure to comply with the corrective action plan may result in further disciplinary action, up to and including termination of employment.",
+      "category": "warning",
+      "description": "Consequences",
+      "all_variations": [
+        {
+          "text": "Failure to comply with the corrective action plan may result in further disciplinary action, up to and including termination of employment.",
+          "placeholder": "{{ consequences_of_non_improvement }}"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_acknowledgment_date",
+      "original_value": "February 14, 2026",
+      "category": "dates",
+      "description": "Acknowledgment date",
+      "all_variations": [
+        {
+          "text": "February 14, 2026",
+          "placeholder": "{{ employee_acknowledgment_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "hr_representative_name",
+      "original_value": "Jessica Huang, HR Generalist",
+      "category": "management",
+      "description": "HR representative",
+      "all_variations": [
+        {
+          "text": "Jessica Huang, HR Generalist",
+          "placeholder": "{{ hr_representative_name }}"
+        }
+      ]
+    }
+  ]
+}

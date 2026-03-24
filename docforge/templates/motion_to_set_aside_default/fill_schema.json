@@ -1,0 +1,211 @@
+{
+  "type": "object",
+  "required": [
+    "attorney",
+    "addresses",
+    "parties",
+    "case_info",
+    "court",
+    "dates",
+    "people"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "attorney": {
+      "type": "object",
+      "required": [
+        "attorney_name",
+        "attorney_sbn",
+        "attorney_email",
+        "law_firm_name",
+        "law_firm_phone"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attorney_name": {
+          "type": "string",
+          "description": "Name of the attorney representing the defendant"
+        },
+        "attorney_sbn": {
+          "type": "string",
+          "description": "State Bar Number of the attorney"
+        },
+        "attorney_email": {
+          "type": "string",
+          "description": "Email address of the attorney"
+        },
+        "law_firm_name": {
+          "type": "string",
+          "description": "Name of the law firm"
+        },
+        "law_firm_phone": {
+          "type": "string",
+          "description": "Phone number of the law firm"
+        }
+      }
+    },
+    "addresses": {
+      "type": "object",
+      "required": [
+        "law_firm_address",
+        "court_address",
+        "old_business_address",
+        "old_business_address_short",
+        "new_business_address",
+        "new_business_address_short"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "law_firm_address": {
+          "type": "string",
+          "description": "Address of the law firm"
+        },
+        "court_address": {
+          "type": "string",
+          "description": "Address of the courthouse"
+        },
+        "old_business_address": {
+          "type": "string",
+          "description": "Previous business address of defendant"
+        },
+        "old_business_address_short": {
+          "type": "string",
+          "description": "Short form/abbreviation for previous business address of defendant (in the original document this was '1942 Sabre Street')"
+        },
+        "new_business_address": {
+          "type": "string",
+          "description": "Current business address of defendant"
+        },
+        "new_business_address_short": {
+          "type": "string",
+          "description": "Short form/abbreviation for current business address of defendant (in the original document this was '648 Toomey Terrace')"
+        }
+      }
+    },
+    "parties": {
+      "type": "object",
+      "required": [
+        "plaintiff_name",
+        "plaintiff_name_short",
+        "defendant_name",
+        "defendant_name_short"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "plaintiff_name": {
+          "type": "string",
+          "description": "Name of the plaintiff company"
+        },
+        "plaintiff_name_short": {
+          "type": "string",
+          "description": "Short form/abbreviation for name of the plaintiff company (in the original document this was 'ASP')"
+        },
+        "defendant_name": {
+          "type": "string",
+          "description": "Name of the defendant company"
+        },
+        "defendant_name_short": {
+          "type": "string",
+          "description": "Short form/abbreviation for name of the defendant company (in the original document this was 'GSO')"
+        }
+      }
+    },
+    "case_info": {
+      "type": "object",
+      "required": [
+        "case_number",
+        "reservation_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "case_number": {
+          "type": "string",
+          "description": "Court case number"
+        },
+        "reservation_id": {
+          "type": "string",
+          "description": "Court hearing reservation ID number"
+        }
+      }
+    },
+    "court": {
+      "type": "object",
+      "required": [
+        "judge_name",
+        "department"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "judge_name": {
+          "type": "string",
+          "description": "Name of the presiding judge"
+        },
+        "department": {
+          "type": "string",
+          "description": "Court department number"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "hearing_date",
+        "hearing_time",
+        "default_entry_date",
+        "motion_date",
+        "lease_end_date",
+        "equipment_removal_date",
+        "service_date",
+        "action_filed_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "hearing_date": {
+          "type": "string",
+          "description": "Date of the motion hearing"
+        },
+        "hearing_time": {
+          "type": "string",
+          "description": "Time of the motion hearing"
+        },
+        "default_entry_date": {
+          "type": "string",
+          "description": "Date when default was entered"
+        },
+        "motion_date": {
+          "type": "string",
+          "description": "Date the motion was filed"
+        },
+        "lease_end_date": {
+          "type": "string",
+          "description": "Date when defendant's lease at old address ended"
+        },
+        "equipment_removal_date": {
+          "type": "string",
+          "description": "Date when defendant's equipment was removed from old address"
+        },
+        "service_date": {
+          "type": "string",
+          "description": "Date when service was attempted"
+        },
+        "action_filed_date": {
+          "type": "string",
+          "description": "Date when the original action was filed"
+        }
+      }
+    },
+    "people": {
+      "type": "object",
+      "required": [
+        "declarant_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "declarant_name": {
+          "type": "string",
+          "description": "Name of the person providing declaration"
+        }
+      }
+    }
+  }
+}

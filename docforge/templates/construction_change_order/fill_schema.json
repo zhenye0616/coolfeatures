@@ -1,0 +1,152 @@
+{
+  "type": "object",
+  "required": [
+    "project",
+    "parties",
+    "order",
+    "dates",
+    "financial",
+    "signatures"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": [
+        "project_name",
+        "project_location"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "project_name": {
+          "type": "string",
+          "description": "Project name"
+        },
+        "project_location": {
+          "type": "string",
+          "description": "Project location"
+        }
+      }
+    },
+    "parties": {
+      "type": "object",
+      "required": [
+        "owner_name",
+        "contractor_name",
+        "architect_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "owner_name": {
+          "type": "string",
+          "description": "Owner name"
+        },
+        "contractor_name": {
+          "type": "string",
+          "description": "Contractor name"
+        },
+        "architect_name": {
+          "type": "string",
+          "description": "Architect name"
+        }
+      }
+    },
+    "order": {
+      "type": "object",
+      "required": [
+        "change_order_number"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "change_order_number": {
+          "type": "string",
+          "description": "Change order number"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "original_contract_date",
+        "change_order_date",
+        "original_completion_date",
+        "new_completion_date",
+        "time_extension_days"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "original_contract_date": {
+          "type": "string",
+          "description": "Original contract date"
+        },
+        "change_order_date": {
+          "type": "string",
+          "description": "Change order date"
+        },
+        "original_completion_date": {
+          "type": "string",
+          "description": "Original completion date"
+        },
+        "new_completion_date": {
+          "type": "string",
+          "description": "New completion date"
+        },
+        "time_extension_days": {
+          "type": "string",
+          "description": "Time extension days"
+        }
+      }
+    },
+    "financial": {
+      "type": "object",
+      "required": [
+        "net_change_amount",
+        "original_contract_sum",
+        "previous_approved_changes",
+        "new_contract_sum"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "net_change_amount": {
+          "type": "string",
+          "description": "Net change amount"
+        },
+        "original_contract_sum": {
+          "type": "string",
+          "description": "Original contract sum"
+        },
+        "previous_approved_changes": {
+          "type": "string",
+          "description": "Previous approved changes"
+        },
+        "new_contract_sum": {
+          "type": "string",
+          "description": "New contract sum"
+        }
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "owner_signature_name",
+        "contractor_signature_name",
+        "architect_signature_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "owner_signature_name": {
+          "type": "string",
+          "description": "Owner signatory"
+        },
+        "contractor_signature_name": {
+          "type": "string",
+          "description": "Contractor signatory"
+        },
+        "architect_signature_name": {
+          "type": "string",
+          "description": "Architect signatory"
+        }
+      }
+    }
+  }
+}

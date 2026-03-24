@@ -1,0 +1,199 @@
+{
+  "type": "object",
+  "required": [
+    "certificate",
+    "producer",
+    "insured",
+    "insurer",
+    "policy",
+    "limits",
+    "holder",
+    "details",
+    "signatures"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "certificate": {
+      "type": "object",
+      "required": [
+        "certificate_date",
+        "certificate_number"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "certificate_date": {
+          "type": "string",
+          "description": "Certificate date"
+        },
+        "certificate_number": {
+          "type": "string",
+          "description": "Certificate number"
+        }
+      }
+    },
+    "producer": {
+      "type": "object",
+      "required": [
+        "producer_name",
+        "producer_address",
+        "producer_city_state",
+        "producer_phone"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "producer_name": {
+          "type": "string",
+          "description": "Producer/agent name"
+        },
+        "producer_address": {
+          "type": "string",
+          "description": "Producer address line 1"
+        },
+        "producer_city_state": {
+          "type": "string",
+          "description": "Producer city/state/zip"
+        },
+        "producer_phone": {
+          "type": "string",
+          "description": "Producer phone"
+        }
+      }
+    },
+    "insured": {
+      "type": "object",
+      "required": [
+        "insured_name",
+        "insured_address",
+        "insured_city_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "insured_name": {
+          "type": "string",
+          "description": "Insured company name"
+        },
+        "insured_address": {
+          "type": "string",
+          "description": "Insured address line 1"
+        },
+        "insured_city_state": {
+          "type": "string",
+          "description": "Insured city/state/zip"
+        }
+      }
+    },
+    "insurer": {
+      "type": "object",
+      "required": [
+        "insurer_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "insurer_name": {
+          "type": "string",
+          "description": "Insurer name"
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_number",
+        "policy_effective_date",
+        "policy_expiration_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "policy_number": {
+          "type": "string",
+          "description": "Policy number"
+        },
+        "policy_effective_date": {
+          "type": "string",
+          "description": "Policy effective date"
+        },
+        "policy_expiration_date": {
+          "type": "string",
+          "description": "Policy expiration date"
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "required": [
+        "general_liability_limit",
+        "umbrella_limit",
+        "workers_comp_limit",
+        "auto_liability_limit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "general_liability_limit": {
+          "type": "string",
+          "description": "General liability limit"
+        },
+        "umbrella_limit": {
+          "type": "string",
+          "description": "Umbrella liability limit"
+        },
+        "workers_comp_limit": {
+          "type": "string",
+          "description": "Workers comp limit"
+        },
+        "auto_liability_limit": {
+          "type": "string",
+          "description": "Auto liability limit"
+        }
+      }
+    },
+    "holder": {
+      "type": "object",
+      "required": [
+        "certificate_holder_name",
+        "certificate_holder_address",
+        "certificate_holder_city_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "certificate_holder_name": {
+          "type": "string",
+          "description": "Certificate holder name"
+        },
+        "certificate_holder_address": {
+          "type": "string",
+          "description": "Certificate holder address line 1"
+        },
+        "certificate_holder_city_state": {
+          "type": "string",
+          "description": "Certificate holder city/state/zip"
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "required": [
+        "description_of_operations"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "description_of_operations": {
+          "type": "string",
+          "description": "Description of operations"
+        }
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "authorized_representative_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "authorized_representative_name": {
+          "type": "string",
+          "description": "Authorized representative"
+        }
+      }
+    }
+  }
+}

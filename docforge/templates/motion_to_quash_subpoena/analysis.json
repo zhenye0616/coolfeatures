@@ -1,0 +1,494 @@
+{
+  "document_type": "Motion to Quash Deposition Subpoena for Production of Business Records",
+  "document_description": "A motion to quash deposition subpoena for production of business records in a civil lawsuit involving a software license agreement dispute. The document includes notice of motion, memorandum of points and authorities, legal arguments regarding privacy rights, particularization requirements, and request for monetary sanctions.",
+  "fields": [
+    {
+      "field_name": "attorney_name",
+      "original_value": "Pavel Kolmogorov",
+      "category": "attorney",
+      "description": "Name of the attorney representing plaintiff and cross-defendant",
+      "all_variations": [
+        {
+          "text": "Pavel Kolmogorov",
+          "placeholder": "{{ attorney_name }}"
+        },
+        {
+          "text": "Kolmogorov",
+          "placeholder": "{{ attorney_name_lastname }}"
+        }
+      ]
+    },
+    {
+      "field_name": "attorney_sbn",
+      "original_value": "321018",
+      "category": "attorney",
+      "description": "State Bar Number of the attorney",
+      "all_variations": [
+        {
+          "text": "SBN: 321018",
+          "placeholder": "{{ attorney_sbn_with_prefix }}"
+        },
+        {
+          "text": "321018",
+          "placeholder": "{{ attorney_sbn }}"
+        }
+      ]
+    },
+    {
+      "field_name": "attorney_email",
+      "original_value": "pavel@kolmogorovlaw.com",
+      "category": "attorney",
+      "description": "Email address of the attorney",
+      "all_variations": [
+        {
+          "text": "pavel@kolmogorovlaw.com",
+          "placeholder": "{{ attorney_email }}"
+        }
+      ]
+    },
+    {
+      "field_name": "law_firm_name",
+      "original_value": "KOLMOGOROV LAW, P.C.",
+      "category": "attorney",
+      "description": "Name of the law firm",
+      "all_variations": [
+        {
+          "text": "KOLMOGOROV LAW, P.C.",
+          "placeholder": "{{ law_firm_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "law_firm_address",
+      "original_value": "327 Magnet, Irvine, CA 92618",
+      "category": "attorney",
+      "description": "Address of the law firm",
+      "all_variations": [
+        {
+          "text": "327 Magnet, Irvine, CA 92618",
+          "placeholder": "{{ law_firm_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "attorney_phone",
+      "original_value": "(909) 235-6420",
+      "category": "attorney",
+      "description": "Phone number of the attorney",
+      "all_variations": [
+        {
+          "text": "(909) 235-6420",
+          "placeholder": "{{ attorney_phone }}"
+        }
+      ]
+    },
+    {
+      "field_name": "plaintiff_name",
+      "original_value": "IVAN PETRUSHIN",
+      "category": "parties",
+      "description": "Name of the plaintiff",
+      "all_variations": [
+        {
+          "text": "IVAN PETRUSHIN",
+          "placeholder": "{{ plaintiff_name_upper }}"
+        },
+        {
+          "text": "Ivan Petrushin",
+          "placeholder": "{{ plaintiff_name }}"
+        },
+        {
+          "text": "Petrushin",
+          "placeholder": "{{ plaintiff_name_lastname }}"
+        }
+      ]
+    },
+    {
+      "field_name": "plaintiff_entity_type",
+      "original_value": "an individual",
+      "category": "parties",
+      "description": "Entity type of the plaintiff",
+      "all_variations": [
+        {
+          "text": "an individual",
+          "placeholder": "{{ plaintiff_entity_type }}"
+        }
+      ]
+    },
+    {
+      "field_name": "defendant_name",
+      "original_value": "RICARDO JONES",
+      "category": "parties",
+      "description": "Name of the defendant",
+      "all_variations": [
+        {
+          "text": "RICARDO JONES",
+          "placeholder": "{{ defendant_name_upper }}"
+        },
+        {
+          "text": "Ricardo Jones",
+          "placeholder": "{{ defendant_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "defendant_entity_type",
+      "original_value": "an individual",
+      "category": "parties",
+      "description": "Entity type of the defendant",
+      "all_variations": [
+        {
+          "text": "an individual",
+          "placeholder": "{{ defendant_entity_type }}"
+        }
+      ]
+    },
+    {
+      "field_name": "cross_defendant_name",
+      "original_value": "Premium Lifestyle, Inc.",
+      "category": "parties",
+      "description": "Name of the cross-defendant company",
+      "all_variations": [
+        {
+          "text": "Premium Lifestyle, Inc.",
+          "placeholder": "{{ cross_defendant_name }}"
+        },
+        {
+          "text": "PLI",
+          "placeholder": "{{ cross_defendant_name_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "case_number",
+      "original_value": "37-2024-00017065-CU-FR-CTL",
+      "category": "case_details",
+      "description": "Case number assigned to the lawsuit",
+      "all_variations": [
+        {
+          "text": "37-2024-00017065-CU-FR-CTL",
+          "placeholder": "{{ case_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "judge_name",
+      "original_value": "Blaine K. Bowman",
+      "category": "court_info",
+      "description": "Name of the assigned judge",
+      "all_variations": [
+        {
+          "text": "Hon. Blaine K. Bowman",
+          "placeholder": "{{ judge_name_with_hon }}"
+        },
+        {
+          "text": "Blaine K. Bowman",
+          "placeholder": "{{ judge_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "C-74",
+      "category": "court_info",
+      "description": "Court department number",
+      "all_variations": [
+        {
+          "text": "C-74",
+          "placeholder": "{{ department }}"
+        }
+      ]
+    },
+    {
+      "field_name": "action_filed_date",
+      "original_value": "June 21, 2024",
+      "category": "dates",
+      "description": "Date when the action was filed",
+      "all_variations": [
+        {
+          "text": "June 21, 2024",
+          "placeholder": "{{ action_filed_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "court_name",
+      "original_value": "SUPERIOR COURT OF THE STATE OF CALIFORNIA",
+      "category": "court_info",
+      "description": "Name of the court",
+      "all_variations": [
+        {
+          "text": "SUPERIOR COURT OF THE STATE OF CALIFORNIA",
+          "placeholder": "{{ court_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "county_name",
+      "original_value": "SAN DIEGO COUNTY",
+      "category": "court_info",
+      "description": "County where the court is located",
+      "all_variations": [
+        {
+          "text": "SAN DIEGO COUNTY",
+          "placeholder": "{{ county_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "court_address",
+      "original_value": "330 West Broadway, San Diego, California 92101",
+      "category": "addresses",
+      "description": "Address of the court",
+      "all_variations": [
+        {
+          "text": "330 West Broadway, San Diego, California 92101",
+          "placeholder": "{{ court_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "defendant_evenson_name",
+      "original_value": "Jonah Evenson",
+      "category": "parties",
+      "description": "Name of defendant Jonah Evenson (also known as Ricardo Jones)",
+      "all_variations": [
+        {
+          "text": "Jonah Evenson",
+          "placeholder": "{{ defendant_evenson_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "subpoena_issue_date",
+      "original_value": "March 5, 2026",
+      "category": "dates",
+      "description": "Date when the deposition subpoena was issued",
+      "all_variations": [
+        {
+          "text": "March 5, 2026",
+          "placeholder": "{{ subpoena_issue_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "bank_name",
+      "original_value": "JPMorgan Chase Bank, N.A.",
+      "category": "entities",
+      "description": "Name of the bank served with the subpoena",
+      "all_variations": [
+        {
+          "text": "JPMorgan Chase Bank, N.A.",
+          "placeholder": "{{ bank_name }}"
+        },
+        {
+          "text": "Chase",
+          "placeholder": "{{ bank_name_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "records_period_start",
+      "original_value": "June 28, 2021",
+      "category": "dates",
+      "description": "Start date for the period of banking records requested",
+      "all_variations": [
+        {
+          "text": "June 28, 2021",
+          "placeholder": "{{ records_period_start }}"
+        }
+      ]
+    },
+    {
+      "field_name": "records_period_end",
+      "original_value": "June 21, 2023",
+      "category": "dates",
+      "description": "End date for the period of banking records requested",
+      "all_variations": [
+        {
+          "text": "June 21, 2023",
+          "placeholder": "{{ records_period_end }}"
+        }
+      ]
+    },
+    {
+      "field_name": "defendant_attorney_name",
+      "original_value": "Micah L. Bailey",
+      "category": "attorney",
+      "description": "Name of defendant's attorney",
+      "all_variations": [
+        {
+          "text": "Micah L. Bailey",
+          "placeholder": "{{ defendant_attorney_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "sanctions_amount",
+      "original_value": "$3,060.00",
+      "category": "financial",
+      "description": "Amount of monetary sanctions requested",
+      "all_variations": [
+        {
+          "text": "$3,060.00",
+          "placeholder": "{{ sanctions_amount }}"
+        }
+      ]
+    },
+    {
+      "field_name": "defendant_law_firm",
+      "original_value": "Purdy & Bailey, LLP",
+      "category": "attorney",
+      "description": "Name of defendant's law firm",
+      "all_variations": [
+        {
+          "text": "Purdy & Bailey, LLP",
+          "placeholder": "{{ defendant_law_firm }}"
+        }
+      ]
+    },
+    {
+      "field_name": "bank_address",
+      "original_value": "3830 Valley Centre Drive, Suite 707, San Diego, California 92130",
+      "category": "addresses",
+      "description": "Address of the bank's custodian of records",
+      "all_variations": [
+        {
+          "text": "3830 Valley Centre Drive, Suite 707, San Diego, California 92130",
+          "placeholder": "{{ bank_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "production_date",
+      "original_value": "April 6, 2026",
+      "category": "dates",
+      "description": "Date when records are commanded to be produced",
+      "all_variations": [
+        {
+          "text": "April 6, 2026",
+          "placeholder": "{{ production_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "production_time",
+      "original_value": "10:00 a.m.",
+      "category": "dates",
+      "description": "Time when records are commanded to be produced",
+      "all_variations": [
+        {
+          "text": "10:00 a.m.",
+          "placeholder": "{{ production_time }}"
+        }
+      ]
+    },
+    {
+      "field_name": "vanguard_legal",
+      "original_value": "Vanguard Legal Solutions, Inc.",
+      "category": "entities",
+      "description": "Name of the legal solutions company receiving the records",
+      "all_variations": [
+        {
+          "text": "Vanguard Legal Solutions, Inc.",
+          "placeholder": "{{ vanguard_legal }}"
+        }
+      ]
+    },
+    {
+      "field_name": "account_number_ending",
+      "original_value": "695506159",
+      "category": "financial",
+      "description": "Ending digits of the bank account number",
+      "all_variations": [
+        {
+          "text": "695506159",
+          "placeholder": "{{ account_number_ending }}"
+        }
+      ]
+    },
+    {
+      "field_name": "consumer_notice_date",
+      "original_value": "March 3, 2026",
+      "category": "dates",
+      "description": "Date when consumer notice was mailed",
+      "all_variations": [
+        {
+          "text": "March 3, 2026",
+          "placeholder": "{{ consumer_notice_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "meet_confer_date",
+      "original_value": "March 10, 2026",
+      "category": "dates",
+      "description": "Date when meet and confer letter was sent",
+      "all_variations": [
+        {
+          "text": "March 10, 2026",
+          "placeholder": "{{ meet_confer_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "withdrawal_deadline",
+      "original_value": "March 20, 2026",
+      "category": "dates",
+      "description": "Deadline given for withdrawal of subpoena",
+      "all_variations": [
+        {
+          "text": "March 20, 2026",
+          "placeholder": "{{ withdrawal_deadline }}"
+        }
+      ]
+    },
+    {
+      "field_name": "rfj_productions",
+      "original_value": "RFJ Productions, LLC",
+      "category": "entities",
+      "description": "Name of the LLC involved in the software license agreement",
+      "all_variations": [
+        {
+          "text": "RFJ Productions, LLC",
+          "placeholder": "{{ rfj_productions }}"
+        }
+      ]
+    },
+    {
+      "field_name": "attorney_hours",
+      "original_value": "5.1 hours",
+      "category": "financial",
+      "description": "Number of hours spent by attorney preparing motion",
+      "all_variations": [
+        {
+          "text": "5.1 hours",
+          "placeholder": "{{ attorney_hours }}"
+        }
+      ]
+    },
+    {
+      "field_name": "attorney_rate",
+      "original_value": "$600 per hour",
+      "category": "financial",
+      "description": "Hourly rate of the attorney",
+      "all_variations": [
+        {
+          "text": "$600 per hour",
+          "placeholder": "{{ attorney_rate }}"
+        }
+      ]
+    },
+    {
+      "field_name": "motion_date",
+      "original_value": "March 23, 2026",
+      "category": "dates",
+      "description": "Date when the motion was filed",
+      "all_variations": [
+        {
+          "text": "March 23, 2026",
+          "placeholder": "{{ motion_date }}"
+        }
+      ]
+    }
+  ]
+}

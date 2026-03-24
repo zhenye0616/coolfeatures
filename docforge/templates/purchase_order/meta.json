@@ -1,0 +1,8 @@
+{
+  "name": "Purchase Order",
+  "document_type": "Purchase Order",
+  "description": "A government purchase order.",
+  "field_count": 20,
+  "placeholder_count": 21,
+  "created": "2026-03-24T13:27:05.146675"
+}

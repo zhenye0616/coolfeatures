@@ -1,0 +1,8 @@
+{
+  "name": "Payment Receipt",
+  "document_type": "Payment Receipt",
+  "description": "A payment receipt confirming transaction.",
+  "field_count": 14,
+  "placeholder_count": 14,
+  "created": "2026-03-24T13:27:05.327266"
+}

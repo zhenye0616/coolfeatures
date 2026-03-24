@@ -1,0 +1,222 @@
+{
+  "document_type": "Construction Change Order",
+  "document_description": "A change order modifying a construction contract.",
+  "fields": [
+    {
+      "field_name": "project_name",
+      "original_value": "Riverside Commons Mixed-Use Development",
+      "category": "project",
+      "description": "Project name",
+      "all_variations": [
+        {
+          "text": "Riverside Commons Mixed-Use Development",
+          "placeholder": "{{ project_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "project_location",
+      "original_value": "1400 River Road, Austin, TX 78702",
+      "category": "project",
+      "description": "Project location",
+      "all_variations": [
+        {
+          "text": "1400 River Road, Austin, TX 78702",
+          "placeholder": "{{ project_location }}"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_name",
+      "original_value": "Lone Star Development Partners, LP",
+      "category": "parties",
+      "description": "Owner name",
+      "all_variations": [
+        {
+          "text": "Lone Star Development Partners, LP",
+          "placeholder": "{{ owner_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_name",
+      "original_value": "Brazos Building Group, Inc.",
+      "category": "parties",
+      "description": "Contractor name",
+      "all_variations": [
+        {
+          "text": "Brazos Building Group, Inc.",
+          "placeholder": "{{ contractor_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "architect_name",
+      "original_value": "Sterling Architects, PLLC",
+      "category": "parties",
+      "description": "Architect name",
+      "all_variations": [
+        {
+          "text": "Sterling Architects, PLLC",
+          "placeholder": "{{ architect_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "change_order_number",
+      "original_value": "CO-007",
+      "category": "order",
+      "description": "Change order number",
+      "all_variations": [
+        {
+          "text": "CO-007",
+          "placeholder": "{{ change_order_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "original_contract_date",
+      "original_value": "June 15, 2025",
+      "category": "dates",
+      "description": "Original contract date",
+      "all_variations": [
+        {
+          "text": "June 15, 2025",
+          "placeholder": "{{ original_contract_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "change_order_date",
+      "original_value": "February 12, 2026",
+      "category": "dates",
+      "description": "Change order date",
+      "all_variations": [
+        {
+          "text": "February 12, 2026",
+          "placeholder": "{{ change_order_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "net_change_amount",
+      "original_value": "$68,500.00",
+      "category": "financial",
+      "description": "Net change amount",
+      "all_variations": [
+        {
+          "text": "$68,500.00",
+          "placeholder": "{{ net_change_amount }}"
+        }
+      ]
+    },
+    {
+      "field_name": "original_contract_sum",
+      "original_value": "$4,250,000.00",
+      "category": "financial",
+      "description": "Original contract sum",
+      "all_variations": [
+        {
+          "text": "$4,250,000.00",
+          "placeholder": "{{ original_contract_sum }}"
+        }
+      ]
+    },
+    {
+      "field_name": "previous_approved_changes",
+      "original_value": "$32,000.00",
+      "category": "financial",
+      "description": "Previous approved changes",
+      "all_variations": [
+        {
+          "text": "$32,000.00",
+          "placeholder": "{{ previous_approved_changes }}"
+        }
+      ]
+    },
+    {
+      "field_name": "new_contract_sum",
+      "original_value": "$4,350,500.00",
+      "category": "financial",
+      "description": "New contract sum",
+      "all_variations": [
+        {
+          "text": "$4,350,500.00",
+          "placeholder": "{{ new_contract_sum }}"
+        }
+      ]
+    },
+    {
+      "field_name": "original_completion_date",
+      "original_value": "November 30, 2026",
+      "category": "dates",
+      "description": "Original completion date",
+      "all_variations": [
+        {
+          "text": "November 30, 2026",
+          "placeholder": "{{ original_completion_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "new_completion_date",
+      "original_value": "December 21, 2026",
+      "category": "dates",
+      "description": "New completion date",
+      "all_variations": [
+        {
+          "text": "December 21, 2026",
+          "placeholder": "{{ new_completion_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "time_extension_days",
+      "original_value": "21",
+      "category": "dates",
+      "description": "Time extension days",
+      "all_variations": [
+        {
+          "text": "21",
+          "placeholder": "{{ time_extension_days }}"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_signature_name",
+      "original_value": "Richard Cavanaugh",
+      "category": "signatures",
+      "description": "Owner signatory",
+      "all_variations": [
+        {
+          "text": "Richard Cavanaugh",
+          "placeholder": "{{ owner_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_signature_name",
+      "original_value": "Miguel Santos",
+      "category": "signatures",
+      "description": "Contractor signatory",
+      "all_variations": [
+        {
+          "text": "Miguel Santos",
+          "placeholder": "{{ contractor_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "architect_signature_name",
+      "original_value": "Diana Wexler",
+      "category": "signatures",
+      "description": "Architect signatory",
+      "all_variations": [
+        {
+          "text": "Diana Wexler",
+          "placeholder": "{{ architect_signature_name }}"
+        }
+      ]
+    }
+  ]
+}

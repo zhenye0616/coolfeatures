@@ -1,0 +1,180 @@
+{
+  "type": "object",
+  "required": [
+    "issuer",
+    "order",
+    "dates",
+    "vendor",
+    "shipping",
+    "totals",
+    "payment",
+    "signatures"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "issuer": {
+      "type": "object",
+      "required": [
+        "issuing_department",
+        "issuing_org_short",
+        "issuing_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "issuing_department": {
+          "type": "string",
+          "description": "Issuing department name"
+        },
+        "issuing_org_short": {
+          "type": "string",
+          "description": "Issuing organization short name"
+        },
+        "issuing_address": {
+          "type": "string",
+          "description": "Issuing address"
+        }
+      }
+    },
+    "order": {
+      "type": "object",
+      "required": [
+        "purchase_order_number"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "purchase_order_number": {
+          "type": "string",
+          "description": "PO number"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "po_date",
+        "delivery_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "po_date": {
+          "type": "string",
+          "description": "PO date"
+        },
+        "delivery_date": {
+          "type": "string",
+          "description": "Delivery date"
+        }
+      }
+    },
+    "vendor": {
+      "type": "object",
+      "required": [
+        "vendor_name",
+        "vendor_address",
+        "vendor_city_state",
+        "vendor_contact"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "vendor_name": {
+          "type": "string",
+          "description": "Vendor name"
+        },
+        "vendor_address": {
+          "type": "string",
+          "description": "Vendor address line 1"
+        },
+        "vendor_city_state": {
+          "type": "string",
+          "description": "Vendor city/state/zip"
+        },
+        "vendor_contact": {
+          "type": "string",
+          "description": "Vendor contact"
+        }
+      }
+    },
+    "shipping": {
+      "type": "object",
+      "required": [
+        "ship_to_name",
+        "ship_to_street",
+        "ship_to_city_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ship_to_name": {
+          "type": "string",
+          "description": "Ship to location name"
+        },
+        "ship_to_street": {
+          "type": "string",
+          "description": "Ship to street"
+        },
+        "ship_to_city_state": {
+          "type": "string",
+          "description": "Ship to city/state/zip"
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "required": [
+        "subtotal",
+        "tax",
+        "shipping_cost",
+        "total"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subtotal": {
+          "type": "string",
+          "description": "Subtotal"
+        },
+        "tax": {
+          "type": "string",
+          "description": "Tax amount"
+        },
+        "shipping_cost": {
+          "type": "string",
+          "description": "Shipping cost"
+        },
+        "total": {
+          "type": "string",
+          "description": "Grand total"
+        }
+      }
+    },
+    "payment": {
+      "type": "object",
+      "required": [
+        "payment_terms"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "payment_terms": {
+          "type": "string",
+          "description": "Payment terms"
+        }
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "authorized_by_name",
+        "authorized_by_title"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "authorized_by_name": {
+          "type": "string",
+          "description": "Authorized by"
+        },
+        "authorized_by_title": {
+          "type": "string",
+          "description": "Authorized title"
+        }
+      }
+    }
+  }
+}

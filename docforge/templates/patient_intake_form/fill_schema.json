@@ -1,0 +1,172 @@
+{
+  "type": "object",
+  "required": [
+    "practice",
+    "patient",
+    "emergency",
+    "insurance",
+    "medical",
+    "dates"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "practice": {
+      "type": "object",
+      "required": [
+        "practice_name",
+        "practice_address",
+        "practice_phone"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "practice_name": {
+          "type": "string",
+          "description": "Name of medical practice"
+        },
+        "practice_address": {
+          "type": "string",
+          "description": "Address of medical practice"
+        },
+        "practice_phone": {
+          "type": "string",
+          "description": "Phone of medical practice"
+        }
+      }
+    },
+    "patient": {
+      "type": "object",
+      "required": [
+        "patient_full_name",
+        "date_of_birth",
+        "gender",
+        "patient_address",
+        "phone_number",
+        "email"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "patient_full_name": {
+          "type": "string",
+          "description": "Full name of patient"
+        },
+        "date_of_birth": {
+          "type": "string",
+          "description": "Patient date of birth"
+        },
+        "gender": {
+          "type": "string",
+          "description": "Patient gender"
+        },
+        "patient_address": {
+          "type": "string",
+          "description": "Patient home address"
+        },
+        "phone_number": {
+          "type": "string",
+          "description": "Patient phone number"
+        },
+        "email": {
+          "type": "string",
+          "description": "Patient email"
+        }
+      }
+    },
+    "emergency": {
+      "type": "object",
+      "required": [
+        "emergency_contact_name",
+        "emergency_contact_phone",
+        "emergency_contact_relationship"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "emergency_contact_name": {
+          "type": "string",
+          "description": "Emergency contact name"
+        },
+        "emergency_contact_phone": {
+          "type": "string",
+          "description": "Emergency contact phone"
+        },
+        "emergency_contact_relationship": {
+          "type": "string",
+          "description": "Emergency contact relationship"
+        }
+      }
+    },
+    "insurance": {
+      "type": "object",
+      "required": [
+        "insurance_provider",
+        "insurance_policy_number",
+        "insurance_group_number",
+        "policyholder_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "insurance_provider": {
+          "type": "string",
+          "description": "Insurance provider name"
+        },
+        "insurance_policy_number": {
+          "type": "string",
+          "description": "Insurance policy number"
+        },
+        "insurance_group_number": {
+          "type": "string",
+          "description": "Insurance group number"
+        },
+        "policyholder_name": {
+          "type": "string",
+          "description": "Policyholder name"
+        }
+      }
+    },
+    "medical": {
+      "type": "object",
+      "required": [
+        "primary_care_physician",
+        "allergies",
+        "current_medications",
+        "medical_conditions",
+        "reason_for_visit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "primary_care_physician": {
+          "type": "string",
+          "description": "Primary care physician"
+        },
+        "allergies": {
+          "type": "string",
+          "description": "Known allergies"
+        },
+        "current_medications": {
+          "type": "string",
+          "description": "Current medications"
+        },
+        "medical_conditions": {
+          "type": "string",
+          "description": "Existing medical conditions"
+        },
+        "reason_for_visit": {
+          "type": "string",
+          "description": "Reason for visit"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "signature_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "signature_date": {
+          "type": "string",
+          "description": "Signature date"
+        }
+      }
+    }
+  }
+}

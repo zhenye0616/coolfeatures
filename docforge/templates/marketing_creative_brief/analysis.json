@@ -1,0 +1,222 @@
+{
+  "document_type": "Marketing Creative Brief",
+  "document_description": "A marketing campaign creative brief.",
+  "fields": [
+    {
+      "field_name": "client_company",
+      "original_value": "Solstice Outdoor Apparel",
+      "category": "client",
+      "description": "Client company",
+      "all_variations": [
+        {
+          "text": "Solstice Outdoor Apparel",
+          "placeholder": "{{ client_company }}"
+        }
+      ]
+    },
+    {
+      "field_name": "project_name",
+      "original_value": "Spring 2026 Product Launch Campaign",
+      "category": "project",
+      "description": "Project name",
+      "all_variations": [
+        {
+          "text": "Spring 2026 Product Launch Campaign",
+          "placeholder": "{{ project_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "prepared_by",
+      "original_value": "Nina Castellano, Account Director",
+      "category": "people",
+      "description": "Prepared by",
+      "all_variations": [
+        {
+          "text": "Nina Castellano, Account Director",
+          "placeholder": "{{ prepared_by }}"
+        }
+      ]
+    },
+    {
+      "field_name": "date",
+      "original_value": "January 22, 2026",
+      "category": "dates",
+      "description": "Brief date",
+      "all_variations": [
+        {
+          "text": "January 22, 2026",
+          "placeholder": "{{ date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "project_overview",
+      "original_value": "Solstice Outdoor Apparel is launching its new \"TrailForge\" line of sustainable hiking gear for Spring 2026. The campaign must build awareness and drive pre-orders through digital and social media channels.",
+      "category": "project",
+      "description": "Project overview",
+      "all_variations": [
+        {
+          "text": "Solstice Outdoor Apparel is launching its new \"TrailForge\" line of sustainable hiking gear for Spring 2026. The campaign must build awareness and drive pre-orders through digital and social media channels.",
+          "placeholder": "{{ project_overview }}"
+        }
+      ]
+    },
+    {
+      "field_name": "target_audience",
+      "original_value": "Active outdoor enthusiasts aged 25-45, household income $75K+, environmentally conscious, primarily in Pacific Northwest and Mountain West states.",
+      "category": "project",
+      "description": "Target audience",
+      "all_variations": [
+        {
+          "text": "Active outdoor enthusiasts aged 25-45, household income $75K+, environmentally conscious, primarily in Pacific Northwest and Mountain West states.",
+          "placeholder": "{{ target_audience }}"
+        }
+      ]
+    },
+    {
+      "field_name": "key_message",
+      "original_value": "TrailForge: Built for the trail. Better for the planet.",
+      "category": "project",
+      "description": "Key message",
+      "all_variations": [
+        {
+          "text": "TrailForge: Built for the trail. Better for the planet.",
+          "placeholder": "{{ key_message }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tone_and_style",
+      "original_value": "Adventurous, authentic, and environmentally responsible. Earthy color palette with bold action photography.",
+      "category": "project",
+      "description": "Tone and style",
+      "all_variations": [
+        {
+          "text": "Adventurous, authentic, and environmentally responsible. Earthy color palette with bold action photography.",
+          "placeholder": "{{ tone_and_style }}"
+        }
+      ]
+    },
+    {
+      "field_name": "budget",
+      "original_value": "$85,000.00",
+      "category": "financial",
+      "description": "Budget",
+      "all_variations": [
+        {
+          "text": "$85,000.00",
+          "placeholder": "{{ budget }}"
+        }
+      ]
+    },
+    {
+      "field_name": "timeline_start",
+      "original_value": "February 1, 2026",
+      "category": "dates",
+      "description": "Timeline start",
+      "all_variations": [
+        {
+          "text": "February 1, 2026",
+          "placeholder": "{{ timeline_start }}"
+        }
+      ]
+    },
+    {
+      "field_name": "timeline_end",
+      "original_value": "March 31, 2026",
+      "category": "dates",
+      "description": "Timeline end",
+      "all_variations": [
+        {
+          "text": "March 31, 2026",
+          "placeholder": "{{ timeline_end }}"
+        }
+      ]
+    },
+    {
+      "field_name": "competitors",
+      "original_value": "Patagonia, REI Co-op, Arc'teryx, prAna",
+      "category": "project",
+      "description": "Competitors",
+      "all_variations": [
+        {
+          "text": "Patagonia, REI Co-op, Arc'teryx, prAna",
+          "placeholder": "{{ competitors }}"
+        }
+      ]
+    },
+    {
+      "field_name": "success_metric_preorders",
+      "original_value": "10,000 pre-orders",
+      "category": "project",
+      "description": "Pre-order target",
+      "all_variations": [
+        {
+          "text": "10,000 pre-orders",
+          "placeholder": "{{ success_metric_preorders }}"
+        }
+      ]
+    },
+    {
+      "field_name": "success_metric_impressions",
+      "original_value": "2M social impressions",
+      "category": "project",
+      "description": "Social impressions target",
+      "all_variations": [
+        {
+          "text": "2M social impressions",
+          "placeholder": "{{ success_metric_impressions }}"
+        }
+      ]
+    },
+    {
+      "field_name": "success_metric_ctr",
+      "original_value": "5% email click-through rate",
+      "category": "project",
+      "description": "Email CTR target",
+      "all_variations": [
+        {
+          "text": "5% email click-through rate",
+          "placeholder": "{{ success_metric_ctr }}"
+        }
+      ]
+    },
+    {
+      "field_name": "success_metric_visits",
+      "original_value": "50,000 landing page visits",
+      "category": "project",
+      "description": "Landing page visits target",
+      "all_variations": [
+        {
+          "text": "50,000 landing page visits",
+          "placeholder": "{{ success_metric_visits }}"
+        }
+      ]
+    },
+    {
+      "field_name": "approver_name",
+      "original_value": "Derek Holman",
+      "category": "people",
+      "description": "Approver name",
+      "all_variations": [
+        {
+          "text": "Derek Holman",
+          "placeholder": "{{ approver_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "approver_title",
+      "original_value": "VP of Marketing",
+      "category": "people",
+      "description": "Approver title",
+      "all_variations": [
+        {
+          "text": "VP of Marketing",
+          "placeholder": "{{ approver_title }}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "document_type": "Motion to Set Aside Default and Quash Service of Summons",
+  "document_description": "A motion to set aside default judgment filed by GSO Printing LLC against All State Printing LLC, including notice of motion, introduction, and legal arguments.",
+  "fields": [
+    {
+      "field_name": "attorney_name",
+      "original_value": "Pavel Kolmogorov",
+      "category": "attorney",
+      "description": "Name of the attorney representing the defendant",
+      "all_variations": [
+        {
+          "text": "Pavel Kolmogorov (SBN 321018)",
+          "placeholder": "{{ attorney_name_with_sbn }}"
+        },
+        {
+          "text": "Pavel Kolmogorov",
+          "placeholder": "{{ attorney_name }}"
+        },
+        {
+          "text": "Kolmogorov",
+          "placeholder": "{{ attorney_name_lastname }}"
+        }
+      ]
+    },
+    {
+      "field_name": "attorney_sbn",
+      "original_value": "321018",
+      "category": "attorney",
+      "description": "State Bar Number of the attorney",
+      "all_variations": [
+        {
+          "text": "321018",
+          "placeholder": "{{ attorney_sbn }}"
+        }
+      ]
+    },
+    {
+      "field_name": "attorney_email",
+      "original_value": "pavel@kolmogorovlaw.com",
+      "category": "attorney",
+      "description": "Email address of the attorney",
+      "all_variations": [
+        {
+          "text": "pavel@kolmogorovlaw.com",
+          "placeholder": "{{ attorney_email }}"
+        }
+      ]
+    },
+    {
+      "field_name": "law_firm_name",
+      "original_value": "KOLMOGOROV LAW, P.C.",
+      "category": "attorney",
+      "description": "Name of the law firm",
+      "all_variations": [
+        {
+          "text": "KOLMOGOROV LAW, P.C.",
+          "placeholder": "{{ law_firm_name_upper }}"
+        },
+        {
+          "text": "Kolmogorov law, p.c.",
+          "placeholder": "{{ law_firm_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "law_firm_address",
+      "original_value": "327 Magnet, Irvine, CA 92618",
+      "category": "addresses",
+      "description": "Address of the law firm",
+      "all_variations": [
+        {
+          "text": "327 Magnet, Irvine, CA 92618",
+          "placeholder": "{{ law_firm_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "law_firm_phone",
+      "original_value": "(909) 235-6420",
+      "category": "attorney",
+      "description": "Phone number of the law firm",
+      "all_variations": [
+        {
+          "text": "(909) 235-6420",
+          "placeholder": "{{ law_firm_phone }}"
+        }
+      ]
+    },
+    {
+      "field_name": "plaintiff_name",
+      "original_value": "ALL STATE PRINTING LLC",
+      "category": "parties",
+      "description": "Name of the plaintiff company",
+      "all_variations": [
+        {
+          "text": "ALL STATE PRINTING LLC",
+          "placeholder": "{{ plaintiff_name_upper }}"
+        },
+        {
+          "text": "All State Printing LLC",
+          "placeholder": "{{ plaintiff_name }}"
+        },
+        {
+          "text": "ASP",
+          "placeholder": "{{ plaintiff_name_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "defendant_name",
+      "original_value": "GSO PRINTING LLC",
+      "category": "parties",
+      "description": "Name of the defendant company",
+      "all_variations": [
+        {
+          "text": "GSO PRINTING LLC",
+          "placeholder": "{{ defendant_name_upper }}"
+        },
+        {
+          "text": "GSO Printing LLC",
+          "placeholder": "{{ defendant_name }}"
+        },
+        {
+          "text": "gso Printing llc",
+          "placeholder": "{{ defendant_name_lower }}"
+        },
+        {
+          "text": "GSO",
+          "placeholder": "{{ defendant_name_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "case_number",
+      "original_value": "30-2025-01478431-CU-BC-WJC",
+      "category": "case_info",
+      "description": "Court case number",
+      "all_variations": [
+        {
+          "text": "30-2025-01478431-CU-BC-WJC",
+          "placeholder": "{{ case_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "judge_name",
+      "original_value": "Sheila Recio",
+      "category": "court",
+      "description": "Name of the presiding judge",
+      "all_variations": [
+        {
+          "text": "Hon. Sheila Recio",
+          "placeholder": "{{ judge_name_with_hon }}"
+        },
+        {
+          "text": "Honorable Sheila Recio",
+          "placeholder": "{{ judge_name_with_honorable }}"
+        },
+        {
+          "text": "Sheila Recio",
+          "placeholder": "{{ judge_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "W08",
+      "category": "court",
+      "description": "Court department number",
+      "all_variations": [
+        {
+          "text": "W08",
+          "placeholder": "{{ department }}"
+        }
+      ]
+    },
+    {
+      "field_name": "reservation_id",
+      "original_value": "74654578",
+      "category": "case_info",
+      "description": "Court hearing reservation ID number",
+      "all_variations": [
+        {
+          "text": "74654578",
+          "placeholder": "{{ reservation_id }}"
+        }
+      ]
+    },
+    {
+      "field_name": "hearing_date",
+      "original_value": "January 16, 2025",
+      "category": "dates",
+      "description": "Date of the motion hearing",
+      "all_variations": [
+        {
+          "text": "January 16, 2025",
+          "placeholder": "{{ hearing_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "hearing_time",
+      "original_value": "9:30 AM",
+      "category": "dates",
+      "description": "Time of the motion hearing",
+      "all_variations": [
+        {
+          "text": "9:30 AM",
+          "placeholder": "{{ hearing_time }}"
+        },
+        {
+          "text": "9:30 a.m.",
+          "placeholder": "{{ hearing_time_alt }}"
+        }
+      ]
+    },
+    {
+      "field_name": "court_address",
+      "original_value": "8141 13th Street, Westminster, CA 92683",
+      "category": "addresses",
+      "description": "Address of the courthouse",
+      "all_variations": [
+        {
+          "text": "8141 13th Street, Westminster, CA 92683",
+          "placeholder": "{{ court_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "default_entry_date",
+      "original_value": "July 31, 2025",
+      "category": "dates",
+      "description": "Date when default was entered",
+      "all_variations": [
+        {
+          "text": "July 31, 2025",
+          "placeholder": "{{ default_entry_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "motion_date",
+      "original_value": "December 18, 2025",
+      "category": "dates",
+      "description": "Date the motion was filed",
+      "all_variations": [
+        {
+          "text": "December 18, 2025",
+          "placeholder": "{{ motion_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "declarant_name",
+      "original_value": "Raquel Manzanares",
+      "category": "people",
+      "description": "Name of the person providing declaration",
+      "all_variations": [
+        {
+          "text": "Raquel Manzanares",
+          "placeholder": "{{ declarant_name }}"
+        },
+        {
+          "text": "Manzanares",
+          "placeholder": "{{ declarant_name_lastname }}"
+        },
+        {
+          "text": "Manzanares Decl.",
+          "placeholder": "{{ declarant_name_lastname_decl }}"
+        }
+      ]
+    },
+    {
+      "field_name": "old_business_address",
+      "original_value": "1942 Sabre Street, Hayward, CA 94545",
+      "category": "addresses",
+      "description": "Previous business address of defendant",
+      "all_variations": [
+        {
+          "text": "1942 Sabre Street, Hayward, CA 94545",
+          "placeholder": "{{ old_business_address }}"
+        },
+        {
+          "text": "1942 Sabre Street",
+          "placeholder": "{{ old_business_address_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "new_business_address",
+      "original_value": "648 Toomey Terrace, Hayward, CA 94544",
+      "category": "addresses",
+      "description": "Current business address of defendant",
+      "all_variations": [
+        {
+          "text": "648 Toomey Terrace, Hayward, CA 94544",
+          "placeholder": "{{ new_business_address }}"
+        },
+        {
+          "text": "648 Toomey Terrace",
+          "placeholder": "{{ new_business_address_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "lease_end_date",
+      "original_value": "September 1, 2024",
+      "category": "dates",
+      "description": "Date when defendant's lease at old address ended",
+      "all_variations": [
+        {
+          "text": "September 1, 2024",
+          "placeholder": "{{ lease_end_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "equipment_removal_date",
+      "original_value": "August 30, 2024",
+      "category": "dates",
+      "description": "Date when defendant's equipment was removed from old address",
+      "all_variations": [
+        {
+          "text": "August 30, 2024",
+          "placeholder": "{{ equipment_removal_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "service_date",
+      "original_value": "July 1, 2025",
+      "category": "dates",
+      "description": "Date when service was attempted",
+      "all_variations": [
+        {
+          "text": "July 1, 2025",
+          "placeholder": "{{ service_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "action_filed_date",
+      "original_value": "April 25, 2025",
+      "category": "dates",
+      "description": "Date when the original action was filed",
+      "all_variations": [
+        {
+          "text": "April 25, 2025",
+          "placeholder": "{{ action_filed_date }}"
+        }
+      ]
+    }
+  ]
+}

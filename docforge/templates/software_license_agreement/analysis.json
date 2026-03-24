@@ -1,0 +1,218 @@
+{
+  "document_type": "Software License Agreement",
+  "document_description": "A software license agreement.",
+  "fields": [
+    {
+      "field_name": "licensor_name",
+      "original_value": "CloudVault Technologies, Inc.",
+      "category": "licensor",
+      "description": "Licensor name",
+      "all_variations": [
+        {
+          "text": "CloudVault Technologies, Inc.",
+          "placeholder": "{{ licensor_name }}"
+        },
+        {
+          "text": "CLOUDVAULT TECHNOLOGIES, INC.",
+          "placeholder": "{{ licensor_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "licensor_address",
+      "original_value": "4800 Great America Parkway, Suite 200, Santa Clara, CA 95054",
+      "category": "licensor",
+      "description": "Licensor address",
+      "all_variations": [
+        {
+          "text": "4800 Great America Parkway, Suite 200, Santa Clara, CA 95054",
+          "placeholder": "{{ licensor_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "licensee_name",
+      "original_value": "Pinnacle Financial Advisors, LLC",
+      "category": "licensee",
+      "description": "Licensee name",
+      "all_variations": [
+        {
+          "text": "Pinnacle Financial Advisors, LLC",
+          "placeholder": "{{ licensee_name }}"
+        },
+        {
+          "text": "PINNACLE FINANCIAL ADVISORS, LLC",
+          "placeholder": "{{ licensee_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "licensee_address",
+      "original_value": "227 West Trade Street, Suite 1500, Charlotte, NC 28202",
+      "category": "licensee",
+      "description": "Licensee address",
+      "all_variations": [
+        {
+          "text": "227 West Trade Street, Suite 1500, Charlotte, NC 28202",
+          "placeholder": "{{ licensee_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "software_name",
+      "original_value": "CloudVault Enterprise Data Manager",
+      "category": "software",
+      "description": "Software name",
+      "all_variations": [
+        {
+          "text": "CloudVault Enterprise Data Manager",
+          "placeholder": "{{ software_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "software_version",
+      "original_value": "v4.2",
+      "category": "software",
+      "description": "Software version",
+      "all_variations": [
+        {
+          "text": "v4.2",
+          "placeholder": "{{ software_version }}"
+        }
+      ]
+    },
+    {
+      "field_name": "license_type",
+      "original_value": "Enterprise, Non-Exclusive",
+      "category": "license",
+      "description": "License type (custom text from doc)",
+      "all_variations": [
+        {
+          "text": "non-exclusive, non-transferable",
+          "placeholder": "{{ license_type }}"
+        }
+      ]
+    },
+    {
+      "field_name": "number_of_seats",
+      "original_value": "150 user seats",
+      "category": "license",
+      "description": "Number of seats",
+      "all_variations": [
+        {
+          "text": "150 user seats",
+          "placeholder": "{{ number_of_seats }}"
+        }
+      ]
+    },
+    {
+      "field_name": "effective_date",
+      "original_value": "February 1, 2026",
+      "category": "dates",
+      "description": "Effective date",
+      "all_variations": [
+        {
+          "text": "February 1, 2026",
+          "placeholder": "{{ effective_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "license_term",
+      "original_value": "one (1) year, with automatic annual renewal",
+      "category": "license",
+      "description": "License term",
+      "all_variations": [
+        {
+          "text": "one (1) year, with automatic annual renewal",
+          "placeholder": "{{ license_term }}"
+        }
+      ]
+    },
+    {
+      "field_name": "license_fee",
+      "original_value": "$67,500.00 per year",
+      "category": "financial",
+      "description": "License fee",
+      "all_variations": [
+        {
+          "text": "$67,500.00 per year",
+          "placeholder": "{{ license_fee }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_terms",
+      "original_value": "Annual payment due within 30 days of invoice date",
+      "category": "financial",
+      "description": "Payment terms",
+      "all_variations": [
+        {
+          "text": "Annual payment due within 30 days of invoice date",
+          "placeholder": "{{ payment_terms }}"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Delaware",
+      "category": "details",
+      "description": "Governing state",
+      "all_variations": [
+        {
+          "text": "Delaware",
+          "placeholder": "{{ governing_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "licensor_signature_name",
+      "original_value": "Raj Patel",
+      "category": "signatures",
+      "description": "Licensor signatory",
+      "all_variations": [
+        {
+          "text": "Raj Patel",
+          "placeholder": "{{ licensor_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "licensor_title",
+      "original_value": "Chief Revenue Officer",
+      "category": "signatures",
+      "description": "Licensor signatory title",
+      "all_variations": [
+        {
+          "text": "Chief Revenue Officer",
+          "placeholder": "{{ licensor_title }}"
+        }
+      ]
+    },
+    {
+      "field_name": "licensee_signature_name",
+      "original_value": "Catherine O'Brien",
+      "category": "signatures",
+      "description": "Licensee signatory",
+      "all_variations": [
+        {
+          "text": "Catherine O'Brien",
+          "placeholder": "{{ licensee_signature_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "licensee_title",
+      "original_value": "Chief Technology Officer",
+      "category": "signatures",
+      "description": "Licensee signatory title",
+      "all_variations": [
+        {
+          "text": "Chief Technology Officer",
+          "placeholder": "{{ licensee_title }}"
+        }
+      ]
+    }
+  ]
+}

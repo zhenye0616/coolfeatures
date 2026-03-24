@@ -1,0 +1,218 @@
+{
+  "document_type": "Residential Lease Agreement",
+  "document_description": "A binding lease contract.",
+  "fields": [
+    {
+      "field_name": "landlord_name",
+      "original_value": "Crestview Properties, LLC",
+      "category": "parties",
+      "description": "Landlord name",
+      "all_variations": [
+        {
+          "text": "Crestview Properties, LLC",
+          "placeholder": "{{ landlord_name }}"
+        },
+        {
+          "text": "CRESTVIEW PROPERTIES, LLC",
+          "placeholder": "{{ landlord_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "landlord_address",
+      "original_value": "900 Broadway, Suite 500, Denver, CO 80203",
+      "category": "parties",
+      "description": "Landlord address",
+      "all_variations": [
+        {
+          "text": "900 Broadway, Suite 500, Denver, CO 80203",
+          "placeholder": "{{ landlord_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tenant_name",
+      "original_value": "Amanda J. Fischer",
+      "category": "parties",
+      "description": "Tenant name",
+      "all_variations": [
+        {
+          "text": "Amanda J. Fischer",
+          "placeholder": "{{ tenant_name }}"
+        },
+        {
+          "text": "AMANDA J. FISCHER",
+          "placeholder": "{{ tenant_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tenant_current_address",
+      "original_value": "134 Maple Avenue, Boulder, CO 80302",
+      "category": "parties",
+      "description": "Tenant current address",
+      "all_variations": [
+        {
+          "text": "134 Maple Avenue, Boulder, CO 80302",
+          "placeholder": "{{ tenant_current_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "property_address",
+      "original_value": "2745 Vine Street, Unit 6, Denver, CO 80205",
+      "category": "property",
+      "description": "Property address",
+      "all_variations": [
+        {
+          "text": "2745 Vine Street, Unit 6, Denver, CO 80205",
+          "placeholder": "{{ property_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "lease_start_date",
+      "original_value": "March 1, 2026",
+      "category": "dates",
+      "description": "Lease start date",
+      "all_variations": [
+        {
+          "text": "March 1, 2026",
+          "placeholder": "{{ lease_start_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "lease_end_date",
+      "original_value": "February 28, 2027",
+      "category": "dates",
+      "description": "Lease end date",
+      "all_variations": [
+        {
+          "text": "February 28, 2027",
+          "placeholder": "{{ lease_end_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "monthly_rent",
+      "original_value": "$1,850.00",
+      "category": "financial",
+      "description": "Monthly rent amount",
+      "all_variations": [
+        {
+          "text": "$1,850.00",
+          "placeholder": "{{ monthly_rent }}"
+        }
+      ]
+    },
+    {
+      "field_name": "security_deposit",
+      "original_value": "$1,850.00",
+      "category": "financial",
+      "description": "Security deposit amount",
+      "all_variations": [
+        {
+          "text": "$1,850.00",
+          "placeholder": "{{ security_deposit }}"
+        }
+      ]
+    },
+    {
+      "field_name": "rent_due_day",
+      "original_value": "1st",
+      "category": "financial",
+      "description": "Day rent is due",
+      "all_variations": [
+        {
+          "text": "1st",
+          "placeholder": "{{ rent_due_day }}"
+        }
+      ]
+    },
+    {
+      "field_name": "late_fee_amount",
+      "original_value": "$75.00",
+      "category": "financial",
+      "description": "Late fee amount",
+      "all_variations": [
+        {
+          "text": "$75.00",
+          "placeholder": "{{ late_fee_amount }}"
+        }
+      ]
+    },
+    {
+      "field_name": "late_fee_grace_period_days",
+      "original_value": "5",
+      "category": "financial",
+      "description": "Grace period days",
+      "all_variations": [
+        {
+          "text": "5",
+          "placeholder": "{{ late_fee_grace_period_days }}"
+        }
+      ]
+    },
+    {
+      "field_name": "number_of_occupants",
+      "original_value": "2",
+      "category": "property",
+      "description": "Maximum occupants",
+      "all_variations": [
+        {
+          "text": "2",
+          "placeholder": "{{ number_of_occupants }}"
+        }
+      ]
+    },
+    {
+      "field_name": "pet_policy",
+      "original_value": "One cat permitted with $300 pet deposit. No dogs.",
+      "category": "property",
+      "description": "Pet policy",
+      "all_variations": [
+        {
+          "text": "One cat permitted with $300 pet deposit. No dogs.",
+          "placeholder": "{{ pet_policy }}"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Colorado",
+      "category": "details",
+      "description": "Governing state",
+      "all_variations": [
+        {
+          "text": "Colorado",
+          "placeholder": "{{ governing_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "landlord_signature_date",
+      "original_value": "February 20, 2026",
+      "category": "dates",
+      "description": "Landlord signature date",
+      "all_variations": [
+        {
+          "text": "February 20, 2026",
+          "placeholder": "{{ landlord_signature_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tenant_signature_date",
+      "original_value": "February 20, 2026",
+      "category": "dates",
+      "description": "Tenant signature date",
+      "all_variations": [
+        {
+          "text": "February 20, 2026",
+          "placeholder": "{{ tenant_signature_date }}"
+        }
+      ]
+    }
+  ]
+}

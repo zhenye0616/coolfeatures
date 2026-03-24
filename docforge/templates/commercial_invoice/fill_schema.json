@@ -1,0 +1,133 @@
+{
+  "type": "object",
+  "required": [
+    "company",
+    "invoice",
+    "client",
+    "totals",
+    "payment"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": [
+        "company_name",
+        "company_address",
+        "company_phone",
+        "company_email"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "Company name"
+        },
+        "company_address": {
+          "type": "string",
+          "description": "Company address"
+        },
+        "company_phone": {
+          "type": "string",
+          "description": "Company phone"
+        },
+        "company_email": {
+          "type": "string",
+          "description": "Company email"
+        }
+      }
+    },
+    "invoice": {
+      "type": "object",
+      "required": [
+        "invoice_number",
+        "invoice_date",
+        "due_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "invoice_number": {
+          "type": "string",
+          "description": "Invoice number"
+        },
+        "invoice_date": {
+          "type": "string",
+          "description": "Invoice date"
+        },
+        "due_date": {
+          "type": "string",
+          "description": "Payment due date"
+        }
+      }
+    },
+    "client": {
+      "type": "object",
+      "required": [
+        "bill_to_name",
+        "bill_to_company",
+        "bill_to_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "bill_to_name": {
+          "type": "string",
+          "description": "Bill to name"
+        },
+        "bill_to_company": {
+          "type": "string",
+          "description": "Bill to company"
+        },
+        "bill_to_address": {
+          "type": "string",
+          "description": "Bill to address"
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "required": [
+        "subtotal",
+        "tax_rate",
+        "tax_amount",
+        "total_due"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subtotal": {
+          "type": "string",
+          "description": "Subtotal"
+        },
+        "tax_rate": {
+          "type": "string",
+          "description": "Tax rate"
+        },
+        "tax_amount": {
+          "type": "string",
+          "description": "Tax amount"
+        },
+        "total_due": {
+          "type": "string",
+          "description": "Total due"
+        }
+      }
+    },
+    "payment": {
+      "type": "object",
+      "required": [
+        "payment_terms",
+        "payment_instructions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "payment_terms": {
+          "type": "string",
+          "description": "Payment terms"
+        },
+        "payment_instructions": {
+          "type": "string",
+          "description": "Payment instructions"
+        }
+      }
+    }
+  }
+}

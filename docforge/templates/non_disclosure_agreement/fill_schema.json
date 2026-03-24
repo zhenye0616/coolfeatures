@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "required": [
+    "parties",
+    "dates",
+    "details",
+    "signatures"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "parties": {
+      "type": "object",
+      "required": [
+        "disclosing_party_name",
+        "disclosing_party_address",
+        "receiving_party_name",
+        "receiving_party_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "disclosing_party_name": {
+          "type": "string",
+          "description": "Name of the disclosing party"
+        },
+        "disclosing_party_address": {
+          "type": "string",
+          "description": "Address of the disclosing party"
+        },
+        "receiving_party_name": {
+          "type": "string",
+          "description": "Name of the receiving party"
+        },
+        "receiving_party_address": {
+          "type": "string",
+          "description": "Address of the receiving party"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "effective_date",
+        "signature_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "effective_date": {
+          "type": "string",
+          "description": "Date agreement takes effect"
+        },
+        "signature_date": {
+          "type": "string",
+          "description": "Date of signature"
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "required": [
+        "confidential_info_description",
+        "agreement_duration",
+        "governing_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "confidential_info_description": {
+          "type": "string",
+          "description": "Description of confidential information"
+        },
+        "agreement_duration": {
+          "type": "string",
+          "description": "Duration of the agreement"
+        },
+        "governing_state": {
+          "type": "string",
+          "description": "State whose laws govern the agreement"
+        }
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "disclosing_party_signature_name",
+        "disclosing_party_title",
+        "receiving_party_signature_name",
+        "receiving_party_title"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "disclosing_party_signature_name": {
+          "type": "string",
+          "description": "Name of disclosing party signatory"
+        },
+        "disclosing_party_title": {
+          "type": "string",
+          "description": "Title of disclosing party signatory"
+        },
+        "receiving_party_signature_name": {
+          "type": "string",
+          "description": "Name of receiving party signatory"
+        },
+        "receiving_party_title": {
+          "type": "string",
+          "description": "Title of receiving party signatory"
+        }
+      }
+    }
+  }
+}

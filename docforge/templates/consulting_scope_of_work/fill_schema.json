@@ -1,0 +1,147 @@
+{
+  "type": "object",
+  "required": [
+    "consultant",
+    "client",
+    "project",
+    "dates",
+    "financial",
+    "signatures"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "consultant": {
+      "type": "object",
+      "required": [
+        "consultant_company_name",
+        "consultant_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "consultant_company_name": {
+          "type": "string",
+          "description": "Consultant company"
+        },
+        "consultant_address": {
+          "type": "string",
+          "description": "Consultant address"
+        }
+      }
+    },
+    "client": {
+      "type": "object",
+      "required": [
+        "client_company_name",
+        "client_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "client_company_name": {
+          "type": "string",
+          "description": "Client company"
+        },
+        "client_address": {
+          "type": "string",
+          "description": "Client address"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "project_name",
+        "sow_number",
+        "project_objective"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "project_name": {
+          "type": "string",
+          "description": "Project name"
+        },
+        "sow_number": {
+          "type": "string",
+          "description": "SOW number"
+        },
+        "project_objective": {
+          "type": "string",
+          "description": "Project objective"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "sow_date",
+        "timeline_start",
+        "timeline_end"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "sow_date": {
+          "type": "string",
+          "description": "SOW date"
+        },
+        "timeline_start": {
+          "type": "string",
+          "description": "Timeline start"
+        },
+        "timeline_end": {
+          "type": "string",
+          "description": "Timeline end"
+        }
+      }
+    },
+    "financial": {
+      "type": "object",
+      "required": [
+        "total_fee",
+        "payment_pct_1",
+        "payment_pct_final"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_fee": {
+          "type": "string",
+          "description": "Total fee"
+        },
+        "payment_pct_1": {
+          "type": "string",
+          "description": "First payment amount"
+        },
+        "payment_pct_final": {
+          "type": "string",
+          "description": "Final payment amount"
+        }
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "consultant_signature_name",
+        "consultant_title",
+        "client_signature_name",
+        "client_title"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "consultant_signature_name": {
+          "type": "string",
+          "description": "Consultant signatory"
+        },
+        "consultant_title": {
+          "type": "string",
+          "description": "Consultant title"
+        },
+        "client_signature_name": {
+          "type": "string",
+          "description": "Client signatory"
+        },
+        "client_title": {
+          "type": "string",
+          "description": "Client title"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "document_type": "Commercial Invoice",
+  "document_description": "A bill for goods/services provided.",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Cascade Digital Solutions",
+      "category": "company",
+      "description": "Company name",
+      "all_variations": [
+        {
+          "text": "Cascade Digital Solutions",
+          "placeholder": "{{ company_name }}"
+        },
+        {
+          "text": "CASCADE DIGITAL SOLUTIONS",
+          "placeholder": "{{ company_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "1100 Dexter Avenue N, Suite 400, Seattle, WA 98109",
+      "category": "company",
+      "description": "Company address",
+      "all_variations": [
+        {
+          "text": "1100 Dexter Avenue N, Suite 400, Seattle, WA 98109",
+          "placeholder": "{{ company_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_phone",
+      "original_value": "(206) 555-0831",
+      "category": "company",
+      "description": "Company phone",
+      "all_variations": [
+        {
+          "text": "(206) 555-0831",
+          "placeholder": "{{ company_phone }}"
+        }
+      ]
+    },
+    {
+      "field_name": "company_email",
+      "original_value": "billing@cascadedigital.com",
+      "category": "company",
+      "description": "Company email",
+      "all_variations": [
+        {
+          "text": "billing@cascadedigital.com",
+          "placeholder": "{{ company_email }}"
+        }
+      ]
+    },
+    {
+      "field_name": "invoice_number",
+      "original_value": "INV-2026-0342",
+      "category": "invoice",
+      "description": "Invoice number",
+      "all_variations": [
+        {
+          "text": "INV-2026-0342",
+          "placeholder": "{{ invoice_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "invoice_date",
+      "original_value": "February 1, 2026",
+      "category": "invoice",
+      "description": "Invoice date",
+      "all_variations": [
+        {
+          "text": "February 1, 2026",
+          "placeholder": "{{ invoice_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "due_date",
+      "original_value": "March 3, 2026",
+      "category": "invoice",
+      "description": "Payment due date",
+      "all_variations": [
+        {
+          "text": "March 3, 2026",
+          "placeholder": "{{ due_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "bill_to_name",
+      "original_value": "Jennifer Lawson",
+      "category": "client",
+      "description": "Bill to name",
+      "all_variations": [
+        {
+          "text": "Jennifer Lawson",
+          "placeholder": "{{ bill_to_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "bill_to_company",
+      "original_value": "Northstar Retail Group",
+      "category": "client",
+      "description": "Bill to company",
+      "all_variations": [
+        {
+          "text": "Northstar Retail Group",
+          "placeholder": "{{ bill_to_company }}"
+        }
+      ]
+    },
+    {
+      "field_name": "bill_to_address",
+      "original_value": "4500 Union Bay Place NE, Seattle, WA 98105",
+      "category": "client",
+      "description": "Bill to address",
+      "all_variations": [
+        {
+          "text": "4500 Union Bay Place NE, Seattle, WA 98105",
+          "placeholder": "{{ bill_to_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "subtotal",
+      "original_value": "$7,650.00",
+      "category": "totals",
+      "description": "Subtotal",
+      "all_variations": [
+        {
+          "text": "$7,650.00",
+          "placeholder": "{{ subtotal }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tax_rate",
+      "original_value": "10.25%",
+      "category": "totals",
+      "description": "Tax rate",
+      "all_variations": [
+        {
+          "text": "10.25%",
+          "placeholder": "{{ tax_rate }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tax_amount",
+      "original_value": "$784.13",
+      "category": "totals",
+      "description": "Tax amount",
+      "all_variations": [
+        {
+          "text": "$784.13",
+          "placeholder": "{{ tax_amount }}"
+        }
+      ]
+    },
+    {
+      "field_name": "total_due",
+      "original_value": "$8,434.13",
+      "category": "totals",
+      "description": "Total due",
+      "all_variations": [
+        {
+          "text": "$8,434.13",
+          "placeholder": "{{ total_due }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_terms",
+      "original_value": "Net 30",
+      "category": "payment",
+      "description": "Payment terms",
+      "all_variations": [
+        {
+          "text": "Net 30",
+          "placeholder": "{{ payment_terms }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_instructions",
+      "original_value": "Please remit payment via ACH transfer to:\nCascade Digital Solutions\nBank of the West\nRouting #: 121100782\nAccount #: 44829103756",
+      "category": "payment",
+      "description": "Payment instructions",
+      "all_variations": [
+        {
+          "text": "Cascade Digital Solutions\nBank of the West\nRouting #: 121100782\nAccount #: 44829103756",
+          "placeholder": "{{ payment_instructions }}"
+        }
+      ]
+    }
+  ]
+}

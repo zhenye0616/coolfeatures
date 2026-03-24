@@ -1,0 +1,274 @@
+{
+  "document_type": "Patient Intake Form",
+  "document_description": "A healthcare intake form.",
+  "fields": [
+    {
+      "field_name": "practice_name",
+      "original_value": "Riverside Family Medical Center",
+      "category": "practice",
+      "description": "Name of medical practice",
+      "all_variations": [
+        {
+          "text": "Riverside Family Medical Center",
+          "placeholder": "{{ practice_name }}"
+        },
+        {
+          "text": "RIVERSIDE FAMILY MEDICAL CENTER",
+          "placeholder": "{{ practice_name_upper }}"
+        }
+      ]
+    },
+    {
+      "field_name": "practice_address",
+      "original_value": "450 Elm Street, Suite 101, Portland, OR 97201",
+      "category": "practice",
+      "description": "Address of medical practice",
+      "all_variations": [
+        {
+          "text": "450 Elm Street, Suite 101, Portland, OR 97201",
+          "placeholder": "{{ practice_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "practice_phone",
+      "original_value": "(503) 555-0172",
+      "category": "practice",
+      "description": "Phone of medical practice",
+      "all_variations": [
+        {
+          "text": "(503) 555-0172",
+          "placeholder": "{{ practice_phone }}"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_full_name",
+      "original_value": "Sarah Elizabeth Thompson",
+      "category": "patient",
+      "description": "Full name of patient",
+      "all_variations": [
+        {
+          "text": "Sarah Elizabeth Thompson",
+          "placeholder": "{{ patient_full_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "date_of_birth",
+      "original_value": "07/14/1988",
+      "category": "patient",
+      "description": "Patient date of birth",
+      "all_variations": [
+        {
+          "text": "07/14/1988",
+          "placeholder": "{{ date_of_birth }}"
+        }
+      ]
+    },
+    {
+      "field_name": "gender",
+      "original_value": "Female",
+      "category": "patient",
+      "description": "Patient gender",
+      "all_variations": [
+        {
+          "text": "Female",
+          "placeholder": "{{ gender }}"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_address",
+      "original_value": "2238 NW Lovejoy Street, Apt 4B, Portland, OR 97210",
+      "category": "patient",
+      "description": "Patient home address",
+      "all_variations": [
+        {
+          "text": "2238 NW Lovejoy Street, Apt 4B, Portland, OR 97210",
+          "placeholder": "{{ patient_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "phone_number",
+      "original_value": "(503) 555-0394",
+      "category": "patient",
+      "description": "Patient phone number",
+      "all_variations": [
+        {
+          "text": "(503) 555-0394",
+          "placeholder": "{{ phone_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "email",
+      "original_value": "sarah.thompson88@email.com",
+      "category": "patient",
+      "description": "Patient email",
+      "all_variations": [
+        {
+          "text": "sarah.thompson88@email.com",
+          "placeholder": "{{ email }}"
+        }
+      ]
+    },
+    {
+      "field_name": "emergency_contact_name",
+      "original_value": "Michael Thompson",
+      "category": "emergency",
+      "description": "Emergency contact name",
+      "all_variations": [
+        {
+          "text": "Michael Thompson",
+          "placeholder": "{{ emergency_contact_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "emergency_contact_phone",
+      "original_value": "(503) 555-0281",
+      "category": "emergency",
+      "description": "Emergency contact phone",
+      "all_variations": [
+        {
+          "text": "(503) 555-0281",
+          "placeholder": "{{ emergency_contact_phone }}"
+        }
+      ]
+    },
+    {
+      "field_name": "emergency_contact_relationship",
+      "original_value": "Spouse",
+      "category": "emergency",
+      "description": "Emergency contact relationship",
+      "all_variations": [
+        {
+          "text": "Spouse",
+          "placeholder": "{{ emergency_contact_relationship }}"
+        }
+      ]
+    },
+    {
+      "field_name": "insurance_provider",
+      "original_value": "Blue Cross Blue Shield of Oregon",
+      "category": "insurance",
+      "description": "Insurance provider name",
+      "all_variations": [
+        {
+          "text": "Blue Cross Blue Shield of Oregon",
+          "placeholder": "{{ insurance_provider }}"
+        }
+      ]
+    },
+    {
+      "field_name": "insurance_policy_number",
+      "original_value": "BCB-882947163",
+      "category": "insurance",
+      "description": "Insurance policy number",
+      "all_variations": [
+        {
+          "text": "BCB-882947163",
+          "placeholder": "{{ insurance_policy_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "insurance_group_number",
+      "original_value": "GRP-44521",
+      "category": "insurance",
+      "description": "Insurance group number",
+      "all_variations": [
+        {
+          "text": "GRP-44521",
+          "placeholder": "{{ insurance_group_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "policyholder_name",
+      "original_value": "Sarah Elizabeth Thompson",
+      "category": "insurance",
+      "description": "Policyholder name",
+      "all_variations": [
+        {
+          "text": "Sarah Elizabeth Thompson",
+          "placeholder": "{{ policyholder_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "primary_care_physician",
+      "original_value": "Dr. James Nakamura",
+      "category": "medical",
+      "description": "Primary care physician",
+      "all_variations": [
+        {
+          "text": "Dr. James Nakamura",
+          "placeholder": "{{ primary_care_physician }}"
+        }
+      ]
+    },
+    {
+      "field_name": "allergies",
+      "original_value": "Penicillin, Sulfa drugs",
+      "category": "medical",
+      "description": "Known allergies",
+      "all_variations": [
+        {
+          "text": "Penicillin, Sulfa drugs",
+          "placeholder": "{{ allergies }}"
+        }
+      ]
+    },
+    {
+      "field_name": "current_medications",
+      "original_value": "Lisinopril 10mg daily, Vitamin D 2000 IU daily",
+      "category": "medical",
+      "description": "Current medications",
+      "all_variations": [
+        {
+          "text": "Lisinopril 10mg daily, Vitamin D 2000 IU daily",
+          "placeholder": "{{ current_medications }}"
+        }
+      ]
+    },
+    {
+      "field_name": "medical_conditions",
+      "original_value": "Hypertension, Seasonal allergies",
+      "category": "medical",
+      "description": "Existing medical conditions",
+      "all_variations": [
+        {
+          "text": "Hypertension, Seasonal allergies",
+          "placeholder": "{{ medical_conditions }}"
+        }
+      ]
+    },
+    {
+      "field_name": "reason_for_visit",
+      "original_value": "Annual physical exam and recurring lower back pain",
+      "category": "medical",
+      "description": "Reason for visit",
+      "all_variations": [
+        {
+          "text": "Annual physical exam and recurring lower back pain",
+          "placeholder": "{{ reason_for_visit }}"
+        }
+      ]
+    },
+    {
+      "field_name": "signature_date",
+      "original_value": "February 10, 2026",
+      "category": "dates",
+      "description": "Signature date",
+      "all_variations": [
+        {
+          "text": "February 10, 2026",
+          "placeholder": "{{ signature_date }}"
+        }
+      ]
+    }
+  ]
+}

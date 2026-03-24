@@ -1,0 +1,280 @@
+{
+  "type": "object",
+  "required": [
+    "attorney",
+    "parties",
+    "case_details",
+    "court_info",
+    "dates",
+    "addresses",
+    "entities",
+    "financial"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "attorney": {
+      "type": "object",
+      "required": [
+        "attorney_name",
+        "attorney_sbn",
+        "attorney_email",
+        "law_firm_name",
+        "law_firm_address",
+        "attorney_phone",
+        "defendant_attorney_name",
+        "defendant_law_firm"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attorney_name": {
+          "type": "string",
+          "description": "Name of the attorney representing plaintiff and cross-defendant"
+        },
+        "attorney_sbn": {
+          "type": "string",
+          "description": "State Bar Number of the attorney"
+        },
+        "attorney_email": {
+          "type": "string",
+          "description": "Email address of the attorney"
+        },
+        "law_firm_name": {
+          "type": "string",
+          "description": "Name of the law firm"
+        },
+        "law_firm_address": {
+          "type": "string",
+          "description": "Address of the law firm"
+        },
+        "attorney_phone": {
+          "type": "string",
+          "description": "Phone number of the attorney"
+        },
+        "defendant_attorney_name": {
+          "type": "string",
+          "description": "Name of defendant's attorney"
+        },
+        "defendant_law_firm": {
+          "type": "string",
+          "description": "Name of defendant's law firm"
+        }
+      }
+    },
+    "parties": {
+      "type": "object",
+      "required": [
+        "plaintiff_name",
+        "plaintiff_entity_type",
+        "defendant_name",
+        "defendant_entity_type",
+        "cross_defendant_name",
+        "cross_defendant_name_short",
+        "defendant_evenson_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "plaintiff_name": {
+          "type": "string",
+          "description": "Name of the plaintiff"
+        },
+        "plaintiff_entity_type": {
+          "type": "string",
+          "description": "Entity type of the plaintiff"
+        },
+        "defendant_name": {
+          "type": "string",
+          "description": "Name of the defendant"
+        },
+        "defendant_entity_type": {
+          "type": "string",
+          "description": "Entity type of the defendant"
+        },
+        "cross_defendant_name": {
+          "type": "string",
+          "description": "Name of the cross-defendant company"
+        },
+        "cross_defendant_name_short": {
+          "type": "string",
+          "description": "Short form/abbreviation for name of the cross-defendant company (in the original document this was 'PLI')"
+        },
+        "defendant_evenson_name": {
+          "type": "string",
+          "description": "Name of defendant Jonah Evenson (also known as Ricardo Jones)"
+        }
+      }
+    },
+    "case_details": {
+      "type": "object",
+      "required": [
+        "case_number"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "case_number": {
+          "type": "string",
+          "description": "Case number assigned to the lawsuit"
+        }
+      }
+    },
+    "court_info": {
+      "type": "object",
+      "required": [
+        "judge_name",
+        "department",
+        "court_name",
+        "county_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "judge_name": {
+          "type": "string",
+          "description": "Name of the assigned judge"
+        },
+        "department": {
+          "type": "string",
+          "description": "Court department number"
+        },
+        "court_name": {
+          "type": "string",
+          "description": "Name of the court"
+        },
+        "county_name": {
+          "type": "string",
+          "description": "County where the court is located"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "action_filed_date",
+        "subpoena_issue_date",
+        "records_period_start",
+        "records_period_end",
+        "production_date",
+        "production_time",
+        "consumer_notice_date",
+        "meet_confer_date",
+        "withdrawal_deadline",
+        "motion_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "action_filed_date": {
+          "type": "string",
+          "description": "Date when the action was filed"
+        },
+        "subpoena_issue_date": {
+          "type": "string",
+          "description": "Date when the deposition subpoena was issued"
+        },
+        "records_period_start": {
+          "type": "string",
+          "description": "Start date for the period of banking records requested"
+        },
+        "records_period_end": {
+          "type": "string",
+          "description": "End date for the period of banking records requested"
+        },
+        "production_date": {
+          "type": "string",
+          "description": "Date when records are commanded to be produced"
+        },
+        "production_time": {
+          "type": "string",
+          "description": "Time when records are commanded to be produced"
+        },
+        "consumer_notice_date": {
+          "type": "string",
+          "description": "Date when consumer notice was mailed"
+        },
+        "meet_confer_date": {
+          "type": "string",
+          "description": "Date when meet and confer letter was sent"
+        },
+        "withdrawal_deadline": {
+          "type": "string",
+          "description": "Deadline given for withdrawal of subpoena"
+        },
+        "motion_date": {
+          "type": "string",
+          "description": "Date when the motion was filed"
+        }
+      }
+    },
+    "addresses": {
+      "type": "object",
+      "required": [
+        "court_address",
+        "bank_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "court_address": {
+          "type": "string",
+          "description": "Address of the court"
+        },
+        "bank_address": {
+          "type": "string",
+          "description": "Address of the bank's custodian of records"
+        }
+      }
+    },
+    "entities": {
+      "type": "object",
+      "required": [
+        "bank_name",
+        "bank_name_short",
+        "vanguard_legal",
+        "rfj_productions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "bank_name": {
+          "type": "string",
+          "description": "Name of the bank served with the subpoena"
+        },
+        "bank_name_short": {
+          "type": "string",
+          "description": "Short form/abbreviation for name of the bank served with the subpoena (in the original document this was 'Chase')"
+        },
+        "vanguard_legal": {
+          "type": "string",
+          "description": "Name of the legal solutions company receiving the records"
+        },
+        "rfj_productions": {
+          "type": "string",
+          "description": "Name of the LLC involved in the software license agreement"
+        }
+      }
+    },
+    "financial": {
+      "type": "object",
+      "required": [
+        "sanctions_amount",
+        "account_number_ending",
+        "attorney_hours",
+        "attorney_rate"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "sanctions_amount": {
+          "type": "string",
+          "description": "Amount of monetary sanctions requested"
+        },
+        "account_number_ending": {
+          "type": "string",
+          "description": "Ending digits of the bank account number"
+        },
+        "attorney_hours": {
+          "type": "string",
+          "description": "Number of hours spent by attorney preparing motion"
+        },
+        "attorney_rate": {
+          "type": "string",
+          "description": "Hourly rate of the attorney"
+        }
+      }
+    }
+  }
+}

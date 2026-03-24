@@ -1,0 +1,165 @@
+{
+  "type": "object",
+  "required": [
+    "licensor",
+    "licensee",
+    "software",
+    "license",
+    "dates",
+    "financial",
+    "details",
+    "signatures"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "licensor": {
+      "type": "object",
+      "required": [
+        "licensor_name",
+        "licensor_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "licensor_name": {
+          "type": "string",
+          "description": "Licensor name"
+        },
+        "licensor_address": {
+          "type": "string",
+          "description": "Licensor address"
+        }
+      }
+    },
+    "licensee": {
+      "type": "object",
+      "required": [
+        "licensee_name",
+        "licensee_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "licensee_name": {
+          "type": "string",
+          "description": "Licensee name"
+        },
+        "licensee_address": {
+          "type": "string",
+          "description": "Licensee address"
+        }
+      }
+    },
+    "software": {
+      "type": "object",
+      "required": [
+        "software_name",
+        "software_version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "software_name": {
+          "type": "string",
+          "description": "Software name"
+        },
+        "software_version": {
+          "type": "string",
+          "description": "Software version"
+        }
+      }
+    },
+    "license": {
+      "type": "object",
+      "required": [
+        "license_type",
+        "number_of_seats",
+        "license_term"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "license_type": {
+          "type": "string",
+          "description": "License type (custom text from doc)"
+        },
+        "number_of_seats": {
+          "type": "string",
+          "description": "Number of seats"
+        },
+        "license_term": {
+          "type": "string",
+          "description": "License term"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "effective_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "effective_date": {
+          "type": "string",
+          "description": "Effective date"
+        }
+      }
+    },
+    "financial": {
+      "type": "object",
+      "required": [
+        "license_fee",
+        "payment_terms"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "license_fee": {
+          "type": "string",
+          "description": "License fee"
+        },
+        "payment_terms": {
+          "type": "string",
+          "description": "Payment terms"
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "required": [
+        "governing_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "governing_state": {
+          "type": "string",
+          "description": "Governing state"
+        }
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "licensor_signature_name",
+        "licensor_title",
+        "licensee_signature_name",
+        "licensee_title"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "licensor_signature_name": {
+          "type": "string",
+          "description": "Licensor signatory"
+        },
+        "licensor_title": {
+          "type": "string",
+          "description": "Licensor signatory title"
+        },
+        "licensee_signature_name": {
+          "type": "string",
+          "description": "Licensee signatory"
+        },
+        "licensee_title": {
+          "type": "string",
+          "description": "Licensee signatory title"
+        }
+      }
+    }
+  }
+}

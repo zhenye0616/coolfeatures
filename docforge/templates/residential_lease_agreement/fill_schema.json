@@ -1,0 +1,138 @@
+{
+  "type": "object",
+  "required": [
+    "parties",
+    "property",
+    "dates",
+    "financial",
+    "details"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "parties": {
+      "type": "object",
+      "required": [
+        "landlord_name",
+        "landlord_address",
+        "tenant_name",
+        "tenant_current_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "landlord_name": {
+          "type": "string",
+          "description": "Landlord name"
+        },
+        "landlord_address": {
+          "type": "string",
+          "description": "Landlord address"
+        },
+        "tenant_name": {
+          "type": "string",
+          "description": "Tenant name"
+        },
+        "tenant_current_address": {
+          "type": "string",
+          "description": "Tenant current address"
+        }
+      }
+    },
+    "property": {
+      "type": "object",
+      "required": [
+        "property_address",
+        "number_of_occupants",
+        "pet_policy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "property_address": {
+          "type": "string",
+          "description": "Property address"
+        },
+        "number_of_occupants": {
+          "type": "string",
+          "description": "Maximum occupants"
+        },
+        "pet_policy": {
+          "type": "string",
+          "description": "Pet policy"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "lease_start_date",
+        "lease_end_date",
+        "landlord_signature_date",
+        "tenant_signature_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "lease_start_date": {
+          "type": "string",
+          "description": "Lease start date"
+        },
+        "lease_end_date": {
+          "type": "string",
+          "description": "Lease end date"
+        },
+        "landlord_signature_date": {
+          "type": "string",
+          "description": "Landlord signature date"
+        },
+        "tenant_signature_date": {
+          "type": "string",
+          "description": "Tenant signature date"
+        }
+      }
+    },
+    "financial": {
+      "type": "object",
+      "required": [
+        "monthly_rent",
+        "security_deposit",
+        "rent_due_day",
+        "late_fee_amount",
+        "late_fee_grace_period_days"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "monthly_rent": {
+          "type": "string",
+          "description": "Monthly rent amount"
+        },
+        "security_deposit": {
+          "type": "string",
+          "description": "Security deposit amount"
+        },
+        "rent_due_day": {
+          "type": "string",
+          "description": "Day rent is due"
+        },
+        "late_fee_amount": {
+          "type": "string",
+          "description": "Late fee amount"
+        },
+        "late_fee_grace_period_days": {
+          "type": "string",
+          "description": "Grace period days"
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "required": [
+        "governing_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "governing_state": {
+          "type": "string",
+          "description": "Governing state"
+        }
+      }
+    }
+  }
+}

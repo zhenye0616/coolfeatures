@@ -1,0 +1,250 @@
+{
+  "document_type": "Purchase Order",
+  "document_description": "A government purchase order.",
+  "fields": [
+    {
+      "field_name": "issuing_department",
+      "original_value": "DEPARTMENT OF PUBLIC WORKS",
+      "category": "issuer",
+      "description": "Issuing department name",
+      "all_variations": [
+        {
+          "text": "DEPARTMENT OF PUBLIC WORKS",
+          "placeholder": "{{ issuing_department }}"
+        }
+      ]
+    },
+    {
+      "field_name": "issuing_org_short",
+      "original_value": "City of Maplewood",
+      "category": "issuer",
+      "description": "Issuing organization short name",
+      "all_variations": [
+        {
+          "text": "CITY OF MAPLEWOOD",
+          "placeholder": "{{ issuing_org_short_upper }}"
+        },
+        {
+          "text": "City of Maplewood",
+          "placeholder": "{{ issuing_org_short }}"
+        }
+      ]
+    },
+    {
+      "field_name": "issuing_address",
+      "original_value": "100 Civic Center Drive, Maplewood, NJ 07040",
+      "category": "issuer",
+      "description": "Issuing address",
+      "all_variations": [
+        {
+          "text": "100 Civic Center Drive, Maplewood, NJ 07040",
+          "placeholder": "{{ issuing_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "purchase_order_number",
+      "original_value": "PO-2026-04821",
+      "category": "order",
+      "description": "PO number",
+      "all_variations": [
+        {
+          "text": "PO-2026-04821",
+          "placeholder": "{{ purchase_order_number }}"
+        }
+      ]
+    },
+    {
+      "field_name": "po_date",
+      "original_value": "February 25, 2026",
+      "category": "dates",
+      "description": "PO date",
+      "all_variations": [
+        {
+          "text": "February 25, 2026",
+          "placeholder": "{{ po_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "vendor_name",
+      "original_value": "Garden State Supply Co.",
+      "category": "vendor",
+      "description": "Vendor name",
+      "all_variations": [
+        {
+          "text": "Garden State Supply Co.",
+          "placeholder": "{{ vendor_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "vendor_address",
+      "original_value": "350 Industrial Parkway",
+      "category": "vendor",
+      "description": "Vendor address line 1",
+      "all_variations": [
+        {
+          "text": "350 Industrial Parkway",
+          "placeholder": "{{ vendor_address }}"
+        }
+      ]
+    },
+    {
+      "field_name": "vendor_city_state",
+      "original_value": "Edison, NJ 08817",
+      "category": "vendor",
+      "description": "Vendor city/state/zip",
+      "all_variations": [
+        {
+          "text": "Edison, NJ 08817",
+          "placeholder": "{{ vendor_city_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "vendor_contact",
+      "original_value": "Brian Mueller, (732) 555-0194",
+      "category": "vendor",
+      "description": "Vendor contact",
+      "all_variations": [
+        {
+          "text": "Brian Mueller, (732) 555-0194",
+          "placeholder": "{{ vendor_contact }}"
+        }
+      ]
+    },
+    {
+      "field_name": "ship_to_name",
+      "original_value": "City of Maplewood Public Works Yard",
+      "category": "shipping",
+      "description": "Ship to location name",
+      "all_variations": [
+        {
+          "text": "City of Maplewood Public Works Yard",
+          "placeholder": "{{ ship_to_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "ship_to_street",
+      "original_value": "25 Depot Lane",
+      "category": "shipping",
+      "description": "Ship to street",
+      "all_variations": [
+        {
+          "text": "25 Depot Lane",
+          "placeholder": "{{ ship_to_street }}"
+        }
+      ]
+    },
+    {
+      "field_name": "ship_to_city_state",
+      "original_value": "Maplewood, NJ 07040",
+      "category": "shipping",
+      "description": "Ship to city/state/zip",
+      "all_variations": [
+        {
+          "text": "Maplewood, NJ 07040",
+          "placeholder": "{{ ship_to_city_state }}"
+        }
+      ]
+    },
+    {
+      "field_name": "delivery_date",
+      "original_value": "March 15, 2026",
+      "category": "dates",
+      "description": "Delivery date",
+      "all_variations": [
+        {
+          "text": "March 15, 2026",
+          "placeholder": "{{ delivery_date }}"
+        }
+      ]
+    },
+    {
+      "field_name": "subtotal",
+      "original_value": "$5,527.50",
+      "category": "totals",
+      "description": "Subtotal",
+      "all_variations": [
+        {
+          "text": "$5,527.50",
+          "placeholder": "{{ subtotal }}"
+        }
+      ]
+    },
+    {
+      "field_name": "tax",
+      "original_value": "$366.27",
+      "category": "totals",
+      "description": "Tax amount",
+      "all_variations": [
+        {
+          "text": "$366.27",
+          "placeholder": "{{ tax }}"
+        }
+      ]
+    },
+    {
+      "field_name": "shipping_cost",
+      "original_value": "$175.00",
+      "category": "totals",
+      "description": "Shipping cost",
+      "all_variations": [
+        {
+          "text": "$175.00",
+          "placeholder": "{{ shipping_cost }}"
+        }
+      ]
+    },
+    {
+      "field_name": "total",
+      "original_value": "$6,068.77",
+      "category": "totals",
+      "description": "Grand total",
+      "all_variations": [
+        {
+          "text": "$6,068.77",
+          "placeholder": "{{ total }}"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_terms",
+      "original_value": "Net 45",
+      "category": "payment",
+      "description": "Payment terms",
+      "all_variations": [
+        {
+          "text": "Net 45",
+          "placeholder": "{{ payment_terms }}"
+        }
+      ]
+    },
+    {
+      "field_name": "authorized_by_name",
+      "original_value": "Frank DiNapoli",
+      "category": "signatures",
+      "description": "Authorized by",
+      "all_variations": [
+        {
+          "text": "Frank DiNapoli",
+          "placeholder": "{{ authorized_by_name }}"
+        }
+      ]
+    },
+    {
+      "field_name": "authorized_by_title",
+      "original_value": "Director of Public Works",
+      "category": "signatures",
+      "description": "Authorized title",
+      "all_variations": [
+        {
+          "text": "Director of Public Works",
+          "placeholder": "{{ authorized_by_title }}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "type": "object",
+  "required": [
+    "institution",
+    "recipient",
+    "course",
+    "dates",
+    "personnel",
+    "certificate"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "institution": {
+      "type": "object",
+      "required": [
+        "institution_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "institution_name": {
+          "type": "string",
+          "description": "Institution name"
+        }
+      }
+    },
+    "recipient": {
+      "type": "object",
+      "required": [
+        "recipient_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "recipient_name": {
+          "type": "string",
+          "description": "Recipient name"
+        }
+      }
+    },
+    "course": {
+      "type": "object",
+      "required": [
+        "course_name",
+        "course_description",
+        "total_hours"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "course_name": {
+          "type": "string",
+          "description": "Course name"
+        },
+        "course_description": {
+          "type": "string",
+          "description": "Course description"
+        },
+        "total_hours": {
+          "type": "string",
+          "description": "Total hours"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": [
+        "completion_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "completion_date": {
+          "type": "string",
+          "description": "Completion date"
+        }
+      }
+    },
+    "personnel": {
+      "type": "object",
+      "required": [
+        "instructor_name",
+        "instructor_title_line1",
+        "instructor_title_line2",
+        "director_name",
+        "director_title"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "instructor_name": {
+          "type": "string",
+          "description": "Instructor name"
+        },
+        "instructor_title_line1": {
+          "type": "string",
+          "description": "Instructor title line 1"
+        },
+        "instructor_title_line2": {
+          "type": "string",
+          "description": "Instructor title line 2"
+        },
+        "director_name": {
+          "type": "string",
+          "description": "Director name"
+        },
+        "director_title": {
+          "type": "string",
+          "description": "Director title"
+        }
+      }
+    },
+    "certificate": {
+      "type": "object",
+      "required": [
+        "certificate_number"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "certificate_number": {
+          "type": "string",
+          "description": "Certificate number"
+        }
+      }
+    }
+  }
+}

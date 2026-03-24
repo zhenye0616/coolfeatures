@@ -1,0 +1,12 @@
+[project]
+name = "motion-template-pipeline"
+version = "0.1.0"
+description = "Extract format from any .docx, create reusable templates, fill with new data via LLM"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit",
+    "python-docx",
+    "docxtpl",
+    "anthropic",
+    "pdf2docx>=0.5.12",
+]
