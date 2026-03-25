@@ -244,11 +244,10 @@ def _extract_document_text(docx_path: str) -> str:
                     parts.append(f"  Row {r}, Col {c}: {text}")
 
     parts.append("\n[BODY]")
-    for i, p in enumerate(doc.paragraphs):
+    for p in doc.paragraphs:
         if not p.text.strip():
             continue
-        style = p.style.name if p.style else "Normal"
-        parts.append(f"  P{i} [{style}]: {p.text.strip()}")
+        parts.append(f"  {p.text.strip()}")
 
     return "\n".join(parts)
 
