@@ -535,12 +535,19 @@ Fields to fill (from schema):
 {chr(10).join(schema_fields)}
 
 Rules:
-- Use ONLY the facts provided. Never fabricate information.
-- If a fact is not provided, use a reasonable placeholder like '[TBD]'.
-- Dates should be in 'Month Day, Year' format (e.g., 'January 16, 2026').
-- Provide the canonical/primary form of each value. Variations (uppercase, lowercase)
-  will be derived automatically.
-- For _short fields, provide the abbreviation/acronym (e.g., 'PSC', 'GGL').""",
+- Map the provided facts to the template fields. Use the facts as given — do not fabricate
+  names, dates, or numbers, but DO infer reasonable values when they can be derived from
+  the provided facts (e.g., if a firm name is given, the firm address likely comes from the
+  same facts; if a person's full name is given, their last name can be derived).
+- Only use '[TBD]' as an absolute last resort when a value truly cannot be determined or
+  inferred from the provided facts.
+- For dates, use the format that is natural for the document type (e.g., 'January 16, 2026'
+  for formal documents, or match the format implied by the facts).
+- Provide the canonical/primary form of each value. Variations (uppercase, lowercase,
+  with prefixes) will be derived automatically — do NOT provide those yourself.
+- For _short fields, provide the abbreviation/acronym form (e.g., 'PSC', 'GGL').
+- Use the EXACT names, numbers, and values from the facts — do not paraphrase or reformat
+  names (e.g., if facts say "John Smith", use "John Smith", not "Smith, John").""",
         tools=[
             {
                 "name": "fill_template",
