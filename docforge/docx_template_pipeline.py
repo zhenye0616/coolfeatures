@@ -234,14 +234,16 @@ def _extract_document_text(docx_path: str) -> str:
             if p.text.strip():
                 parts.append(f"[FOOTER] {p.text.strip()}")
 
-    for i, table in enumerate(doc.tables):
-        parts.append(f"\n[TABLE {i}]")
-        for r, row in enumerate(table.rows):
-            for c, cell in enumerate(row.cells):
+    for table in doc.tables:
+        parts.append("\n[TABLE]")
+        for row in table.rows:
+            cells = []
+            for cell in row.cells:
                 text = cell.text.strip()
                 if text:
-                    text = re.sub(r"\n+", " | ", text)
-                    parts.append(f"  Row {r}, Col {c}: {text}")
+                    cells.append(re.sub(r"\n+", " | ", text))
+            if cells:
+                parts.append(f"  {' | '.join(cells)}")
 
     parts.append("\n[BODY]")
     for p in doc.paragraphs:
