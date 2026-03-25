@@ -456,7 +456,13 @@ def _fuzzy_lookup(fill_data: dict, key: str) -> str | None:
     val = fill_data.get(key)
     if val is not None:
         return val
-    # Try matching by removing common suffixes/prefixes and checking containment
+    # Strategy 1: substring containment (one key contains the other)
+    for k, v in fill_data.items():
+        if not isinstance(v, str):
+            continue
+        if key in k or k in key:
+            return v
+    # Strategy 2: Jaccard similarity on underscore-separated word parts
     key_parts = set(key.split("_"))
     best_score = 0
     best_val = None
@@ -464,7 +470,6 @@ def _fuzzy_lookup(fill_data: dict, key: str) -> str | None:
         if not isinstance(v, str):
             continue
         k_parts = set(k.split("_"))
-        # Jaccard similarity on word parts
         intersection = len(key_parts & k_parts)
         union = len(key_parts | k_parts)
         if union > 0:
