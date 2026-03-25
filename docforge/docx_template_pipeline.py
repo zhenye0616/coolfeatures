@@ -450,6 +450,31 @@ def _build_cross_field_map(
     return pairs
 
 
+def _fuzzy_lookup(fill_data: dict, key: str) -> str | None:
+    """Try to find a matching key in fill_data using fuzzy matching."""
+    # Exact match
+    val = fill_data.get(key)
+    if val is not None:
+        return val
+    # Try matching by removing common suffixes/prefixes and checking containment
+    key_parts = set(key.split("_"))
+    best_score = 0
+    best_val = None
+    for k, v in fill_data.items():
+        if not isinstance(v, str):
+            continue
+        k_parts = set(k.split("_"))
+        # Jaccard similarity on word parts
+        intersection = len(key_parts & k_parts)
+        union = len(key_parts | k_parts)
+        if union > 0:
+            score = intersection / union
+            if score > best_score and score >= 0.5:
+                best_score = score
+                best_val = v
+    return best_val
+
+
 def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
     vmap = _build_variation_map(analysis)
     cross_map = _build_cross_field_map(analysis, fill_data)
@@ -457,7 +482,9 @@ def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
 
     for fld in analysis["fields"]:
         fname = fld["field_name"]
-        canonical = fill_data.get(fname, "[TBD]")
+        canonical = fill_data.get(fname)
+        if canonical is None:
+            canonical = _fuzzy_lookup(fill_data, fname) or "[TBD]"
 
         for pname, transform, _original, field_orig_value in vmap.get(fname, []):
             if transform == _TR_UPPER:
