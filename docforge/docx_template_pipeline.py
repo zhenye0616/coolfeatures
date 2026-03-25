@@ -531,16 +531,30 @@ def _fuzzy_lookup(fill_data: dict, key: str) -> str | None:
             continue
         if key in k or k in key:
             return v
-    # Strategy 2: Jaccard similarity on underscore-separated word parts
-    key_parts = set(key.split("_"))
+    # Strategy 2: last-word match with overlap — e.g., "attorney_name" matches "lawyer_name"
+    key_parts = key.split("_")
+    key_last = key_parts[-1] if key_parts else ""
+    if len(key_parts) >= 2 and key_last:
+        for k, v in fill_data.items():
+            if not isinstance(v, str):
+                continue
+            k_parts = k.split("_")
+            k_last = k_parts[-1] if k_parts else ""
+            if k_last == key_last and len(k_parts) >= 2:
+                # Last word matches — check for additional overlap
+                shared = len(set(key_parts) & set(k_parts))
+                if shared >= 2 or (shared >= 1 and len(key_parts) <= 2 and len(k_parts) <= 2):
+                    return v
+    # Strategy 3: Jaccard similarity on underscore-separated word parts
+    key_set = set(key_parts)
     best_score = 0
     best_val = None
     for k, v in fill_data.items():
         if not isinstance(v, str):
             continue
-        k_parts = set(k.split("_"))
-        intersection = len(key_parts & k_parts)
-        union = len(key_parts | k_parts)
+        k_set = set(k.split("_"))
+        intersection = len(key_set & k_set)
+        union = len(key_set | k_set)
         if union > 0:
             score = intersection / union
             if score > best_score and score >= 0.5:
