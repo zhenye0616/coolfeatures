@@ -49,6 +49,7 @@ _TR_LOWER = "lower"
 _TR_SHORT = "short"
 _TR_ABBREV = "abbrev"
 _TR_IDENTITY = "identity"
+_TR_TITLE = "title"
 _TR_LASTNAME_AFFIX = "lastname_affix"
 # Affix transform is a tuple: ("affix", prefix, suffix)
 
@@ -429,15 +430,23 @@ def _build_variation_map(analysis: dict) -> dict:
         elif pname == fname:
             transform = _TR_IDENTITY
         else:
-            idx = variation_text.find(original_value)
-            if idx < 0:
-                idx = variation_text.lower().find(original_value.lower())
-            if idx >= 0:
-                prefix = variation_text[:idx]
-                suffix = variation_text[idx + len(original_value) :]
-                transform = ("affix", prefix, suffix)
+            # Heuristic case detection before falling back to affix
+            if variation_text == original_value.upper() and variation_text != original_value:
+                transform = _TR_UPPER
+            elif variation_text == original_value.lower() and variation_text != original_value:
+                transform = _TR_LOWER
+            elif variation_text == original_value.title() and variation_text != original_value:
+                transform = _TR_TITLE
             else:
-                transform = _TR_IDENTITY
+                idx = variation_text.find(original_value)
+                if idx < 0:
+                    idx = variation_text.lower().find(original_value.lower())
+                if idx >= 0:
+                    prefix = variation_text[:idx]
+                    suffix = variation_text[idx + len(original_value) :]
+                    transform = ("affix", prefix, suffix)
+                else:
+                    transform = _TR_IDENTITY
 
         vmap[fname].append((pname, transform, variation_text, original_value))
     return vmap
@@ -473,6 +482,8 @@ def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
                 context[pname] = canonical.upper()
             elif transform == _TR_LOWER:
                 context[pname] = canonical.lower()
+            elif transform == _TR_TITLE:
+                context[pname] = canonical.title()
             elif transform == _TR_IDENTITY:
                 context[pname] = canonical
             elif isinstance(transform, tuple) and transform[0] == "affix":
