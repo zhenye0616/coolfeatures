@@ -191,13 +191,13 @@ class RenderedDocument:
 # ── Private utilities ────────────────────────────────────────────────────────
 
 
-def _is_openai_model(model: str) -> bool:
-    return model.startswith(("gpt-", "o1", "o3", "o4"))
+def _is_openai_compatible(model: str) -> bool:
+    return model.startswith(("gpt-", "o1", "o3", "o4", "gemini"))
 
 
 def _make_client(config: LLMConfig):
-    if _is_openai_model(config.model):
-        return None  # OpenAI calls use _call_openai directly
+    if _is_openai_compatible(config.model):
+        return None  # OpenAI-compatible calls use _call_openai_compatible directly
     if anthropic is None:
         raise ImportError("anthropic package is required: pip install anthropic")
     kwargs: dict = {"api_key": config.api_key}
@@ -206,13 +206,18 @@ def _make_client(config: LLMConfig):
     return anthropic.Anthropic(**kwargs)
 
 
-def _call_openai(config: LLMConfig, system: str, messages: list, tools: list,
-                 tool_choice: dict, max_tokens: int) -> dict:
-    """Call OpenAI API directly via httpx and return the tool call input."""
+def _call_openai_compatible(config: LLMConfig, system: str, messages: list, tools: list,
+                           tool_choice: dict, max_tokens: int) -> dict:
+    """Call OpenAI-compatible API (OpenAI, Gemini) via httpx and return tool call input."""
     import httpx
 
-    api_key = os.environ.get("OPENAI_API_KEY", "") or config.api_key
-    base = (config.base_url or "https://api.openai.com").rstrip("/")
+    is_gemini = config.model.startswith("gemini")
+    if is_gemini:
+        api_key = os.environ.get("GEMINI_API_KEY", "") or config.api_key
+        base = (config.base_url or "https://generativelanguage.googleapis.com/v1beta/openai").rstrip("/")
+    else:
+        api_key = os.environ.get("OPENAI_API_KEY", "") or config.api_key
+        base = (config.base_url or "https://api.openai.com").rstrip("/")
 
     # Convert Anthropic tool format to OpenAI format
     oai_tools = []
@@ -242,9 +247,10 @@ def _call_openai(config: LLMConfig, system: str, messages: list, tools: list,
         "tool_choice": oai_tc,
     }
 
+    url = f"{base}/chat/completions" if is_gemini else f"{base}/v1/chat/completions"
     with httpx.Client(timeout=120) as client:
         resp = client.post(
-            f"{base}/v1/chat/completions",
+            url,
             headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
             json=body,
         )
@@ -344,8 +350,8 @@ IMPORTANT REMINDERS:
         }
     ]
 
-    if _is_openai_model(config.model):
-        return _call_openai(
+    if _is_openai_compatible(config.model):
+        return _call_openai_compatible(
             config, _ANALYSIS_SYSTEM_PROMPT, messages, tools,
             {"name": "report_fields"}, config.max_tokens_analyze,
         )
@@ -668,8 +674,8 @@ Rules:
         }
     ]
 
-    if _is_openai_model(config.model):
-        return _call_openai(
+    if _is_openai_compatible(config.model):
+        return _call_openai_compatible(
             config, fill_system, messages, tools,
             {"name": "fill_template"}, config.max_tokens_fill,
         )
