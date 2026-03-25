@@ -191,13 +191,72 @@ class RenderedDocument:
 # ── Private utilities ────────────────────────────────────────────────────────
 
 
+def _is_openai_model(model: str) -> bool:
+    return model.startswith(("gpt-", "o1", "o3", "o4"))
+
+
 def _make_client(config: LLMConfig):
+    if _is_openai_model(config.model):
+        return None  # OpenAI calls use _call_openai directly
     if anthropic is None:
         raise ImportError("anthropic package is required: pip install anthropic")
     kwargs: dict = {"api_key": config.api_key}
     if config.base_url:
         kwargs["base_url"] = config.base_url
     return anthropic.Anthropic(**kwargs)
+
+
+def _call_openai(config: LLMConfig, system: str, messages: list, tools: list,
+                 tool_choice: dict, max_tokens: int) -> dict:
+    """Call OpenAI API directly via httpx and return the tool call input."""
+    import httpx
+
+    api_key = os.environ.get("OPENAI_API_KEY", "") or config.api_key
+    base = (config.base_url or "https://api.openai.com").rstrip("/")
+
+    # Convert Anthropic tool format to OpenAI format
+    oai_tools = []
+    for t in tools:
+        oai_tools.append({
+            "type": "function",
+            "function": {
+                "name": t["name"],
+                "description": t["description"],
+                "parameters": t["input_schema"],
+            },
+        })
+
+    # Build OpenAI messages
+    oai_messages = [{"role": "system", "content": system}]
+    for m in messages:
+        oai_messages.append({"role": m["role"], "content": m["content"]})
+
+    # tool_choice conversion
+    oai_tc = {"type": "function", "function": {"name": tool_choice["name"]}}
+
+    body = {
+        "model": config.model,
+        "max_tokens": max_tokens,
+        "messages": oai_messages,
+        "tools": oai_tools,
+        "tool_choice": oai_tc,
+    }
+
+    with httpx.Client(timeout=120) as client:
+        resp = client.post(
+            f"{base}/v1/chat/completions",
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json=body,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+    # Extract tool call arguments
+    choice = data["choices"][0]["message"]
+    for tc in choice.get("tool_calls", []):
+        if tc["function"]["name"] in {t["name"] for t in tools}:
+            return json.loads(tc["function"]["arguments"])
+    raise ValueError("OpenAI response did not contain a tool call")
 
 
 def _extract_placeholder_name(placeholder_str: str) -> str | None:
@@ -258,23 +317,17 @@ def _extract_document_text(docx_path: str) -> str:
 
 
 def _analyze_document(doc_text: str, config: LLMConfig) -> dict:
-    client = _make_client(config)
-    response = client.messages.create(
-        model=config.model,
-        max_tokens=config.max_tokens_analyze,
-        system=_ANALYSIS_SYSTEM_PROMPT,
-        tools=[
-            {
-                "name": "report_fields",
-                "description": "Report all variable fields found in the document",
-                "input_schema": _ANALYSIS_SCHEMA,
-            }
-        ],
-        tool_choice={"type": "tool", "name": "report_fields"},
-        messages=[
-            {
-                "role": "user",
-                "content": f"""Analyze this document and identify every variable/case-specific field.
+    tools = [
+        {
+            "name": "report_fields",
+            "description": "Report all variable fields found in the document",
+            "input_schema": _ANALYSIS_SCHEMA,
+        }
+    ]
+    messages = [
+        {
+            "role": "user",
+            "content": f"""Analyze this document and identify every variable/case-specific field.
 
 DOCUMENT TEXT:
 ---
@@ -288,8 +341,23 @@ IMPORTANT REMINDERS:
   forms (e.g., "Manzanares Decl.", just "Manzanares"). These MUST appear in all_variations.
 - Party abbreviations (e.g., "ASP", "GSO") used throughout the body MUST be captured as _short variations.
 - Prefixed forms like "Hon. Judge Name" or "SBN 12345" MUST be captured alongside the bare value.""",
-            }
-        ],
+        }
+    ]
+
+    if _is_openai_model(config.model):
+        return _call_openai(
+            config, _ANALYSIS_SYSTEM_PROMPT, messages, tools,
+            {"name": "report_fields"}, config.max_tokens_analyze,
+        )
+
+    client = _make_client(config)
+    response = client.messages.create(
+        model=config.model,
+        max_tokens=config.max_tokens_analyze,
+        system=_ANALYSIS_SYSTEM_PROMPT,
+        tools=tools,
+        tool_choice={"type": "tool", "name": "report_fields"},
+        messages=messages,
     )
 
     for block in response.content:
@@ -549,11 +617,7 @@ def _fill_with_llm(
     for fname, fspec in fill_schema["properties"].items():
         schema_fields.append(f"- {fname}: {fspec['description']}")
 
-    client = _make_client(config)
-    response = client.messages.create(
-        model=config.model,
-        max_tokens=config.max_tokens_fill,
-        system=f"""You are a document data assistant. You produce structured JSON to fill
+    fill_system = f"""You are a document data assistant. You produce structured JSON to fill
 a {doc_type} template.
 
 Document description: {doc_desc}
@@ -574,21 +638,36 @@ Rules:
   with prefixes) will be derived automatically — do NOT provide those yourself.
 - For _short fields, provide the abbreviation/acronym form (e.g., 'PSC', 'GGL').
 - Use the EXACT names, numbers, and values from the facts — do not paraphrase or reformat
-  names (e.g., if facts say "John Smith", use "John Smith", not "Smith, John").""",
-        tools=[
-            {
-                "name": "fill_template",
-                "description": f"Provide structured data to fill a {doc_type} template",
-                "input_schema": fill_schema,
-            }
-        ],
+  names (e.g., if facts say "John Smith", use "John Smith", not "Smith, John")."""
+
+    tools = [
+        {
+            "name": "fill_template",
+            "description": f"Provide structured data to fill a {doc_type} template",
+            "input_schema": fill_schema,
+        }
+    ]
+    messages = [
+        {
+            "role": "user",
+            "content": f"Fill in the template fields based on these facts:\n\n{new_facts}",
+        }
+    ]
+
+    if _is_openai_model(config.model):
+        return _call_openai(
+            config, fill_system, messages, tools,
+            {"name": "fill_template"}, config.max_tokens_fill,
+        )
+
+    client = _make_client(config)
+    response = client.messages.create(
+        model=config.model,
+        max_tokens=config.max_tokens_fill,
+        system=fill_system,
+        tools=tools,
         tool_choice={"type": "tool", "name": "fill_template"},
-        messages=[
-            {
-                "role": "user",
-                "content": f"Fill in the template fields based on these facts:\n\n{new_facts}",
-            }
-        ],
+        messages=messages,
     )
 
     for block in response.content:
