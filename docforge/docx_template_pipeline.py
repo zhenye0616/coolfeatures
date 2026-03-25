@@ -443,7 +443,7 @@ def _build_cross_field_map(
     for fld in analysis["fields"]:
         fname = fld["field_name"]
         orig = fld["original_value"]
-        new_val = fill_data.get(fname)
+        new_val = fill_data.get(fname) or _fuzzy_lookup(fill_data, fname)
         if new_val and orig != new_val and len(orig) >= 3:
             pairs.append((orig, new_val))
     pairs.sort(key=lambda x: len(x[0]), reverse=True)
@@ -520,6 +520,8 @@ def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
                 alt_val = fill_data.get(f"{fname}_{transform}")
                 if not alt_val:
                     alt_val = fill_data.get(pname)
+                if not alt_val:
+                    alt_val = _fuzzy_lookup(fill_data, f"{fname}_{transform}")
                 context[pname] = alt_val if alt_val else canonical
             else:
                 warnings.warn(
