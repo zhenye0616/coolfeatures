@@ -358,41 +358,25 @@ def _apply_replacements_to_docx(
 
 
 def _build_fill_schema(analysis: dict) -> dict:
-    categories: dict[str, list] = {}
+    properties: dict = {}
+    required: list = []
+
     for fld in analysis["fields"]:
-        categories.setdefault(fld["category"], []).append(fld)
+        fname = fld["field_name"]
+        properties[fname] = {"type": "string", "description": fld["description"]}
+        required.append(fname)
 
-    properties = {}
-    required = []
-
-    for cat, fields in categories.items():
-        cat_properties: dict = {}
-        cat_required: list = []
-
-        for fld in fields:
-            fname = fld["field_name"]
-            cat_properties[fname] = {"type": "string", "description": fld["description"]}
-            cat_required.append(fname)
-
-            for _, v, pname in _iter_field_variations({"fields": [fld]}):
-                for suffix in _USER_SUPPLIED_SUFFIXES:
-                    if pname.endswith(suffix) and pname not in cat_properties:
-                        cat_properties[pname] = {
-                            "type": "string",
-                            "description": (
-                                f"Short form/abbreviation for {fld['description'].lower()} "
-                                f"(in the original document this was '{v['text']}')"
-                            ),
-                        }
-                        cat_required.append(pname)
-
-        properties[cat] = {
-            "type": "object",
-            "required": cat_required,
-            "additionalProperties": False,
-            "properties": cat_properties,
-        }
-        required.append(cat)
+        for _, v, pname in _iter_field_variations({"fields": [fld]}):
+            for suffix in _USER_SUPPLIED_SUFFIXES:
+                if pname.endswith(suffix) and pname not in properties:
+                    properties[pname] = {
+                        "type": "string",
+                        "description": (
+                            f"Short form/abbreviation for {fld['description'].lower()} "
+                            f"(in the original document this was '{v['text']}')"
+                        ),
+                    }
+                    required.append(pname)
 
     return {
         "type": "object",
@@ -458,9 +442,8 @@ def _build_cross_field_map(
     pairs = []
     for fld in analysis["fields"]:
         fname = fld["field_name"]
-        cat = fld["category"]
         orig = fld["original_value"]
-        new_val = fill_data.get(cat, {}).get(fname)
+        new_val = fill_data.get(fname)
         if new_val and orig != new_val and len(orig) >= 3:
             pairs.append((orig, new_val))
     pairs.sort(key=lambda x: len(x[0]), reverse=True)
@@ -474,8 +457,7 @@ def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
 
     for fld in analysis["fields"]:
         fname = fld["field_name"]
-        cat = fld["category"]
-        canonical = fill_data.get(cat, {}).get(fname, "[TBD]")
+        canonical = fill_data.get(fname, "[TBD]")
 
         for pname, transform, _original, field_orig_value in vmap.get(fname, []):
             if transform == _TR_UPPER:
@@ -508,9 +490,9 @@ def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
                 else:
                     context[pname] = new_lastname
             elif transform in (_TR_SHORT, _TR_ABBREV):
-                alt_val = fill_data.get(cat, {}).get(f"{fname}_{transform}")
+                alt_val = fill_data.get(f"{fname}_{transform}")
                 if not alt_val:
-                    alt_val = fill_data.get(cat, {}).get(pname)
+                    alt_val = fill_data.get(pname)
                 context[pname] = alt_val if alt_val else canonical
             else:
                 warnings.warn(
@@ -529,9 +511,8 @@ def _fill_with_llm(
     doc_desc = analysis["document_description"]
 
     schema_fields = []
-    for cat, spec in fill_schema["properties"].items():
-        for fname, fspec in spec["properties"].items():
-            schema_fields.append(f"- {fname} ({cat}): {fspec['description']}")
+    for fname, fspec in fill_schema["properties"].items():
+        schema_fields.append(f"- {fname}: {fspec['description']}")
 
     client = _make_client(config)
     response = client.messages.create(
@@ -647,6 +628,17 @@ def create_template(
     )
 
 
+def _flatten_fill_data(fill_data: dict) -> dict:
+    """Normalize fill_data: if nested {category: {field: val}}, flatten to {field: val}."""
+    flat: dict = {}
+    for key, val in fill_data.items():
+        if isinstance(val, dict):
+            flat.update(val)
+        else:
+            flat[key] = val
+    return flat
+
+
 def fill_template(
     artifacts: TemplateArtifacts,
     new_facts: str,
@@ -678,6 +670,9 @@ def fill_template(
         fill_data = _fill_with_llm(
             new_facts, artifacts.analysis, artifacts.fill_schema, llm_config
         )
+
+    # Normalize nested fill_data (category→fields) to flat (field→value)
+    fill_data = _flatten_fill_data(fill_data)
 
     context = _expand_to_placeholders(fill_data, artifacts.analysis)
 
