@@ -248,21 +248,28 @@ def _call_openai_compatible(config: LLMConfig, system: str, messages: list, tool
     }
 
     url = f"{base}/chat/completions" if is_gemini else f"{base}/v1/chat/completions"
-    with httpx.Client(timeout=120) as client:
-        resp = client.post(
-            url,
-            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            json=body,
-        )
-        resp.raise_for_status()
-        data = resp.json()
+    import time as _time
+    last_err = None
+    for attempt in range(3):
+        with httpx.Client(timeout=120) as client:
+            resp = client.post(
+                url,
+                headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+                json=body,
+            )
+            if resp.status_code >= 500:
+                _time.sleep(2)
+                continue
+            resp.raise_for_status()
 
-    # Extract tool call arguments
-    choice = data["choices"][0]["message"]
-    for tc in choice.get("tool_calls", []):
-        if tc["function"]["name"] in {t["name"] for t in tools}:
-            return json.loads(tc["function"]["arguments"])
-    raise ValueError("OpenAI response did not contain a tool call")
+        data = resp.json()
+        choice = data["choices"][0]["message"]
+        for tc in choice.get("tool_calls", []):
+            if tc["function"]["name"] in {t["name"] for t in tools}:
+                return json.loads(tc["function"]["arguments"])
+        last_err = "response did not contain a tool call"
+        _time.sleep(1)  # brief pause before retry
+    raise ValueError(f"OpenAI/Gemini API failed after 3 attempts: {last_err}")
 
 
 def _extract_placeholder_name(placeholder_str: str) -> str | None:
