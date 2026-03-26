@@ -1,0 +1,22 @@
+{
+  "facility": {
+    "facility_name": "Pinecrest Nursing and Rehabilitation",
+    "incident_location": "Room 108, West Wing"
+  },
+  "dates": {
+    "incident_date": "August 3, 2026",
+    "incident_time": "10:15 AM"
+  },
+  "clinical": {
+    "incident_type": "Patient fall",
+    "injuries": "Abrasion to right forearm, no laceration"
+  },
+  "patient": {
+    "person_involved": "Harold Bergstrom"
+  },
+  "staff": {
+    "witness": "Nurse Angela Rivera",
+    "reporting_staff": "Charge Nurse Tomoko Sato",
+    "supervisor": "Director of Nursing, William Okafor"
+  }
+}

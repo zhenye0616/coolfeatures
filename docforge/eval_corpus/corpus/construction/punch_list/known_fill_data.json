@@ -1,0 +1,21 @@
+{
+  "project": {
+    "project_name": "Parkside Residences Phase 1"
+  },
+  "identifiers": {
+    "project_number": "PR1-2026-005"
+  },
+  "parties": {
+    "general_contractor": "Horizon Construction Group",
+    "owner_developer": "Parkside Living LLC",
+    "inspector": "Project Manager, Steven Cho",
+    "architect": "Urban Edge Design, Nina Petrov"
+  },
+  "location": {
+    "unit_area": "Building A, Units 101-108"
+  },
+  "dates": {
+    "punch_list_date": "August 15, 2026",
+    "target_completion": "September 5, 2026"
+  }
+}

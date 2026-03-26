@@ -1,0 +1,142 @@
+{
+  "document_type": "discharge_summary",
+  "fields": [
+    {
+      "field_name": "patient_name",
+      "original_value": "Robert Jennings",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Robert Jennings",
+          "type": "identity"
+        },
+        {
+          "text": "Jennings",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "mrn",
+      "original_value": "MRN-2024-08834",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "MRN-2024-08834",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "hospital_name",
+      "original_value": "St. Catherine's Medical Center",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "St. Catherine's Medical Center",
+          "type": "identity"
+        },
+        {
+          "text": "ST. CATHERINE'S MEDICAL CENTER",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "admission_date",
+      "original_value": "December 12, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "December 12, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "discharge_date",
+      "original_value": "December 16, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "December 16, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "admitting_diagnosis",
+      "original_value": "Acute appendicitis",
+      "category": "clinical",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Acute appendicitis",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "discharge_diagnosis",
+      "original_value": "Status post appendectomy",
+      "category": "clinical",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Status post appendectomy",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "attending_physician",
+      "original_value": "Dr. Natasha Volkov",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dr. Natasha Volkov",
+          "type": "identity"
+        },
+        {
+          "text": "Dr. Volkov",
+          "type": "short"
+        },
+        {
+          "text": "Volkov",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "General Surgery",
+      "category": "provider",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "General Surgery",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "DISCHARGE SUMMARY",
+    "PATIENT INFORMATION",
+    "HISTORY OF PRESENT ILLNESS",
+    "HOSPITAL COURSE",
+    "DISCHARGE MEDICATIONS",
+    "DISCHARGE INSTRUCTIONS",
+    "DISCHARGE CONDITION",
+    "Electronically signed by",
+    "Medical Record Number",
+    "Admitting Diagnosis",
+    "Discharge Diagnosis"
+  ]
+}

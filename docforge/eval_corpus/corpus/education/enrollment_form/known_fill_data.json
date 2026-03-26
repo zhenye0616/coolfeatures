@@ -1,0 +1,25 @@
+{
+  "parties": {
+    "institution_name": "Maplewood Technical College",
+    "institution_address": "1800 Elm Street, Columbus, OH 43215",
+    "student_name": "Jasmine Washington",
+    "home_address": "1245 Pine Ridge Drive, Columbus, OH 43201",
+    "emergency_contact_name": "Denise Washington"
+  },
+  "personal": {
+    "date_of_birth": "February 11, 2005",
+    "ssn_last_four": "4512"
+  },
+  "contact": {
+    "phone": "(614) 555-0293",
+    "email": "j.washington@email.com"
+  },
+  "academic": {
+    "intended_major": "Dental Hygiene (AAS)",
+    "student_type": "First-time freshman",
+    "previous_school": "Westerville North High School (graduated June 2025)"
+  },
+  "dates": {
+    "enrollment_term": "Spring 2026"
+  }
+}

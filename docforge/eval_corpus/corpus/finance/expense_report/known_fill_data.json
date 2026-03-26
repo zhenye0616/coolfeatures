@@ -1,0 +1,19 @@
+{
+  "parties": {
+    "employee_name": "Andrew Park",
+    "department": "Sales",
+    "manager_name": "Lisa Yamamoto",
+    "manager_title": "VP of Sales",
+    "company_name": "Clearwater Consulting Group",
+    "company_address": "1500 Bayfront Parkway, Erie, PA 16507"
+  },
+  "dates": {
+    "reporting_period": "April 1-30, 2026",
+    "date_submitted": "May 3, 2026"
+  },
+  "financial": {
+    "total_expenses": "$4,215.00",
+    "airfare_amount": "$612.00",
+    "conference_fee": "$1,950.00"
+  }
+}

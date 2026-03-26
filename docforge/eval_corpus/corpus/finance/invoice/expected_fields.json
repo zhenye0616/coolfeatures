@@ -1,0 +1,143 @@
+{
+  "document_type": "invoice",
+  "fields": [
+    {
+      "field_name": "vendor_name",
+      "original_value": "Meridian Supply Co.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Meridian Supply Co.",
+          "type": "identity"
+        },
+        {
+          "text": "MERIDIAN SUPPLY CO.",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "vendor_address",
+      "original_value": "3400 Commerce Boulevard, Dallas, TX 75201",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "3400 Commerce Boulevard, Dallas, TX 75201",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "client_name",
+      "original_value": "Brightfield Construction LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Brightfield Construction LLC",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "client_address",
+      "original_value": "890 Industrial Park Way, Austin, TX 78701",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "890 Industrial Park Way, Austin, TX 78701",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "invoice_number",
+      "original_value": "INV-2025-0847",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "INV-2025-0847",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "invoice_date",
+      "original_value": "February 28, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 28, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "due_date",
+      "original_value": "March 30, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "March 30, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "po_number",
+      "original_value": "PO-BC-2024-156",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "PO-BC-2024-156",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_phone",
+      "original_value": "(214) 555-0192",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(214) 555-0192",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_email",
+      "original_value": "billing@meridiansupply.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "billing@meridiansupply.com",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "INVOICE",
+    "BILL TO",
+    "PAYMENT TERMS",
+    "Description",
+    "Quantity",
+    "Unit Price",
+    "Total",
+    "Subtotal",
+    "Sales Tax",
+    "TOTAL DUE",
+    "Net 30",
+    "Thank you for your business"
+  ]
+}

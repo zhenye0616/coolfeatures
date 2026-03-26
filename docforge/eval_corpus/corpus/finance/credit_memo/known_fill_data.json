@@ -1,0 +1,23 @@
+{
+  "parties": {
+    "issuer_name": "Northern Tech Supply",
+    "issuer_address": "5500 Gateway Boulevard, Minneapolis, MN 55402",
+    "recipient_name": "Bayshore IT Services",
+    "recipient_address": "1700 Waterfront Drive, Annapolis, MD 21401",
+    "authorized_by": "Michael Torres"
+  },
+  "identifiers": {
+    "credit_memo_number": "CM-2026-0891",
+    "original_invoice": "INV-2026-0567"
+  },
+  "dates": {
+    "credit_memo_date": "November 8, 2026"
+  },
+  "financial": {
+    "total_credit": "$3,650.00"
+  },
+  "contact": {
+    "contact_email": "returns@northerntechsupply.com",
+    "contact_phone": "(612) 555-0388"
+  }
+}

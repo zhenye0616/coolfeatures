@@ -1,0 +1,21 @@
+{
+  "parties": {
+    "company_name": "Horizon Tech Partners",
+    "company_address": "900 Congress Avenue, Suite 200, Austin, TX 78701",
+    "candidate_name": "Emily Nakamura",
+    "hr_director_name": "David Chen"
+  },
+  "employment": {
+    "position_title": "Lead Data Engineer",
+    "department": "Data Infrastructure",
+    "manager_name": "VP of Data, Robert Kim"
+  },
+  "dates": {
+    "start_date": "April 14, 2026",
+    "offer_date": "March 20, 2026"
+  },
+  "compensation": {
+    "base_salary": "$185,000",
+    "signing_bonus": "$20,000"
+  }
+}

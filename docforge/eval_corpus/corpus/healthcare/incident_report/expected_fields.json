@@ -1,0 +1,166 @@
+{
+  "document_type": "incident_report",
+  "fields": [
+    {
+      "field_name": "facility_name",
+      "original_value": "Brookhaven Rehabilitation Center",
+      "category": "facility",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Brookhaven Rehabilitation Center",
+          "type": "identity"
+        },
+        {
+          "text": "BROOKHAVEN REHABILITATION CENTER",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "incident_date",
+      "original_value": "February 14, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 14, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "incident_time",
+      "original_value": "2:35 PM",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2:35 PM",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "incident_location",
+      "original_value": "Room 214, East Wing",
+      "category": "facility",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Room 214, East Wing",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "incident_type",
+      "original_value": "Patient fall",
+      "category": "clinical",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Patient fall",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "person_involved",
+      "original_value": "Margaret Sullivan",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Margaret Sullivan",
+          "type": "identity"
+        },
+        {
+          "text": "Sullivan",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "witness",
+      "original_value": "Nurse Patricia Hayes",
+      "category": "staff",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Nurse Patricia Hayes",
+          "type": "identity"
+        },
+        {
+          "text": "Hayes",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "reporting_staff",
+      "original_value": "Charge Nurse David Kim",
+      "category": "staff",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Charge Nurse David Kim",
+          "type": "identity"
+        },
+        {
+          "text": "Kim",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "supervisor",
+      "original_value": "Director of Nursing, Barbara Thompson",
+      "category": "staff",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Director of Nursing, Barbara Thompson",
+          "type": "identity"
+        },
+        {
+          "text": "Barbara Thompson",
+          "type": "name_only"
+        },
+        {
+          "text": "Thompson",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "injuries",
+      "original_value": "Bruise to left hip, no fracture suspected",
+      "category": "clinical",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Bruise to left hip, no fracture suspected",
+          "type": "identity"
+        },
+        {
+          "text": "bruise to the left hip",
+          "type": "article_form"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "INCIDENT / OCCURRENCE REPORT",
+    "CONFIDENTIAL",
+    "FOR INTERNAL USE ONLY",
+    "INCIDENT DETAILS",
+    "DESCRIPTION OF INCIDENT",
+    "ACTIONS TAKEN",
+    "INJURIES SUSTAINED",
+    "PREVENTIVE MEASURES",
+    "REPORT FILED BY",
+    "SUPERVISOR REVIEW",
+    "Fall risk assessment"
+  ]
+}

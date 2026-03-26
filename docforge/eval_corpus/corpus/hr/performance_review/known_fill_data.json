@@ -1,0 +1,20 @@
+{
+  "parties": {
+    "company_name": "Pinnacle Tech Group",
+    "company_address": "1800 Summit Boulevard, Suite 300, Denver, CO 80202",
+    "employee_name": "Derek Yamamoto"
+  },
+  "employment": {
+    "employee_title": "Senior Product Manager",
+    "department": "Product Strategy",
+    "manager_name": "VP of Engineering, Christine Palmer"
+  },
+  "dates": {
+    "review_period": "January 1, 2025 \u2013 December 31, 2025",
+    "review_date": "February 20, 2026",
+    "next_review_date": "February 2027"
+  },
+  "evaluation": {
+    "overall_rating": "Meets Expectations"
+  }
+}

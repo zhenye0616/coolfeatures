@@ -1,0 +1,24 @@
+{
+  "project": {
+    "project_name": "Capitol Square Redevelopment"
+  },
+  "identifiers": {
+    "project_number": "CSR-2025-003",
+    "change_order_number": "CO-012"
+  },
+  "parties": {
+    "owner_name": "Capitol Square Partners",
+    "owner_address": "2200 K Street NW, Suite 800, Washington, DC 20037",
+    "contractor_name": "Titan Construction Group",
+    "contractor_address": "5600 Industrial Boulevard, Arlington, VA 22203",
+    "owner_approver": "Jonathan Ellis, Managing Partner",
+    "contractor_approver": "Rosa Martinez, Senior PM"
+  },
+  "dates": {
+    "change_order_date": "September 15, 2026"
+  },
+  "financial": {
+    "cost_impact": "$87,300.00",
+    "new_contract_sum": "$22,187,300.00"
+  }
+}

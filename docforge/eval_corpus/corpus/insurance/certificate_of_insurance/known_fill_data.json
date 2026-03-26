@@ -1,0 +1,20 @@
+{
+  "parties": {
+    "insured_name": "Coastal Builders Group",
+    "insured_address": "1220 Waterfront Avenue, Portland, OR 97209",
+    "insurer_name": "Pacific Shield Insurance",
+    "certificate_holder_name": "Portland Bureau of Transportation",
+    "certificate_holder_address": "1120 SW 5th Avenue, Portland, OR 97204",
+    "producer_agent": "Lisa Tran"
+  },
+  "identifiers": {
+    "policy_number": "PSI-GL-2026-11234"
+  },
+  "dates": {
+    "policy_period_start": "July 1, 2026",
+    "policy_period_end": "July 1, 2027"
+  },
+  "coverage": {
+    "coverage_type": "Commercial General Liability"
+  }
+}

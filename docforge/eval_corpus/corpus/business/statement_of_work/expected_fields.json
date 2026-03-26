@@ -1,0 +1,210 @@
+{
+  "document_type": "statement_of_work",
+  "fields": [
+    {
+      "field_name": "provider_name",
+      "original_value": "Brightpath Digital Agency",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Brightpath Digital Agency",
+          "type": "identity"
+        },
+        {
+          "text": "BRIGHTPATH DIGITAL AGENCY",
+          "type": "upper"
+        },
+        {
+          "text": "Brightpath",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "provider_address",
+      "original_value": "550 Creative Drive, Suite 200, Seattle, WA 98101",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "550 Creative Drive, Suite 200, Seattle, WA 98101",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "client_name",
+      "original_value": "Cornerstone Hospitality Group",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Cornerstone Hospitality Group",
+          "type": "identity"
+        },
+        {
+          "text": "Cornerstone",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "client_address",
+      "original_value": "2400 Hotel Boulevard, Las Vegas, NV 89109",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2400 Hotel Boulevard, Las Vegas, NV 89109",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_name",
+      "original_value": "Website Redesign & Digital Marketing Platform",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Website Redesign & Digital Marketing Platform",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "sow_number",
+      "original_value": "SOW-2025-BP-034",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "SOW-2025-BP-034",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "effective_date",
+      "original_value": "February 28, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "February 28, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_start",
+      "original_value": "March 15, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "March 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_end",
+      "original_value": "August 31, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "August 31, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_manager",
+      "original_value": "Alexis Brennan",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Alexis Brennan",
+          "type": "identity"
+        },
+        {
+          "text": "Brennan",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "client_contact",
+      "original_value": "VP of Marketing, Jordan Hayes",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "VP of Marketing, Jordan Hayes",
+          "type": "identity"
+        },
+        {
+          "text": "Jordan Hayes",
+          "type": "name_only"
+        },
+        {
+          "text": "Hayes",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "total_cost",
+      "original_value": "$185,000",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$185,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_terms",
+      "original_value": "Monthly milestones",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Net 30",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "m1_date",
+      "original_value": "April 15, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "April 15, 2025",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "STATEMENT OF WORK",
+    "PARTIES",
+    "PROJECT OVERVIEW",
+    "KEY PERSONNEL",
+    "SCOPE OF WORK",
+    "DELIVERABLES AND MILESTONES",
+    "PAYMENT TERMS",
+    "ACCEPTANCE AND CHANGE CONTROL",
+    "ACCEPTED AND AGREED",
+    "Change Order",
+    "Net 30"
+  ]
+}

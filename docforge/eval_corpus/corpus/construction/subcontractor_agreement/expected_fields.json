@@ -1,0 +1,227 @@
+{
+  "document_type": "subcontractor_agreement",
+  "fields": [
+    {
+      "field_name": "general_contractor_name",
+      "original_value": "Atlas General Contractors Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Atlas General Contractors Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "ATLAS GENERAL CONTRACTORS INC.",
+          "type": "upper"
+        },
+        {
+          "text": "Atlas",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "general_contractor_address",
+      "original_value": "6700 Construction Blvd, Suite 100, Phoenix, AZ 85004",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "6700 Construction Blvd, Suite 100, Phoenix, AZ 85004",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "subcontractor_name",
+      "original_value": "Desert Electrical Solutions LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Desert Electrical Solutions LLC",
+          "type": "identity"
+        },
+        {
+          "text": "DESERT ELECTRICAL SOLUTIONS LLC",
+          "type": "upper"
+        },
+        {
+          "text": "Desert Electrical",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "subcontractor_address",
+      "original_value": "2100 Power Line Road, Tempe, AZ 85281",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2100 Power Line Road, Tempe, AZ 85281",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_name",
+      "original_value": "Scottsdale Medical Plaza",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Scottsdale Medical Plaza",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_number",
+      "original_value": "SMP-2024-008",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "SMP-2024-008",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "scope_of_work",
+      "original_value": "Complete electrical installation including service entrance, distribution, lighting, fire alarm, low voltage",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Complete electrical installation including service entrance, distribution, lighting, fire alarm, low voltage",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contract_sum",
+      "original_value": "$2,350,000.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$2,350,000.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "retainage",
+      "original_value": "10%",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "10%",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "start_date",
+      "original_value": "April 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "April 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "completion_date",
+      "original_value": "November 15, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "November 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "gl_insurance_limit",
+      "original_value": "$2,000,000",
+      "category": "insurance",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$2,000,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "auto_insurance_limit",
+      "original_value": "$1,000,000",
+      "category": "insurance",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$1,000,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_terms",
+      "original_value": "Monthly progress billing, Net 30",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Monthly progress billing, Net 30",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "bond_requirement",
+      "original_value": "Performance and payment bond, 100% of contract value",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "performance and payment bond",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "wc_insurance",
+      "original_value": "Statutory",
+      "category": "insurance",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Statutory",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "SUBCONTRACTOR AGREEMENT",
+    "PARTIES",
+    "SCOPE OF WORK",
+    "CONTRACT SUM AND PAYMENT",
+    "INSURANCE REQUIREMENTS",
+    "BOND REQUIREMENTS",
+    "SCHEDULE",
+    "IN WITNESS WHEREOF",
+    "GENERAL CONTRACTOR",
+    "SUBCONTRACTOR",
+    "shall furnish all labor, materials, tools, equipment",
+    "Monthly progress billing"
+  ]
+}

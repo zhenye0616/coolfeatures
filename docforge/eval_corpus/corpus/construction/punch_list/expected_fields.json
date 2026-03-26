@@ -1,0 +1,141 @@
+{
+  "document_type": "punch_list",
+  "fields": [
+    {
+      "field_name": "project_name",
+      "original_value": "Lakeview Condominiums Phase 2",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Lakeview Condominiums Phase 2",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_number",
+      "original_value": "LCP2-2024-012",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "LCP2-2024-012",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "general_contractor",
+      "original_value": "Northern Star Builders",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Northern Star Builders",
+          "type": "identity"
+        },
+        {
+          "text": "NORTHERN STAR BUILDERS",
+          "type": "upper"
+        },
+        {
+          "text": "Northern Star",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_developer",
+      "original_value": "Lakeview Development Partners LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Lakeview Development Partners LLC",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "unit_area",
+      "original_value": "Building C, Units 301-310",
+      "category": "location",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Building C, Units 301-310",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "punch_list_date",
+      "original_value": "March 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "inspector",
+      "original_value": "Project Manager, Jennifer Walsh",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Project Manager, Jennifer Walsh",
+          "type": "identity"
+        },
+        {
+          "text": "Walsh",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "architect",
+      "original_value": "Lakeside Architecture, Kevin Yamamoto",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Lakeside Architecture, Kevin Yamamoto",
+          "type": "identity"
+        },
+        {
+          "text": "Yamamoto",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "target_completion",
+      "original_value": "March 21, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 21, 2025",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "PUNCH LIST",
+    "PUNCH LIST ITEMS",
+    "NOTES",
+    "ACKNOWLEDGED BY",
+    "Location",
+    "Description",
+    "Responsible",
+    "Status",
+    "Open",
+    "Target Completion"
+  ]
+}

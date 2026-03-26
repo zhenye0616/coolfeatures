@@ -1,0 +1,23 @@
+{
+  "project": {
+    "project_name": "Meadowbrook Middle School Renovation",
+    "workers_on_site": "28"
+  },
+  "identifiers": {
+    "project_number": "MMSR-2026-001",
+    "report_number": "DCL-042"
+  },
+  "parties": {
+    "contractor_name": "Summit Building Corp",
+    "contractor_address": "1550 Colfax Avenue, Denver, CO 80218",
+    "superintendent": "Brian O'Malley",
+    "foreman": "Hector Ruiz",
+    "subcontractors": "Apex Electrical (3 workers), Front Range HVAC (5 workers)"
+  },
+  "dates": {
+    "log_date": "November 8, 2026"
+  },
+  "conditions": {
+    "weather": "Overcast, 38\u00b0F"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parties": {
+    "claimant_name": "Marcus Reynolds",
+    "claimant_address": "891 Peachtree Lane, Atlanta, GA 30309",
+    "insurer_name": "Georgia Mutual Auto Insurance"
+  },
+  "identifiers": {
+    "policy_number": "GMA-AUTO-2024-55103",
+    "vehicle_vin": "2T1BURHE5JC987654",
+    "police_report_number": "APD-2025-12340"
+  },
+  "dates": {
+    "date_of_loss": "March 3, 2025",
+    "time_of_loss": "8:15 AM",
+    "claim_date": "March 5, 2025"
+  },
+  "location": {
+    "loss_location": "Intersection of Piedmont Road and 10th Street, Atlanta, GA"
+  },
+  "coverage": {
+    "type_of_loss": "Automobile collision"
+  },
+  "property": {
+    "vehicle_description": "2023 Toyota Camry"
+  },
+  "financial": {
+    "estimated_damage": "$12,200.00"
+  }
+}

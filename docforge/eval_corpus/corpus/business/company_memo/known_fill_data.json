@@ -1,0 +1,16 @@
+{
+  "parties": {
+    "company_name": "Sterling Production Group",
+    "company_address": "6200 Manufacturing Drive, Cleveland, OH 44114",
+    "from_name": "CEO, James Richardson",
+    "new_vp_engineering": "Karen Wu",
+    "new_director_quality": "David Abernathy"
+  },
+  "dates": {
+    "memo_date": "November 15, 2026",
+    "effective_date": "December 1, 2026"
+  },
+  "project": {
+    "subject": "Leadership Transitions and Department Restructuring"
+  }
+}

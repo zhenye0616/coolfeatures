@@ -1,0 +1,195 @@
+{
+  "document_type": "workers_comp_first_report",
+  "fields": [
+    {
+      "field_name": "employer_name",
+      "original_value": "Pacific Coast Seafood Processing Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Pacific Coast Seafood Processing Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "PACIFIC COAST SEAFOOD PROCESSING INC.",
+          "type": "upper"
+        },
+        {
+          "text": "Pacific Coast",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "employer_address",
+      "original_value": "1800 Waterfront Drive, Seattle, WA 98101",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1800 Waterfront Drive, Seattle, WA 98101",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_name",
+      "original_value": "Roberto Morales",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Roberto Morales",
+          "type": "identity"
+        },
+        {
+          "text": "Morales",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_dob",
+      "original_value": "May 12, 1988",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "May 12, 1988",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_ssn_last4",
+      "original_value": "3421",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "3421",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "job_title",
+      "original_value": "Line Supervisor",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Line Supervisor",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "hire_date",
+      "original_value": "March 15, 2020",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "March 15, 2020",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "date_of_injury",
+      "original_value": "February 5, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 5, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "time_of_injury",
+      "original_value": "10:20 AM",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "10:20 AM",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "injury_location",
+      "original_value": "Processing Floor B, Station 7",
+      "category": "location",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Processing Floor B, Station 7",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "nature_of_injury",
+      "original_value": "Laceration to right forearm from conveyor belt guard malfunction",
+      "category": "medical",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Laceration to right forearm from conveyor belt guard malfunction",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "witness",
+      "original_value": "Shift Manager Angela Park",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Shift Manager Angela Park",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "treating_physician",
+      "original_value": "Dr. James Whitfield, Harbor Medical Clinic",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dr. James Whitfield, Harbor Medical Clinic",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "claim_number",
+      "original_value": "CMWC-2025-0892",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "CMWC-2025-0892",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "EMPLOYER'S FIRST REPORT OF INJURY OR ILLNESS",
+    "Workers' Compensation Claim",
+    "CLAIM INFORMATION",
+    "EMPLOYER INFORMATION",
+    "EMPLOYEE INFORMATION",
+    "INJURY DETAILS",
+    "EMPLOYER CERTIFICATION",
+    "I certify that the above information is true and correct"
+  ]
+}

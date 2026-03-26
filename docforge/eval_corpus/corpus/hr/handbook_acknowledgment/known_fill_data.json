@@ -1,0 +1,18 @@
+{
+  "parties": {
+    "company_name": "Summit Shipping Group",
+    "company_address": "4500 Maritime Boulevard, Savannah, GA 31401",
+    "employee_name": "Philip Andersen"
+  },
+  "identifiers": {
+    "employee_id": "EMP-2025-0723"
+  },
+  "employment": {
+    "department": "Warehouse Management",
+    "supervisor_name": "Warehouse Director, Karen Reyes"
+  },
+  "dates": {
+    "hire_date": "March 10, 2025",
+    "acknowledgment_date": "March 10, 2025"
+  }
+}

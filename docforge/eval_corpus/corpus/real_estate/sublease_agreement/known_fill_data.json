@@ -1,0 +1,23 @@
+{
+  "parties": {
+    "sublessor_name": "Apex Digital Agency",
+    "sublessor_address": "100 Federal Street, Floor 12, Boston, MA 02110",
+    "subtenant_name": "Studio Nine Creative",
+    "subtenant_address": "280 Newbury Street, Boston, MA 02116",
+    "master_lease_landlord": "Harbor Square Properties LLC"
+  },
+  "property": {
+    "premises_address": "Suite 1210, 100 Federal Street, Boston, MA 02110"
+  },
+  "dates": {
+    "master_lease_date": "March 1, 2024",
+    "sublease_start": "August 1, 2026",
+    "sublease_end": "March 31, 2027"
+  },
+  "financial": {
+    "monthly_rent": "$4,200.00"
+  },
+  "legal": {
+    "governing_state": "Massachusetts"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "parties": {
+    "landlord_name": "Robert and Susan Chang",
+    "landlord_address": "820 Lakeview Terrace, Bellevue, WA 98004",
+    "tenant_name": "Tyler Bennett",
+    "tenant_address_current": "1023 Pine Street, Apt 6C, Tacoma, WA 98402"
+  },
+  "property": {
+    "property_address": "1456 River Road, Apt 8, Seattle, WA 98101"
+  },
+  "dates": {
+    "lease_start": "July 1, 2026",
+    "lease_end": "June 30, 2027"
+  },
+  "financial": {
+    "monthly_rent": "$2,800",
+    "security_deposit": "$2,800",
+    "late_fee": "$100"
+  },
+  "contact": {
+    "emergency_phone": "(206) 555-0189"
+  },
+  "legal": {
+    "governing_state": "Washington"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "parties": {
+    "disclosing_party_name": "Vertex Solutions LLC",
+    "disclosing_party_address": "1800 Market Street, Floor 12, San Francisco, CA 94102",
+    "receiving_party_name": "James Rodriguez",
+    "receiving_party_address": "55 Oak Avenue, Berkeley, CA 94704"
+  },
+  "dates": {
+    "effective_date": "June 1, 2026"
+  },
+  "terms": {
+    "term_duration": "2 years"
+  },
+  "legal": {
+    "governing_state": "New York"
+  }
+}

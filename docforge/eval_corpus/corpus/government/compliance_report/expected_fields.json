@@ -1,0 +1,222 @@
+{
+  "document_type": "environmental_compliance_report",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "NovaChem Industries Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "NovaChem Industries Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "NOVACHEM INDUSTRIES INC.",
+          "type": "upper"
+        },
+        {
+          "text": "NovaChem",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "9200 Chemical Plant Road, Houston, TX 77001",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "9200 Chemical Plant Road, Houston, TX 77001",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "facility_id",
+      "original_value": "TX-EPA-2020-4478",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "TX-EPA-2020-4478",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "reporting_period",
+      "original_value": "Q4 2024 (October 1 - December 31, 2024)",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Q4 2024 (October 1 - December 31, 2024)",
+          "type": "identity"
+        },
+        {
+          "text": "Q4 2024",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "submitted_to",
+      "original_value": "Texas Commission on Environmental Quality (TCEQ)",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Texas Commission on Environmental Quality (TCEQ)",
+          "type": "identity"
+        },
+        {
+          "text": "TCEQ",
+          "type": "abbreviation"
+        }
+      ]
+    },
+    {
+      "field_name": "compliance_officer",
+      "original_value": "Dr. Patricia Langford",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dr. Patricia Langford",
+          "type": "identity"
+        },
+        {
+          "text": "Langford",
+          "type": "last_name"
+        },
+        {
+          "text": "Dr. Langford",
+          "type": "title_last"
+        }
+      ]
+    },
+    {
+      "field_name": "report_date",
+      "original_value": "January 31, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "January 31, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "voc_actual",
+      "original_value": "8.3",
+      "category": "metrics",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "8.3",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "nox_actual",
+      "original_value": "5.7",
+      "category": "metrics",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "5.7",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "so2_actual",
+      "original_value": "1.9",
+      "category": "metrics",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "1.9",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "pm10_actual",
+      "original_value": "1.2",
+      "category": "metrics",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "1.2",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "spent_solvents_qty",
+      "original_value": "14,200",
+      "category": "metrics",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "14,200",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "heavy_metal_sludge_qty",
+      "original_value": "6,800",
+      "category": "metrics",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "6,800",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "lab_waste_qty",
+      "original_value": "2,100",
+      "category": "metrics",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "2,100",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "facility_name",
+      "original_value": "NovaChem Industries Inc. \u2014 Houston Plant",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "NovaChem Industries Inc. \u2014 Houston Plant",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "QUARTERLY ENVIRONMENTAL COMPLIANCE REPORT",
+    "EXECUTIVE SUMMARY",
+    "AIR EMISSIONS DATA",
+    "WASTE DISPOSAL RECORDS",
+    "INCIDENT LOG",
+    "CERTIFICATION",
+    "I certify under penalty of law",
+    "true, complete, and accurate",
+    "Corrective Action",
+    "Permitted",
+    "Actual"
+  ]
+}

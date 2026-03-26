@@ -1,0 +1,115 @@
+{
+  "document_type": "nda",
+  "fields": [
+    {
+      "field_name": "disclosing_party_name",
+      "original_value": "Pinnacle Technologies Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Pinnacle Technologies Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "PINNACLE TECHNOLOGIES INC.",
+          "type": "upper"
+        },
+        {
+          "text": "Pinnacle",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "disclosing_party_address",
+      "original_value": "1200 Innovation Drive, Suite 400, San Jose, CA 95134",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1200 Innovation Drive, Suite 400, San Jose, CA 95134",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_party_name",
+      "original_value": "Sarah Chen",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Sarah Chen",
+          "type": "identity"
+        },
+        {
+          "text": "Chen",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_party_address",
+      "original_value": "742 Elm Street, Apt 3B, Palo Alto, CA 94301",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "742 Elm Street, Apt 3B, Palo Alto, CA 94301",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "effective_date",
+      "original_value": "March 15, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "term_duration",
+      "original_value": "2 years",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "2 years",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "California",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "California",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "WHEREAS",
+    "NOW, THEREFORE",
+    "IN WITNESS WHEREOF",
+    "Non-Disclosure Agreement",
+    "Confidential Information",
+    "RECITALS",
+    "OBLIGATIONS OF THE RECEIVING PARTY",
+    "EXCLUSIONS FROM CONFIDENTIAL INFORMATION",
+    "RETURN OF MATERIALS",
+    "REMEDIES",
+    "GOVERNING LAW",
+    "ENTIRE AGREEMENT"
+  ]
+}

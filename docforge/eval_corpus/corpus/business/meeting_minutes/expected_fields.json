@@ -1,0 +1,175 @@
+{
+  "document_type": "meeting_minutes",
+  "fields": [
+    {
+      "field_name": "organization_name",
+      "original_value": "Silverline Ventures Capital",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Silverline Ventures Capital",
+          "type": "identity"
+        },
+        {
+          "text": "SILVERLINE VENTURES CAPITAL",
+          "type": "upper"
+        },
+        {
+          "text": "Silverline",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "organization_address",
+      "original_value": "1200 Financial District, Floor 18, New York, NY 10004",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1200 Financial District, Floor 18, New York, NY 10004",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "meeting_title",
+      "original_value": "Q4 2024 Board of Directors Meeting",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Q4 2024 Board of Directors Meeting",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "meeting_date",
+      "original_value": "January 22, 2025, 10:00 AM EST",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 22, 2025, 10:00 AM EST",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "meeting_location",
+      "original_value": "Main Boardroom, 1200 Financial District",
+      "category": "location",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Main Boardroom, 1200 Financial District",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "chair",
+      "original_value": "CEO, Margaret Thornton",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "CEO, Margaret Thornton",
+          "type": "identity"
+        },
+        {
+          "text": "Margaret Thornton",
+          "type": "name_only"
+        },
+        {
+          "text": "Thornton",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "secretary",
+      "original_value": "VP of Operations, Richard Park",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "VP of Operations, Richard Park",
+          "type": "identity"
+        },
+        {
+          "text": "Richard Park",
+          "type": "name_only"
+        },
+        {
+          "text": "Park",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "next_meeting",
+      "original_value": "April 15, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "April 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "total_aum",
+      "original_value": "$2.4 billion",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$2.4 billion",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "quarterly_revenue",
+      "original_value": "$18.7 million",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$18.7 million",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "net_income",
+      "original_value": "$5.2 million",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$5.2 million",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "BOARD OF DIRECTORS \u2014 MEETING MINUTES",
+    "MEETING DETAILS",
+    "ATTENDEES",
+    "CALL TO ORDER",
+    "FINANCIAL REVIEW",
+    "STRATEGIC INITIATIVES",
+    "NEW INVESTMENT APPROVAL",
+    "COMMITTEE REPORTS",
+    "ADJOURNMENT",
+    "Respectfully submitted",
+    "quorum was present",
+    "motion was carried"
+  ]
+}

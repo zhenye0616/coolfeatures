@@ -1,0 +1,149 @@
+{
+  "document_type": "job_description",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Redwood Data Systems",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Redwood Data Systems",
+          "type": "identity"
+        },
+        {
+          "text": "REDWOOD DATA SYSTEMS",
+          "type": "upper"
+        },
+        {
+          "text": "Redwood",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "1500 Innovation Parkway, San Jose, CA 95131",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "1500 Innovation Parkway, San Jose, CA 95131",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "position_title",
+      "original_value": "Machine Learning Engineer",
+      "category": "employment",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Machine Learning Engineer",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "AI & Data Science",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "AI & Data Science",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "reports_to",
+      "original_value": "Head of AI, Dr. Sarah Okonkwo",
+      "category": "employment",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Head of AI, Dr. Sarah Okonkwo",
+          "type": "identity"
+        },
+        {
+          "text": "Dr. Sarah Okonkwo",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "location",
+      "original_value": "San Jose, CA (Hybrid \u2013 3 days in office)",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "San Jose, CA (Hybrid \u2013 3 days in office)",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "salary_range",
+      "original_value": "$140,000 \u2013 $180,000",
+      "category": "compensation",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$140,000 \u2013 $180,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "date_posted",
+      "original_value": "February 10, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "February 10, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "requisition_number",
+      "original_value": "REQ-2025-0089",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "REQ-2025-0089",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_email",
+      "original_value": "careers@redwooddata.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "careers@redwooddata.com",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "JOB DESCRIPTION",
+    "ABOUT US",
+    "ROLE OVERVIEW",
+    "KEY RESPONSIBILITIES",
+    "REQUIREMENTS",
+    "BENEFITS",
+    "equal opportunity employer",
+    "comprehensive benefits package",
+    "401(k)",
+    "cover letter"
+  ]
+}

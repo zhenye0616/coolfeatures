@@ -1,0 +1,16 @@
+{
+  "parties": {
+    "attorney_name": "David Kowalski",
+    "law_firm": "Kowalski Law",
+    "sender_address": "222 West Adams Street, Suite 1500, Chicago, IL 60606",
+    "recipient_name": "Sunset Beverages Corp",
+    "recipient_address": "875 Industrial Parkway, Milwaukee, WI 53202"
+  },
+  "dates": {
+    "letter_date": "May 10, 2026"
+  },
+  "terms": {
+    "infringement_type": "trademark infringement",
+    "compliance_deadline": "10 business days"
+  }
+}

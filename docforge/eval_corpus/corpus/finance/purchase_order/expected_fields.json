@@ -1,0 +1,188 @@
+{
+  "document_type": "purchase_order",
+  "fields": [
+    {
+      "field_name": "buyer_name",
+      "original_value": "Summit Manufacturing Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Summit Manufacturing Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "SUMMIT MANUFACTURING INC.",
+          "type": "upper"
+        },
+        {
+          "text": "Summit",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "buyer_address",
+      "original_value": "4500 Industrial Blvd, Detroit, MI 48201",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "4500 Industrial Blvd, Detroit, MI 48201",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "vendor_name",
+      "original_value": "Precision Parts International",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Precision Parts International",
+          "type": "identity"
+        },
+        {
+          "text": "Precision Parts",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "vendor_address",
+      "original_value": "7200 Commerce Way, Cincinnati, OH 45202",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "7200 Commerce Way, Cincinnati, OH 45202",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "ship_to_address",
+      "original_value": "4520 Industrial Blvd, Detroit, MI 48201",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "4520 Industrial Blvd, Detroit, MI 48201",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "po_number",
+      "original_value": "PO-SM-2025-0234",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "PO-SM-2025-0234",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "po_date",
+      "original_value": "March 10, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 10, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "delivery_date",
+      "original_value": "April 15, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "April 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_terms",
+      "original_value": "Net 45",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Net 45",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "subtotal",
+      "original_value": "$28,450.00",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$28,450.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "shipping",
+      "original_value": "$850.00",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$850.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "total",
+      "original_value": "$31,007.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$31,007.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_email",
+      "original_value": "purchasing@summitmfg.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "purchasing@summitmfg.com",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "PURCHASE ORDER",
+    "VENDOR",
+    "SHIP TO",
+    "TERMS AND CONDITIONS",
+    "AUTHORIZED BY",
+    "Item #",
+    "Description",
+    "Quantity",
+    "Unit Price",
+    "Total",
+    "Subtotal",
+    "Shipping",
+    "Tax"
+  ]
+}

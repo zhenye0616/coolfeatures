@@ -1,0 +1,23 @@
+{
+  "parties": {
+    "institution_name": "Oakdale University",
+    "institution_address": "1600 Research Park Drive, Ann Arbor, MI 48109",
+    "professor_name": "Dr. Maria Gonzalez",
+    "student_name": "James O'Brien",
+    "target_institution": "MIT"
+  },
+  "academic": {
+    "professor_department": "Department of Mechanical Engineering",
+    "target_program": "Master's Program in Aerospace Engineering"
+  },
+  "dates": {
+    "letter_date": "March 15, 2026"
+  },
+  "terms": {
+    "relationship_duration": "3 years"
+  },
+  "contact": {
+    "professor_email": "m.gonzalez@oakdale.edu",
+    "professor_phone": "(734) 555-0289"
+  }
+}

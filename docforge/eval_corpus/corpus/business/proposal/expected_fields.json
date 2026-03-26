@@ -1,0 +1,165 @@
+{
+  "document_type": "business_proposal",
+  "fields": [
+    {
+      "field_name": "consulting_firm",
+      "original_value": "Atlas Consulting Group",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Atlas Consulting Group",
+          "type": "identity"
+        },
+        {
+          "text": "ATLAS CONSULTING GROUP",
+          "type": "upper"
+        },
+        {
+          "text": "Atlas",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "client_company",
+      "original_value": "Northstar Retail Corporation",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Northstar Retail Corporation",
+          "type": "identity"
+        },
+        {
+          "text": "Northstar",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "project_title",
+      "original_value": "Digital Transformation Strategy & Implementation",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Digital Transformation Strategy & Implementation",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "proposal_date",
+      "original_value": "March 5, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "March 5, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_lead_name",
+      "original_value": "Catherine Reeves, Managing Director",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Catherine Reeves, Managing Director",
+          "type": "identity"
+        },
+        {
+          "text": "Catherine Reeves",
+          "type": "name_only"
+        },
+        {
+          "text": "Reeves",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "total_budget",
+      "original_value": "$425,000",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$425,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "timeline_start",
+      "original_value": "Q2 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Q2 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "timeline_end",
+      "original_value": "Q4 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Q4 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_email",
+      "original_value": "catherine.reeves@atlasconsulting.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "catherine.reeves@atlasconsulting.com",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_phone",
+      "original_value": "(312) 555-0178",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(312) 555-0178",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "BUSINESS PROPOSAL",
+    "EXECUTIVE SUMMARY",
+    "SCOPE OF WORK",
+    "TIMELINE",
+    "PROJECT TEAM",
+    "INVESTMENT",
+    "TERMS AND CONDITIONS",
+    "CONTACT INFORMATION",
+    "ACCEPTED AND AGREED",
+    "Payment Schedule",
+    "Master Services Agreement",
+    "Net 30",
+    "Prepared for",
+    "Prepared by",
+    "Discovery & Assessment",
+    "Strategy Development",
+    "Implementation Planning",
+    "Execution Support"
+  ]
+}

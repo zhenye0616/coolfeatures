@@ -1,0 +1,21 @@
+{
+  "parties": {
+    "business_name": "Mountain View Garage",
+    "business_address": "780 Colfax Avenue, Denver, CO 80204",
+    "customer_name": "Robert Tanaka",
+    "technician": "Carlos Rivera"
+  },
+  "contact": {
+    "customer_phone": "(303) 555-0192"
+  },
+  "identifiers": {
+    "receipt_number": "REC-2026-3401"
+  },
+  "dates": {
+    "receipt_date": "August 12, 2026"
+  },
+  "financial": {
+    "total": "$742.30",
+    "payment_method": "Mastercard ending in 8837"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "document_type": "certificate_of_insurance",
+  "fields": [
+    {
+      "field_name": "insured_name",
+      "original_value": "Granite Peak Construction LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Granite Peak Construction LLC",
+          "type": "identity"
+        },
+        {
+          "text": "GRANITE PEAK CONSTRUCTION LLC",
+          "type": "upper"
+        },
+        {
+          "text": "Granite Peak",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "insured_address",
+      "original_value": "560 Builder's Way, Boise, ID 83702",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "560 Builder's Way, Boise, ID 83702",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "insurer_name",
+      "original_value": "Western Alliance Insurance Company",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Western Alliance Insurance Company",
+          "type": "identity"
+        },
+        {
+          "text": "Western Alliance",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_number",
+      "original_value": "WAI-GL-2025-78432",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "WAI-GL-2025-78432",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "certificate_holder_name",
+      "original_value": "Boise City Department of Public Works",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Boise City Department of Public Works",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "certificate_holder_address",
+      "original_value": "150 Capitol Boulevard, Boise, ID 83701",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "150 Capitol Boulevard, Boise, ID 83701",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "coverage_type",
+      "original_value": "Commercial General Liability",
+      "category": "coverage",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Commercial General Liability",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_period_start",
+      "original_value": "January 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 1, 2025",
+          "type": "identity"
+        },
+        {
+          "text": "01/01/2025",
+          "type": "short_date"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_period_end",
+      "original_value": "January 1, 2026",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 1, 2026",
+          "type": "identity"
+        },
+        {
+          "text": "01/01/2026",
+          "type": "short_date"
+        }
+      ]
+    },
+    {
+      "field_name": "producer_agent",
+      "original_value": "Karen Hoffman",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Karen Hoffman",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "CERTIFICATE OF INSURANCE",
+    "DATE ISSUED",
+    "PRODUCER",
+    "INSURED",
+    "INSURER",
+    "COVERAGES",
+    "CERTIFICATE HOLDER",
+    "AUTHORIZED REPRESENTATIVE",
+    "DESCRIPTION OF OPERATIONS",
+    "This certificate is issued as a matter of information only"
+  ]
+}

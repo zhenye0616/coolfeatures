@@ -1,0 +1,188 @@
+{
+  "document_type": "sublease",
+  "fields": [
+    {
+      "field_name": "sublessor_name",
+      "original_value": "TechForward Innovations Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "TechForward Innovations Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "TECHFORWARD INNOVATIONS INC.",
+          "type": "upper"
+        },
+        {
+          "text": "TechForward",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "sublessor_address",
+      "original_value": "600 Market Street, Floor 8, Philadelphia, PA 19106",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "600 Market Street, Floor 8, Philadelphia, PA 19106",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "subtenant_name",
+      "original_value": "GreenLeaf Design Studio",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "GreenLeaf Design Studio",
+          "type": "identity"
+        },
+        {
+          "text": "GreenLeaf",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "subtenant_address",
+      "original_value": "124 Walnut Street, Philadelphia, PA 19103",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "124 Walnut Street, Philadelphia, PA 19103",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "premises_address",
+      "original_value": "Suite 810, 600 Market Street, Philadelphia, PA 19106",
+      "category": "property",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Suite 810, 600 Market Street, Philadelphia, PA 19106",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "master_lease_landlord",
+      "original_value": "Keystone Tower LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Keystone Tower LLC",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "master_lease_date",
+      "original_value": "January 15, 2023",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "January 15, 2023",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "sublease_start",
+      "original_value": "April 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "April 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "sublease_end",
+      "original_value": "December 31, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "December 31, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "monthly_rent",
+      "original_value": "$3,500.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$3,500.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Pennsylvania",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Pennsylvania",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "master_lease_reference",
+      "original_value": "Lease dated January 15, 2023 between Keystone Tower LLC and TechForward Innovations Inc.",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Lease dated January 15, 2023 between Keystone Tower LLC and TechForward Innovations Inc.",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "sublease_term_description",
+      "original_value": "April 1, 2025 to December 31, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "April 1, 2025 to December 31, 2025",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "SUBLEASE AGREEMENT",
+    "PARTIES",
+    "MASTER LEASE",
+    "SUBLEASED PREMISES",
+    "SUBLEASE TERM",
+    "RENT",
+    "LANDLORD CONSENT",
+    "SUBTENANT OBLIGATIONS",
+    "GOVERNING LAW",
+    "IN WITNESS WHEREOF",
+    "SUBLESSOR",
+    "SUBTENANT",
+    "commercially reasonable efforts"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "parties": {
+    "requester_name": "Daniel Ortega",
+    "requester_address": "920 Sunset Boulevard, Suite 4, San Diego, CA 92101",
+    "organization": "Pacific Coast Tribune",
+    "target_agency": "California Department of Toxic Substances Control"
+  },
+  "dates": {
+    "request_date": "August 14, 2026"
+  },
+  "project": {
+    "records_requested": "All site assessment reports, remediation orders, and public comments regarding Pacific Shores Industrial Complex (site code: CA-TOX-2021-1187) from March 2024 to present"
+  },
+  "contact": {
+    "contact_email": "d.ortega@paccoasttribune.com",
+    "contact_phone": "(619) 555-0341"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "project": {
+    "project_name": "Gateway Plaza Office Tower"
+  },
+  "identifiers": {
+    "project_number": "GPOT-2025-007",
+    "rfi_number": "RFI-019"
+  },
+  "parties": {
+    "contractor_name": "Cornerstone Builders",
+    "contractor_address": "780 Market Street, Suite 200, San Jose, CA 95113",
+    "architect_name": "Pacific Design Associates",
+    "architect_address": "3300 El Camino Real, Palo Alto, CA 94306",
+    "submitted_by": "Site Superintendent, David Park"
+  },
+  "dates": {
+    "rfi_date": "June 10, 2026",
+    "response_due_date": "June 17, 2026"
+  }
+}

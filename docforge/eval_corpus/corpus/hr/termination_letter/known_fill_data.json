@@ -1,0 +1,21 @@
+{
+  "parties": {
+    "company_name": "Apex Wealth Management",
+    "employee_name": "Natasha Petrov",
+    "hr_contact": "Michael Torres, HR Director"
+  },
+  "identifiers": {
+    "employee_id": "EMP-2022-0891"
+  },
+  "employment": {
+    "position_title": "Client Portfolio Analyst",
+    "department": "Advisory Services"
+  },
+  "dates": {
+    "letter_date": "June 1, 2026",
+    "effective_date": "June 15, 2026"
+  },
+  "terms": {
+    "termination_reason": "Role consolidation following department merger"
+  }
+}

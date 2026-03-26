@@ -1,0 +1,169 @@
+{
+  "document_type": "scholarship_award_letter",
+  "fields": [
+    {
+      "field_name": "institution_name",
+      "original_value": "Crestwood University",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Crestwood University",
+          "type": "identity"
+        },
+        {
+          "text": "CRESTWOOD UNIVERSITY",
+          "type": "upper"
+        },
+        {
+          "text": "Crestwood",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "institution_address",
+      "original_value": "400 University Circle, Charlotte, NC 28202",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "400 University Circle, Charlotte, NC 28202",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "student_name",
+      "original_value": "Priya Patel",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Priya Patel",
+          "type": "identity"
+        },
+        {
+          "text": "Patel",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "student_id",
+      "original_value": "CU-2024-11234",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "CU-2024-11234",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "scholarship_name",
+      "original_value": "Dean's Merit Scholarship",
+      "category": "academic",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dean's Merit Scholarship",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "award_amount",
+      "original_value": "$12,500 per academic year",
+      "category": "compensation",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$12,500 per academic year",
+          "type": "identity"
+        },
+        {
+          "text": "$12,500",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "award_period",
+      "original_value": "2025-2026 Academic Year",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2025-2026 Academic Year",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "renewal_terms",
+      "original_value": "Up to 4 years, maintaining 3.5 GPA",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Up to 4 years, maintaining 3.5 GPA",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "letter_date",
+      "original_value": "April 1, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "April 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "acceptance_deadline",
+      "original_value": "May 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "May 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "signatory_name",
+      "original_value": "Dr. Robert Ellis, Dean of Admissions",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Dr. Robert Ellis, Dean of Admissions",
+          "type": "identity"
+        },
+        {
+          "text": "Dr. Robert Ellis",
+          "type": "short"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "Office of Financial Aid and Scholarships",
+    "AWARD DETAILS",
+    "TERMS AND CONDITIONS",
+    "ACCEPTANCE",
+    "STUDENT ACCEPTANCE",
+    "outstanding academic achievement",
+    "leadership potential",
+    "full-time student",
+    "good academic and disciplinary standing",
+    "scholarship renewal application"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "document_type": "non_compete_agreement",
+  "fields": [
+    {
+      "field_name": "employer_name",
+      "original_value": "Quantum Analytics Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Quantum Analytics Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "QUANTUM ANALYTICS INC.",
+          "type": "upper"
+        },
+        {
+          "text": "Quantum",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "employer_address",
+      "original_value": "3200 Research Park Drive, Raleigh, NC 27606",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "3200 Research Park Drive, Raleigh, NC 27606",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_name",
+      "original_value": "Daniel Reeves",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Daniel Reeves",
+          "type": "identity"
+        },
+        {
+          "text": "Reeves",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_title",
+      "original_value": "Director of Data Science",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Director of Data Science",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "agreement_date",
+      "original_value": "January 5, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 5, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "restricted_period",
+      "original_value": "18 months",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "18 months",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "geographic_restriction",
+      "original_value": "Within 50 miles of any Quantum Analytics office",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "50 miles of any Quantum Analytics office",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "restricted_activities",
+      "original_value": "Data analytics consulting, machine learning product development",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Data analytics consulting, machine learning product development",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "consideration",
+      "original_value": "Continued employment and $10,000 signing retention bonus",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$10,000 signing retention bonus",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "North Carolina",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "North Carolina",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "arbitration_location",
+      "original_value": "Raleigh, NC",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Raleigh, NC",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "retention_bonus",
+      "original_value": "$10,000",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$10,000",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "NON-COMPETE AND NON-SOLICITATION AGREEMENT",
+    "WHEREAS",
+    "NOW, THEREFORE",
+    "IN WITNESS WHEREOF",
+    "RECITALS",
+    "NON-COMPETE COVENANT",
+    "RESTRICTED ACTIVITIES",
+    "NON-SOLICITATION",
+    "CONSIDERATION",
+    "REMEDIES",
+    "GOVERNING LAW",
+    "ENTIRE AGREEMENT",
+    "Restricted Period",
+    "irreparable harm",
+    "binding arbitration"
+  ]
+}

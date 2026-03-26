@@ -1,0 +1,120 @@
+{
+  "document_type": "foia_request",
+  "fields": [
+    {
+      "field_name": "requester_name",
+      "original_value": "Sandra Whitfield",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Sandra Whitfield",
+          "type": "identity"
+        },
+        {
+          "text": "SANDRA WHITFIELD",
+          "type": "upper"
+        },
+        {
+          "text": "Whitfield",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "requester_address",
+      "original_value": "78 Press Avenue, Boston, MA 02108",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "78 Press Avenue, Boston, MA 02108",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "organization",
+      "original_value": "New England Investigative News",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "New England Investigative News",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "request_date",
+      "original_value": "March 3, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "March 3, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "target_agency",
+      "original_value": "Massachusetts Department of Environmental Protection",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Massachusetts Department of Environmental Protection",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "records_requested",
+      "original_value": "All inspection reports, correspondence, and enforcement actions related to Clearwater Chemical Plant (facility ID: MA-HAZ-2019-0234) from January 2023 to present",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "All inspection reports, correspondence, and enforcement actions related to Clearwater Chemical Plant (facility ID: MA-HAZ-2019-0234) from January 2023 to present",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_email",
+      "original_value": "s.whitfield@neinews.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "s.whitfield@neinews.com",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_phone",
+      "original_value": "(617) 555-0234",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(617) 555-0234",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "FREEDOM OF INFORMATION REQUEST",
+    "Massachusetts Public Records Law",
+    "RECORDS REQUESTED",
+    "FEE WAIVER REQUEST",
+    "Respectfully submitted",
+    "Records Access Officer",
+    "news-gathering purposes in the public interest",
+    "specific exemptions of the Public Records Law",
+    "response within ten business days"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "document_type": "insurance_claim_form",
+  "fields": [
+    {
+      "field_name": "claimant_name",
+      "original_value": "Teresa Beaumont",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Teresa Beaumont",
+          "type": "identity"
+        },
+        {
+          "text": "Beaumont",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "claimant_address",
+      "original_value": "234 Willow Creek Road, Nashville, TN 37205",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "234 Willow Creek Road, Nashville, TN 37205",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "insurer_name",
+      "original_value": "Southern Fidelity Insurance",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Southern Fidelity Insurance",
+          "type": "identity"
+        },
+        {
+          "text": "SOUTHERN FIDELITY INSURANCE",
+          "type": "upper"
+        },
+        {
+          "text": "Southern Fidelity",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_number",
+      "original_value": "SF-AUTO-2023-99210",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "SF-AUTO-2023-99210",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "date_of_loss",
+      "original_value": "December 18, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "December 18, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "time_of_loss",
+      "original_value": "3:45 PM",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "3:45 PM",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "loss_location",
+      "original_value": "Intersection of Broadway and 5th Avenue, Nashville, TN",
+      "category": "location",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Intersection of Broadway and 5th Avenue, Nashville, TN",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "type_of_loss",
+      "original_value": "Automobile collision",
+      "category": "coverage",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Automobile collision",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "vehicle_description",
+      "original_value": "2022 Honda Accord",
+      "category": "property",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2022 Honda Accord",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "vehicle_vin",
+      "original_value": "1HGCV2F34NA123456",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1HGCV2F34NA123456",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "estimated_damage",
+      "original_value": "$8,500.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$8,500.00",
+          "type": "identity"
+        },
+        {
+          "text": "$8,500",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "police_report_number",
+      "original_value": "NPD-2024-45678",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "NPD-2024-45678",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "claim_date",
+      "original_value": "December 20, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "December 20, 2024",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "INSURANCE CLAIM FORM",
+    "CLAIM INFORMATION",
+    "CLAIMANT INFORMATION",
+    "VEHICLE INFORMATION",
+    "LOSS DETAILS",
+    "CLAIMANT CERTIFICATION",
+    "I hereby certify that the information provided above is true",
+    "authorize",
+    "investigate and process this claim"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "document_type": "handbook_acknowledgment",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Trident Logistics Corporation",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Trident Logistics Corporation",
+          "type": "identity"
+        },
+        {
+          "text": "TRIDENT LOGISTICS CORPORATION",
+          "type": "upper"
+        },
+        {
+          "text": "Trident",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "700 Harbor Drive, Long Beach, CA 90802",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "700 Harbor Drive, Long Beach, CA 90802",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_name",
+      "original_value": "Maria Santos",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Maria Santos",
+          "type": "identity"
+        },
+        {
+          "text": "Santos",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_id",
+      "original_value": "EMP-2024-1156",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "EMP-2024-1156",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "Operations",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Operations",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "hire_date",
+      "original_value": "November 4, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "November 4, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "supervisor_name",
+      "original_value": "Operations Manager, Frank Delgado",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Operations Manager, Frank Delgado",
+          "type": "identity"
+        },
+        {
+          "text": "Delgado",
+          "type": "last_name"
+        },
+        {
+          "text": "Frank Delgado",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "acknowledgment_date",
+      "original_value": "November 4, 2024",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "November 4, 2024",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "EMPLOYEE HANDBOOK ACKNOWLEDGMENT FORM",
+    "ACKNOWLEDGMENT",
+    "Employee Handbook",
+    "at-will",
+    "contract of employment",
+    "Human Resources Department",
+    "workplace safety",
+    "anti-harassment",
+    "equal employment opportunity",
+    "confidentiality obligations"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "document_type": "eviction_notice",
+  "fields": [
+    {
+      "field_name": "landlord_name",
+      "original_value": "Crestview Property Management",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Crestview Property Management",
+          "type": "identity"
+        },
+        {
+          "text": "CRESTVIEW PROPERTY MANAGEMENT",
+          "type": "upper"
+        },
+        {
+          "text": "Crestview",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "landlord_address",
+      "original_value": "400 Renaissance Center, Suite 1100, Detroit, MI 48243",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "400 Renaissance Center, Suite 1100, Detroit, MI 48243",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "tenant_name",
+      "original_value": "Kyle Henderson",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Kyle Henderson",
+          "type": "identity"
+        },
+        {
+          "text": "Henderson",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "property_address",
+      "original_value": "Unit 7B, 1590 Woodward Avenue, Detroit, MI 48226",
+      "category": "property",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Unit 7B, 1590 Woodward Avenue, Detroit, MI 48226",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "notice_date",
+      "original_value": "February 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "unpaid_rent",
+      "original_value": "$1,450.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$1,450.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "late_fee",
+      "original_value": "$75.00",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$75.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "total_amount_due",
+      "original_value": "$1,525.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$1,525.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "cure_period",
+      "original_value": "seven (7) days",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "seven (7) days",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_phone",
+      "original_value": "(313) 555-0267",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(313) 555-0267",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "NOTICE TO QUIT / PAY RENT",
+    "TOTAL AMOUNT DUE",
+    "Unpaid Rent",
+    "Late Fee",
+    "cure period",
+    "legal proceedings",
+    "recover possession",
+    "certified check or money order",
+    "Sincerely",
+    "Property Manager"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "parties": {
+    "applicant_name": "Horizon Design Collective",
+    "applicant_address": "2200 Pike Avenue, Suite 110, Colorado Springs, CO 80903",
+    "property_owner": "Evergreen Care Partners",
+    "property_owner_address": "340 Mesa Drive, Colorado Springs, CO 80904"
+  },
+  "location": {
+    "property_address": "340 Mesa Drive, Colorado Springs, CO 80904"
+  },
+  "zoning": {
+    "current_zoning": "R-3 Residential",
+    "requested_variance": "Allow memory care facility in R-3 zone"
+  },
+  "identifiers": {
+    "parcel_number": "2781-104-00-019"
+  },
+  "property": {
+    "property_size": "3.1 acres"
+  },
+  "dates": {
+    "application_date": "September 8, 2026",
+    "hearing_date": "October 14, 2026"
+  },
+  "jurisdiction": {
+    "municipality": "City of Colorado Springs, Planning & Zoning Commission"
+  }
+}

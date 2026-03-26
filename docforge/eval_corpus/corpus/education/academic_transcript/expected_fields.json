@@ -1,0 +1,167 @@
+{
+  "document_type": "academic_transcript",
+  "fields": [
+    {
+      "field_name": "institution_name",
+      "original_value": "Pacific Northwest University",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Pacific Northwest University",
+          "type": "identity"
+        },
+        {
+          "text": "PACIFIC NORTHWEST UNIVERSITY",
+          "type": "upper"
+        },
+        {
+          "text": "PNU",
+          "type": "abbreviation"
+        }
+      ]
+    },
+    {
+      "field_name": "institution_address",
+      "original_value": "1200 University Boulevard, Eugene, OR 97401",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "1200 University Boulevard, Eugene, OR 97401",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "student_name",
+      "original_value": "Ryan Mitchell",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Ryan Mitchell",
+          "type": "identity"
+        },
+        {
+          "text": "Mitchell",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "student_id",
+      "original_value": "PNU-2020-45892",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "PNU-2020-45892",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "date_of_birth",
+      "original_value": "June 14, 2002",
+      "category": "personal",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "June 14, 2002",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "program",
+      "original_value": "Bachelor of Science in Computer Science",
+      "category": "academic",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Bachelor of Science in Computer Science",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "enrollment_date",
+      "original_value": "Fall 2020",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Fall 2020",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "expected_graduation",
+      "original_value": "Spring 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Spring 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "cumulative_gpa",
+      "original_value": "3.72 / 4.00",
+      "category": "academic",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "3.72 / 4.00",
+          "type": "identity"
+        },
+        {
+          "text": "3.72",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "deans_list",
+      "original_value": "Fall 2023, Spring 2024",
+      "category": "academic",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Fall 2023, Spring 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "registrar_name",
+      "original_value": "Dr. Helen Carmichael",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Dr. Helen Carmichael",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "OFFICIAL ACADEMIC TRANSCRIPT",
+    "Office of the Registrar",
+    "ACADEMIC HONORS",
+    "Dean's List",
+    "Semester GPA",
+    "Credits Earned",
+    "Course Code",
+    "Course Title",
+    "Grade",
+    "Cumulative GPA",
+    "Official Document \u2013 Do Not Duplicate",
+    "University Registrar"
+  ]
+}

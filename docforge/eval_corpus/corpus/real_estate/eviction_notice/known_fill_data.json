@@ -1,0 +1,24 @@
+{
+  "parties": {
+    "landlord_name": "Lakefront Realty Group",
+    "landlord_address": "7700 Lakeshore Drive, Suite 500, Chicago, IL 60611",
+    "tenant_name": "Brianna Morales"
+  },
+  "property": {
+    "property_address": "Apt 12C, 3200 Michigan Avenue, Chicago, IL 60616"
+  },
+  "dates": {
+    "notice_date": "June 15, 2026"
+  },
+  "financial": {
+    "unpaid_rent": "$1,800.00",
+    "late_fee": "$100.00",
+    "total_amount_due": "$1,900.00"
+  },
+  "terms": {
+    "cure_period": "five (5) days"
+  },
+  "contact": {
+    "contact_phone": "(312) 555-0493"
+  }
+}

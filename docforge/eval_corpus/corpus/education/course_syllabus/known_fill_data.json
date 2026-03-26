@@ -1,0 +1,26 @@
+{
+  "parties": {
+    "institution_name": "Riverside University",
+    "institution_address": "2100 Campus Drive, Portland, OR 97205",
+    "instructor_name": "Dr. Alan Foster"
+  },
+  "academic": {
+    "course_title": "Business Intelligence and Reporting"
+  },
+  "identifiers": {
+    "course_code": "MIS 420",
+    "section": "002"
+  },
+  "contact": {
+    "instructor_office": "Morrison Hall 308",
+    "instructor_email": "a.foster@riverside.edu",
+    "instructor_phone": "(503) 555-0178"
+  },
+  "terms": {
+    "office_hours": "Mon/Wed 3-5 PM",
+    "meeting_time": "Tue/Thu 1:00-2:30 PM, Room 210"
+  },
+  "dates": {
+    "semester": "Fall 2026"
+  }
+}

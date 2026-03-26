@@ -1,0 +1,135 @@
+{
+  "document_type": "company_memo",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Oakridge Manufacturing Corp",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Oakridge Manufacturing Corp",
+          "type": "identity"
+        },
+        {
+          "text": "OAKRIDGE MANUFACTURING CORP",
+          "type": "upper"
+        },
+        {
+          "text": "Oakridge",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "4800 Industrial Parkway, Pittsburgh, PA 15201",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "4800 Industrial Parkway, Pittsburgh, PA 15201",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "from_name",
+      "original_value": "CEO, Patricia Langford",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "CEO, Patricia Langford",
+          "type": "identity"
+        },
+        {
+          "text": "Patricia Langford",
+          "type": "name_only"
+        },
+        {
+          "text": "Langford",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "memo_date",
+      "original_value": "March 10, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "March 10, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "subject",
+      "original_value": "Organizational Changes and New Leadership Appointments",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Organizational Changes and New Leadership Appointments",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "new_vp_engineering",
+      "original_value": "Michael Tanaka",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Michael Tanaka",
+          "type": "identity"
+        },
+        {
+          "text": "Tanaka",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "new_director_quality",
+      "original_value": "Sarah Okonkwo",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Sarah Okonkwo",
+          "type": "identity"
+        },
+        {
+          "text": "Okonkwo",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "effective_date",
+      "original_value": "April 1, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "April 1, 2025",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "MEMORANDUM",
+    "Dear Team",
+    "Sincerely",
+    "Chief Executive Officer",
+    "Effective",
+    "has been appointed",
+    "operational excellence",
+    "organizational changes"
+  ]
+}

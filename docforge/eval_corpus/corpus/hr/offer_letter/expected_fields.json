@@ -1,0 +1,167 @@
+{
+  "document_type": "offer_letter",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Cascade Digital Solutions",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Cascade Digital Solutions",
+          "type": "identity"
+        },
+        {
+          "text": "CASCADE DIGITAL SOLUTIONS",
+          "type": "upper"
+        },
+        {
+          "text": "Cascade",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "5600 Technology Parkway, Building C, Redmond, WA 98052",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "5600 Technology Parkway, Building C, Redmond, WA 98052",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "candidate_name",
+      "original_value": "Michael Thompson",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Michael Thompson",
+          "type": "identity"
+        },
+        {
+          "text": "Thompson",
+          "type": "last_name"
+        },
+        {
+          "text": "Mr. Thompson",
+          "type": "salutation"
+        }
+      ]
+    },
+    {
+      "field_name": "position_title",
+      "original_value": "Senior Software Engineer",
+      "category": "employment",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Senior Software Engineer",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "Platform Engineering",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Platform Engineering",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "manager_name",
+      "original_value": "Director of Engineering, Lisa Park",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Director of Engineering, Lisa Park",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "start_date",
+      "original_value": "February 3, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 3, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "base_salary",
+      "original_value": "$165,000",
+      "category": "compensation",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$165,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "signing_bonus",
+      "original_value": "$15,000",
+      "category": "compensation",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$15,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "offer_date",
+      "original_value": "January 10, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "January 10, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "hr_director_name",
+      "original_value": "Jennifer Walsh",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Jennifer Walsh",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "Position Details",
+    "Compensation",
+    "Benefits",
+    "Employment Relationship",
+    "Conditions of Employment",
+    "ACCEPTANCE",
+    "Human Resources Department",
+    "at-will",
+    "background check",
+    "Confidentiality and Intellectual Property Agreement",
+    "semi-monthly",
+    "Hybrid"
+  ]
+}

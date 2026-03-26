@@ -1,0 +1,156 @@
+{
+  "document_type": "medical_referral",
+  "fields": [
+    {
+      "field_name": "referring_physician",
+      "original_value": "Dr. James Thornton",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dr. James Thornton",
+          "type": "identity"
+        },
+        {
+          "text": "Thornton",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "referring_practice",
+      "original_value": "Thornton Family Practice",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Thornton Family Practice",
+          "type": "identity"
+        },
+        {
+          "text": "THORNTON FAMILY PRACTICE",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "referring_address",
+      "original_value": "290 Wellness Drive, Suite 104, Portland, OR 97201",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "290 Wellness Drive, Suite 104, Portland, OR 97201",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_physician",
+      "original_value": "Dr. Priya Sharma",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dr. Priya Sharma",
+          "type": "identity"
+        },
+        {
+          "text": "Sharma",
+          "type": "last_name"
+        },
+        {
+          "text": "Dr. Sharma",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_practice",
+      "original_value": "Oregon Spine & Joint Center",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Oregon Spine & Joint Center",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "receiving_address",
+      "original_value": "1800 Medical Campus Drive, Portland, OR 97225",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1800 Medical Campus Drive, Portland, OR 97225",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_name",
+      "original_value": "Catherine O'Brien",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Catherine O'Brien",
+          "type": "identity"
+        },
+        {
+          "text": "O'Brien",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_dob",
+      "original_value": "July 22, 1972",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "July 22, 1972",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "referral_date",
+      "original_value": "August 15, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "August 15, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "referral_reason",
+      "original_value": "Chronic lower back pain, MRI showing L4-L5 disc herniation",
+      "category": "clinical",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Chronic lower back pain, MRI showing L4-L5 disc herniation",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "Referral",
+    "CLINICAL SUMMARY",
+    "Date of Birth",
+    "Current Medications",
+    "Allergies",
+    "No known drug allergies",
+    "evaluation and management",
+    "conservative management",
+    "physical therapy"
+  ]
+}

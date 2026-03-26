@@ -1,0 +1,152 @@
+{
+  "document_type": "request_for_information",
+  "fields": [
+    {
+      "field_name": "project_name",
+      "original_value": "Harbor Point Office Complex",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Harbor Point Office Complex",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_number",
+      "original_value": "HPOC-2023-015",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "HPOC-2023-015",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_name",
+      "original_value": "Bayside Construction Group",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Bayside Construction Group",
+          "type": "identity"
+        },
+        {
+          "text": "BAYSIDE CONSTRUCTION GROUP",
+          "type": "upper"
+        },
+        {
+          "text": "Bayside",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_address",
+      "original_value": "450 Harbor Way, San Francisco, CA 94105",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "450 Harbor Way, San Francisco, CA 94105",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "architect_name",
+      "original_value": "Sterling Architecture + Design",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Sterling Architecture + Design",
+          "type": "identity"
+        },
+        {
+          "text": "Sterling Architecture",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "architect_address",
+      "original_value": "1200 Design Center Drive, San Francisco, CA 94107",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1200 Design Center Drive, San Francisco, CA 94107",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "rfi_number",
+      "original_value": "RFI-042",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "RFI-042",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "rfi_date",
+      "original_value": "February 18, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 18, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "response_due_date",
+      "original_value": "February 25, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 25, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "submitted_by",
+      "original_value": "Site Superintendent, Miguel Santos",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Site Superintendent, Miguel Santos",
+          "type": "identity"
+        },
+        {
+          "text": "Santos",
+          "type": "last_name"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "REQUEST FOR INFORMATION",
+    "RFI",
+    "FROM (CONTRACTOR)",
+    "TO (ARCHITECT)",
+    "QUESTION",
+    "RESPONSE (ARCHITECT)",
+    "Priority",
+    "Response Needed By",
+    "Submitted by"
+  ]
+}

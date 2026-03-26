@@ -1,0 +1,24 @@
+{
+  "parties": {
+    "company_name": "Glacier Analytics Inc.",
+    "company_address": "2700 Waterfront Drive, Suite 800, Seattle, WA 98101"
+  },
+  "employment": {
+    "position_title": "Data Platform Engineer",
+    "department": "Data Engineering",
+    "reports_to": "Director of Engineering, Kevin Zhang",
+    "location": "Seattle, WA (Remote-first)"
+  },
+  "compensation": {
+    "salary_range": "$155,000 \u2013 $195,000"
+  },
+  "dates": {
+    "date_posted": "May 5, 2026"
+  },
+  "identifiers": {
+    "requisition_number": "REQ-2026-0142"
+  },
+  "contact": {
+    "contact_email": "hiring@glacieranalytics.com"
+  }
+}

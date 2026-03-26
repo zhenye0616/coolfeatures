@@ -1,0 +1,133 @@
+{
+  "document_type": "receipt",
+  "fields": [
+    {
+      "field_name": "business_name",
+      "original_value": "Harborview Auto Repair",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Harborview Auto Repair",
+          "type": "identity"
+        },
+        {
+          "text": "HARBORVIEW AUTO REPAIR",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "business_address",
+      "original_value": "1245 Pacific Highway, San Diego, CA 92101",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1245 Pacific Highway, San Diego, CA 92101",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "customer_name",
+      "original_value": "Linda Petrova",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Linda Petrova",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "customer_phone",
+      "original_value": "(619) 555-0384",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(619) 555-0384",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "receipt_number",
+      "original_value": "REC-2025-1892",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "REC-2025-1892",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "receipt_date",
+      "original_value": "February 20, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 20, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "technician",
+      "original_value": "Mike Santos",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Mike Santos",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "total",
+      "original_value": "$687.45",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$687.45",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_method",
+      "original_value": "Visa ending in 4521",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Visa ending in 4521",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "SERVICE RECEIPT",
+    "CUSTOMER",
+    "SERVICES PERFORMED",
+    "PAYMENT",
+    "Receipt #",
+    "Date",
+    "Technician",
+    "Service",
+    "Parts",
+    "Amount",
+    "Subtotal",
+    "Tax",
+    "TOTAL",
+    "Thank you for choosing"
+  ]
+}
