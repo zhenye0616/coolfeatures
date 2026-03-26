@@ -1,0 +1,188 @@
+{
+  "document_type": "enrollment_form",
+  "fields": [
+    {
+      "field_name": "institution_name",
+      "original_value": "Golden Valley Community College",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Golden Valley Community College",
+          "type": "identity"
+        },
+        {
+          "text": "GOLDEN VALLEY COMMUNITY COLLEGE",
+          "type": "upper"
+        },
+        {
+          "text": "Golden Valley",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "institution_address",
+      "original_value": "5500 Valley Road, Sacramento, CA 95823",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "5500 Valley Road, Sacramento, CA 95823",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "student_name",
+      "original_value": "Alejandro Gutierrez",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Alejandro Gutierrez",
+          "type": "identity"
+        },
+        {
+          "text": "Gutierrez",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "date_of_birth",
+      "original_value": "August 23, 2004",
+      "category": "personal",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "August 23, 2004",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "ssn_last_four",
+      "original_value": "7823",
+      "category": "personal",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "7823",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "home_address",
+      "original_value": "892 Sunset Avenue, Sacramento, CA 95814",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "892 Sunset Avenue, Sacramento, CA 95814",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "phone",
+      "original_value": "(916) 555-0178",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(916) 555-0178",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "email",
+      "original_value": "a.gutierrez@email.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "a.gutierrez@email.com",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "intended_major",
+      "original_value": "Nursing (ADN)",
+      "category": "academic",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Nursing (ADN)",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "enrollment_term",
+      "original_value": "Fall 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Fall 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "student_type",
+      "original_value": "First-time freshman",
+      "category": "academic",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "First-time freshman",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "previous_school",
+      "original_value": "Sacramento Valley High School",
+      "category": "academic",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Sacramento Valley High School (graduated June 2024)",
+          "type": "identity"
+        },
+        {
+          "text": "Sacramento Valley High School",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "emergency_contact_name",
+      "original_value": "Rosa Gutierrez",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Rosa Gutierrez",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "STUDENT ENROLLMENT APPLICATION",
+    "Office of Admissions and Records",
+    "PERSONAL INFORMATION",
+    "ACADEMIC INFORMATION",
+    "EMERGENCY CONTACT",
+    "CERTIFICATION",
+    "true and complete",
+    "denial of admission",
+    "Applicant Signature"
+  ]
+}

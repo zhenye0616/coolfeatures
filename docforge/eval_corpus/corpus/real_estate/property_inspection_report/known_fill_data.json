@@ -1,0 +1,25 @@
+{
+  "parties": {
+    "inspector_name": "Diana Torres",
+    "inspection_company": "Torres Property Inspections LLC",
+    "inspector_address": "920 Commerce Street, Dallas, TX 75202",
+    "client_name": "Kevin and Lisa Park"
+  },
+  "identifiers": {
+    "inspector_license": "HI-2021-7823"
+  },
+  "dates": {
+    "inspection_date": "June 15, 2026"
+  },
+  "property": {
+    "property_address": "5124 Meadow Creek Drive, Plano, TX 75024",
+    "year_built": "2005",
+    "square_footage": "3,100"
+  },
+  "contact": {
+    "inspector_phone": "(214) 555-0467"
+  },
+  "legal": {
+    "governing_state": "Texas"
+  }
+}

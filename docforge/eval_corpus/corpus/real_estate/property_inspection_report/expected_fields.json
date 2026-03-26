@@ -1,0 +1,225 @@
+{
+  "document_type": "property_inspection",
+  "fields": [
+    {
+      "field_name": "inspector_name",
+      "original_value": "William Garrett",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "William Garrett",
+          "type": "identity"
+        },
+        {
+          "text": "William Garrett, CPI",
+          "type": "with_credential"
+        },
+        {
+          "text": "Garrett",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "inspection_company",
+      "original_value": "Garrett Home Inspections LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Garrett Home Inspections LLC",
+          "type": "identity"
+        },
+        {
+          "text": "GARRETT HOME INSPECTIONS LLC",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "inspector_license",
+      "original_value": "HI-2019-4455",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "HI-2019-4455",
+          "type": "identity"
+        },
+        {
+          "text": "#HI-2019-4455",
+          "type": "with_hash"
+        }
+      ]
+    },
+    {
+      "field_name": "inspector_address",
+      "original_value": "1850 Inspector Lane, Nashville, TN 37203",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1850 Inspector Lane, Nashville, TN 37203",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "client_name",
+      "original_value": "Jonathan and Rebecca Marsh",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Jonathan and Rebecca Marsh",
+          "type": "identity"
+        },
+        {
+          "text": "Marsh",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "inspection_date",
+      "original_value": "January 28, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 28, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "property_address",
+      "original_value": "3742 Oakwood Trail, Nashville, TN 37215",
+      "category": "property",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "3742 Oakwood Trail, Nashville, TN 37215",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "year_built",
+      "original_value": "1998",
+      "category": "property",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "1998",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "square_footage",
+      "original_value": "2,400",
+      "category": "property",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "2,400",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "overall_condition",
+      "original_value": "generally in good condition with minor repairs needed",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "generally in good condition with minor repairs needed",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "inspector_phone",
+      "original_value": "(615) 555-0291",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(615) 555-0291",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "roof_condition",
+      "original_value": "Fair",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Fair",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "foundation_condition",
+      "original_value": "Good",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Good",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "hvac_condition",
+      "original_value": "Fair",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Fair",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Tennessee",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Tennessee",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "PROPERTY INSPECTION REPORT",
+    "EXECUTIVE SUMMARY",
+    "INSPECTION FINDINGS",
+    "RECOMMENDATIONS",
+    "INSPECTOR CERTIFICATION",
+    "Inspector",
+    "Client",
+    "Inspection Date",
+    "Property Address",
+    "Year Built",
+    "Category",
+    "Condition",
+    "Notes",
+    "Roof",
+    "Foundation",
+    "Plumbing",
+    "Electrical",
+    "HVAC"
+  ]
+}

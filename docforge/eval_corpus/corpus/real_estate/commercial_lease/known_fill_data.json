@@ -1,0 +1,30 @@
+{
+  "parties": {
+    "landlord_name": "Cornerstone Realty Partners",
+    "landlord_address": "2200 Blake Street, Suite 800, Denver, CO 80205",
+    "tenant_name": "Peak Performance Fitness",
+    "tenant_address": "1340 Pearl Street, Unit 2, Boulder, CO 80302"
+  },
+  "property": {
+    "premises_address": "Suite 310, 1600 Champa Street, Denver, CO 80202",
+    "square_footage": "3,200"
+  },
+  "dates": {
+    "lease_start": "January 1, 2027",
+    "lease_end": "December 31, 2031"
+  },
+  "financial": {
+    "base_rent": "$5,500.00",
+    "cam_charges": "$1,100.00",
+    "security_deposit": "$16,500.00",
+    "insurance_minimum": "$1,000,000"
+  },
+  "terms": {
+    "annual_escalation": "3%",
+    "permitted_use": "fitness training, personal coaching, group exercise classes",
+    "lease_term_years": "five (5) years"
+  },
+  "legal": {
+    "governing_state": "Colorado"
+  }
+}

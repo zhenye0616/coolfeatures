@@ -1,0 +1,23 @@
+{
+  "parties": {
+    "institution_name": "Lakeview State College",
+    "institution_address": "3200 College Avenue, Springfield, IL 62704",
+    "student_name": "Emma Nakamura",
+    "registrar_name": "Dr. Patricia Whitfield"
+  },
+  "identifiers": {
+    "student_id": "LSC-2021-78234"
+  },
+  "personal": {
+    "date_of_birth": "March 22, 2003"
+  },
+  "academic": {
+    "program": "Bachelor of Arts in Data Analytics",
+    "cumulative_gpa": "3.58 / 4.00",
+    "deans_list": "Spring 2024"
+  },
+  "dates": {
+    "enrollment_date": "Fall 2021",
+    "expected_graduation": "Spring 2026"
+  }
+}

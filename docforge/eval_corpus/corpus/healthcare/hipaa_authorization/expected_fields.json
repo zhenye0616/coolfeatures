@@ -1,0 +1,105 @@
+{
+  "document_type": "hipaa_authorization",
+  "fields": [
+    {
+      "field_name": "patient_name",
+      "original_value": "Steven Nakamura",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Steven Nakamura",
+          "type": "identity"
+        },
+        {
+          "text": "Nakamura",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_dob",
+      "original_value": "September 30, 1990",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "September 30, 1990",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "provider_name",
+      "original_value": "Eastside Behavioral Health",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Eastside Behavioral Health",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "recipient",
+      "original_value": "Dr. Michael Chen at Pacific Wellness Group",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dr. Michael Chen at Pacific Wellness Group",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "purpose",
+      "original_value": "Continuation of care / treatment coordination",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Continuation of care / treatment coordination",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "authorization_date",
+      "original_value": "March 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "expiration_date",
+      "original_value": "March 1, 2026",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 1, 2026",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "HIPAA AUTHORIZATION",
+    "PROTECTED HEALTH INFORMATION",
+    "PATIENT INFORMATION",
+    "AUTHORIZATION",
+    "TERMS AND CONDITIONS",
+    "PATIENT SIGNATURE",
+    "protected health information",
+    "voluntary",
+    "re-disclosure",
+    "revoked"
+  ]
+}

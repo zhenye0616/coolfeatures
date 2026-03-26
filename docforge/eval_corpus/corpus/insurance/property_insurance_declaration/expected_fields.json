@@ -1,0 +1,223 @@
+{
+  "document_type": "property_insurance_declaration",
+  "fields": [
+    {
+      "field_name": "insured_name",
+      "original_value": "Harrington Family Trust",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Harrington Family Trust",
+          "type": "identity"
+        },
+        {
+          "text": "HARRINGTON FAMILY TRUST",
+          "type": "upper"
+        },
+        {
+          "text": "Harrington",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "trustees",
+      "original_value": "William and Carol Harrington",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "William and Carol Harrington",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "insured_address",
+      "original_value": "4200 Estate Drive, Scottsdale, AZ 85251",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "4200 Estate Drive, Scottsdale, AZ 85251",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "insurer_name",
+      "original_value": "Desert Sun Insurance Company",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Desert Sun Insurance Company",
+          "type": "identity"
+        },
+        {
+          "text": "Desert Sun",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_number",
+      "original_value": "DSIC-HO-2025-33567",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "DSIC-HO-2025-33567",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_period_start",
+      "original_value": "March 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_period_end",
+      "original_value": "March 1, 2026",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 1, 2026",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "annual_premium",
+      "original_value": "$4,850.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$4,850.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "dwelling_coverage",
+      "original_value": "$750,000",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$750,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "personal_property_coverage",
+      "original_value": "$375,000",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$375,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "liability_coverage",
+      "original_value": "$500,000",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$500,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "medical_payments",
+      "original_value": "$5,000",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$5,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "deductible",
+      "original_value": "$2,500.00",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$2,500.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "agent_name",
+      "original_value": "Robert Castillo",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Robert Castillo",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "agent_agency",
+      "original_value": "Castillo Insurance Partners",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Castillo Insurance Partners",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "mortgage_holder",
+      "original_value": "First National Bank of Arizona",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "First National Bank of Arizona",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "PROPERTY INSURANCE POLICY DECLARATIONS",
+    "POLICY INFORMATION",
+    "NAMED INSURED",
+    "INSURED PROPERTY",
+    "COVERAGE SUMMARY",
+    "MORTGAGE HOLDER / LOSS PAYEE",
+    "AUTHORIZED SIGNATURES",
+    "Coverage A - Dwelling",
+    "Coverage B - Personal Property",
+    "Coverage C - Personal Liability",
+    "Coverage D - Medical Payments",
+    "as their interests may appear"
+  ]
+}

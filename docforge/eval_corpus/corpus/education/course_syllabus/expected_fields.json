@@ -1,0 +1,170 @@
+{
+  "document_type": "course_syllabus",
+  "fields": [
+    {
+      "field_name": "institution_name",
+      "original_value": "Northbrook College",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Northbrook College",
+          "type": "identity"
+        },
+        {
+          "text": "NORTHBROOK COLLEGE",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "institution_address",
+      "original_value": "800 Academic Way, Madison, WI 53703",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "800 Academic Way, Madison, WI 53703",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "course_title",
+      "original_value": "Introduction to Data Analytics",
+      "category": "academic",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Introduction to Data Analytics",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "course_code",
+      "original_value": "BUS 301",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "BUS 301",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "section",
+      "original_value": "001",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "001",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "instructor_name",
+      "original_value": "Professor Yuki Tanaka",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Professor Yuki Tanaka",
+          "type": "identity"
+        },
+        {
+          "text": "Tanaka",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "instructor_office",
+      "original_value": "Hadley Hall 412",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Hadley Hall 412",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "office_hours",
+      "original_value": "Tue/Thu 2-4 PM",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Tue/Thu 2-4 PM",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "instructor_email",
+      "original_value": "y.tanaka@northbrook.edu",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "y.tanaka@northbrook.edu",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "instructor_phone",
+      "original_value": "(608) 555-0234",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(608) 555-0234",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "semester",
+      "original_value": "Spring 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Spring 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "meeting_time",
+      "original_value": "Mon/Wed 10:00-11:30 AM, Lecture Hall B",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Mon/Wed 10:00-11:30 AM, Lecture Hall B",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "COURSE SYLLABUS",
+    "COURSE DESCRIPTION",
+    "LEARNING OBJECTIVES",
+    "GRADING POLICY",
+    "WEEKLY SCHEDULE",
+    "COURSE POLICIES",
+    "Midterm Exam",
+    "Final Project",
+    "Class Participation",
+    "Academic integrity",
+    "Dean of Students"
+  ]
+}

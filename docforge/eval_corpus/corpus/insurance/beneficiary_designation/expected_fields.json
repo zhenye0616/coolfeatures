@@ -1,0 +1,135 @@
+{
+  "document_type": "life_insurance_beneficiary_designation",
+  "fields": [
+    {
+      "field_name": "policy_owner",
+      "original_value": "Kenneth Watanabe",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Kenneth Watanabe",
+          "type": "identity"
+        },
+        {
+          "text": "Watanabe",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_owner_address",
+      "original_value": "3156 Cherry Blossom Lane, San Jose, CA 95125",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "3156 Cherry Blossom Lane, San Jose, CA 95125",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_number",
+      "original_value": "PPL-LIFE-2020-67890",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "PPL-LIFE-2020-67890",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "insurer_name",
+      "original_value": "Pacific Premier Life Insurance",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Pacific Premier Life Insurance",
+          "type": "identity"
+        },
+        {
+          "text": "PACIFIC PREMIER LIFE INSURANCE",
+          "type": "upper"
+        },
+        {
+          "text": "Pacific Premier",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "primary_beneficiary",
+      "original_value": "Yuki Watanabe",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Yuki Watanabe",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contingent_beneficiary",
+      "original_value": "Hana Watanabe",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Hana Watanabe",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contingent_beneficiary_dob",
+      "original_value": "January 3, 2015",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "January 3, 2015",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "date_signed",
+      "original_value": "February 14, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 14, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "witness",
+      "original_value": "Notary Public, Sandra Mitchell",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Notary Public, Sandra Mitchell",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "BENEFICIARY DESIGNATION FORM",
+    "POLICY OWNER INFORMATION",
+    "PRIMARY BENEFICIARY",
+    "CONTINGENT BENEFICIARY",
+    "CERTIFICATION",
+    "hereby revoke all prior beneficiary designations",
+    "supersedes all previous designations",
+    "Witness"
+  ]
+}

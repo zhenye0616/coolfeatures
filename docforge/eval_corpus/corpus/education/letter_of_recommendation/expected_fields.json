@@ -1,0 +1,168 @@
+{
+  "document_type": "letter_of_recommendation",
+  "fields": [
+    {
+      "field_name": "institution_name",
+      "original_value": "Westfield Institute of Technology",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Westfield Institute of Technology",
+          "type": "identity"
+        },
+        {
+          "text": "WESTFIELD INSTITUTE OF TECHNOLOGY",
+          "type": "upper"
+        },
+        {
+          "text": "Westfield",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "institution_address",
+      "original_value": "350 Engineering Drive, Cambridge, MA 02139",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "350 Engineering Drive, Cambridge, MA 02139",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "professor_name",
+      "original_value": "Professor David Hawthorne",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Professor David Hawthorne",
+          "type": "identity"
+        },
+        {
+          "text": "Hawthorne",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "professor_department",
+      "original_value": "Department of Electrical Engineering",
+      "category": "academic",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Department of Electrical Engineering",
+          "type": "identity"
+        },
+        {
+          "text": "Electrical Engineering",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "student_name",
+      "original_value": "Sophia Chen",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Sophia Chen",
+          "type": "identity"
+        },
+        {
+          "text": "Chen",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "target_program",
+      "original_value": "PhD Program in Robotics",
+      "category": "academic",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "PhD Program in Robotics",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "target_institution",
+      "original_value": "Stanford University",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Stanford University",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "letter_date",
+      "original_value": "December 5, 2024",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "December 5, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "relationship_duration",
+      "original_value": "2 years",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "2 years",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "professor_email",
+      "original_value": "d.hawthorne@westfield.edu",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "d.hawthorne@westfield.edu",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "professor_phone",
+      "original_value": "(617) 555-0341",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(617) 555-0341",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "Letter of Recommendation",
+    "Graduate Admissions Committee",
+    "undergraduate research assistant",
+    "highest recommendation",
+    "without reservation",
+    "Outstanding Thesis Prize",
+    "co-authoring",
+    "IEEE conferences",
+    "Sincerely"
+  ]
+}

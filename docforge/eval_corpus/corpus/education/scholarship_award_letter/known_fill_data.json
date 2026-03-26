@@ -1,0 +1,25 @@
+{
+  "parties": {
+    "institution_name": "Evergreen College",
+    "institution_address": "900 Forest Lane, Burlington, VT 05401",
+    "student_name": "Marcus Johnson",
+    "signatory_name": "Dr. Sandra Kim, Dean of Enrollment"
+  },
+  "identifiers": {
+    "student_id": "EC-2025-20456"
+  },
+  "academic": {
+    "scholarship_name": "Presidential Academic Scholarship"
+  },
+  "compensation": {
+    "award_amount": "$15,000 per academic year"
+  },
+  "dates": {
+    "award_period": "2026-2027 Academic Year",
+    "letter_date": "April 15, 2026",
+    "acceptance_deadline": "May 15, 2026"
+  },
+  "terms": {
+    "renewal_terms": "Up to 4 years, maintaining 3.6 GPA"
+  }
+}

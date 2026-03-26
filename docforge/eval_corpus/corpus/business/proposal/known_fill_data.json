@@ -1,0 +1,22 @@
+{
+  "parties": {
+    "consulting_firm": "Summit Advisory Partners",
+    "client_company": "Coastal Enterprises Inc.",
+    "project_lead_name": "Daniel Ortiz, Managing Director"
+  },
+  "project": {
+    "project_title": "Operational Excellence & Process Automation"
+  },
+  "dates": {
+    "proposal_date": "September 12, 2026",
+    "timeline_start": "Q1 2027",
+    "timeline_end": "Q3 2027"
+  },
+  "financial": {
+    "total_budget": "$550,000"
+  },
+  "contact": {
+    "contact_email": "daniel.ortiz@summitadvisory.com",
+    "contact_phone": "(415) 555-0293"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "parties": {
+    "applicant_name": "Ridgeline Builders Inc",
+    "applicant_address": "780 Capital Way, Suite 200, Madison, WI 53703",
+    "property_owner": "Patricia Kowalski",
+    "property_owner_address": "412 Birchwood Lane, Madison, WI 53711",
+    "contractor_name": "Hartman Renovations LLC"
+  },
+  "location": {
+    "project_address": "412 Birchwood Lane, Madison, WI 53711"
+  },
+  "project": {
+    "permit_type": "Residential Addition",
+    "work_description": "Second-floor addition with new staircase and HVAC extension"
+  },
+  "financial": {
+    "estimated_cost": "$142,000"
+  },
+  "identifiers": {
+    "contractor_license": "WI-CON-2021-7834"
+  },
+  "dates": {
+    "application_date": "June 3, 2026"
+  },
+  "jurisdiction": {
+    "municipality": "City of Madison"
+  },
+  "contact": {
+    "applicant_email": "info@ridgelinebuilders.com"
+  }
+}

@@ -1,0 +1,859 @@
+{
+  "catalog_version": "1.0",
+  "total_templates": 87,
+  "industries": [
+    {
+      "name": "Legal",
+      "template_count": 12,
+      "templates": [
+        {
+          "id": "legal-001",
+          "name": "Non-Disclosure Agreement (NDA) — Unilateral",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["disclosing_party_name", "disclosing_party_address", "receiving_party_name", "receiving_party_address", "effective_date", "confidential_info_definition", "term_duration", "governing_state", "signatures"],
+          "sources": ["https://eforms.com/nda/", "https://www.vertex42.com/WordTemplates/non-disclosure-agreement.html", "https://legaltemplates.net/form/non-disclosure-agreement/"]
+        },
+        {
+          "id": "legal-002",
+          "name": "Non-Disclosure Agreement (NDA) — Mutual",
+          "complexity": "medium",
+          "field_count_range": [12, 18],
+          "variable_fields": ["party_a_name", "party_a_address", "party_b_name", "party_b_address", "effective_date", "mutual_confidential_info_definitions", "exclusions", "term", "remedies", "governing_law", "signatures"],
+          "sources": ["https://eforms.com/nda/", "https://www.vertex42.com/WordTemplates/non-disclosure-agreement.html", "https://www.pandadoc.com/nda-template/"]
+        },
+        {
+          "id": "legal-003",
+          "name": "Independent Contractor Agreement",
+          "complexity": "complex",
+          "field_count_range": [18, 25],
+          "variable_fields": ["client_name", "client_address", "contractor_name", "contractor_address", "scope_of_services", "compensation_rate", "payment_schedule", "term_start_date", "term_end_date", "termination_conditions", "ip_ownership", "non_compete_clause", "governing_law", "signatures"],
+          "sources": ["https://eforms.com/employment/independent-contractor/", "https://esign.com/employment/independent-contractor/", "https://legaltemplates.net/form/employment-contract/independent-contractor/"]
+        },
+        {
+          "id": "legal-004",
+          "name": "Service Agreement / Contract",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["provider_name", "provider_address", "client_name", "client_address", "service_description", "deliverables_list", "payment_terms", "timeline_milestones", "liability_limits", "termination_clause", "signatures"],
+          "sources": ["https://esign.com/employment/independent-contractor/service-contract/", "https://www.lawdepot.com/us/business/independent-contractor-agreement/"]
+        },
+        {
+          "id": "legal-005",
+          "name": "General Employment Contract",
+          "complexity": "complex",
+          "field_count_range": [20, 28],
+          "variable_fields": ["employer_name", "employer_address", "employee_name", "employee_address", "job_title", "department", "start_date", "salary", "pay_frequency", "benefits_summary", "probation_period", "termination_notice_period", "non_compete", "signatures"],
+          "sources": ["https://legaltemplates.net/form/employment-contract/", "https://www.rocketlawyer.com/business-and-contracts/business-operations/product-or-service-sales/document/independent-contractor-agreement"]
+        },
+        {
+          "id": "legal-006",
+          "name": "Power of Attorney",
+          "complexity": "medium",
+          "field_count_range": [12, 18],
+          "variable_fields": ["principal_name", "principal_address", "principal_dob", "agent_name", "agent_address", "powers_granted", "effective_date", "durability_clause", "revocation_conditions", "notary_block", "signatures", "witnesses"],
+          "sources": ["https://eforms.com/power-of-attorney/", "https://legaltemplates.net/form/power-of-attorney/"]
+        },
+        {
+          "id": "legal-007",
+          "name": "Cease and Desist Letter",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["sender_name", "sender_address", "recipient_name", "recipient_address", "date", "infringing_activity_description", "legal_basis", "demanded_actions", "response_deadline", "consequences"],
+          "sources": ["https://eforms.com/cease-and-desist/", "https://legaltemplates.net/form/cease-and-desist/"]
+        },
+        {
+          "id": "legal-008",
+          "name": "Demand Letter",
+          "complexity": "simple",
+          "field_count_range": [8, 10],
+          "variable_fields": ["creditor_name", "creditor_address", "debtor_name", "debtor_address", "date", "amount_owed", "debt_description", "payment_deadline", "consequences"],
+          "sources": ["https://eforms.com/demand-letter/", "https://legaltemplates.net/form/demand-letter/"]
+        },
+        {
+          "id": "legal-009",
+          "name": "General Release / Waiver",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["releasor_name", "releasee_name", "date", "claims_released_description", "consideration_amount", "governing_law", "signatures", "notary_block"],
+          "sources": ["https://eforms.com/release-waiver/", "https://legaltemplates.net/form/release-of-liability/"]
+        },
+        {
+          "id": "legal-010",
+          "name": "Partnership Agreement",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["partner_names", "partner_addresses", "business_name", "business_purpose", "capital_contributions", "profit_loss_ratios", "management_responsibilities", "withdrawal_terms", "dissolution_terms", "dispute_resolution", "signatures"],
+          "sources": ["https://eforms.com/partnership-agreement/", "https://legaltemplates.net/form/partnership-agreement/"]
+        },
+        {
+          "id": "legal-011",
+          "name": "Bill of Sale",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["seller_name", "seller_address", "buyer_name", "buyer_address", "item_description", "serial_number", "sale_price", "payment_method", "sale_date", "warranty_disclaimer", "signatures"],
+          "sources": ["https://eforms.com/bill-of-sale/", "https://legaltemplates.net/form/bill-of-sale/"]
+        },
+        {
+          "id": "legal-012",
+          "name": "Promissory Note",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["borrower_name", "borrower_address", "lender_name", "lender_address", "principal_amount", "interest_rate", "payment_schedule", "maturity_date", "late_fee", "default_terms", "governing_law", "signatures"],
+          "sources": ["https://eforms.com/promissory-note/", "https://legaltemplates.net/form/promissory-note/"]
+        }
+      ]
+    },
+    {
+      "name": "Healthcare",
+      "template_count": 8,
+      "templates": [
+        {
+          "id": "health-001",
+          "name": "Patient Intake Form",
+          "complexity": "complex",
+          "field_count_range": [25, 40],
+          "variable_fields": ["patient_name", "dob", "gender", "address", "phone", "email", "emergency_contact_name", "emergency_contact_phone", "emergency_contact_relationship", "insurance_provider", "policy_number", "group_number", "pcp", "allergies", "current_medications", "medical_history_checkboxes", "reason_for_visit"],
+          "sources": ["https://www.jotform.com/form-templates/medical-intake-form", "https://formdr.com/templates/medical-intake-form/", "https://www.smartsheet.com/medical-forms-templates"]
+        },
+        {
+          "id": "health-002",
+          "name": "Patient Discharge Summary",
+          "complexity": "complex",
+          "field_count_range": [18, 25],
+          "variable_fields": ["patient_name", "mrn", "admission_date", "discharge_date", "admitting_diagnosis", "discharge_diagnosis", "procedures_performed", "discharge_medications", "follow_up_instructions", "attending_physician", "signatures"],
+          "sources": ["https://www.smartsheet.com/medical-forms-templates", "https://www.123formbuilder.com/free-form-templates/gallery-healthcare/"]
+        },
+        {
+          "id": "health-003",
+          "name": "Prescription / Medication Order",
+          "complexity": "medium",
+          "field_count_range": [12, 15],
+          "variable_fields": ["patient_name", "patient_dob", "date", "medication_name", "dosage", "route", "frequency", "quantity", "refills", "prescriber_name", "prescriber_npi", "dea_number", "prescriber_signature"],
+          "sources": ["https://documentero.com/templates/healthcare-medical/document/prescription/", "https://officetemplatesonline.com/medical-templates/"]
+        },
+        {
+          "id": "health-004",
+          "name": "Medical Referral Letter",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["referring_physician_name", "referring_practice", "specialist_name", "specialist_practice", "patient_name", "patient_dob", "date", "referral_reason", "clinical_history", "current_medications", "requested_services", "urgency_level", "signature"],
+          "sources": ["https://officetemplatesonline.com/medical-templates/", "https://www.smartsheet.com/medical-forms-templates"]
+        },
+        {
+          "id": "health-005",
+          "name": "HIPAA Authorization / Consent Form",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["patient_name", "patient_dob", "date", "information_to_disclose", "purpose_of_disclosure", "recipient_of_information", "expiration_date", "patient_signature", "witness_signature"],
+          "sources": ["https://www.jotform.com/hipaa/templates/", "https://www.freeprintablemedicalforms.com/category/forms"]
+        },
+        {
+          "id": "health-006",
+          "name": "Medical History Questionnaire",
+          "complexity": "complex",
+          "field_count_range": [30, 50],
+          "variable_fields": ["patient_name", "dob", "past_surgeries", "chronic_conditions_checkboxes", "family_history", "social_history_smoking", "social_history_alcohol", "social_history_drugs", "current_medications_table", "allergies_table", "immunization_records"],
+          "sources": ["https://www.jotform.com/hipaa/templates/", "https://www.smartsheet.com/medical-forms-templates"]
+        },
+        {
+          "id": "health-007",
+          "name": "Incident / Accident Report (Medical)",
+          "complexity": "medium",
+          "field_count_range": [15, 20],
+          "variable_fields": ["facility_name", "incident_date_time", "location", "person_involved", "witnesses", "incident_description", "injuries_sustained", "immediate_actions", "reporting_staff", "supervisor_notified", "follow_up_actions"],
+          "sources": ["https://www.smartsheet.com/medical-forms-templates", "https://forms.app/en/templates/medical-forms"]
+        },
+        {
+          "id": "health-008",
+          "name": "Patient Satisfaction Survey",
+          "complexity": "medium",
+          "field_count_range": [12, 18],
+          "variable_fields": ["patient_name_optional", "visit_date", "department", "wait_time_rating", "staff_courtesy_rating", "cleanliness_rating", "communication_rating", "open_comments", "likelihood_to_recommend"],
+          "sources": ["https://www.jotform.com/hipaa/templates/", "https://www.123formbuilder.com/free-form-templates/gallery-healthcare/"]
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "template_count": 10,
+      "templates": [
+        {
+          "id": "finance-001",
+          "name": "Commercial Invoice",
+          "complexity": "medium",
+          "field_count_range": [15, 20],
+          "variable_fields": ["seller_name", "seller_address", "buyer_name", "buyer_address", "invoice_number", "invoice_date", "due_date", "line_items", "subtotal", "tax", "total", "payment_terms", "bank_details"],
+          "sources": ["https://www.invoicesimple.com/invoice-template", "https://www.smartsheet.com/free-expense-report-templates"]
+        },
+        {
+          "id": "finance-002",
+          "name": "Personal Loan Agreement",
+          "complexity": "complex",
+          "field_count_range": [18, 24],
+          "variable_fields": ["lender_name", "lender_address", "borrower_name", "borrower_address", "loan_amount", "interest_rate", "repayment_schedule", "payment_amount", "maturity_date", "late_fee", "prepayment_terms", "collateral", "default_terms", "governing_law", "signatures"],
+          "sources": ["https://eforms.com/loan-agreement/", "https://legaltemplates.net/form/loan-agreement/", "https://www.docusign.com/templates/loan-agreement"]
+        },
+        {
+          "id": "finance-003",
+          "name": "Business Loan Agreement",
+          "complexity": "complex",
+          "field_count_range": [25, 35],
+          "variable_fields": ["lender_name", "lender_address", "borrower_business_name", "borrower_ein", "borrower_address", "authorized_signer", "loan_amount", "interest_rate", "amortization_schedule", "collateral", "covenants", "representations_warranties", "default_events", "remedies", "signatures"],
+          "sources": ["https://www.template.net/agreements/loan/word", "https://easylegaldocs.com/templates/agreements/loan-agreement/"]
+        },
+        {
+          "id": "finance-004",
+          "name": "Purchase Order",
+          "complexity": "medium",
+          "field_count_range": [15, 20],
+          "variable_fields": ["buyer_company", "buyer_address", "vendor_company", "vendor_address", "po_number", "date", "ship_to_address", "line_items", "subtotal", "shipping", "tax", "grand_total", "delivery_date", "payment_terms"],
+          "sources": ["https://templatelab.com/purchase-order-templates/", "https://www.vertex42.com/ExcelTemplates/excel-purchase-order.html"]
+        },
+        {
+          "id": "finance-005",
+          "name": "Expense Report",
+          "complexity": "medium",
+          "field_count_range": [12, 18],
+          "variable_fields": ["employee_name", "department", "reporting_period", "manager_name", "expense_line_items", "subtotal_by_category", "total_amount", "employee_signature", "manager_approval_signature", "date_submitted"],
+          "sources": ["https://www.smartsheet.com/free-expense-report-templates", "https://www.adobe.com/acrobat/guides/what-is-an-expense-report-template.html"]
+        },
+        {
+          "id": "finance-006",
+          "name": "Receipt",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["business_name", "business_address", "receipt_number", "date", "customer_name", "items_services", "subtotal", "tax", "total", "payment_method", "clerk_name"],
+          "sources": ["https://www.invoicesimple.com/receipt-template", "https://www.template.net/editable/receipts/word", "https://www.smartsheet.com/content/receipt-templates-microsoft-word"]
+        },
+        {
+          "id": "finance-007",
+          "name": "Financial Statement (Balance Sheet)",
+          "complexity": "complex",
+          "field_count_range": [30, 50],
+          "variable_fields": ["company_name", "reporting_period", "current_assets", "long_term_assets", "current_liabilities", "long_term_liabilities", "equity_items", "total_assets", "total_liabilities_equity", "preparer_name", "date_prepared"],
+          "sources": ["https://www.adobe.com/express/templates/invoice/financial-statement", "https://www.template.net/business/report-templates/compliance-report-template/"]
+        },
+        {
+          "id": "finance-008",
+          "name": "Budget Proposal",
+          "complexity": "complex",
+          "field_count_range": [20, 35],
+          "variable_fields": ["department_project_name", "fiscal_year", "preparer_name", "personnel_costs", "materials_costs", "travel_costs", "equipment_costs", "requested_amounts", "approved_amounts", "justification_notes", "total_budget", "approval_signatures"],
+          "sources": ["https://www.smartsheet.com/free-expense-report-templates", "https://www.template.net/editable/receipts/word"]
+        },
+        {
+          "id": "finance-009",
+          "name": "Tax Invoice",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["supplier_name", "supplier_address", "supplier_tax_id", "customer_name", "customer_address", "invoice_number", "date", "description_of_supply", "taxable_amount", "tax_amount", "total", "payment_terms"],
+          "sources": ["https://www.invoicesimple.com/invoice-template", "https://www.template.net/editable/receipts/word"]
+        },
+        {
+          "id": "finance-010",
+          "name": "Credit Memo",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["company_name", "company_address", "customer_name", "customer_address", "credit_memo_number", "date", "original_invoice_reference", "reason_for_credit", "line_items", "total_credit", "authorized_by"],
+          "sources": ["https://www.invoicesimple.com/receipt-template", "https://www.vertex42.com/ExcelTemplates/excel-purchase-order.html"]
+        }
+      ]
+    },
+    {
+      "name": "Real Estate",
+      "template_count": 8,
+      "templates": [
+        {
+          "id": "realestate-001",
+          "name": "Residential Lease Agreement",
+          "complexity": "complex",
+          "field_count_range": [25, 35],
+          "variable_fields": ["landlord_name", "landlord_address", "tenant_names", "tenant_address", "property_address", "unit_number", "lease_start", "lease_end", "monthly_rent", "security_deposit", "late_fee", "pet_policy", "utilities_responsibility", "maintenance_obligations", "governing_law", "signatures"],
+          "sources": ["https://legaltemplates.net/form/lease-agreement/", "https://www.vertex42.com/WordTemplates/lease-agreement-template.html", "https://eforms.com/rental/"]
+        },
+        {
+          "id": "realestate-002",
+          "name": "Commercial Lease Agreement",
+          "complexity": "complex",
+          "field_count_range": [30, 45],
+          "variable_fields": ["landlord_entity", "landlord_address", "tenant_business", "tenant_address", "premises_description", "square_footage", "lease_term", "base_rent", "cam_charges", "rent_escalation", "permitted_use", "buildout_allowance", "insurance_requirements", "default_remedies", "signatures"],
+          "sources": ["https://eforms.com/rental/", "https://legaltemplates.net/form/lease-agreement/", "https://www.template.net/agreements/lease/word"]
+        },
+        {
+          "id": "realestate-003",
+          "name": "Rent-to-Own / Lease Purchase Agreement",
+          "complexity": "complex",
+          "field_count_range": [18, 25],
+          "variable_fields": ["seller_landlord_name", "buyer_tenant_name", "property_address", "purchase_price", "option_fee", "monthly_rent", "rent_credit", "option_period", "purchase_conditions", "closing_costs_allocation", "signatures"],
+          "sources": ["https://eforms.com/rental/lease-to-own/", "https://www.template.net/business/lease-templates/lease-purchase-agreement-template/"]
+        },
+        {
+          "id": "realestate-004",
+          "name": "Property Inspection Report",
+          "complexity": "complex",
+          "field_count_range": [40, 60],
+          "variable_fields": ["inspector_name", "inspector_license", "property_address", "inspection_date", "client_name", "roof_condition", "foundation_condition", "plumbing_condition", "electrical_condition", "hvac_condition", "photos_references", "findings_summary", "recommendations", "inspector_signature"],
+          "sources": ["https://www.template.net/agreements/lease/word", "https://www.smartsheet.com/medical-forms-templates"]
+        },
+        {
+          "id": "realestate-005",
+          "name": "Rental Application",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["applicant_name", "dob", "ssn", "current_address", "prior_addresses", "employer_name", "employer_address", "employer_phone", "income", "bank_name", "account_type", "references", "credit_check_authorization", "signature", "date"],
+          "sources": ["https://eforms.com/rental/", "https://legaltemplates.net/form/lease-agreement/"]
+        },
+        {
+          "id": "realestate-006",
+          "name": "Eviction Notice (Notice to Quit)",
+          "complexity": "simple",
+          "field_count_range": [8, 10],
+          "variable_fields": ["landlord_name", "tenant_name", "property_address", "date_served", "eviction_reason", "cure_period", "move_out_date", "landlord_signature"],
+          "sources": ["https://eforms.com/eviction/", "https://legaltemplates.net/form/eviction-notice/"]
+        },
+        {
+          "id": "realestate-007",
+          "name": "Property Management Agreement",
+          "complexity": "medium",
+          "field_count_range": [15, 20],
+          "variable_fields": ["owner_name", "owner_address", "manager_name", "manager_address", "property_address", "management_fee_percentage", "term", "manager_responsibilities", "owner_responsibilities", "insurance_requirements", "termination_clause", "signatures"],
+          "sources": ["https://eforms.com/property-management/", "https://www.template.net/agreements/lease/word"]
+        },
+        {
+          "id": "realestate-008",
+          "name": "Move-In / Move-Out Checklist",
+          "complexity": "complex",
+          "field_count_range": [30, 50],
+          "variable_fields": ["property_address", "tenant_name", "move_in_date", "move_out_date", "room_by_room_condition", "walls_condition", "floors_condition", "fixtures_condition", "appliances_condition", "tenant_signature", "landlord_signature", "deposit_deductions"],
+          "sources": ["https://eforms.com/rental/", "https://www.template.net/agreements/lease/word"]
+        }
+      ]
+    },
+    {
+      "name": "HR / Employment",
+      "template_count": 10,
+      "templates": [
+        {
+          "id": "hr-001",
+          "name": "Job Offer Letter",
+          "complexity": "medium",
+          "field_count_range": [15, 20],
+          "variable_fields": ["company_name", "company_address", "company_logo", "candidate_name", "candidate_address", "date", "job_title", "department", "reporting_manager", "start_date", "salary", "pay_frequency", "bonus_structure", "benefits_summary", "pto_days", "at_will_statement", "response_deadline", "hr_contact", "signature"],
+          "sources": ["https://www.hibob.com/hr-tools/job-offer-letter-template/", "https://esign.com/offer-letters/employment/", "https://www.indeed.com/hire/c/info/job-offer-letter-format", "https://www.docusign.com/templates/offer-letter"]
+        },
+        {
+          "id": "hr-002",
+          "name": "Job Description",
+          "complexity": "medium",
+          "field_count_range": [15, 22],
+          "variable_fields": ["company_name", "job_title", "department", "location", "reports_to", "flsa_status", "job_summary", "essential_duties", "qualifications_education", "qualifications_experience", "qualifications_skills", "physical_requirements", "work_environment", "salary_range", "benefits", "eeo_statement"],
+          "sources": ["https://www.indeed.com/hire/c/info/job-offer-letter-format", "https://www.template.net/letters/job-offer"]
+        },
+        {
+          "id": "hr-003",
+          "name": "Performance Review / Evaluation",
+          "complexity": "complex",
+          "field_count_range": [25, 40],
+          "variable_fields": ["employee_name", "job_title", "department", "review_period", "reviewer_name", "rating_scale_definitions", "competency_ratings", "goals_last_period", "new_goals", "overall_rating", "employee_comments", "employee_signature", "manager_signature", "date"],
+          "sources": ["https://www.template.net/business/letters/offer-letter-doc/", "https://www.aihr.com/blog/termination-letter-template/"]
+        },
+        {
+          "id": "hr-004",
+          "name": "Termination Letter",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["company_name", "date", "employee_name", "employee_address", "termination_date", "termination_reason", "final_pay_date", "benefits_continuation", "severance_details", "return_company_property", "non_disparagement", "hr_contact", "signature"],
+          "sources": ["https://www.vertex42.com/WordTemplates/termination-letter.html", "https://eforms.com/employee/write-up/termination-letter/", "https://legaltemplates.net/form/employee/write-up/termination-letter/"]
+        },
+        {
+          "id": "hr-005",
+          "name": "Employee Handbook Acknowledgment",
+          "complexity": "simple",
+          "field_count_range": [6, 10],
+          "variable_fields": ["company_name", "employee_name", "employee_id", "date_of_hire", "handbook_version", "acknowledgment_text", "employee_signature", "date_signed", "witness_signature"],
+          "sources": ["https://www.template.net/business/letters/offer-letter-doc/", "https://resources.workable.com/employee-termination-letter-template"]
+        },
+        {
+          "id": "hr-006",
+          "name": "Employee Warning / Write-Up",
+          "complexity": "medium",
+          "field_count_range": [14, 18],
+          "variable_fields": ["employee_name", "job_title", "department", "supervisor_name", "date", "violation_type", "incident_description", "previous_warnings", "corrective_action_required", "improvement_timeline", "consequences", "employee_comments", "employee_signature", "supervisor_signature"],
+          "sources": ["https://eforms.com/employee/write-up/", "https://legaltemplates.net/form/employee/write-up/"]
+        },
+        {
+          "id": "hr-007",
+          "name": "Resignation Letter",
+          "complexity": "simple",
+          "field_count_range": [6, 10],
+          "variable_fields": ["employee_name", "date", "manager_name", "company_name", "job_title", "last_working_date", "reason", "transition_notes", "signature"],
+          "sources": ["https://eforms.com/employee/resignation-letter/", "https://www.template.net/letters/job-offer"]
+        },
+        {
+          "id": "hr-008",
+          "name": "Employee Onboarding Checklist",
+          "complexity": "complex",
+          "field_count_range": [20, 35],
+          "variable_fields": ["new_hire_name", "job_title", "department", "start_date", "manager_name", "it_setup_items", "hr_paperwork_items", "training_schedule", "first_week_tasks", "30_60_90_day_milestones", "mentor_name"],
+          "sources": ["https://www.smartsheet.com/free-expense-report-templates", "https://www.template.net/business/letters/offer-letter-doc/"]
+        },
+        {
+          "id": "hr-009",
+          "name": "Time-Off / Leave Request Form",
+          "complexity": "simple",
+          "field_count_range": [10, 14],
+          "variable_fields": ["employee_name", "employee_id", "department", "leave_type", "start_date", "end_date", "total_days", "reason", "covering_employee", "employee_signature", "manager_approval", "hr_approval", "dates"],
+          "sources": ["https://www.jotform.com/form-templates/", "https://www.template.net/business/letters/offer-letter-doc/"]
+        },
+        {
+          "id": "hr-010",
+          "name": "Employment Verification Letter",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["company_name", "company_address", "date", "employee_name", "job_title", "employment_start_date", "current_salary", "employment_status", "hr_representative_name", "hr_representative_title", "signature"],
+          "sources": ["https://eforms.com/employment/verification-letter/", "https://www.template.net/letters/job-offer"]
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "template_count": 8,
+      "templates": [
+        {
+          "id": "edu-001",
+          "name": "Academic Transcript",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["institution_name", "institution_logo", "student_name", "student_id", "dob", "program_major", "enrollment_date", "graduation_date", "course_listing", "cumulative_gpa", "degree_conferred", "registrar_signature", "date_issued", "seal"],
+          "sources": ["https://www.template.net/edit-online/437096/academic-transcript"]
+        },
+        {
+          "id": "edu-002",
+          "name": "Letter of Recommendation (Student)",
+          "complexity": "medium",
+          "field_count_range": [10, 14],
+          "variable_fields": ["recommender_name", "recommender_title", "recommender_institution", "date", "addressee", "student_name", "relationship_context", "courses_taken", "academic_performance", "character_assessment", "achievements", "recommendation_statement", "recommender_signature", "contact_info"],
+          "sources": ["https://eforms.com/recommendation-letter/student/", "https://www.template.net/business/letters/student-recommendation-letter/", "https://www.sampletemplates.com/letter-templates/recommendation-letter-for-student.html"]
+        },
+        {
+          "id": "edu-003",
+          "name": "Course Syllabus",
+          "complexity": "complex",
+          "field_count_range": [25, 40],
+          "variable_fields": ["institution_name", "course_title", "course_number", "semester_year", "instructor_name", "office_location", "office_hours", "email", "course_description", "learning_objectives", "required_textbooks", "grading_policy", "assignment_schedule", "academic_integrity_policy", "disability_accommodations", "important_dates"],
+          "sources": ["https://www.template.net/edit-online/437096/academic-transcript", "https://www.canva.com/letters/templates/recommendation/"]
+        },
+        {
+          "id": "edu-004",
+          "name": "Enrollment / Registration Form",
+          "complexity": "medium",
+          "field_count_range": [18, 25],
+          "variable_fields": ["student_name", "dob", "gender", "address", "parent_guardian_names", "phone", "email", "grade_level", "program_selected", "prior_school", "emergency_contact", "medical_conditions", "photo_release_consent", "signature", "date"],
+          "sources": ["https://www.jotform.com/form-templates/", "https://www.123formbuilder.com/free-form-templates/gallery-healthcare/"]
+        },
+        {
+          "id": "edu-005",
+          "name": "Report Card",
+          "complexity": "medium",
+          "field_count_range": [15, 25],
+          "variable_fields": ["school_name", "school_logo", "student_name", "grade_level", "teacher_name", "marking_period", "subjects_grades", "attendance_summary", "conduct_rating", "teacher_comments", "parent_signature_line", "date"],
+          "sources": ["https://www.template.net/edit-online/437096/academic-transcript"]
+        },
+        {
+          "id": "edu-006",
+          "name": "Diploma / Certificate of Completion",
+          "complexity": "simple",
+          "field_count_range": [6, 10],
+          "variable_fields": ["institution_name", "institution_logo", "institution_seal", "student_name", "degree_title", "field_of_study", "date_conferred", "honors_designation", "president_signature", "registrar_signature"],
+          "sources": ["https://www.template.net/edit-online/437096/academic-transcript", "https://www.canva.com/letters/templates/recommendation/"]
+        },
+        {
+          "id": "edu-007",
+          "name": "Permission Slip / Field Trip Form",
+          "complexity": "simple",
+          "field_count_range": [10, 14],
+          "variable_fields": ["school_name", "event_name", "date", "destination", "departure_time", "return_time", "teacher_name", "student_name", "parent_guardian_name", "emergency_phone", "medical_conditions", "parent_signature", "date_signed"],
+          "sources": ["https://www.template.net/edit-online/437096/academic-transcript", "https://www.jotform.com/form-templates/"]
+        },
+        {
+          "id": "edu-008",
+          "name": "Student Disciplinary Notice",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["school_name", "date", "student_name", "grade", "parent_guardian_name", "infraction_description", "incident_date", "prior_incidents", "disciplinary_action", "appeal_process", "principal_signature", "parent_acknowledgment_signature"],
+          "sources": ["https://www.template.net/edit-online/437096/academic-transcript"]
+        }
+      ]
+    },
+    {
+      "name": "Government",
+      "template_count": 7,
+      "templates": [
+        {
+          "id": "gov-001",
+          "name": "Building Permit Application",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["applicant_name", "applicant_address", "applicant_phone", "property_address", "parcel_number", "property_owner", "contractor_name", "contractor_license", "project_description", "estimated_cost", "building_type", "occupancy_type", "square_footage", "zoning_classification", "signatures", "date"],
+          "sources": ["https://documentero.com/templates/government-public-sector/document/building-permit-application/", "https://www.template.net/editable/136427/building-permit-application", "https://www.chicago.gov/city/en/sites/guide-to-building-permits/home/forms.html"]
+        },
+        {
+          "id": "gov-002",
+          "name": "Compliance Report",
+          "complexity": "complex",
+          "field_count_range": [20, 35],
+          "variable_fields": ["organization_name", "report_period", "regulatory_framework", "compliance_officer", "areas_assessed", "findings_summary", "non_compliance_items", "corrective_actions", "deadlines", "risk_ratings", "executive_summary", "signatures", "date"],
+          "sources": ["https://www.template.net/business/report-templates/compliance-report-template/", "https://www.sample.net/reports/compliance-reports/"]
+        },
+        {
+          "id": "gov-003",
+          "name": "Freedom of Information (FOIA) Request",
+          "complexity": "simple",
+          "field_count_range": [8, 10],
+          "variable_fields": ["requester_name", "requester_address", "requester_phone", "requester_email", "date", "agency_name", "agency_address", "records_description", "preferred_format", "fee_waiver_justification", "signature"],
+          "sources": ["https://www.template.net/editable/136427/building-permit-application"]
+        },
+        {
+          "id": "gov-004",
+          "name": "Environmental Site Inspection Report",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["facility_name", "facility_address", "inspector_name", "inspector_agency", "inspection_date", "permit_number", "inspection_type", "areas_inspected", "observations", "violations_found", "photos_referenced", "corrective_actions", "compliance_deadline", "inspector_signature"],
+          "sources": ["https://www.epa.gov/npdes/construction-general-permit-resources-tools-and-templates"]
+        },
+        {
+          "id": "gov-005",
+          "name": "Work Permit / Authorization",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["applicant_name", "dob", "nationality", "employer_name", "job_title", "work_location", "permit_type", "effective_date", "expiration_date", "conditions_restrictions", "issuing_authority", "permit_number", "signature"],
+          "sources": ["https://www.template.net/editable/136427/building-permit-application", "https://www.safetymint.com/permit-templates/"]
+        },
+        {
+          "id": "gov-006",
+          "name": "Public Comment Form",
+          "complexity": "simple",
+          "field_count_range": [6, 10],
+          "variable_fields": ["commenter_name", "commenter_address", "commenter_email", "date", "project_reference_number", "agency_name", "subject", "comment_body", "supporting_documents", "signature"],
+          "sources": ["https://www.123formbuilder.com/free-form-templates/gallery-governmental/"]
+        },
+        {
+          "id": "gov-007",
+          "name": "Grant Application Cover Sheet",
+          "complexity": "medium",
+          "field_count_range": [14, 18],
+          "variable_fields": ["applicant_organization", "organization_address", "ein", "project_title", "principal_investigator", "pi_title", "requested_amount", "project_period", "program_area", "abstract", "authorized_representative", "representative_signature", "date"],
+          "sources": ["https://www.template.net/editable/136427/building-permit-application"]
+        }
+      ]
+    },
+    {
+      "name": "Business General",
+      "template_count": 10,
+      "templates": [
+        {
+          "id": "biz-001",
+          "name": "Business Proposal",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["company_name", "company_logo", "client_name", "date", "proposal_title", "executive_summary", "problem_statement", "proposed_solution", "scope_of_work", "timeline_milestones", "pricing_table", "terms_conditions", "team_bios", "contact_info", "signature"],
+          "sources": ["https://word.cloud.microsoft/create/en/business-proposals/", "https://www.pandadoc.com/nda-template/"]
+        },
+        {
+          "id": "biz-002",
+          "name": "Statement of Work (SOW)",
+          "complexity": "complex",
+          "field_count_range": [22, 35],
+          "variable_fields": ["project_name", "client_name", "vendor_name", "date", "project_objectives", "scope_description", "deliverables", "milestones_schedule", "acceptance_criteria", "assumptions", "constraints", "payment_schedule", "change_management_process", "signatures"],
+          "sources": ["https://www.smartsheet.com/free-statement-work-templates", "https://www.projectmanager.com/templates/statement-of-work-template", "https://www.proposify.com/proposal-templates/statement-work-template"]
+        },
+        {
+          "id": "biz-003",
+          "name": "Meeting Minutes",
+          "complexity": "medium",
+          "field_count_range": [12, 18],
+          "variable_fields": ["meeting_title", "date", "time", "location", "attendees", "absentees", "agenda_items", "discussion_notes", "action_items", "decisions_made", "next_meeting_date", "minute_taker", "chair_signature"],
+          "sources": ["https://create.microsoft.com/en-us/templates/memo", "https://www.template.net/editable/136427/building-permit-application"]
+        },
+        {
+          "id": "biz-004",
+          "name": "Internal Memo",
+          "complexity": "simple",
+          "field_count_range": [6, 8],
+          "variable_fields": ["company_name", "company_logo", "to", "from", "date", "subject", "cc", "body_text", "attachments"],
+          "sources": ["https://create.microsoft.com/en-us/templates/memo"]
+        },
+        {
+          "id": "biz-005",
+          "name": "Company Policy Document",
+          "complexity": "complex",
+          "field_count_range": [15, 22],
+          "variable_fields": ["company_name", "policy_title", "policy_number", "effective_date", "revision_date", "approved_by", "purpose", "scope", "definitions", "policy_statement", "procedures", "responsibilities", "enforcement", "related_documents", "revision_history"],
+          "sources": ["https://www.template.net/editable/136427/building-permit-application", "https://www.smartsheet.com/free-statement-work-templates"]
+        },
+        {
+          "id": "biz-006",
+          "name": "Business Letter (General)",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["sender_name", "sender_title", "sender_company", "sender_address", "date", "recipient_name", "recipient_title", "recipient_company", "recipient_address", "salutation", "reference_line", "body", "closing", "signature", "enclosures"],
+          "sources": ["https://www.vertex42.com/WordTemplates/", "https://create.microsoft.com/en-us/templates/memo"]
+        },
+        {
+          "id": "biz-007",
+          "name": "Project Status Report",
+          "complexity": "complex",
+          "field_count_range": [18, 28],
+          "variable_fields": ["project_name", "report_date", "project_manager", "reporting_period", "overall_status_rag", "milestones_summary", "accomplishments", "planned_next_period", "risks_issues", "budget_status", "resource_status", "escalations"],
+          "sources": ["https://www.smartsheet.com/free-statement-work-templates", "https://www.projectmanager.com/templates/statement-of-work-template"]
+        },
+        {
+          "id": "biz-008",
+          "name": "Request for Proposal (RFP)",
+          "complexity": "complex",
+          "field_count_range": [18, 25],
+          "variable_fields": ["issuing_organization", "date", "project_title", "background", "scope_of_work", "requirements", "evaluation_criteria", "submission_deadline", "contact_person", "proposal_format_instructions", "terms_conditions"],
+          "sources": ["https://www.template.net/editable/136427/building-permit-application", "https://www.pandadoc.com/nda-template/"]
+        },
+        {
+          "id": "biz-009",
+          "name": "Non-Compete Agreement",
+          "complexity": "medium",
+          "field_count_range": [10, 14],
+          "variable_fields": ["company_name", "company_address", "employee_name", "employee_address", "effective_date", "restricted_activities", "geographic_scope", "duration", "consideration", "breach_remedies", "governing_law", "signatures"],
+          "sources": ["https://eforms.com/non-compete/", "https://legaltemplates.net/form/non-compete-agreement/"]
+        },
+        {
+          "id": "biz-010",
+          "name": "Meeting Agenda",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["meeting_title", "date", "time", "location_virtual_link", "organizer", "attendees_invited", "agenda_items", "materials_to_review", "notes_section"],
+          "sources": ["https://create.microsoft.com/en-us/templates/memo", "https://www.template.net/editable/136427/building-permit-application"]
+        }
+      ]
+    },
+    {
+      "name": "Insurance",
+      "template_count": 7,
+      "templates": [
+        {
+          "id": "ins-001",
+          "name": "Insurance Claim Form",
+          "complexity": "complex",
+          "field_count_range": [18, 25],
+          "variable_fields": ["policyholder_name", "policyholder_address", "policyholder_phone", "policy_number", "claim_number", "date_of_loss", "location_of_loss", "loss_description", "property_damaged", "estimated_value", "police_report_number", "witnesses", "supporting_documents", "claimant_signature", "date"],
+          "sources": ["https://www.template.net/insurance/word", "https://www.scribd.com/document/560669371/Make-an-Insurance-Claim-Letter-Template"]
+        },
+        {
+          "id": "ins-002",
+          "name": "Certificate of Insurance (COI)",
+          "complexity": "complex",
+          "field_count_range": [25, 35],
+          "variable_fields": ["insurer_name", "insured_name", "insured_address", "certificate_holder_name", "certificate_holder_address", "policy_number", "policy_start", "policy_end", "general_liability_coverage", "auto_coverage", "umbrella_coverage", "workers_comp_coverage", "coverage_limits", "deductibles", "additional_insured_endorsement", "agent_name", "agent_signature", "date"],
+          "sources": ["https://www.template.net/business/certificate-templates/insurance-certificate/", "https://officetemplatesonline.com/insurance-certificate-samples-and-templates-in-ms-word/", "https://www.jotform.com/pdf-templates/certificate-of-insurance-template"]
+        },
+        {
+          "id": "ins-003",
+          "name": "Insurance Policy Declaration Page",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["insurance_company_name", "insurance_company_logo", "policy_number", "named_insured", "mailing_address", "policy_period", "premium_amount", "coverage_summary_table", "property_vehicle_description", "endorsements", "agent_name", "agent_phone"],
+          "sources": ["https://www.template.net/insurance/word", "https://www.sampletemplates.com/certificate-templates/certificate-of-insurance-template.html"]
+        },
+        {
+          "id": "ins-004",
+          "name": "Insurance Claim Denial Letter",
+          "complexity": "medium",
+          "field_count_range": [12, 16],
+          "variable_fields": ["insurance_company_name", "insurance_company_address", "date", "policyholder_name", "policyholder_address", "claim_number", "policy_number", "date_of_loss", "denial_reason", "relevant_policy_provisions", "appeal_process", "appeal_deadline", "adjuster_name", "adjuster_contact", "signature"],
+          "sources": ["https://www.template.net/insurance/word", "https://www.scribd.com/document/560669371/Make-an-Insurance-Claim-Letter-Template"]
+        },
+        {
+          "id": "ins-005",
+          "name": "Insurance Application / Quote Request",
+          "complexity": "complex",
+          "field_count_range": [20, 28],
+          "variable_fields": ["applicant_name", "applicant_address", "applicant_dob", "business_name", "coverage_type_requested", "property_vehicle_details", "prior_claims_history", "current_coverage_details", "requested_limits", "deductible_preference", "effective_date_requested", "agent", "signature"],
+          "sources": ["https://www.123formbuilder.com/free-form-templates/gallery-insurance-forms/", "https://www.template.net/insurance/word"]
+        },
+        {
+          "id": "ins-006",
+          "name": "Loss Run Report",
+          "complexity": "medium",
+          "field_count_range": [10, 14],
+          "variable_fields": ["insurance_company_name", "insured_name", "policy_number", "report_date", "reporting_period", "claims_listing", "total_incurred", "loss_ratio"],
+          "sources": ["https://www.template.net/insurance/word"]
+        },
+        {
+          "id": "ins-007",
+          "name": "Proof of Insurance Letter",
+          "complexity": "simple",
+          "field_count_range": [8, 12],
+          "variable_fields": ["insurance_company_name", "insurance_company_address", "date", "insured_name", "policy_number", "coverage_type", "coverage_limits", "policy_effective_date", "policy_expiration_date", "purpose_of_letter", "agent_name", "agent_signature"],
+          "sources": ["https://officetemplatesonline.com/insurance-certificate-samples-and-templates-in-ms-word/", "https://www.template.net/insurance/word"]
+        }
+      ]
+    },
+    {
+      "name": "Construction / Engineering",
+      "template_count": 7,
+      "templates": [
+        {
+          "id": "const-001",
+          "name": "Change Order",
+          "complexity": "complex",
+          "field_count_range": [18, 25],
+          "variable_fields": ["project_name", "owner_name", "contractor_name", "change_order_number", "date", "contract_number", "change_description", "change_reason", "cost_impact_additions", "cost_impact_deductions", "time_impact_days", "revised_contract_sum", "revised_completion_date", "owner_signature", "contractor_signature", "architect_signature"],
+          "sources": ["https://www.levelset.com/blog/free-change-order-templates/"]
+        },
+        {
+          "id": "const-002",
+          "name": "Request for Information (RFI)",
+          "complexity": "medium",
+          "field_count_range": [14, 18],
+          "variable_fields": ["project_name", "rfi_number", "date_submitted", "from_party", "to_party", "subject", "spec_drawing_reference", "question_request", "suggested_solution", "response_needed_by", "priority", "attachments", "response_section", "responder_name", "responder_date"],
+          "sources": ["https://www.smartsheet.com/content/construction-rfi-templates", "https://www.procore.com/library/rfi-templates", "https://buildingblok.com/resources/rfi-template", "https://www.documentcrunch.com/blog/rfi-template-construction-guide"]
+        },
+        {
+          "id": "const-003",
+          "name": "Submittal Form",
+          "complexity": "medium",
+          "field_count_range": [14, 18],
+          "variable_fields": ["project_name", "submittal_number", "date", "from_contractor", "to_architect", "spec_section", "submittal_description", "attached_items", "action_requested", "contractor_remarks", "reviewer_action", "reviewer_comments", "reviewer_signature", "date_reviewed"],
+          "sources": ["https://www.procore.com/library/rfi-templates", "https://www.template.net/editable/136427/building-permit-application"]
+        },
+        {
+          "id": "const-004",
+          "name": "Daily Construction Log / Report",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["project_name", "date", "weather_conditions", "temperature", "contractor_name", "superintendent_name", "workforce_count_by_trade", "equipment_on_site", "work_performed", "materials_delivered", "visitors", "safety_incidents", "delays_issues", "photos", "superintendent_signature"],
+          "sources": ["https://www.smartsheet.com/content/construction-rfi-templates", "https://www.procore.com/library/rfi-templates"]
+        },
+        {
+          "id": "const-005",
+          "name": "Punch List",
+          "complexity": "medium",
+          "field_count_range": [10, 14],
+          "variable_fields": ["project_name", "date", "contractor", "area_location", "item_number", "deficiency_description", "responsible_party", "status", "completion_date", "inspector_name", "final_signoff_signatures"],
+          "sources": ["https://www.smartsheet.com/content/construction-rfi-templates", "https://www.template.net/editable/136427/building-permit-application"]
+        },
+        {
+          "id": "const-006",
+          "name": "Construction Safety Plan",
+          "complexity": "complex",
+          "field_count_range": [20, 30],
+          "variable_fields": ["project_name", "project_address", "contractor_name", "safety_officer", "date_prepared", "project_description", "hazard_analysis", "ppe_requirements", "emergency_procedures", "training_requirements", "incident_reporting_procedure", "safety_inspection_schedule", "signatures"],
+          "sources": ["https://www.safetymint.com/permit-templates/", "https://www.template.net/editable/136427/building-permit-application"]
+        },
+        {
+          "id": "const-007",
+          "name": "Certificate of Substantial Completion",
+          "complexity": "medium",
+          "field_count_range": [14, 18],
+          "variable_fields": ["project_name", "owner_name", "contractor_name", "architect_name", "contract_date", "date_substantial_completion", "punch_list_items_remaining", "contract_sum", "approved_change_orders_total", "adjusted_contract_sum", "retainage_amount", "owner_signature", "contractor_signature", "architect_signature", "date"],
+          "sources": ["https://www.template.net/editable/136427/building-permit-application"]
+        }
+      ]
+    }
+  ],
+  "complexity_distribution": {
+    "simple": 19,
+    "medium": 28,
+    "complex": 40
+  },
+  "top_sources": [
+    {
+      "name": "eForms",
+      "url": "https://eforms.com",
+      "formats": ["PDF", "DOCX", "ODT"],
+      "best_for": ["Legal", "HR", "Real Estate"]
+    },
+    {
+      "name": "LegalTemplates.net",
+      "url": "https://legaltemplates.net",
+      "formats": ["PDF", "DOCX"],
+      "best_for": ["Legal contracts and agreements"]
+    },
+    {
+      "name": "Template.net",
+      "url": "https://www.template.net",
+      "formats": ["DOCX", "PDF", "Google Docs"],
+      "best_for": ["All industries"]
+    },
+    {
+      "name": "Vertex42",
+      "url": "https://www.vertex42.com",
+      "formats": ["DOCX", "XLSX"],
+      "best_for": ["Legal", "Finance", "Business"]
+    },
+    {
+      "name": "Smartsheet",
+      "url": "https://www.smartsheet.com",
+      "formats": ["DOCX", "XLSX", "PDF", "Google Docs"],
+      "best_for": ["Business", "Healthcare", "Construction"]
+    },
+    {
+      "name": "eSign.com",
+      "url": "https://esign.com",
+      "formats": ["PDF", "DOCX", "ODT"],
+      "best_for": ["Legal", "HR"]
+    },
+    {
+      "name": "DocuSign",
+      "url": "https://www.docusign.com",
+      "formats": ["DOCX", "PDF"],
+      "best_for": ["Agreements with e-sign"]
+    },
+    {
+      "name": "Jotform",
+      "url": "https://www.jotform.com",
+      "formats": ["PDF", "fillable forms"],
+      "best_for": ["Healthcare", "Education"]
+    },
+    {
+      "name": "PandaDoc",
+      "url": "https://www.pandadoc.com",
+      "formats": ["DOCX", "PDF"],
+      "best_for": ["Business proposals", "NDAs"]
+    },
+    {
+      "name": "Procore",
+      "url": "https://www.procore.com",
+      "formats": ["DOCX", "XLSX", "PDF"],
+      "best_for": ["Construction"]
+    },
+    {
+      "name": "Microsoft Templates",
+      "url": "https://create.microsoft.com",
+      "formats": ["DOCX"],
+      "best_for": ["Memos", "agendas", "business letters"]
+    },
+    {
+      "name": "OfficeTemplatesOnline",
+      "url": "https://officetemplatesonline.com",
+      "formats": ["DOCX"],
+      "best_for": ["Medical", "Insurance"]
+    },
+    {
+      "name": "Documentero",
+      "url": "https://documentero.com",
+      "formats": ["DOCX"],
+      "best_for": ["Healthcare", "Government"]
+    },
+    {
+      "name": "ProjectManager",
+      "url": "https://www.projectmanager.com",
+      "formats": ["DOCX"],
+      "best_for": ["SOWs", "project reports"]
+    },
+    {
+      "name": "EPA",
+      "url": "https://www.epa.gov",
+      "formats": ["DOCX"],
+      "best_for": ["Environmental compliance"]
+    }
+  ]
+}

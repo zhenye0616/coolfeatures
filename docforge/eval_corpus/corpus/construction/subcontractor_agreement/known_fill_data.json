@@ -1,0 +1,32 @@
+{
+  "parties": {
+    "general_contractor_name": "Pacific Builders International",
+    "general_contractor_address": "4200 Harbor Boulevard, Suite 300, Long Beach, CA 90802",
+    "subcontractor_name": "Cascade Mechanical Systems LLC",
+    "subcontractor_address": "850 Industrial Way, Glendale, CA 91201"
+  },
+  "project": {
+    "project_name": "Pasadena Community Health Center"
+  },
+  "identifiers": {
+    "project_number": "PCHC-2026-002"
+  },
+  "terms": {
+    "scope_of_work": "Complete HVAC installation including rooftop units, ductwork, controls, and commissioning",
+    "bond_requirement": "Performance and payment bond, 100% of contract value"
+  },
+  "financial": {
+    "contract_sum": "$3,100,000.00",
+    "retainage": "10%",
+    "payment_terms": "Monthly progress billing, Net 30"
+  },
+  "dates": {
+    "start_date": "June 15, 2026",
+    "completion_date": "February 28, 2027"
+  },
+  "insurance": {
+    "gl_insurance_limit": "$2,000,000",
+    "auto_insurance_limit": "$1,000,000",
+    "wc_insurance": "Statutory"
+  }
+}

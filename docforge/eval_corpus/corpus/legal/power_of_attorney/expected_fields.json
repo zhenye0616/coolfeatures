@@ -1,0 +1,138 @@
+{
+  "document_type": "power_of_attorney",
+  "fields": [
+    {
+      "field_name": "principal_name",
+      "original_value": "Eleanor Fitzgerald",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Eleanor Fitzgerald",
+          "type": "identity"
+        },
+        {
+          "text": "ELEANOR FITZGERALD",
+          "type": "upper"
+        },
+        {
+          "text": "Fitzgerald",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "principal_address",
+      "original_value": "2205 Magnolia Boulevard, Savannah, GA 31401",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2205 Magnolia Boulevard, Savannah, GA 31401",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "principal_dob",
+      "original_value": "April 12, 1958",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "April 12, 1958",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "agent_name",
+      "original_value": "Thomas Fitzgerald",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Thomas Fitzgerald",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "agent_address",
+      "original_value": "118 Peachtree Circle, Atlanta, GA 30301",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "118 Peachtree Circle, Atlanta, GA 30301",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "effective_date",
+      "original_value": "November 15, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "November 15, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "poa_type",
+      "original_value": "Durable",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Durable",
+          "type": "identity"
+        },
+        {
+          "text": "durable",
+          "type": "lower"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Georgia",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Georgia",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "notary_county",
+      "original_value": "Chatham",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Chatham",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "KNOW ALL MEN BY THESE PRESENTS",
+    "IN WITNESS WHEREOF",
+    "Power of Attorney",
+    "Attorney-in-Fact",
+    "GRANT OF GENERAL AUTHORITY",
+    "DURABILITY PROVISION",
+    "THIRD PARTY RELIANCE",
+    "COMPENSATION OF AGENT",
+    "GOVERNING LAW",
+    "REVOCATION",
+    "NOTARY PUBLIC"
+  ]
+}

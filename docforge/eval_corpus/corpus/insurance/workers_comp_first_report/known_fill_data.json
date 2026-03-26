@@ -1,0 +1,28 @@
+{
+  "parties": {
+    "employer_name": "Northern Fisheries Corp",
+    "employer_address": "3500 Marine Way, Anchorage, AK 99501",
+    "employee_name": "Sandra Gutierrez",
+    "witness": "Shift Lead Tom Bradley",
+    "treating_physician": "Dr. Karen Olsen, Anchorage General Hospital"
+  },
+  "identifiers": {
+    "employee_ssn_last4": "7789",
+    "claim_number": "NFWC-2026-0134"
+  },
+  "dates": {
+    "employee_dob": "August 22, 1992",
+    "hire_date": "June 1, 2021",
+    "date_of_injury": "October 10, 2026",
+    "time_of_injury": "2:30 PM"
+  },
+  "employment": {
+    "job_title": "Filleting Technician"
+  },
+  "location": {
+    "injury_location": "Cold Storage Unit A, Bay 3"
+  },
+  "medical": {
+    "nature_of_injury": "Slip and fall on wet floor resulting in fractured left wrist"
+  }
+}

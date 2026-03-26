@@ -1,0 +1,22 @@
+{
+  "parties": {
+    "borrower_name": "Samantha Liu",
+    "borrower_address": "2890 Harbor Drive, San Diego, CA 92101",
+    "lender_name": "Pacific Savings Bank",
+    "lender_address": "500 Broadway, Suite 300, San Diego, CA 92101"
+  },
+  "financial": {
+    "principal_amount": "$100,000.00",
+    "interest_rate": "5.75%",
+    "monthly_payment": "$1,882.00",
+    "late_fee": "$75 or 5%"
+  },
+  "dates": {
+    "execution_date": "March 1, 2026",
+    "maturity_date": "March 1, 2031"
+  },
+  "legal": {
+    "governing_state": "California",
+    "governing_county": "San Diego County"
+  }
+}

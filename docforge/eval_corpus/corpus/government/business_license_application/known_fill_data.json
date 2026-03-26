@@ -1,0 +1,28 @@
+{
+  "parties": {
+    "business_name": "Savor\u00e9 Dining Group LLC",
+    "dba_name": "Savor\u00e9 Kitchen & Lounge",
+    "owner_name": "Isabella Romano",
+    "owner_address": "1820 Congress Avenue, Austin, TX 78701"
+  },
+  "project": {
+    "business_type": "Restaurant / Lounge"
+  },
+  "identifiers": {
+    "sos_entity_number": "TX-LLC-2025-33214",
+    "ein": "91-3345678"
+  },
+  "dates": {
+    "planned_opening": "September 15, 2026",
+    "application_date": "July 1, 2026"
+  },
+  "location": {
+    "business_address": "1820 Congress Avenue, Austin, TX 78701"
+  },
+  "contact": {
+    "contact_phone": "(512) 555-0267"
+  },
+  "jurisdiction": {
+    "municipality": "City of Austin"
+  }
+}

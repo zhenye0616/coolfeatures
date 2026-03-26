@@ -1,0 +1,162 @@
+{
+  "document_type": "performance_review",
+  "fields": [
+    {
+      "field_name": "company_name",
+      "original_value": "Skyline Software Solutions",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Skyline Software Solutions",
+          "type": "identity"
+        },
+        {
+          "text": "SKYLINE SOFTWARE SOLUTIONS",
+          "type": "upper"
+        },
+        {
+          "text": "Skyline",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "2200 Lakeside Drive, Suite 500, Oakland, CA 94612",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "2200 Lakeside Drive, Suite 500, Oakland, CA 94612",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_name",
+      "original_value": "Adriana Vasquez",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Adriana Vasquez",
+          "type": "identity"
+        },
+        {
+          "text": "Vasquez",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "employee_title",
+      "original_value": "Product Manager",
+      "category": "employment",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Product Manager",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "Product Development",
+      "category": "employment",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Product Development",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "manager_name",
+      "original_value": "Director of Product, Nathan Blackwell",
+      "category": "employment",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Director of Product, Nathan Blackwell",
+          "type": "identity"
+        },
+        {
+          "text": "Blackwell",
+          "type": "last_name"
+        },
+        {
+          "text": "Nathan Blackwell",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "review_period",
+      "original_value": "January 1, 2024 \u2013 December 31, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 1, 2024 \u2013 December 31, 2024",
+          "type": "identity"
+        },
+        {
+          "text": "2024",
+          "type": "year_only"
+        }
+      ]
+    },
+    {
+      "field_name": "review_date",
+      "original_value": "February 15, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "February 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "overall_rating",
+      "original_value": "Exceeds Expectations",
+      "category": "evaluation",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Exceeds Expectations",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "next_review_date",
+      "original_value": "February 2026",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "February 2026",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "ANNUAL PERFORMANCE REVIEW",
+    "OVERALL RATING",
+    "GOALS & ACHIEVEMENTS",
+    "CORE COMPETENCIES",
+    "AREAS FOR IMPROVEMENT",
+    "DEVELOPMENT PLAN",
+    "Employee Acknowledgment",
+    "Confidential HR Document",
+    "Competency",
+    "Rating",
+    "Next Review Date"
+  ]
+}

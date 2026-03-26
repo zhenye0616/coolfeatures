@@ -1,0 +1,180 @@
+{
+  "document_type": "change_order",
+  "fields": [
+    {
+      "field_name": "project_name",
+      "original_value": "Riverside Mixed-Use Development",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Riverside Mixed-Use Development",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_number",
+      "original_value": "RMD-2024-001",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "RMD-2024-001",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_name",
+      "original_value": "Riverside Ventures LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Riverside Ventures LLC",
+          "type": "identity"
+        },
+        {
+          "text": "Riverside Ventures",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_address",
+      "original_value": "900 River Road, Suite 400, Sacramento, CA 95814",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "900 River Road, Suite 400, Sacramento, CA 95814",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_name",
+      "original_value": "Ironclad Builders Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Ironclad Builders Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "IRONCLAD BUILDERS INC.",
+          "type": "upper"
+        },
+        {
+          "text": "Ironclad",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_address",
+      "original_value": "3300 Construction Avenue, Sacramento, CA 95826",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "3300 Construction Avenue, Sacramento, CA 95826",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "change_order_number",
+      "original_value": "CO-007",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "CO-007",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "change_order_date",
+      "original_value": "March 5, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 5, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "cost_impact",
+      "original_value": "$142,500.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$142,500.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "new_contract_sum",
+      "original_value": "$18,642,500.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$18,642,500.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_approver",
+      "original_value": "Patricia Nakamura",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Patricia Nakamura, VP of Development",
+          "type": "identity"
+        },
+        {
+          "text": "Nakamura",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_approver",
+      "original_value": "Frank Delgado",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Frank Delgado, Project Director",
+          "type": "identity"
+        },
+        {
+          "text": "Delgado",
+          "type": "last_name"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "CHANGE ORDER",
+    "PROJECT INFORMATION",
+    "DESCRIPTION OF CHANGE",
+    "COST AND SCHEDULE IMPACT",
+    "APPROVALS",
+    "Original Contract Sum",
+    "New Contract Sum",
+    "Owner Approval",
+    "Contractor Approval"
+  ]
+}

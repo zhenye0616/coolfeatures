@@ -1,0 +1,223 @@
+{
+  "document_type": "patient_intake_form",
+  "fields": [
+    {
+      "field_name": "patient_name",
+      "original_value": "Victoria Ramirez",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Victoria Ramirez",
+          "type": "identity"
+        },
+        {
+          "text": "Ramirez",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_dob",
+      "original_value": "March 8, 1985",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 8, 1985",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_gender",
+      "original_value": "Female",
+      "category": "patient",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Female",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_address",
+      "original_value": "1523 Cedar Park Road, Minneapolis, MN 55401",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1523 Cedar Park Road, Minneapolis, MN 55401",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_phone",
+      "original_value": "(612) 555-0147",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "(612) 555-0147",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "patient_email",
+      "original_value": "v.ramirez@email.com",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "v.ramirez@email.com",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "emergency_contact_name",
+      "original_value": "Carlos Ramirez",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Carlos Ramirez",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "emergency_contact_relationship",
+      "original_value": "Spouse",
+      "category": "patient",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Spouse",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "emergency_contact_phone",
+      "original_value": "(612) 555-0298",
+      "category": "patient",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "(612) 555-0298",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "insurance_provider",
+      "original_value": "Blue Cross Blue Shield",
+      "category": "insurance",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Blue Cross Blue Shield",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "policy_number",
+      "original_value": "BCB-445892",
+      "category": "insurance",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "BCB-445892",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "group_number",
+      "original_value": "GRP-2200",
+      "category": "insurance",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "GRP-2200",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "primary_care_physician",
+      "original_value": "Dr. Amanda Foster",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Dr. Amanda Foster",
+          "type": "identity"
+        },
+        {
+          "text": "Foster",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "reason_for_visit",
+      "original_value": "Annual wellness exam",
+      "category": "clinical",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Annual wellness exam",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "practice_name",
+      "original_value": "Lakeside Family Medicine",
+      "category": "provider",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Lakeside Family Medicine",
+          "type": "identity"
+        },
+        {
+          "text": "LAKESIDE FAMILY MEDICINE",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "form_date",
+      "original_value": "October 3, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "October 3, 2024",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "Patient Intake Form",
+    "PATIENT INFORMATION",
+    "EMERGENCY CONTACT",
+    "INSURANCE INFORMATION",
+    "CURRENT MEDICATIONS",
+    "ALLERGIES",
+    "PATIENT CONSENT AND ACKNOWLEDGMENT",
+    "HIPAA",
+    "Notice of Privacy Practices",
+    "Date of Birth",
+    "Policy Number",
+    "Group Number"
+  ]
+}

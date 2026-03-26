@@ -1,0 +1,26 @@
+{
+  "parties": {
+    "provider_name": "Zenith Creative Solutions",
+    "provider_address": "1400 Innovation Way, Suite 500, Austin, TX 78702",
+    "client_name": "Pacific Resort Holdings",
+    "client_address": "3300 Coastal Highway, Monterey, CA 93940",
+    "project_manager": "Ryan Caldwell",
+    "client_contact": "Director of Digital Strategy, Mika Tanaka"
+  },
+  "project": {
+    "project_name": "Mobile App Development & Guest Experience Platform"
+  },
+  "identifiers": {
+    "sow_number": "SOW-2026-ZC-012"
+  },
+  "dates": {
+    "effective_date": "October 1, 2026",
+    "project_start": "October 15, 2026",
+    "project_end": "March 31, 2027",
+    "m1_date": "November 15, 2026"
+  },
+  "financial": {
+    "total_cost": "$240,000",
+    "payment_terms": "Net 30"
+  }
+}

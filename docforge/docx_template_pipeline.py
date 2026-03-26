@@ -49,6 +49,7 @@ _TR_LOWER = "lower"
 _TR_SHORT = "short"
 _TR_ABBREV = "abbrev"
 _TR_IDENTITY = "identity"
+_TR_TITLE = "title"
 _TR_LASTNAME_AFFIX = "lastname_affix"
 # Affix transform is a tuple: ("affix", prefix, suffix)
 
@@ -190,13 +191,122 @@ class RenderedDocument:
 # ── Private utilities ────────────────────────────────────────────────────────
 
 
+def _is_openai_compatible(model: str) -> bool:
+    return model.startswith(("gpt-", "o1", "o3", "o4", "gemini"))
+
+
 def _make_client(config: LLMConfig):
+    if _is_openai_compatible(config.model):
+        return None  # OpenAI-compatible calls use _call_openai_compatible directly
     if anthropic is None:
         raise ImportError("anthropic package is required: pip install anthropic")
     kwargs: dict = {"api_key": config.api_key}
     if config.base_url:
         kwargs["base_url"] = config.base_url
     return anthropic.Anthropic(**kwargs)
+
+
+def _call_openai_compatible(config: LLMConfig, system: str, messages: list, tools: list,
+                           tool_choice: dict, max_tokens: int) -> dict:
+    """Call OpenAI-compatible API (OpenAI, Gemini) via httpx and return tool call input."""
+    import httpx
+
+    is_gemini = config.model.startswith("gemini")
+    if is_gemini:
+        api_key = os.environ.get("GEMINI_API_KEY", "") or config.api_key
+        base = (config.base_url or "https://generativelanguage.googleapis.com/v1beta/openai").rstrip("/")
+    else:
+        api_key = os.environ.get("OPENAI_API_KEY", "") or config.api_key
+        base = (config.base_url or "https://api.openai.com").rstrip("/")
+
+    # Convert Anthropic tool format to OpenAI format
+    oai_tools = []
+    for t in tools:
+        oai_tools.append({
+            "type": "function",
+            "function": {
+                "name": t["name"],
+                "description": t["description"],
+                "parameters": t["input_schema"],
+            },
+        })
+
+    # Build OpenAI messages
+    oai_messages = [{"role": "system", "content": system}]
+    for m in messages:
+        oai_messages.append({"role": m["role"], "content": m["content"]})
+
+    # tool_choice conversion
+    oai_tc = {"type": "function", "function": {"name": tool_choice["name"]}}
+
+    body = {
+        "model": config.model,
+        "max_tokens": max_tokens,
+        "messages": oai_messages,
+        "tools": oai_tools,
+        "tool_choice": oai_tc,
+    }
+
+    url = f"{base}/chat/completions" if is_gemini else f"{base}/v1/chat/completions"
+    import time as _time
+    last_err = None
+    for attempt in range(5):
+        with httpx.Client(timeout=120) as client:
+            resp = client.post(
+                url,
+                headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+                json=body,
+            )
+            if resp.status_code >= 500:
+                last_err = f"HTTP {resp.status_code}: {resp.text[:200]}"
+                _time.sleep(2)
+                continue
+            if not resp.is_success:
+                last_err = f"HTTP {resp.status_code}: {resp.text[:200]}"
+                logger.warning("OpenAI API non-success: %s", last_err)
+                _time.sleep(1)
+                continue
+            resp.raise_for_status()
+
+        try:
+            data = resp.json()
+        except (json.JSONDecodeError, ValueError) as e:
+            last_err = f"invalid JSON response: {e}"
+            logger.warning("OpenAI API returned non-JSON: %s", resp.text[:200])
+            _time.sleep(1)
+            continue
+        try:
+            choice = data["choices"][0]["message"]
+        except (KeyError, IndexError) as e:
+            last_err = f"unexpected response shape: {e}"
+            logger.warning("OpenAI API unexpected shape: %s", str(data)[:200])
+            _time.sleep(1)
+            continue
+        for tc in choice.get("tool_calls", []):
+            if tc["function"]["name"] in {t["name"] for t in tools}:
+                return json.loads(tc["function"]["arguments"])
+        last_err = "response did not contain a tool call"
+        # Last-resort: try to parse JSON from text content
+        content = choice.get("content", "")
+        # Normalize content — some APIs return a list of content blocks
+        if isinstance(content, list):
+            content = " ".join(
+                block.get("text", "") if isinstance(block, dict) else str(block)
+                for block in content
+            )
+        if not isinstance(content, str):
+            content = str(content) if content else ""
+        if content and attempt == 4:  # only on final attempt
+            content = re.sub(r"^```(?:json)?\s*", "", content.strip())
+            content = re.sub(r"\s*```$", "", content.strip())
+            try:
+                parsed = json.loads(content)
+                if isinstance(parsed, dict) and "fields" in parsed:
+                    return parsed
+            except (json.JSONDecodeError, ValueError):
+                pass
+        _time.sleep(1)
+    raise ValueError(f"OpenAI/Gemini API failed after 5 attempts: {last_err}")
 
 
 def _extract_placeholder_name(placeholder_str: str) -> str | None:
@@ -233,21 +343,22 @@ def _extract_document_text(docx_path: str) -> str:
             if p.text.strip():
                 parts.append(f"[FOOTER] {p.text.strip()}")
 
-    for i, table in enumerate(doc.tables):
-        parts.append(f"\n[TABLE {i}]")
-        for r, row in enumerate(table.rows):
-            for c, cell in enumerate(row.cells):
+    for table in doc.tables:
+        parts.append("\n[TABLE]")
+        for row in table.rows:
+            cells = []
+            for cell in row.cells:
                 text = cell.text.strip()
                 if text:
-                    text = re.sub(r"\n+", " | ", text)
-                    parts.append(f"  Row {r}, Col {c}: {text}")
+                    cells.append(re.sub(r"\n+", " | ", text))
+            if cells:
+                parts.append(f"  {' | '.join(cells)}")
 
     parts.append("\n[BODY]")
-    for i, p in enumerate(doc.paragraphs):
+    for p in doc.paragraphs:
         if not p.text.strip():
             continue
-        style = p.style.name if p.style else "Normal"
-        parts.append(f"  P{i} [{style}]: {p.text.strip()}")
+        parts.append(f"  {p.text.strip()}")
 
     return "\n".join(parts)
 
@@ -256,23 +367,17 @@ def _extract_document_text(docx_path: str) -> str:
 
 
 def _analyze_document(doc_text: str, config: LLMConfig) -> dict:
-    client = _make_client(config)
-    response = client.messages.create(
-        model=config.model,
-        max_tokens=config.max_tokens_analyze,
-        system=_ANALYSIS_SYSTEM_PROMPT,
-        tools=[
-            {
-                "name": "report_fields",
-                "description": "Report all variable fields found in the document",
-                "input_schema": _ANALYSIS_SCHEMA,
-            }
-        ],
-        tool_choice={"type": "tool", "name": "report_fields"},
-        messages=[
-            {
-                "role": "user",
-                "content": f"""Analyze this document and identify every variable/case-specific field.
+    tools = [
+        {
+            "name": "report_fields",
+            "description": "Report all variable fields found in the document",
+            "input_schema": _ANALYSIS_SCHEMA,
+        }
+    ]
+    messages = [
+        {
+            "role": "user",
+            "content": f"""Analyze this document and identify every variable/case-specific field.
 
 DOCUMENT TEXT:
 ---
@@ -286,8 +391,23 @@ IMPORTANT REMINDERS:
   forms (e.g., "Manzanares Decl.", just "Manzanares"). These MUST appear in all_variations.
 - Party abbreviations (e.g., "ASP", "GSO") used throughout the body MUST be captured as _short variations.
 - Prefixed forms like "Hon. Judge Name" or "SBN 12345" MUST be captured alongside the bare value.""",
-            }
-        ],
+        }
+    ]
+
+    if _is_openai_compatible(config.model):
+        return _call_openai_compatible(
+            config, _ANALYSIS_SYSTEM_PROMPT, messages, tools,
+            {"name": "report_fields"}, config.max_tokens_analyze,
+        )
+
+    client = _make_client(config)
+    response = client.messages.create(
+        model=config.model,
+        max_tokens=config.max_tokens_analyze,
+        system=_ANALYSIS_SYSTEM_PROMPT,
+        tools=tools,
+        tool_choice={"type": "tool", "name": "report_fields"},
+        messages=messages,
     )
 
     for block in response.content:
@@ -357,41 +477,25 @@ def _apply_replacements_to_docx(
 
 
 def _build_fill_schema(analysis: dict) -> dict:
-    categories: dict[str, list] = {}
+    properties: dict = {}
+    required: list = []
+
     for fld in analysis["fields"]:
-        categories.setdefault(fld["category"], []).append(fld)
+        fname = fld["field_name"]
+        properties[fname] = {"type": "string", "description": fld["description"]}
+        required.append(fname)
 
-    properties = {}
-    required = []
-
-    for cat, fields in categories.items():
-        cat_properties: dict = {}
-        cat_required: list = []
-
-        for fld in fields:
-            fname = fld["field_name"]
-            cat_properties[fname] = {"type": "string", "description": fld["description"]}
-            cat_required.append(fname)
-
-            for _, v, pname in _iter_field_variations({"fields": [fld]}):
-                for suffix in _USER_SUPPLIED_SUFFIXES:
-                    if pname.endswith(suffix) and pname not in cat_properties:
-                        cat_properties[pname] = {
-                            "type": "string",
-                            "description": (
-                                f"Short form/abbreviation for {fld['description'].lower()} "
-                                f"(in the original document this was '{v['text']}')"
-                            ),
-                        }
-                        cat_required.append(pname)
-
-        properties[cat] = {
-            "type": "object",
-            "required": cat_required,
-            "additionalProperties": False,
-            "properties": cat_properties,
-        }
-        required.append(cat)
+        for _, v, pname in _iter_field_variations({"fields": [fld]}):
+            for suffix in _USER_SUPPLIED_SUFFIXES:
+                if pname.endswith(suffix) and pname not in properties:
+                    properties[pname] = {
+                        "type": "string",
+                        "description": (
+                            f"Short form/abbreviation for {fld['description'].lower()} "
+                            f"(in the original document this was '{v['text']}')"
+                        ),
+                    }
+                    required.append(pname)
 
     return {
         "type": "object",
@@ -429,15 +533,23 @@ def _build_variation_map(analysis: dict) -> dict:
         elif pname == fname:
             transform = _TR_IDENTITY
         else:
-            idx = variation_text.find(original_value)
-            if idx < 0:
-                idx = variation_text.lower().find(original_value.lower())
-            if idx >= 0:
-                prefix = variation_text[:idx]
-                suffix = variation_text[idx + len(original_value) :]
-                transform = ("affix", prefix, suffix)
+            # Heuristic case detection before falling back to affix
+            if variation_text == original_value.upper() and variation_text != original_value:
+                transform = _TR_UPPER
+            elif variation_text == original_value.lower() and variation_text != original_value:
+                transform = _TR_LOWER
+            elif variation_text == original_value.title() and variation_text != original_value:
+                transform = _TR_TITLE
             else:
-                transform = _TR_IDENTITY
+                idx = variation_text.find(original_value)
+                if idx < 0:
+                    idx = variation_text.lower().find(original_value.lower())
+                if idx >= 0:
+                    prefix = variation_text[:idx]
+                    suffix = variation_text[idx + len(original_value) :]
+                    transform = ("affix", prefix, suffix)
+                else:
+                    transform = _TR_IDENTITY
 
         vmap[fname].append((pname, transform, variation_text, original_value))
     return vmap
@@ -449,13 +561,68 @@ def _build_cross_field_map(
     pairs = []
     for fld in analysis["fields"]:
         fname = fld["field_name"]
-        cat = fld["category"]
         orig = fld["original_value"]
-        new_val = fill_data.get(cat, {}).get(fname)
+        new_val = fill_data.get(fname) or _fuzzy_lookup(fill_data, fname)
         if new_val and orig != new_val and len(orig) >= 3:
             pairs.append((orig, new_val))
     pairs.sort(key=lambda x: len(x[0]), reverse=True)
     return pairs
+
+
+_FUZZY_MIN_KEY_LEN = 3  # Don't fuzzy-match very short keys to avoid false positives
+
+
+def _fuzzy_lookup(fill_data: dict, key: str) -> str | None:
+    """Try to find a matching key in fill_data using fuzzy matching."""
+    # Exact match
+    val = fill_data.get(key)
+    if val is not None:
+        return val
+    # Skip fuzzy matching for very short keys — too likely to collide
+    if len(key) < _FUZZY_MIN_KEY_LEN:
+        return None
+    # Strategy 1: substring containment (one key contains the other)
+    for k, v in fill_data.items():
+        if not isinstance(v, str) or len(k) < _FUZZY_MIN_KEY_LEN:
+            continue
+        if key in k or k in key:
+            logger.debug("Fuzzy match (substring): '%s' → '%s'", key, k)
+            return v
+    # Strategy 2: last-word match with overlap — e.g., "attorney_name" matches "lawyer_name"
+    key_parts = key.split("_")
+    key_last = key_parts[-1] if key_parts else ""
+    if len(key_parts) >= 2 and key_last:
+        for k, v in fill_data.items():
+            if not isinstance(v, str) or len(k) < _FUZZY_MIN_KEY_LEN:
+                continue
+            k_parts = k.split("_")
+            k_last = k_parts[-1] if k_parts else ""
+            if k_last == key_last and len(k_parts) >= 2:
+                # Last word matches — require at least 2 shared tokens
+                shared = len(set(key_parts) & set(k_parts))
+                if shared >= 2:
+                    logger.debug("Fuzzy match (last-word): '%s' → '%s' (shared=%d)", key, k, shared)
+                    return v
+    # Strategy 3: Jaccard similarity on underscore-separated word parts
+    key_set = set(key_parts)
+    best_score = 0
+    best_val = None
+    best_key = None
+    for k, v in fill_data.items():
+        if not isinstance(v, str) or len(k) < _FUZZY_MIN_KEY_LEN:
+            continue
+        k_set = set(k.split("_"))
+        intersection = len(key_set & k_set)
+        union = len(key_set | k_set)
+        if union > 0 and intersection >= 2:
+            score = intersection / union
+            if score > best_score and score >= 0.5:
+                best_score = score
+                best_val = v
+                best_key = k
+    if best_val is not None:
+        logger.debug("Fuzzy match (Jaccard=%.2f): '%s' → '%s'", best_score, key, best_key)
+    return best_val
 
 
 def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
@@ -465,14 +632,17 @@ def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
 
     for fld in analysis["fields"]:
         fname = fld["field_name"]
-        cat = fld["category"]
-        canonical = fill_data.get(cat, {}).get(fname, "[TBD]")
+        canonical = fill_data.get(fname)
+        if canonical is None:
+            canonical = _fuzzy_lookup(fill_data, fname) or "[TBD]"
 
         for pname, transform, _original, field_orig_value in vmap.get(fname, []):
             if transform == _TR_UPPER:
                 context[pname] = canonical.upper()
             elif transform == _TR_LOWER:
                 context[pname] = canonical.lower()
+            elif transform == _TR_TITLE:
+                context[pname] = canonical.title()
             elif transform == _TR_IDENTITY:
                 context[pname] = canonical
             elif isinstance(transform, tuple) and transform[0] == "affix":
@@ -497,9 +667,11 @@ def _expand_to_placeholders(fill_data: dict, analysis: dict) -> dict:
                 else:
                     context[pname] = new_lastname
             elif transform in (_TR_SHORT, _TR_ABBREV):
-                alt_val = fill_data.get(cat, {}).get(f"{fname}_{transform}")
+                alt_val = fill_data.get(f"{fname}_{transform}")
                 if not alt_val:
-                    alt_val = fill_data.get(cat, {}).get(pname)
+                    alt_val = fill_data.get(pname)
+                if not alt_val:
+                    alt_val = _fuzzy_lookup(fill_data, f"{fname}_{transform}")
                 context[pname] = alt_val if alt_val else canonical
             else:
                 warnings.warn(
@@ -518,15 +690,10 @@ def _fill_with_llm(
     doc_desc = analysis["document_description"]
 
     schema_fields = []
-    for cat, spec in fill_schema["properties"].items():
-        for fname, fspec in spec["properties"].items():
-            schema_fields.append(f"- {fname} ({cat}): {fspec['description']}")
+    for fname, fspec in fill_schema["properties"].items():
+        schema_fields.append(f"- {fname}: {fspec['description']}")
 
-    client = _make_client(config)
-    response = client.messages.create(
-        model=config.model,
-        max_tokens=config.max_tokens_fill,
-        system=f"""You are a document data assistant. You produce structured JSON to fill
+    fill_system = f"""You are a document data assistant. You produce structured JSON to fill
 a {doc_type} template.
 
 Document description: {doc_desc}
@@ -535,26 +702,48 @@ Fields to fill (from schema):
 {chr(10).join(schema_fields)}
 
 Rules:
-- Use ONLY the facts provided. Never fabricate information.
-- If a fact is not provided, use a reasonable placeholder like '[TBD]'.
-- Dates should be in 'Month Day, Year' format (e.g., 'January 16, 2026').
-- Provide the canonical/primary form of each value. Variations (uppercase, lowercase)
-  will be derived automatically.
-- For _short fields, provide the abbreviation/acronym (e.g., 'PSC', 'GGL').""",
-        tools=[
-            {
-                "name": "fill_template",
-                "description": f"Provide structured data to fill a {doc_type} template",
-                "input_schema": fill_schema,
-            }
-        ],
+- Map the provided facts to the template fields. Use the facts as given — do not fabricate
+  names, dates, or numbers, but DO infer reasonable values when they can be derived from
+  the provided facts (e.g., if a firm name is given, the firm address likely comes from the
+  same facts; if a person's full name is given, their last name can be derived).
+- Only use '[TBD]' as an absolute last resort when a value truly cannot be determined or
+  inferred from the provided facts.
+- For dates, use the format that is natural for the document type (e.g., 'January 16, 2026'
+  for formal documents, or match the format implied by the facts).
+- Provide the canonical/primary form of each value. Variations (uppercase, lowercase,
+  with prefixes) will be derived automatically — do NOT provide those yourself.
+- For _short fields, provide the abbreviation/acronym form (e.g., 'PSC', 'GGL').
+- Use the EXACT names, numbers, and values from the facts — do not paraphrase or reformat
+  names (e.g., if facts say "John Smith", use "John Smith", not "Smith, John")."""
+
+    tools = [
+        {
+            "name": "fill_template",
+            "description": f"Provide structured data to fill a {doc_type} template",
+            "input_schema": fill_schema,
+        }
+    ]
+    messages = [
+        {
+            "role": "user",
+            "content": f"Fill in the template fields based on these facts:\n\n{new_facts}",
+        }
+    ]
+
+    if _is_openai_compatible(config.model):
+        return _call_openai_compatible(
+            config, fill_system, messages, tools,
+            {"name": "fill_template"}, config.max_tokens_fill,
+        )
+
+    client = _make_client(config)
+    response = client.messages.create(
+        model=config.model,
+        max_tokens=config.max_tokens_fill,
+        system=fill_system,
+        tools=tools,
         tool_choice={"type": "tool", "name": "fill_template"},
-        messages=[
-            {
-                "role": "user",
-                "content": f"Fill in the template fields based on these facts:\n\n{new_facts}",
-            }
-        ],
+        messages=messages,
     )
 
     for block in response.content:
@@ -629,6 +818,27 @@ def create_template(
     )
 
 
+def _flatten_fill_data(fill_data: dict) -> dict:
+    """Normalize fill_data: if nested {category: {field: val}}, flatten to {field: val}.
+
+    Warns on key collisions between categories; last value wins.
+    """
+    flat: dict = {}
+    for key, val in fill_data.items():
+        if isinstance(val, dict):
+            for field_key, field_val in val.items():
+                if field_key in flat and flat[field_key] != field_val:
+                    logger.warning(
+                        "Key collision in fill_data: '%s' exists in multiple categories "
+                        "(keeping value from category '%s')",
+                        field_key, key,
+                    )
+                flat[field_key] = field_val
+        else:
+            flat[key] = val
+    return flat
+
+
 def fill_template(
     artifacts: TemplateArtifacts,
     new_facts: str,
@@ -660,6 +870,9 @@ def fill_template(
         fill_data = _fill_with_llm(
             new_facts, artifacts.analysis, artifacts.fill_schema, llm_config
         )
+
+    # Normalize nested fill_data (category→fields) to flat (field→value)
+    fill_data = _flatten_fill_data(fill_data)
 
     context = _expand_to_placeholders(fill_data, artifacts.analysis)
 

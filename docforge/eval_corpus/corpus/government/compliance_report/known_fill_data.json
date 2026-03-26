@@ -1,0 +1,25 @@
+{
+  "parties": {
+    "company_name": "Sterling Petrochemicals Corp",
+    "company_address": "5400 Refinery Boulevard, Baton Rouge, LA 70801",
+    "submitted_to": "Louisiana Department of Environmental Quality (LDEQ)",
+    "compliance_officer": "Dr. James Blackwell",
+    "facility_name": "Sterling Petrochemicals Corp \u2014 Baton Rouge Plant"
+  },
+  "identifiers": {
+    "facility_id": "LA-EPA-2022-6691"
+  },
+  "dates": {
+    "reporting_period": "Q2 2026 (April 1 - June 30, 2026)",
+    "report_date": "July 31, 2026"
+  },
+  "metrics": {
+    "voc_actual": "9.1",
+    "nox_actual": "6.2",
+    "so2_actual": "2.3",
+    "pm10_actual": "1.5",
+    "spent_solvents_qty": "18,400",
+    "heavy_metal_sludge_qty": "7,900",
+    "lab_waste_qty": "3,200"
+  }
+}

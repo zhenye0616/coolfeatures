@@ -1,0 +1,125 @@
+{
+  "document_type": "cease_and_desist",
+  "fields": [
+    {
+      "field_name": "attorney_name",
+      "original_value": "Rachel Whitmore",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Rachel Whitmore",
+          "type": "identity"
+        },
+        {
+          "text": "Whitmore",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "law_firm",
+      "original_value": "Whitmore Legal Group",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Whitmore Legal Group",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "sender_address",
+      "original_value": "445 Market Street, Suite 700, San Francisco, CA 94105",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "445 Market Street, Suite 700, San Francisco, CA 94105",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "recipient_name",
+      "original_value": "Greenfield Organics Inc.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Greenfield Organics Inc.",
+          "type": "identity"
+        },
+        {
+          "text": "Greenfield",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "recipient_address",
+      "original_value": "1200 Farm Road, Sonoma, CA 95476",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1200 Farm Road, Sonoma, CA 95476",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "letter_date",
+      "original_value": "January 22, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 22, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "infringement_type",
+      "original_value": "trademark infringement",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "trademark infringement",
+          "type": "identity"
+        },
+        {
+          "text": "Trademark Infringement",
+          "type": "title_case"
+        }
+      ]
+    },
+    {
+      "field_name": "compliance_deadline",
+      "original_value": "10 business days",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "10 business days",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "Cease and Desist",
+    "CERTIFIED MAIL",
+    "Lanham Act",
+    "15 U.S.C.",
+    "injunctive relief",
+    "monetary damages",
+    "without prejudice",
+    "all rights and remedies",
+    "expressly reserved",
+    "likelihood of confusion"
+  ]
+}

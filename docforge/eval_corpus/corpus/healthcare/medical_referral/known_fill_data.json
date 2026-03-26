@@ -1,0 +1,20 @@
+{
+  "provider": {
+    "referring_physician": "Dr. Linda Nakamura",
+    "referring_practice": "Nakamura Internal Medicine",
+    "referring_address": "1250 Wilshire Boulevard, Suite 200, Los Angeles, CA 90017",
+    "receiving_physician": "Dr. Martin Castillo",
+    "receiving_practice": "Southern California Orthopedics",
+    "receiving_address": "3300 South Figueroa Street, Los Angeles, CA 90007"
+  },
+  "patient": {
+    "patient_name": "Gregory Whitman",
+    "patient_dob": "February 14, 1968"
+  },
+  "dates": {
+    "referral_date": "June 20, 2026"
+  },
+  "clinical": {
+    "referral_reason": "Persistent right knee pain, MRI showing medial meniscus tear"
+  }
+}

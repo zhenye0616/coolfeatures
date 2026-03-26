@@ -1,0 +1,23 @@
+{
+  "parties": {
+    "organization_name": "Meridian Growth Partners",
+    "organization_address": "800 Capitol Mall, Suite 1500, Sacramento, CA 95814",
+    "chair": "CEO, David Okafor",
+    "secretary": "VP of Administration, Lisa Yamamoto"
+  },
+  "project": {
+    "meeting_title": "Q2 2026 Board of Directors Meeting"
+  },
+  "dates": {
+    "meeting_date": "July 18, 2026, 9:00 AM PST",
+    "next_meeting": "October 20, 2026"
+  },
+  "location": {
+    "meeting_location": "Executive Conference Room, 800 Capitol Mall"
+  },
+  "financial": {
+    "total_aum": "$3.1 billion",
+    "quarterly_revenue": "$22.3 million",
+    "net_income": "$6.8 million"
+  }
+}

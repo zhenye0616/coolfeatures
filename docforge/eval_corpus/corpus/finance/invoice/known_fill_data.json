@@ -1,0 +1,20 @@
+{
+  "parties": {
+    "vendor_name": "Pacific Materials Group",
+    "vendor_address": "2100 Burnside Avenue, Portland, OR 97209",
+    "client_name": "Evergreen Builders Inc.",
+    "client_address": "4500 Rainier Boulevard, Seattle, WA 98108"
+  },
+  "identifiers": {
+    "invoice_number": "INV-2026-0312",
+    "po_number": "PO-EB-2025-089"
+  },
+  "dates": {
+    "invoice_date": "July 15, 2026",
+    "due_date": "August 14, 2026"
+  },
+  "contact": {
+    "contact_phone": "(503) 555-0247",
+    "contact_email": "accounts@pacificmaterials.com"
+  }
+}

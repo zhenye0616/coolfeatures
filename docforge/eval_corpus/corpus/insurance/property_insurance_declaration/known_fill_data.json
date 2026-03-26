@@ -1,0 +1,26 @@
+{
+  "parties": {
+    "insured_name": "Nakamura Living Trust",
+    "trustees": "Kenji and Mika Nakamura",
+    "insured_address": "8750 Desert Ridge Parkway, Chandler, AZ 85248",
+    "insurer_name": "Canyon State Insurance Company",
+    "agent_name": "Diane Moreno",
+    "agent_agency": "Moreno Insurance Group",
+    "mortgage_holder": "Arizona Federal Credit Union"
+  },
+  "identifiers": {
+    "policy_number": "CSIC-HO-2026-40215"
+  },
+  "dates": {
+    "policy_period_start": "September 1, 2026",
+    "policy_period_end": "September 1, 2027"
+  },
+  "financial": {
+    "annual_premium": "$5,200.00",
+    "dwelling_coverage": "$850,000",
+    "personal_property_coverage": "$425,000",
+    "liability_coverage": "$500,000",
+    "medical_payments": "$5,000",
+    "deductible": "$3,000.00"
+  }
+}

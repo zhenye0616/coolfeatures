@@ -1,0 +1,169 @@
+{
+  "document_type": "business_license_application",
+  "fields": [
+    {
+      "field_name": "business_name",
+      "original_value": "Fusion Kitchen LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Fusion Kitchen LLC",
+          "type": "identity"
+        },
+        {
+          "text": "FUSION KITCHEN LLC",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "dba_name",
+      "original_value": "Fusion Kitchen & Bar",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Fusion Kitchen & Bar",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_name",
+      "original_value": "Christopher Nguyen",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Christopher Nguyen",
+          "type": "identity"
+        },
+        {
+          "text": "Nguyen",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "owner_address",
+      "original_value": "445 Restaurant Row, Portland, OR 97204",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "445 Restaurant Row, Portland, OR 97204",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "business_type",
+      "original_value": "Restaurant / Bar",
+      "category": "project",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Restaurant / Bar",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "sos_entity_number",
+      "original_value": "OR-LLC-2024-88721",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "OR-LLC-2024-88721",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "ein",
+      "original_value": "84-5567234",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "84-5567234",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "planned_opening",
+      "original_value": "April 1, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "April 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "business_address",
+      "original_value": "445 Restaurant Row, Portland, OR 97204",
+      "category": "location",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "445 Restaurant Row, Portland, OR 97204",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_phone",
+      "original_value": "(503) 555-0189",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(503) 555-0189",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "application_date",
+      "original_value": "February 10, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "February 10, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "municipality",
+      "original_value": "City of Portland",
+      "category": "jurisdiction",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "City of Portland",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "BUSINESS LICENSE APPLICATION",
+    "SECTION 1: BUSINESS INFORMATION",
+    "SECTION 2: OWNER / PRINCIPAL INFORMATION",
+    "SECTION 3: BUSINESS LOCATION",
+    "CERTIFICATION AND SIGNATURE",
+    "For Official Use",
+    "Bureau of Revenue and Financial Services",
+    "Business License Division",
+    "compliance with all",
+    "true and complete to the best of my knowledge"
+  ]
+}

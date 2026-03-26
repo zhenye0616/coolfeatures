@@ -1,0 +1,167 @@
+{
+  "document_type": "credit_memo",
+  "fields": [
+    {
+      "field_name": "issuer_name",
+      "original_value": "Westbrook Electronics Distribution",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Westbrook Electronics Distribution",
+          "type": "identity"
+        },
+        {
+          "text": "WESTBROOK ELECTRONICS DISTRIBUTION",
+          "type": "upper"
+        },
+        {
+          "text": "Westbrook",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "issuer_address",
+      "original_value": "8900 Tech Park Circle, Austin, TX 78759",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "8900 Tech Park Circle, Austin, TX 78759",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "recipient_name",
+      "original_value": "DataStream Solutions LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "DataStream Solutions LLC",
+          "type": "identity"
+        },
+        {
+          "text": "DataStream",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "recipient_address",
+      "original_value": "2100 Research Boulevard, Raleigh, NC 27601",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2100 Research Boulevard, Raleigh, NC 27601",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "credit_memo_number",
+      "original_value": "CM-2025-0456",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "CM-2025-0456",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "credit_memo_date",
+      "original_value": "March 15, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "original_invoice",
+      "original_value": "INV-2025-1234",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "INV-2025-1234",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "total_credit",
+      "original_value": "$4,275.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$4,275.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "authorized_by",
+      "original_value": "Sarah Blackwood",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Sarah Blackwood",
+          "type": "identity"
+        },
+        {
+          "text": "Sarah Blackwood, Returns Manager",
+          "type": "with_title"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_email",
+      "original_value": "returns@westbrookelectronics.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "returns@westbrookelectronics.com",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_phone",
+      "original_value": "(512) 555-0743",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "(512) 555-0743",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "CREDIT MEMO",
+    "CREDIT ISSUED TO",
+    "DESCRIPTION",
+    "AUTHORIZED BY",
+    "Quantity",
+    "Description",
+    "Unit Price",
+    "Total",
+    "TOTAL CREDIT",
+    "Original Invoice",
+    "Reason",
+    "Defective units returned"
+  ]
+}

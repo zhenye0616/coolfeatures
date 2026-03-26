@@ -1,0 +1,27 @@
+{
+  "parties": {
+    "client_name": "Nexus Dynamics Corp",
+    "client_address": "1750 Wynkoop Street, Suite 500, Denver, CO 80202",
+    "contractor_name": "Angela Park",
+    "contractor_address": "922 Mapleton Avenue, Boulder, CO 80304"
+  },
+  "dates": {
+    "effective_date": "January 15, 2026"
+  },
+  "terms": {
+    "service_description": "Data Engineering Consulting",
+    "term_duration": "12 months",
+    "confidentiality_period": "24 months",
+    "non_solicitation_period": "12 months",
+    "termination_notice": "30 days"
+  },
+  "financial": {
+    "hourly_rate": "$175/hour",
+    "payment_terms": "Net 30",
+    "invoice_frequency": "bi-weekly"
+  },
+  "legal": {
+    "governing_state": "Colorado",
+    "governing_county": "Denver County"
+  }
+}

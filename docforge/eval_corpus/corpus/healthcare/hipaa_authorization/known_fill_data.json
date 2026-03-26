@@ -1,0 +1,17 @@
+{
+  "patient": {
+    "patient_name": "Laura Fitzgerald",
+    "patient_dob": "May 17, 1988"
+  },
+  "provider": {
+    "provider_name": "Summit Mental Health Associates",
+    "recipient": "Dr. Karen Woodley at Crestview Counseling Center"
+  },
+  "terms": {
+    "purpose": "Continuation of care / treatment coordination"
+  },
+  "dates": {
+    "authorization_date": "July 1, 2026",
+    "expiration_date": "July 1, 2027"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "document_type": "building_permit_application",
+  "fields": [
+    {
+      "field_name": "applicant_name",
+      "original_value": "Lakeshore Development Group LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Lakeshore Development Group LLC",
+          "type": "identity"
+        },
+        {
+          "text": "LAKESHORE DEVELOPMENT GROUP LLC",
+          "type": "upper"
+        },
+        {
+          "text": "Lakeshore",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "applicant_address",
+      "original_value": "2300 Lakefront Drive, Suite 800, Milwaukee, WI 53202",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "2300 Lakefront Drive, Suite 800, Milwaukee, WI 53202",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "property_owner",
+      "original_value": "Harold Jennings",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Harold Jennings",
+          "type": "identity"
+        },
+        {
+          "text": "Jennings",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "property_owner_address",
+      "original_value": "156 Elm Street, Wauwatosa, WI 53213",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "156 Elm Street, Wauwatosa, WI 53213",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_address",
+      "original_value": "156 Elm Street, Wauwatosa, WI 53213",
+      "category": "location",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "156 Elm Street, Wauwatosa, WI 53213",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "permit_type",
+      "original_value": "Residential Renovation",
+      "category": "project",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Residential Renovation",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "estimated_cost",
+      "original_value": "$85,000",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$85,000",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_name",
+      "original_value": "Brennan Construction Co.",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Brennan Construction Co.",
+          "type": "identity"
+        },
+        {
+          "text": "Brennan",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_license",
+      "original_value": "WI-CON-2018-5567",
+      "category": "identifiers",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "WI-CON-2018-5567",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "work_description",
+      "original_value": "Kitchen and bathroom remodel, load-bearing wall removal, electrical upgrade",
+      "category": "project",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Kitchen and bathroom remodel, load-bearing wall removal, electrical upgrade",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "application_date",
+      "original_value": "January 15, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "January 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "municipality",
+      "original_value": "City of Wauwatosa",
+      "category": "jurisdiction",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "City of Wauwatosa",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "applicant_email",
+      "original_value": "permits@lakeshoredev.com",
+      "category": "contact",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "permits@lakeshoredev.com",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "BUILDING PERMIT APPLICATION",
+    "SECTION 1: APPLICANT INFORMATION",
+    "SECTION 2: PROPERTY OWNER INFORMATION",
+    "SECTION 3: PROJECT DETAILS",
+    "CERTIFICATION",
+    "For Official Use Only",
+    "Approved / Denied",
+    "Department of Building Inspection",
+    "compliance with all applicable building codes"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "parties": {
+    "employer_name": "Apex Intelligence Corp",
+    "employer_address": "4100 Technology Center Drive, San Jose, CA 95134",
+    "employee_name": "Samantha Liu",
+    "employee_title": "Senior Vice President of Analytics"
+  },
+  "dates": {
+    "agreement_date": "May 20, 2026"
+  },
+  "terms": {
+    "restricted_period": "24 months",
+    "geographic_restriction": "Within 75 miles of any Apex Intelligence office",
+    "restricted_activities": "Predictive analytics consulting, AI-driven product development"
+  },
+  "financial": {
+    "consideration": "Continued employment and $25,000 signing retention bonus",
+    "retention_bonus": "$25,000"
+  },
+  "legal": {
+    "governing_state": "California",
+    "arbitration_location": "San Jose, CA"
+  }
+}

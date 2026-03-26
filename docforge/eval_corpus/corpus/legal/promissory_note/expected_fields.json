@@ -1,0 +1,179 @@
+{
+  "document_type": "promissory_note",
+  "fields": [
+    {
+      "field_name": "borrower_name",
+      "original_value": "Jason Patel",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Jason Patel",
+          "type": "identity"
+        },
+        {
+          "text": "Patel",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "borrower_address",
+      "original_value": "567 Riverside Drive, Chicago, IL 60601",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "567 Riverside Drive, Chicago, IL 60601",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "lender_name",
+      "original_value": "Great Lakes Credit Union",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Great Lakes Credit Union",
+          "type": "identity"
+        },
+        {
+          "text": "GREAT LAKES CREDIT UNION",
+          "type": "upper"
+        },
+        {
+          "text": "Great Lakes",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "lender_address",
+      "original_value": "1400 Michigan Avenue, Chicago, IL 60605",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1400 Michigan Avenue, Chicago, IL 60605",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "principal_amount",
+      "original_value": "$75,000.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$75,000.00",
+          "type": "identity"
+        },
+        {
+          "text": "Seventy-Five Thousand Dollars",
+          "type": "written_out"
+        }
+      ]
+    },
+    {
+      "field_name": "interest_rate",
+      "original_value": "6.5%",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "6.5%",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "monthly_payment",
+      "original_value": "$1,467.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$1,467.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "execution_date",
+      "original_value": "January 15, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 15, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "maturity_date",
+      "original_value": "January 15, 2030",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "January 15, 2030",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "late_fee",
+      "original_value": "$50 or 5%",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$50 or 5%",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Illinois",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Illinois",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_county",
+      "original_value": "Cook County",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Cook County",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "FOR VALUE RECEIVED",
+    "IN WITNESS WHEREOF",
+    "Promissory Note",
+    "INTEREST RATE",
+    "PAYMENT TERMS",
+    "MATURITY DATE",
+    "LATE PAYMENTS AND DEFAULT",
+    "SECURITY",
+    "GOVERNING LAW",
+    "WAIVER",
+    "presentment",
+    "notice of dishonor"
+  ]
+}

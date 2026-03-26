@@ -1,0 +1,19 @@
+{
+  "parties": {
+    "principal_name": "Dorothy Hashimoto",
+    "principal_address": "4810 SE Hawthorne Boulevard, Portland, OR 97215",
+    "agent_name": "Kevin Hashimoto",
+    "agent_address": "731 NW Everett Street, Portland, OR 97209"
+  },
+  "dates": {
+    "principal_dob": "June 3, 1962",
+    "effective_date": "April 1, 2026"
+  },
+  "terms": {
+    "poa_type": "Durable"
+  },
+  "legal": {
+    "governing_state": "Oregon",
+    "notary_county": "Multnomah"
+  }
+}

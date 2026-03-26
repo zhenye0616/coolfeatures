@@ -1,0 +1,165 @@
+{
+  "document_type": "daily_construction_log",
+  "fields": [
+    {
+      "field_name": "project_name",
+      "original_value": "Greenfield Elementary School Expansion",
+      "category": "project",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Greenfield Elementary School Expansion",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "project_number",
+      "original_value": "GESE-2024-003",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "GESE-2024-003",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_name",
+      "original_value": "Heritage Construction Company",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Heritage Construction Company",
+          "type": "identity"
+        },
+        {
+          "text": "HERITAGE CONSTRUCTION COMPANY",
+          "type": "upper"
+        },
+        {
+          "text": "Heritage",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_address",
+      "original_value": "800 Builder's Lane, Denver, CO 80204",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "800 Builder's Lane, Denver, CO 80204",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "log_date",
+      "original_value": "March 12, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 12, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "report_number",
+      "original_value": "DCL-087",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "DCL-087",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "superintendent",
+      "original_value": "James Kowalski",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "James Kowalski",
+          "type": "identity"
+        },
+        {
+          "text": "Kowalski",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "foreman",
+      "original_value": "Carlos Rivera",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Carlos Rivera",
+          "type": "identity"
+        },
+        {
+          "text": "Rivera",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "workers_on_site",
+      "original_value": "34",
+      "category": "project",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "34",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "subcontractors",
+      "original_value": "Peak Electric (4 workers), Mountain Plumbing (3 workers)",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Peak Electric (4 workers), Mountain Plumbing (3 workers)",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "weather",
+      "original_value": "Clear, 52\u00b0F",
+      "category": "conditions",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Clear, 52\u00b0F",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "DAILY CONSTRUCTION LOG",
+    "PERSONNEL",
+    "WORK PERFORMED",
+    "EQUIPMENT ON SITE",
+    "VISITORS LOG",
+    "SAFETY",
+    "SUBMITTED BY",
+    "Safety Incidents: None",
+    "Superintendent",
+    "Foreman"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "document_type": "independent_contractor_agreement",
+  "fields": [
+    {
+      "field_name": "client_name",
+      "original_value": "Whitfield & Associates LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Whitfield & Associates LLC",
+          "type": "identity"
+        },
+        {
+          "text": "WHITFIELD & ASSOCIATES LLC",
+          "type": "upper"
+        },
+        {
+          "text": "Whitfield",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "client_address",
+      "original_value": "800 Congress Avenue, Suite 1200, Austin, TX 78701",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "800 Congress Avenue, Suite 1200, Austin, TX 78701",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_name",
+      "original_value": "Marcus Rivera",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Marcus Rivera",
+          "type": "identity"
+        },
+        {
+          "text": "Rivera",
+          "type": "last_name"
+        }
+      ]
+    },
+    {
+      "field_name": "contractor_address",
+      "original_value": "334 Birchwood Lane, Round Rock, TX 78664",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "334 Birchwood Lane, Round Rock, TX 78664",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "effective_date",
+      "original_value": "September 1, 2024",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "September 1, 2024",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "service_description",
+      "original_value": "Software Development Consulting",
+      "category": "terms",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Software Development Consulting",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "hourly_rate",
+      "original_value": "$150/hour",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$150/hour",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "payment_terms",
+      "original_value": "Net 15",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Net 15",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "term_duration",
+      "original_value": "12 months",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "12 months",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "confidentiality_period",
+      "original_value": "24 months",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "24 months",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "non_solicitation_period",
+      "original_value": "12 months",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "12 months",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "termination_notice",
+      "original_value": "30 days",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "30 days",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Texas",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Texas",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_county",
+      "original_value": "Travis County",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Travis County",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "invoice_frequency",
+      "original_value": "bi-weekly",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "bi-weekly",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "WHEREAS",
+    "NOW, THEREFORE",
+    "IN WITNESS WHEREOF",
+    "Independent Contractor Agreement",
+    "SCOPE OF SERVICES",
+    "COMPENSATION",
+    "INDEPENDENT CONTRACTOR STATUS",
+    "CONFIDENTIALITY",
+    "INTELLECTUAL PROPERTY",
+    "INSURANCE AND INDEMNIFICATION",
+    "TERMINATION",
+    "NON-SOLICITATION",
+    "GOVERNING LAW",
+    "ENTIRE AGREEMENT"
+  ]
+}

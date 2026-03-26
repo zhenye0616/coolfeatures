@@ -17,3 +17,14 @@ wheels/
 
 # OS
 .DS_Store
+
+# Autonomous loop artifacts
+results.tsv
+*.log
+
+# Claude / AI agent
+CLAUDE.md
+AGENTS.md
+
+# DocForge corpus generation scripts (one-time use)
+docforge/eval_corpus/generate_*.py

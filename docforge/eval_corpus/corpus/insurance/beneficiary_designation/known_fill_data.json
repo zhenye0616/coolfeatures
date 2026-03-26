@@ -1,0 +1,17 @@
+{
+  "parties": {
+    "policy_owner": "Michael Brennan",
+    "policy_owner_address": "4480 Maple Ridge Drive, Minneapolis, MN 55401",
+    "insurer_name": "Great Lakes Life Insurance",
+    "primary_beneficiary": "Catherine Brennan",
+    "contingent_beneficiary": "Liam Brennan",
+    "witness": "Notary Public, Rebecca Torres"
+  },
+  "identifiers": {
+    "policy_number": "GLL-LIFE-2024-23456"
+  },
+  "dates": {
+    "contingent_beneficiary_dob": "March 20, 2018",
+    "date_signed": "August 10, 2026"
+  }
+}

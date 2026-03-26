@@ -1,0 +1,178 @@
+{
+  "document_type": "zoning_variance_application",
+  "fields": [
+    {
+      "field_name": "applicant_name",
+      "original_value": "Martin & Associates Architecture",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Martin & Associates Architecture",
+          "type": "identity"
+        },
+        {
+          "text": "Martin & Associates",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "applicant_address",
+      "original_value": "1100 Design Boulevard, Suite 300, Denver, CO 80202",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1100 Design Boulevard, Suite 300, Denver, CO 80202",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "property_owner",
+      "original_value": "Sunrise Senior Living Foundation",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Sunrise Senior Living Foundation",
+          "type": "identity"
+        },
+        {
+          "text": "SUNRISE SENIOR LIVING FOUNDATION",
+          "type": "upper"
+        },
+        {
+          "text": "Sunrise",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "field_name": "property_owner_address",
+      "original_value": "700 Mountain View Road, Boulder, CO 80302",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "700 Mountain View Road, Boulder, CO 80302",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "property_address",
+      "original_value": "700 Mountain View Road, Boulder, CO 80302",
+      "category": "location",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "700 Mountain View Road, Boulder, CO 80302",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "current_zoning",
+      "original_value": "R-2 Residential",
+      "category": "zoning",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "R-2 Residential",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "requested_variance",
+      "original_value": "Allow assisted living facility in R-2 zone",
+      "category": "zoning",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Allow assisted living facility in R-2 zone",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "parcel_number",
+      "original_value": "1459-223-00-045",
+      "category": "identifiers",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "1459-223-00-045",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "property_size",
+      "original_value": "2.3 acres",
+      "category": "property",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "2.3 acres",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "application_date",
+      "original_value": "February 20, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "February 20, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "hearing_date",
+      "original_value": "March 18, 2025",
+      "category": "dates",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "March 18, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "municipality",
+      "original_value": "City of Boulder, Planning & Zoning Commission",
+      "category": "jurisdiction",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "City of Boulder, Planning & Zoning Commission",
+          "type": "identity"
+        },
+        {
+          "text": "City of Boulder",
+          "type": "short"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "APPLICATION FOR ZONING VARIANCE",
+    "SECTION 1: APPLICANT INFORMATION",
+    "SECTION 2: PROPERTY OWNER",
+    "SECTION 3: PROPERTY DETAILS",
+    "SECTION 4: VARIANCE REQUESTED",
+    "SECTION 5: JUSTIFICATION",
+    "APPLICANT CERTIFICATION",
+    "Planning & Zoning Commission",
+    "unnecessary hardship",
+    "minimum necessary to afford relief",
+    "For Official Use"
+  ]
+}

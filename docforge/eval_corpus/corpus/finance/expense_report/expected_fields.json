@@ -1,0 +1,170 @@
+{
+  "document_type": "expense_report",
+  "fields": [
+    {
+      "field_name": "employee_name",
+      "original_value": "Jennifer Martinez",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Jennifer Martinez",
+          "type": "identity"
+        },
+        {
+          "text": "Martinez",
+          "type": "last_name"
+        },
+        {
+          "text": "Martinez, Jennifer",
+          "type": "last_first"
+        }
+      ]
+    },
+    {
+      "field_name": "department",
+      "original_value": "Marketing",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Marketing",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "manager_name",
+      "original_value": "David Chen",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "David Chen",
+          "type": "identity"
+        },
+        {
+          "text": "David Chen, VP of Marketing",
+          "type": "with_title"
+        }
+      ]
+    },
+    {
+      "field_name": "company_name",
+      "original_value": "Riverview Analytics Corp",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Riverview Analytics Corp",
+          "type": "identity"
+        },
+        {
+          "text": "RIVERVIEW ANALYTICS CORP",
+          "type": "upper"
+        }
+      ]
+    },
+    {
+      "field_name": "company_address",
+      "original_value": "300 Innovation Drive, Boulder, CO 80301",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "300 Innovation Drive, Boulder, CO 80301",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "reporting_period",
+      "original_value": "February 1-28, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "February 1-28, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "date_submitted",
+      "original_value": "March 5, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "March 5, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "total_expenses",
+      "original_value": "$3,847.50",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$3,847.50",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "manager_title",
+      "original_value": "VP of Marketing",
+      "category": "parties",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "VP of Marketing",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "airfare_amount",
+      "original_value": "$487.00",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$487.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "conference_fee",
+      "original_value": "$2,475.00",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$2,475.00",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "EXPENSE REPORT",
+    "EXPENSE DETAILS",
+    "CERTIFICATION",
+    "Employee Name",
+    "Department",
+    "Reporting Period",
+    "Approving Manager",
+    "Date Submitted",
+    "Date",
+    "Description",
+    "Category",
+    "Amount",
+    "TOTAL EXPENSES",
+    "Employee Signature",
+    "Manager Approval"
+  ]
+}

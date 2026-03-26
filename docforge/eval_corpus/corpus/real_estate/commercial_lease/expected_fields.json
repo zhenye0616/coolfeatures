@@ -1,0 +1,226 @@
+{
+  "document_type": "commercial_lease",
+  "fields": [
+    {
+      "field_name": "landlord_name",
+      "original_value": "Metropolitan Properties Group LLC",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Metropolitan Properties Group LLC",
+          "type": "identity"
+        },
+        {
+          "text": "METROPOLITAN PROPERTIES GROUP LLC",
+          "type": "upper"
+        },
+        {
+          "text": "Metropolitan",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "landlord_address",
+      "original_value": "One Financial Plaza, Suite 2400, Hartford, CT 06103",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "One Financial Plaza, Suite 2400, Hartford, CT 06103",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "tenant_name",
+      "original_value": "Bright Horizons Wellness Studio",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Bright Horizons Wellness Studio",
+          "type": "identity"
+        },
+        {
+          "text": "Bright Horizons",
+          "type": "short_name"
+        }
+      ]
+    },
+    {
+      "field_name": "tenant_address",
+      "original_value": "245 Main Street, Unit 3, West Hartford, CT 06107",
+      "category": "parties",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "245 Main Street, Unit 3, West Hartford, CT 06107",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "premises_address",
+      "original_value": "Suite 500, 180 Trumbull Street, Hartford, CT 06103",
+      "category": "property",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "Suite 500, 180 Trumbull Street, Hartford, CT 06103",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "square_footage",
+      "original_value": "2,800",
+      "category": "property",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "2,800",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "lease_start",
+      "original_value": "July 1, 2025",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "July 1, 2025",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "lease_end",
+      "original_value": "June 30, 2030",
+      "category": "dates",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "June 30, 2030",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "base_rent",
+      "original_value": "$4,200.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$4,200.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "cam_charges",
+      "original_value": "$850.00",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$850.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "security_deposit",
+      "original_value": "$12,600.00",
+      "category": "financial",
+      "is_critical": true,
+      "variations": [
+        {
+          "text": "$12,600.00",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "annual_escalation",
+      "original_value": "3%",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "3%",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "permitted_use",
+      "original_value": "health and wellness services, yoga studio, massage therapy",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "health and wellness services, yoga studio, massage therapy",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "governing_state",
+      "original_value": "Connecticut",
+      "category": "legal",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "Connecticut",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "lease_term_years",
+      "original_value": "five (5) years",
+      "category": "terms",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "five (5) years",
+          "type": "identity"
+        }
+      ]
+    },
+    {
+      "field_name": "insurance_minimum",
+      "original_value": "$1,000,000",
+      "category": "financial",
+      "is_critical": false,
+      "variations": [
+        {
+          "text": "$1,000,000",
+          "type": "identity"
+        }
+      ]
+    }
+  ],
+  "boilerplate_phrases": [
+    "COMMERCIAL LEASE AGREEMENT",
+    "PARTIES",
+    "PREMISES",
+    "LEASE TERM",
+    "RENT",
+    "SECURITY DEPOSIT",
+    "PERMITTED USE",
+    "MAINTENANCE AND REPAIRS",
+    "INSURANCE",
+    "GOVERNING LAW",
+    "IN WITNESS WHEREOF",
+    "Base Rent",
+    "CAM Charges",
+    "Annual Escalation",
+    "additional insured"
+  ]
+}
