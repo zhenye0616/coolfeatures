@@ -258,18 +258,44 @@ def _call_openai_compatible(config: LLMConfig, system: str, messages: list, tool
                 json=body,
             )
             if resp.status_code >= 500:
+                last_err = f"HTTP {resp.status_code}: {resp.text[:200]}"
                 _time.sleep(2)
+                continue
+            if not resp.is_success:
+                last_err = f"HTTP {resp.status_code}: {resp.text[:200]}"
+                logger.warning("OpenAI API non-success: %s", last_err)
+                _time.sleep(1)
                 continue
             resp.raise_for_status()
 
-        data = resp.json()
-        choice = data["choices"][0]["message"]
+        try:
+            data = resp.json()
+        except (json.JSONDecodeError, ValueError) as e:
+            last_err = f"invalid JSON response: {e}"
+            logger.warning("OpenAI API returned non-JSON: %s", resp.text[:200])
+            _time.sleep(1)
+            continue
+        try:
+            choice = data["choices"][0]["message"]
+        except (KeyError, IndexError) as e:
+            last_err = f"unexpected response shape: {e}"
+            logger.warning("OpenAI API unexpected shape: %s", str(data)[:200])
+            _time.sleep(1)
+            continue
         for tc in choice.get("tool_calls", []):
             if tc["function"]["name"] in {t["name"] for t in tools}:
                 return json.loads(tc["function"]["arguments"])
         last_err = "response did not contain a tool call"
         # Last-resort: try to parse JSON from text content
         content = choice.get("content", "")
+        # Normalize content — some APIs return a list of content blocks
+        if isinstance(content, list):
+            content = " ".join(
+                block.get("text", "") if isinstance(block, dict) else str(block)
+                for block in content
+            )
+        if not isinstance(content, str):
+            content = str(content) if content else ""
         if content and attempt == 4:  # only on final attempt
             content = re.sub(r"^```(?:json)?\s*", "", content.strip())
             content = re.sub(r"\s*```$", "", content.strip())
@@ -543,47 +569,59 @@ def _build_cross_field_map(
     return pairs
 
 
+_FUZZY_MIN_KEY_LEN = 3  # Don't fuzzy-match very short keys to avoid false positives
+
+
 def _fuzzy_lookup(fill_data: dict, key: str) -> str | None:
     """Try to find a matching key in fill_data using fuzzy matching."""
     # Exact match
     val = fill_data.get(key)
     if val is not None:
         return val
+    # Skip fuzzy matching for very short keys — too likely to collide
+    if len(key) < _FUZZY_MIN_KEY_LEN:
+        return None
     # Strategy 1: substring containment (one key contains the other)
     for k, v in fill_data.items():
-        if not isinstance(v, str):
+        if not isinstance(v, str) or len(k) < _FUZZY_MIN_KEY_LEN:
             continue
         if key in k or k in key:
+            logger.debug("Fuzzy match (substring): '%s' → '%s'", key, k)
             return v
     # Strategy 2: last-word match with overlap — e.g., "attorney_name" matches "lawyer_name"
     key_parts = key.split("_")
     key_last = key_parts[-1] if key_parts else ""
     if len(key_parts) >= 2 and key_last:
         for k, v in fill_data.items():
-            if not isinstance(v, str):
+            if not isinstance(v, str) or len(k) < _FUZZY_MIN_KEY_LEN:
                 continue
             k_parts = k.split("_")
             k_last = k_parts[-1] if k_parts else ""
             if k_last == key_last and len(k_parts) >= 2:
-                # Last word matches — check for additional overlap
+                # Last word matches — require at least 2 shared tokens
                 shared = len(set(key_parts) & set(k_parts))
-                if shared >= 2 or (shared >= 1 and len(key_parts) <= 2 and len(k_parts) <= 2):
+                if shared >= 2:
+                    logger.debug("Fuzzy match (last-word): '%s' → '%s' (shared=%d)", key, k, shared)
                     return v
     # Strategy 3: Jaccard similarity on underscore-separated word parts
     key_set = set(key_parts)
     best_score = 0
     best_val = None
+    best_key = None
     for k, v in fill_data.items():
-        if not isinstance(v, str):
+        if not isinstance(v, str) or len(k) < _FUZZY_MIN_KEY_LEN:
             continue
         k_set = set(k.split("_"))
         intersection = len(key_set & k_set)
         union = len(key_set | k_set)
-        if union > 0:
+        if union > 0 and intersection >= 2:
             score = intersection / union
             if score > best_score and score >= 0.5:
                 best_score = score
                 best_val = v
+                best_key = k
+    if best_val is not None:
+        logger.debug("Fuzzy match (Jaccard=%.2f): '%s' → '%s'", best_score, key, best_key)
     return best_val
 
 
@@ -781,11 +819,21 @@ def create_template(
 
 
 def _flatten_fill_data(fill_data: dict) -> dict:
-    """Normalize fill_data: if nested {category: {field: val}}, flatten to {field: val}."""
+    """Normalize fill_data: if nested {category: {field: val}}, flatten to {field: val}.
+
+    Warns on key collisions between categories; last value wins.
+    """
     flat: dict = {}
     for key, val in fill_data.items():
         if isinstance(val, dict):
-            flat.update(val)
+            for field_key, field_val in val.items():
+                if field_key in flat and flat[field_key] != field_val:
+                    logger.warning(
+                        "Key collision in fill_data: '%s' exists in multiple categories "
+                        "(keeping value from category '%s')",
+                        field_key, key,
+                    )
+                flat[field_key] = field_val
         else:
             flat[key] = val
     return flat

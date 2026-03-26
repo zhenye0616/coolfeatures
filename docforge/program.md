@@ -10,7 +10,7 @@ To set up a new experiment, work with the user to:
 2. **Create the branch**: `git checkout -b docforge/<tag>` from current master.
 3. **Read the in-scope files**: The repo is small. Read these files for full context:
    - `README.md` — repository context.
-   - `evaluate.py` — fixed evaluation harness, corpus loading, scoring. Do not modify.
+   - `eval_corpus/evaluate.py` — fixed evaluation harness, corpus loading, scoring. Do not modify.
    - `docx_template_pipeline.py` — the file you modify. LLM prompts, replacement logic, transform types, schema construction, fill expansion.
    - `app.py` — Streamlit UI. Do not modify.
 4. **Verify eval corpus exists**: Check that `eval_corpus/` contains subdirectories, each with a source `.docx`, `expected_analysis.json`, and optionally `expected_fill.json`. If empty, tell the human to populate it.
@@ -21,16 +21,16 @@ Once you get confirmation, kick off the experimentation.
 
 ## Experimentation
 
-Each experiment evaluates the pipeline against a fixed corpus of document templates. You launch the evaluator simply as: `uv run evaluate.py`.
+Each experiment evaluates the pipeline against a fixed corpus of document templates. You launch the evaluator from the repo root as: `uv run python eval_corpus/evaluate.py` (for example, `uv run python eval_corpus/evaluate.py --subset 5` to run on a small subset).
 
 **What you CAN do:**
 - Modify `docx_template_pipeline.py` — this is the only file you edit. Everything is fair game: LLM analysis prompt, replacement rules, transform types, fill prompt engineering, schema construction, error handling, text extraction logic, variation matching, etc.
 
 **What you CANNOT do:**
-- Modify `evaluate.py`. It is read-only. It contains the fixed evaluation harness, corpus loading, and scoring functions.
+- Modify `eval_corpus/evaluate.py`. It is read-only. It contains the fixed evaluation harness, corpus loading, and scoring functions.
 - Modify `app.py`. It is read-only. It is the Streamlit UI.
 - Modify anything in `eval_corpus/`. The evaluation corpus is the ground truth. Adding, removing, or editing test documents is gaming the eval.
-- **Read ANY file inside `eval_corpus/`**. You may only interact with the corpus through running `evaluate.py`. Do not `cat`, `read`, `grep`, or otherwise inspect source documents, ground truth annotations (expected_fields.json, known_fill_data.json, expected_output.txt), or any other file under `eval_corpus/`. Hardcoding logic based on corpus contents is gaming the eval. The evaluator is a black box — you see the score, nothing else.
+- **Read ANY file inside `eval_corpus/`**. You may only interact with the corpus through running `uv run python eval_corpus/evaluate.py`. Do not `cat`, `read`, `grep`, or otherwise inspect source documents, ground truth annotations (expected_fields.json, known_fill_data.json, expected_output.txt), or any other file under `eval_corpus/`. Hardcoding logic based on corpus contents is gaming the eval. The evaluator is a black box — you see the score, nothing else.
 - Modify `pyproject.toml` or install new packages. You can only use what's already available.
 - Modify any files in `templates/`. These are user-facing saved templates, not part of the eval.
 

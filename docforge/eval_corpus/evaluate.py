@@ -294,7 +294,7 @@ def compute_round_trip(
         output_path = tmp.name
 
     try:
-        result = fill_template(
+        fill_template(
             artifacts,
             new_facts="",
             output_path=output_path,
