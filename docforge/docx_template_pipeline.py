@@ -250,7 +250,7 @@ def _call_openai_compatible(config: LLMConfig, system: str, messages: list, tool
     url = f"{base}/chat/completions" if is_gemini else f"{base}/v1/chat/completions"
     import time as _time
     last_err = None
-    for attempt in range(3):
+    for attempt in range(5):
         with httpx.Client(timeout=120) as client:
             resp = client.post(
                 url,
@@ -269,7 +269,7 @@ def _call_openai_compatible(config: LLMConfig, system: str, messages: list, tool
                 return json.loads(tc["function"]["arguments"])
         last_err = "response did not contain a tool call"
         _time.sleep(1)  # brief pause before retry
-    raise ValueError(f"OpenAI/Gemini API failed after 3 attempts: {last_err}")
+    raise ValueError(f"OpenAI/Gemini API failed after 5 attempts: {last_err}")
 
 
 def _extract_placeholder_name(placeholder_str: str) -> str | None:
