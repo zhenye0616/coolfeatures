@@ -268,7 +268,18 @@ def _call_openai_compatible(config: LLMConfig, system: str, messages: list, tool
             if tc["function"]["name"] in {t["name"] for t in tools}:
                 return json.loads(tc["function"]["arguments"])
         last_err = "response did not contain a tool call"
-        _time.sleep(1)  # brief pause before retry
+        # Last-resort: try to parse JSON from text content
+        content = choice.get("content", "")
+        if content and attempt == 4:  # only on final attempt
+            content = re.sub(r"^```(?:json)?\s*", "", content.strip())
+            content = re.sub(r"\s*```$", "", content.strip())
+            try:
+                parsed = json.loads(content)
+                if isinstance(parsed, dict) and "fields" in parsed:
+                    return parsed
+            except (json.JSONDecodeError, ValueError):
+                pass
+        _time.sleep(1)
     raise ValueError(f"OpenAI/Gemini API failed after 5 attempts: {last_err}")
 
 
