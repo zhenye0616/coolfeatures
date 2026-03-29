@@ -6,8 +6,8 @@ import os
 import re
 from pathlib import Path
 
-from .config import Document, SearchConfig
-from .storage import DocumentStore
+from config import Document, SearchConfig
+from storage import DocumentStore
 
 
 def chunk_document(

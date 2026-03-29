@@ -9,8 +9,8 @@ Implements the `search_corpus` tool from the Context-1 agent harness:
 
 from __future__ import annotations
 
-from .config import ScoredDocument, SearchConfig
-from .storage import DocumentStore
+from config import ScoredDocument, SearchConfig
+from storage import DocumentStore
 
 
 class HybridSearcher:

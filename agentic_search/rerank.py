@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import anthropic
 
-from .config import LLMConfig, ScoredDocument, SearchConfig, extract_json
+from config import LLMConfig, ScoredDocument, SearchConfig, extract_json
 
 _RERANK_PROMPT = """\
 You are a relevance judge. Given a search query and a list of document chunks,

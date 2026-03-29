@@ -12,7 +12,7 @@ from typing import Sequence
 import chromadb
 from rank_bm25 import BM25Okapi
 
-from .config import Document, ScoredDocument, SearchConfig
+from config import Document, ScoredDocument, SearchConfig
 
 
 def _tokenize(text: str) -> list[str]:

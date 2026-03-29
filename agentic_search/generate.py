@@ -13,7 +13,7 @@ from dataclasses import dataclass
 
 import anthropic
 
-from .config import AgentResult, ContextEntry, LLMConfig
+from config import AgentResult, ContextEntry, LLMConfig
 
 _GENERATE_SYSTEM = """\
 You are a knowledgeable assistant.  You are given a user question and a set of

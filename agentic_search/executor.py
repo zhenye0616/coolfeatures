@@ -14,7 +14,7 @@ from typing import Any
 
 import anthropic
 
-from .config import (
+from config import (
     ContextEntry,
     Document,
     LLMConfig,
@@ -24,8 +24,8 @@ from .config import (
     StepOutcome,
     StepStatus,
 )
-from .rerank import Reranker
-from .search import HybridSearcher
+from rerank import Reranker
+from search import HybridSearcher
 
 # ---------------------------------------------------------------------------
 # Tool definitions exposed to the LLM (mirrors Context-1 harness)

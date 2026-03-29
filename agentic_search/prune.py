@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import anthropic
 
-from .config import ContextEntry, LLMConfig, SearchConfig, extract_json
+from config import ContextEntry, LLMConfig, SearchConfig, extract_json
 
 _PRUNE_SYSTEM = """\
 You are a context editor for a search agent.  The agent has accumulated

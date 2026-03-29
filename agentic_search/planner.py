@@ -11,7 +11,7 @@ from typing import Iterator
 
 import anthropic
 
-from .config import LLMConfig, PlanStep, StepStatus, extract_json
+from config import LLMConfig, PlanStep, StepStatus, extract_json
 
 _PLANNER_SYSTEM = """\
 You are a search query planner.  Given a user question, decompose it into a

@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import anthropic
 
-from .config import LLMConfig, PlanStep, StepOutcome, StepStatus, extract_json
+from config import LLMConfig, PlanStep, StepOutcome, StepStatus, extract_json
 
 _EVALUATOR_SYSTEM = """\
 You are an evaluation agent.  You are given:

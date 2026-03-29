@@ -25,7 +25,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-from .config import (
+from config import (
     AgentResult,
     ContextEntry,
     Document,
@@ -34,13 +34,13 @@ from .config import (
     StepOutcome,
     StepStatus,
 )
-from .evaluator import Evaluator
-from .executor import Executor
-from .planner import QueryPlanner
-from .prune import ContextPruner
-from .rerank import Reranker
-from .search import HybridSearcher
-from .storage import DocumentStore
+from evaluator import Evaluator
+from executor import Executor
+from planner import QueryPlanner
+from prune import ContextPruner
+from rerank import Reranker
+from search import HybridSearcher
+from storage import DocumentStore
 
 
 @dataclass
