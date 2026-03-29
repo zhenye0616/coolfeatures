@@ -2,9 +2,60 @@
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any
+
+
+# ---------------------------------------------------------------------------
+# JSON extraction helper — used by planner, reranker, evaluator, pruner
+# ---------------------------------------------------------------------------
+
+def extract_json(text: str, kind: str = "object") -> Any | None:
+    """Robustly extract a JSON object or array from LLM free-text output.
+
+    Uses bracket-counting to find the matching closing delimiter, which
+    handles nested structures correctly (unlike greedy/non-greedy regex).
+
+    Args:
+        text: Raw LLM output that may contain surrounding prose.
+        kind: "object" to find the first ``{...}`` or "array" for ``[...]``.
+
+    Returns:
+        The parsed Python object, or ``None`` if no valid JSON was found.
+    """
+    open_ch, close_ch = ("{", "}") if kind == "object" else ("[", "]")
+    start = text.find(open_ch)
+    if start == -1:
+        return None
+
+    depth = 0
+    in_string = False
+    escape = False
+    for i in range(start, len(text)):
+        ch = text[i]
+        if escape:
+            escape = False
+            continue
+        if ch == "\\":
+            escape = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == open_ch:
+            depth += 1
+        elif ch == close_ch:
+            depth -= 1
+            if depth == 0:
+                try:
+                    return json.loads(text[start : i + 1])
+                except json.JSONDecodeError:
+                    return None
+    return None
 
 
 # ---------------------------------------------------------------------------

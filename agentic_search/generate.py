@@ -40,8 +40,17 @@ class AnswerGenerator:
         self._llm_config = llm_config
         self._client = anthropic.Anthropic(api_key=llm_config.api_key)
 
-    def generate(self, query: str, agent_result: AgentResult) -> GeneratedAnswer:
-        """Generate a final answer from the agent's curated context."""
+    def generate(
+        self,
+        query: str,
+        agent_result: AgentResult,
+        context_token_budget: int = 16_000,
+    ) -> GeneratedAnswer:
+        """Generate a final answer from the agent's curated context.
+
+        Entries are sorted by relevance and greedily packed within
+        *context_token_budget* to avoid exceeding the model's context window.
+        """
         context = agent_result.context_snapshot
         if not context:
             return GeneratedAnswer(
@@ -49,9 +58,22 @@ class AnswerGenerator:
                 context_used=[],
             )
 
+        # Prioritize highest-relevance entries and enforce a token budget
+        sorted_context = sorted(
+            context, key=lambda e: e.relevance_score, reverse=True
+        )
+        selected: list[ContextEntry] = []
+        tokens_used = 0
+        for entry in sorted_context:
+            est = entry.token_estimate
+            if tokens_used + est > context_token_budget and selected:
+                break
+            selected.append(entry)
+            tokens_used += est
+
         chunks_text = "\n\n---\n\n".join(
             f"[{e.doc_id}] (relevance={e.relevance_score:.2f})\n{e.text}"
-            for e in context
+            for e in selected
         )
 
         prompt = (
@@ -68,4 +90,4 @@ class AnswerGenerator:
         )
 
         answer_text = response.content[0].text
-        return GeneratedAnswer(answer=answer_text, context_used=context)
+        return GeneratedAnswer(answer=answer_text, context_used=selected)
