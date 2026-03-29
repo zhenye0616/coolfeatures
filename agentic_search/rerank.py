@@ -8,19 +8,17 @@ After hybrid search returns RRF-fused candidates, the reranker:
 
 from __future__ import annotations
 
-import json
-import re
-
 import anthropic
 
-from .config import LLMConfig, ScoredDocument, SearchConfig
+from .config import LLMConfig, ScoredDocument, SearchConfig, extract_json
 
 _RERANK_PROMPT = """\
 You are a relevance judge. Given a search query and a list of document chunks,
 score each chunk's relevance to the query on a scale of 0-10.
 
-Return ONLY a JSON array of objects with "id" and "score" keys, ordered by the
-input order. Example: [{"id": "doc_1#chunk_0", "score": 8}, ...]
+Each chunk is shown with an "id:" field. Return ONLY a JSON array of objects
+where each object has "id" (the EXACT id value shown for that chunk) and "score"
+(integer 0-10). Example: [{{"id": "doc_1#chunk_0", "score": 8}}, ...]
 
 Query: {query}
 
@@ -61,7 +59,7 @@ class Reranker:
     ) -> list[tuple[ScoredDocument, float]]:
         """Single LLM call to score all candidates."""
         chunks_text = "\n\n".join(
-            f"[{sd.document.doc_id}]\n{sd.document.text[:800]}"
+            f"id: {sd.document.doc_id}\ntext: {sd.document.text[:800]}"
             for sd in candidates
         )
         prompt = _RERANK_PROMPT.format(query=query, chunks=chunks_text)
@@ -73,12 +71,9 @@ class Reranker:
                 messages=[{"role": "user", "content": prompt}],
             )
             content = response.content[0].text
-            # Extract JSON array from response
-            match = re.search(r"\[.*\]", content, re.DOTALL)
-            if not match:
-                # Fallback: keep original RRF scores
+            scores_list = extract_json(content, kind="array")
+            if not scores_list:
                 return [(sd, sd.score) for sd in candidates]
-            scores_list = json.loads(match.group())
             score_map = {item["id"]: float(item["score"]) for item in scores_list}
         except Exception:
             # On any failure, fall back to RRF scores

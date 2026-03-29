@@ -8,12 +8,9 @@ The Evaluator considers the plan and the history of outcomes to decide:
 
 from __future__ import annotations
 
-import json
-import re
-
 import anthropic
 
-from .config import LLMConfig, PlanStep, StepOutcome, StepStatus
+from .config import LLMConfig, PlanStep, StepOutcome, StepStatus, extract_json
 
 _EVALUATOR_SYSTEM = """\
 You are an evaluation agent.  You are given:
@@ -77,10 +74,9 @@ class Evaluator:
         content = response.content[0].text
 
         try:
-            match = re.search(r"\{.*\}", content, re.DOTALL)
-            if not match:
+            parsed = extract_json(content, kind="object")
+            if not parsed:
                 return ("continue", [])
-            parsed = json.loads(match.group())
             decision = parsed.get("decision", "continue")
 
             new_steps: list[PlanStep] = []
@@ -97,5 +93,5 @@ class Evaluator:
                     )
             return (decision, new_steps)
 
-        except (json.JSONDecodeError, KeyError):
+        except (KeyError, TypeError):
             return ("continue", [])

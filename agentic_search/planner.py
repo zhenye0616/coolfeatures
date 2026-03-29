@@ -7,13 +7,11 @@ that yields the next batch of steps whose dependencies are satisfied.
 
 from __future__ import annotations
 
-import json
-import re
 from typing import Iterator
 
 import anthropic
 
-from .config import LLMConfig, PlanStep, StepStatus
+from .config import LLMConfig, PlanStep, StepStatus, extract_json
 
 _PLANNER_SYSTEM = """\
 You are a search query planner.  Given a user question, decompose it into a
@@ -53,13 +51,11 @@ class QueryPlanner:
             messages=[{"role": "user", "content": query}],
         )
         content = response.content[0].text
-        match = re.search(r"\[.*\]", content, re.DOTALL)
-        if not match:
+        raw = extract_json(content, kind="array")
+        if not raw:
             # Fallback: single-step plan with the original query
             self.steps = [PlanStep(step_id=0, query=query, rationale="Direct search")]
             return self.steps
-
-        raw = json.loads(match.group())
         self.steps = [
             PlanStep(
                 step_id=s["step_id"],

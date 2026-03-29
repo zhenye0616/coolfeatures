@@ -12,12 +12,9 @@ The pruner:
 
 from __future__ import annotations
 
-import json
-import re
-
 import anthropic
 
-from .config import ContextEntry, LLMConfig, SearchConfig
+from .config import ContextEntry, LLMConfig, SearchConfig, extract_json
 
 _PRUNE_SYSTEM = """\
 You are a context editor for a search agent.  The agent has accumulated
@@ -80,11 +77,9 @@ class ContextPruner:
                 messages=[{"role": "user", "content": prompt}],
             )
             content = response.content[0].text
-            match = re.search(r"\{.*\}", content, re.DOTALL)
-            if not match:
+            parsed = extract_json(content, kind="object")
+            if not parsed:
                 return context
-
-            parsed = json.loads(match.group())
             keep_ids = set(parsed.get("keep", []))
 
             if not keep_ids:

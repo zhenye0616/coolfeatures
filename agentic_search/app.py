@@ -23,11 +23,16 @@ from .storage import DocumentStore
 DEMO_CORPUS_DIR = str(Path(__file__).parent / "demo_corpus")
 
 
-def _init_store(config: SearchConfig) -> DocumentStore:
-    """Initialize DocumentStore and load demo corpus (cached in session)."""
+def _init_store() -> DocumentStore:
+    """Initialize DocumentStore and load demo corpus (cached in session).
+
+    Uses a stable default config for storage — search-time parameters
+    (top_k, budgets, etc.) are passed via SearchConfig to the agent, not here.
+    """
     if "store" not in st.session_state:
-        store = DocumentStore(config)
-        n = load_corpus(DEMO_CORPUS_DIR, store, config)
+        store_config = SearchConfig()  # stable defaults for storage layer
+        store = DocumentStore(store_config)
+        n = load_corpus(DEMO_CORPUS_DIR, store, store_config)
         st.session_state["store"] = store
         st.session_state["corpus_chunks"] = n
     return st.session_state["store"]
@@ -70,7 +75,7 @@ def main() -> None:
             context_soft_limit=soft_limit,
             max_agent_steps=max_steps,
         )
-        store = _init_store(search_config)
+        store = _init_store()
         st.success(f"Corpus loaded: {st.session_state.get('corpus_chunks', 0)} chunks")
 
     # ---- Main area ----

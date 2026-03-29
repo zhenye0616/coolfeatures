@@ -9,7 +9,6 @@ The Executor implements the observe → reason → act loop for one step:
 
 from __future__ import annotations
 
-import json
 import uuid
 from typing import Any
 
@@ -17,6 +16,7 @@ import anthropic
 
 from .config import (
     ContextEntry,
+    Document,
     LLMConfig,
     PlanStep,
     SearchConfig,
@@ -185,7 +185,7 @@ class Executor:
                     candidate = block.input.get("candidate_answer", "")
                     all_retrieved = [
                         ScoredDocument(
-                            document=e.document if hasattr(e, "document") else type("D", (), {"doc_id": e.doc_id, "text": e.text, "metadata": {}, "token_estimate": e.token_estimate})(),
+                            document=Document(doc_id=e.doc_id, text=e.text),
                             score=e.relevance_score,
                             source="context",
                         )
@@ -212,13 +212,13 @@ class Executor:
 
             messages.append({"role": "user", "content": tool_results})
 
-        # Exhausted iterations — return what we have
+        # Exhausted iterations — this is a timeout, not a success
         return (
             StepOutcome(
                 step_id=step.step_id,
-                status=StepStatus.SUCCESS,
+                status=StepStatus.FAILURE,
                 candidate_answer="",
-                evidence="Max iterations reached.",
+                evidence="Max iterations reached without completion.",
             ),
             new_entries,
             seen_ids,
