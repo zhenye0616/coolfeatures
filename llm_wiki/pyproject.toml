@@ -1,0 +1,16 @@
+[project]
+name = "llm-wiki"
+version = "0.1.0"
+description = "Persistent, LLM-maintained knowledge base — Karpathy's LLM Wiki pattern"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.49.0",
+    "openai>=1.0.0",
+    "pymupdf>=1.27.2.2",
+    "python-dotenv>=1.2.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
