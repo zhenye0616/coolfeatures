@@ -287,12 +287,12 @@ You are a research assistant powered by a personal wiki. Answer questions using 
             # Resolve wikilinks
             links = parse_wikilinks(content)
             all_paths = self.manifest.all_paths()
-            resolved = []
+            resolved = set()
             for link in links:
                 target = _resolve_wikilink(link, all_paths)
                 if target:
-                    resolved.append(target)
-            self.manifest.set_links(rel, resolved)
+                    resolved.add(target)
+            self.manifest.set_links(rel, list(resolved))
 
         # Import .status.json if present
         status_path = self.raw_dir / ".status.json"
@@ -300,6 +300,8 @@ You are a research assistant powered by a personal wiki. Answer questions using 
             status_data = json.loads(status_path.read_text())
             for filename, state in status_data.items():
                 self.manifest.set_ingestion_status(filename, state)
+            status_path.unlink()
+            print(f"  Migrated .status.json ({len(status_data)} entries)")
 
         self.rebuild()
         print("Migration complete.")
@@ -365,12 +367,12 @@ You are a research assistant powered by a personal wiki. Answer questions using 
             # Resolve and store wikilinks
             links = parse_wikilinks(content)
             all_paths = self.manifest.all_paths()
-            resolved = []
+            resolved = set()
             for link in links:
                 target = _resolve_wikilink(link, all_paths)
                 if target:
-                    resolved.append(target)
-            self.manifest.set_links(rel_path, resolved)
+                    resolved.add(target)
+            self.manifest.set_links(rel_path, list(resolved))
 
             return f"Wrote {rel_path}"
 
