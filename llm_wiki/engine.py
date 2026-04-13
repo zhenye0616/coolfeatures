@@ -170,6 +170,8 @@ class WikiEngine:
         self.backend = backend
         self.workers = workers
         self._file_lock = threading.Lock()
+        # Ensure base directory exists so the manifest DB can be created
+        self.base_dir.mkdir(parents=True, exist_ok=True)
         self.manifest = Manifest(self.base_dir / "manifest.db")
 
     # ── public commands ───────────────────────────────────────────
