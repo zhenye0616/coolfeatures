@@ -17,7 +17,4 @@ wheels/
 .python-version
 
 # Project-specific
-my_wiki/
-*.db
-tests/
-docs/superpowers/
+eval_corpus/generate_*.py

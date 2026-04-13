@@ -15,9 +15,3 @@ wheels/
 
 # uv
 .python-version
-
-# Project-specific
-my_wiki/
-*.db
-tests/
-docs/superpowers/
