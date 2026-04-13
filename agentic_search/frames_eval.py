@@ -16,16 +16,16 @@ import json
 import os
 import sys
 import time
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from urllib.parse import unquote
 
-import anthropic
 from datasets import load_dataset
 
+from client import create_client
 from config import LLMConfig, SearchConfig
-from generate import AnswerGenerator
-from wiki_agent import WikiSearchAgent
+from generation.generate import AnswerGenerator
+from retrieval.wiki_agent import WikiSearchAgent
 
 
 # ---------------------------------------------------------------------------
@@ -48,6 +48,7 @@ class QuestionResult:
     steps_taken: int
     context_entries: int
     elapsed_seconds: float
+    trace: list[dict] = field(default_factory=list)
     error: str | None = None
 
 
@@ -140,7 +141,7 @@ def retrieval_f1(gold_urls: list[str], retrieved_urls: list[str]) -> tuple[float
 def judge_final_answer_found(
     context_texts: list[str],
     gold_answer: str,
-    client: anthropic.Anthropic,
+    client,
     model: str,
 ) -> bool:
     """LLM judge: does the retrieved context contain the answer?"""
@@ -168,7 +169,7 @@ def judge_answer_accuracy(
     generated_answer: str,
     gold_answer: str,
     question: str,
-    client: anthropic.Anthropic,
+    client,
     model: str,
 ) -> bool:
     """LLM judge: does the generated answer match the gold answer?
@@ -197,6 +198,61 @@ def judge_answer_accuracy(
 
 
 # ---------------------------------------------------------------------------
+# Trace printing
+# ---------------------------------------------------------------------------
+
+def _print_trace(trace: list[dict]) -> None:
+    """Print a human-readable trace of the agent's execution."""
+    for entry in trace:
+        event = entry.get("event", "")
+        if event == "plan":
+            steps = entry.get("steps", [])
+            print("  [PLAN] Sub-queries:")
+            for s in steps:
+                print(f"    Step {s['id']}: {s['query']}")
+        elif event == "execute_start":
+            print(f"  [STEP {entry.get('step_id')}] Executing: {entry.get('query', '')}")
+        elif event == "model_text":
+            text = entry.get("text", "")
+            if text.strip():
+                print(f"    [THINK] step={entry.get('step_id')} iter={entry.get('iteration')}: {text[:300]}")
+        elif event == "tool_call":
+            tool = entry.get("tool", "")
+            inp = entry.get("input", {})
+            print(f"    [TOOL] {tool}({json.dumps(inp)[:200]})")
+        elif event == "tool_result":
+            tool = entry.get("tool", "")
+            result = entry.get("result", "")
+            print(f"    [RESULT] {tool}: {result[:200]}")
+        elif event == "tool_call_finish":
+            print(f"    [FINISH] candidate={entry.get('candidate_answer', '')[:200]}")
+            summary = entry.get("summary", "")
+            if summary:
+                print(f"             summary={summary[:200]}")
+        elif event == "step_finish_implicit":
+            print(f"    [FINISH implicit] {entry.get('text', '')[:200]}")
+        elif event == "execute_done":
+            print(f"  [STEP {entry.get('step_id')} DONE] +{entry.get('new_entries')} entries, "
+                  f"context_tokens={entry.get('context_tokens')}")
+        elif event == "evaluator_decision":
+            print(f"  [EVAL] decision={entry.get('decision')} | {entry.get('reasoning', '')[:200]}")
+        elif event == "agent_prune":
+            print(f"    [PRUNE] Agent pruned {entry.get('removed')} chunks: "
+                  f"{entry.get('before')} → {entry.get('after')} entries, "
+                  f"{entry.get('tokens_before')} → {entry.get('tokens_after')} tokens")
+        elif event == "prune_decision":
+            print(f"  [PRUNE] keep={len(entry.get('keep', []))} discard={len(entry.get('discard', []))}")
+            reasoning = entry.get("reasoning", "")
+            if reasoning:
+                print(f"          reason: {reasoning[:200]}")
+        elif event == "prune":
+            print(f"  [PRUNE] {entry.get('before')} → {entry.get('after')} entries, "
+                  f"tokens_after={entry.get('tokens_after')}")
+        elif event == "max_steps_reached":
+            print(f"  [MAX STEPS] total={entry.get('total')}")
+
+
+# ---------------------------------------------------------------------------
 # Main evaluation loop
 # ---------------------------------------------------------------------------
 
@@ -204,7 +260,7 @@ def run_evaluation(
     llm_config: LLMConfig,
     search_config: SearchConfig,
     limit: int | None = None,
-    output_path: str = "frames_results.json",
+    output_path: str = "eval_results/frames_results.json",
 ) -> EvalSummary:
     """Run FRAMES evaluation end-to-end."""
     print("Loading FRAMES dataset from HuggingFace...")
@@ -215,7 +271,7 @@ def run_evaluation(
 
     agent = WikiSearchAgent(llm_config, search_config)
     generator = AnswerGenerator(llm_config)
-    judge_client = anthropic.Anthropic(api_key=llm_config.api_key)
+    judge_client = create_client(llm_config)
 
     results: list[QuestionResult] = []
 
@@ -230,6 +286,9 @@ def run_evaluation(
         try:
             # Tier 1: Agent search
             agent_result = agent.search(question)
+
+            # Print trace in real-time
+            _print_trace(agent_result.trace)
 
             # Tier 2: Generate answer
             gen_result = generator.generate(question, agent_result)
@@ -266,6 +325,7 @@ def run_evaluation(
                 steps_taken=agent_result.steps_taken,
                 context_entries=len(agent_result.context_snapshot),
                 elapsed_seconds=elapsed,
+                trace=agent_result.trace,
             )
 
             print(f"  FAF={faf} | Acc={accuracy} | F1={f1:.2f} | "
@@ -358,17 +418,27 @@ def _print_summary(summary: EvalSummary) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run FRAMES benchmark evaluation")
     parser.add_argument("--limit", type=int, default=None, help="Max questions to evaluate (default: all 824)")
-    parser.add_argument("--output", type=str, default="frames_results.json", help="Output JSON path")
-    parser.add_argument("--model", type=str, default="claude-sonnet-4-20250514", help="Model to use")
+    parser.add_argument("--output", type=str, default="eval_results/frames_results.json", help="Output JSON path")
+    parser.add_argument("--model", type=str, default=None, help="Model to use (default depends on provider)")
     parser.add_argument("--max-steps", type=int, default=12, help="Max agent steps per question")
+    parser.add_argument("--provider", type=str, default="anthropic", choices=["anthropic", "openrouter"],
+                        help="LLM provider: anthropic (default) or openrouter")
     args = parser.parse_args()
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("ERROR: ANTHROPIC_API_KEY environment variable not set", file=sys.stderr)
-        sys.exit(1)
+    if args.provider == "openrouter":
+        api_key = os.environ.get("OPENROUTER_API_KEY")
+        if not api_key:
+            print("ERROR: OPENROUTER_API_KEY environment variable not set", file=sys.stderr)
+            sys.exit(1)
+        model = args.model or "anthropic/claude-sonnet-4.5"
+    else:
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("ERROR: ANTHROPIC_API_KEY environment variable not set", file=sys.stderr)
+            sys.exit(1)
+        model = args.model or "claude-sonnet-4-20250514"
 
-    llm_config = LLMConfig(api_key=api_key, model=args.model)
+    llm_config = LLMConfig(api_key=api_key, model=model, provider=args.provider)
     search_config = SearchConfig(max_agent_steps=args.max_steps)
 
     run_evaluation(llm_config, search_config, limit=args.limit, output_path=args.output)

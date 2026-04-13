@@ -14,11 +14,11 @@ from pathlib import Path
 
 import streamlit as st
 
-from agent import SearchAgent
+from retrieval.agent import SearchAgent
 from config import AgentResult, LLMConfig, SearchConfig
-from generate import AnswerGenerator
-from ingest import load_corpus
-from storage import DocumentStore
+from generation.generate import AnswerGenerator
+from storage.ingest import load_corpus
+from storage.storage import DocumentStore
 
 DEMO_CORPUS_DIR = str(Path(__file__).parent / "demo_corpus")
 

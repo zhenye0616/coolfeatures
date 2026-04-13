@@ -1,2 +1,18 @@
+# Secrets
 .env
-frames_results*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Eval results / traces
+eval_results/
+
+# uv
+uv.lock
+
+# IDE / OS
+.DS_Store
+*.swp

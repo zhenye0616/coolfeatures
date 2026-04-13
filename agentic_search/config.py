@@ -67,6 +67,7 @@ class LLMConfig:
     api_key: str
     model: str = "claude-sonnet-4-20250514"
     max_tokens: int = 4096
+    provider: str = "anthropic"  # "anthropic" or "openrouter"
 
 
 # ---------------------------------------------------------------------------
@@ -82,10 +83,10 @@ class SearchConfig:
     top_k_retrieval: int = 50
     # How many results survive reranking
     top_k_rerank: int = 10
-    # Token budget for the agent's accumulated context window
-    context_token_budget: int = 24_000
-    # Soft limit — when exceeded, the agent should prune before searching more
-    context_soft_limit: int = 18_000
+    # Token budget for the agent's accumulated context window (matches Context-1: 32k)
+    context_token_budget: int = 32_000
+    # Soft limit — kept for external pruner (local corpus); wiki executor uses budget/2
+    context_soft_limit: int = 16_000
     # Maximum agent loop iterations
     max_agent_steps: int = 12
     # Per-search-call token budget for returned chunks
@@ -170,3 +171,4 @@ class AgentResult:
     sources: list[Document]
     steps_taken: int
     context_snapshot: list[ContextEntry]
+    trace: list[dict[str, Any]] = field(default_factory=list)
