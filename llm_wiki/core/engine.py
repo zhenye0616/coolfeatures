@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
-from manifest import Manifest, parse_wikilinks, _resolve_wikilink
+from core.manifest import Manifest, parse_wikilinks, _resolve_wikilink
 
 # ---------------------------------------------------------------------------
 # Tool specifications (backend-neutral)
@@ -127,6 +127,27 @@ def _extract_summary(content: str) -> str:
     return ""
 
 
+_FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+
+
+def _parse_frontmatter(content: str) -> tuple[dict[str, str], str]:
+    """Parse YAML frontmatter from markdown content.
+
+    Returns ``(metadata_dict, body_without_frontmatter)``.
+    """
+    match = _FRONTMATTER_RE.match(content)
+    if not match:
+        return {}, content
+    meta: dict[str, str] = {}
+    for line in match.group(1).splitlines():
+        if ":" in line:
+            key, _, value = line.partition(":")
+            k = key.strip()
+            if k and not k.startswith("---"):
+                meta[k] = value.strip()
+    return meta, content[match.end():]
+
+
 # ---------------------------------------------------------------------------
 # Default schema
 # ---------------------------------------------------------------------------
@@ -143,9 +164,31 @@ DEFAULT_SCHEMA = """\
 - `concepts/` — Pages for ideas, themes, technologies, methodologies, etc.
 - `analyses/` — Comparison tables, syntheses, and query results worth preserving.
 
+## Frontmatter
+
+Every wiki page MUST begin with YAML frontmatter:
+
+```
+---
+topic: <broad knowledge area, e.g. "Machine Learning", "Economics">
+subtopic: <specific area within the topic, e.g. "Transformers", "Monetary Policy">
+cssclasses:
+  - topic-<topic-slug>
+tags:
+  - topic/<topic-slug>
+---
+```
+
+`<topic-slug>` = topic lowercased, spaces replaced by hyphens.
+Example: topic "Machine Learning" → slug `machine-learning` →
+  cssclasses: `[topic-machine-learning]`, tags: `[topic/machine-learning]`.
+
+Use consistent naming — reuse existing topic/subtopic names where the content fits.
+Call `list_pages` to see existing topics before choosing new names.
+
 ## Page Conventions
 
-- Each page starts with a `# Title` heading.
+- After the frontmatter, each page starts with a `# Title` heading.
 - Use `[[wikilinks]]` for cross-references between pages.
 - Entity/concept pages include: brief definition, key facts, and a **References** section linking back to source pages.
 - Source pages include: title, author/date if known, key takeaways, entities mentioned, concepts covered.
@@ -244,6 +287,7 @@ You are a research assistant powered by a personal wiki. Answer questions using 
         )
         self.rebuild()
         print(f"\n{answer}")
+        return answer
 
     def lint(self, full: bool = False):
         """Lint wiki pages. If full: all pages, else pages needing lint."""
@@ -279,10 +323,14 @@ You are a research assistant powered by a personal wiki. Answer questions using 
             if rel in ("index.md", "log.md"):
                 continue
             content = md_file.read_text()
-            title = _extract_title(content)
+            meta, body = _parse_frontmatter(content)
+            title = _extract_title(body)
             page_type = _infer_type(rel)
-            summary = _extract_summary(content)
-            self.manifest.upsert_page(rel, title=title, type=page_type, summary=summary)
+            summary = _extract_summary(body)
+            self.manifest.upsert_page(
+                rel, title=title, type=page_type, summary=summary,
+                topic=meta.get("topic", ""), subtopic=meta.get("subtopic", ""),
+            )
 
             # Resolve wikilinks
             links = parse_wikilinks(content)
@@ -316,8 +364,11 @@ You are a research assistant powered by a personal wiki. Answer questions using 
                 return "(no pages yet)"
             lines = []
             for p in pages:
+                topic = p.get("topic") or ""
+                subtopic = p.get("subtopic") or ""
+                topic_str = f" ({topic} > {subtopic})" if topic else ""
                 summary = p.get("summary") or ""
-                lines.append(f"{p['path']} [{p['type']}] — {summary}")
+                lines.append(f"{p['path']} [{p['type']}]{topic_str} — {summary}")
             return "\n".join(lines)
 
         if name == "list_existing_entities":
@@ -357,11 +408,13 @@ You are a research assistant powered by a personal wiki. Answer questions using 
                 print(f"  {label}: wiki/{rel_path}")
 
             # Update manifest
-            title = _extract_title(content)
+            meta, body = _parse_frontmatter(content)
+            title = _extract_title(body)
             page_type = _infer_type(rel_path)
-            summary = _extract_summary(content)
+            summary = _extract_summary(body)
             self.manifest.upsert_page(
-                rel_path, title=title, type=page_type, summary=summary
+                rel_path, title=title, type=page_type, summary=summary,
+                topic=meta.get("topic", ""), subtopic=meta.get("subtopic", ""),
             )
 
             # Resolve and store wikilinks

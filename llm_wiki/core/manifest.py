@@ -39,7 +39,7 @@ class Manifest:
 
     def __init__(self, db_path: str | Path) -> None:
         self._db_path = str(db_path)
-        self._conn = sqlite3.connect(self._db_path)
+        self._conn = sqlite3.connect(self._db_path, check_same_thread=False)
         self._conn.row_factory = sqlite3.Row
         self._conn.execute("PRAGMA journal_mode=WAL")
         self._conn.execute("PRAGMA busy_timeout=5000")
@@ -55,6 +55,8 @@ class Manifest:
                 title       TEXT,
                 type        TEXT,
                 summary     TEXT,
+                topic       TEXT,
+                subtopic    TEXT,
                 created_at  TEXT,
                 updated_at  TEXT,
                 last_linted TEXT
@@ -74,6 +76,19 @@ class Manifest:
             );
             """
         )
+        self._migrate()
+
+    def _migrate(self) -> None:
+        """Add columns introduced after initial schema."""
+        existing = {
+            r[1]
+            for r in self._conn.execute("PRAGMA table_info(pages)").fetchall()
+        }
+        if "topic" not in existing:
+            self._conn.execute("ALTER TABLE pages ADD COLUMN topic TEXT")
+        if "subtopic" not in existing:
+            self._conn.execute("ALTER TABLE pages ADD COLUMN subtopic TEXT")
+        self._conn.commit()
 
     # ── pages ─────────────────────────────────────────────────────
 
@@ -84,20 +99,24 @@ class Manifest:
         title: str,
         type: str,
         summary: str,
+        topic: str = "",
+        subtopic: str = "",
     ) -> None:
         """Insert or update a page.  Preserves ``created_at`` on update."""
         now = _now()
         self._conn.execute(
             """\
-            INSERT INTO pages (path, title, type, summary, created_at, updated_at)
-            VALUES (?, ?, ?, ?, ?, ?)
+            INSERT INTO pages (path, title, type, summary, topic, subtopic, created_at, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(path) DO UPDATE SET
                 title      = excluded.title,
                 type       = excluded.type,
                 summary    = excluded.summary,
+                topic      = excluded.topic,
+                subtopic   = excluded.subtopic,
                 updated_at = excluded.updated_at
             """,
-            (path, title, type, summary, now, now),
+            (path, title, type, summary, topic, subtopic, now, now),
         )
         self._conn.commit()
 
@@ -115,6 +134,19 @@ class Manifest:
                 "SELECT * FROM pages WHERE type = ?", (type,)
             ).fetchall()
         return [dict(r) for r in rows]
+
+    def list_topics(self) -> dict[str, list[str]]:
+        """Return ``{topic: [subtopic, ...]}`` mapping from all pages."""
+        rows = self._conn.execute(
+            "SELECT DISTINCT topic, subtopic FROM pages "
+            "WHERE topic IS NOT NULL AND topic != ''"
+        ).fetchall()
+        result: dict[str, set[str]] = {}
+        for r in rows:
+            topic = r["topic"]
+            subtopic = r["subtopic"] or "General"
+            result.setdefault(topic, set()).add(subtopic)
+        return {k: sorted(v) for k, v in sorted(result.items())}
 
     # ── links ─────────────────────────────────────────────────────
 

@@ -20,8 +20,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from backends import BACKENDS
-from engine import WikiEngine
+from core.backends import BACKENDS
+from core.engine import WikiEngine
 
 
 def main():
@@ -45,6 +45,7 @@ def main():
 
     sub.add_parser("rebuild", help="Regenerate index.md and log.md from manifest")
     sub.add_parser("migrate", help="Migrate existing wiki into manifest (one-time)")
+    sub.add_parser("theme", help="Generate Obsidian CSS snippet for topic color-coding")
 
     args = parser.parse_args()
     if not args.command:
@@ -68,6 +69,11 @@ def main():
             print("Rebuilt index.md and log.md from manifest.")
         case "migrate":
             engine.migrate()
+        case "theme":
+            from core.theme import generate_snippet
+            out = generate_snippet(engine.manifest, engine.wiki_dir)
+            print(f"CSS snippet written to {out}")
+            print("Enable in Obsidian: Settings → Appearance → CSS snippets → topic-colors")
 
 
 if __name__ == "__main__":
